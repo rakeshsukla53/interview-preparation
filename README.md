@@ -1,2 +1,2 @@
 # interview-preparation
-Preparation for interviews
+List of all the programs for interview
