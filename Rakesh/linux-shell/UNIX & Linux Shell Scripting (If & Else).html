@@ -1,0 +1,396 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" href="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/menu.css">
+<link href="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/tomorrow.css" type="text/css" rel="stylesheet">
+<script async="" src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/cbgapi.loaded_1"></script><script async="" src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/cbgapi.loaded_0"></script><script src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/widgets.js" id="twitter-wjs"></script><script gapi_processed="true" src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/plusone.js" async="" type="text/javascript"></script><script src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/all.js" id="facebook-jssdk"></script><script type="text/javascript" src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/prettify.js"></script>
+<link rel="stylesheet" href="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/dreamsys_resp.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="UNIX &amp; Linux Shell Scripting (Programming) Tutorial">
+<meta name="keywords" content="unix, linux, bash, sh, shell, script, scripting, programming, tutorial, help">
+
+<title>UNIX &amp; Linux Shell Scripting (If &amp; Else)</title>
+<link href="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/sunburstnew.html" type="text/css" rel="stylesheet"><link href="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/prettify.css" type="text/css" rel="stylesheet"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body topmargin="0" leftmargin="0" bgproperties="fixed" bgcolor="ffffff">
+
+<script>
+    /*
+    window.onload = function() {
+        var pps = document.getElementsByClassName("prettyprint");
+        for (var i=0; i<pps.length; i++) {
+            pps[i].style.maxWidth = (document.body.clientWidth - 20) + "px";   
+        }
+    };*/
+    showCode = function() {
+        console.log("showing code...");
+        var pps = document.getElementsByClassName("prettyprint");
+        for (var i=0; i<pps.length; i++) {
+            pps[i].style.display = "block !important";   
+        }
+    }
+</script>
+
+
+<table style="background-color: dddddd; border-bottom: 1px solid #999999;" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td align="left">
+<br>
+<div id="dss-header">&nbsp;<b>dreamsys</b> software</div>
+<br>
+</td>
+<td align="right">
+
+<!-- SiteSearch Google -->
+<form method="get" action="http://www.google.com/custom" target="google_window">
+<input name="domains" value="dreamsyssoft.com" type="hidden">
+<input name="q" size="20" maxlength="255" type="text">
+<input name="sa" value="Search" type="submit">
+<input name="sitesearch" value="dreamsyssoft.com" type="hidden">
+<input name="client" value="pub-5964068028036664" type="hidden">
+<input name="forid" value="1" type="hidden">
+<input name="ie" value="ISO-8859-1" type="hidden">
+<input name="oe" value="ISO-8859-1" type="hidden">
+<input name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;" type="hidden">
+<input name="hl" value="en" type="hidden">
+</form>
+<!-- SiteSearch Google -->
+</td>
+</tr>
+</tbody></table>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<tbody><tr>
+
+<td id="NavTd" valign="top">
+<div id="Nav">
+<div class="section">
+<h3 class="section-header">
+<a id="home-header" href="http://www.dreamsyssoft.com/index.php">Home</a>
+</h3>
+</div>
+
+<div id="product-list" class="section">
+	<h3 class="section-header">Products</h3>
+	<div class="section-body">
+	<ul>
+	<li><a href="http://www.dreamsyssoft.com/hextreme-hex-editor">Hextreme Hex Editor</a></li>
+	<li><a href="http://www.dreamsyssoft.com/tiff-to-pdf">Tiff to PDF Converter</a></li>
+	<li><a href="http://www.dreamsyssoft.com/image-to-pdf-library">Image to PDF Library</a></li>
+	<li><a href="http://www.dreamsyssoft.com/math-dungeon-iphone-game/math-dungeon.php">Math Dungeon iPhone Game</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="product-list" class="section">
+	<h3 class="section-header">Tutorials</h3>
+	<div class="section-body">
+	<ul>
+	<li><a href="http://www.dreamsyssoft.com/java-8-lambda-tutorial">Java 8 Lambda Expressions</a></li>
+	<li><a href="http://www.dreamsyssoft.com/unix-shell-scripting/tutorial.php">UNIX Shell Scripting</a></li>
+	<li><a href="http://www.dreamsyssoft.com/python-scripting-tutorial">Python Shell Scripting </a></li>
+	<li><a href="http://www.dreamsyssoft.com/javascript-shell-scripting">JavaScript Shell Scripting </a></li>
+	<li><a href="http://www.dreamsyssoft.com/ruby-scripting-tutorial">Ruby Shell Scripting </a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="product-list" class="section">
+	<h3 class="section-header">Resources</h3>
+	<div class="section-body">
+	<ul>
+	<li><a href="http://www.dreamsyssoft.com/blog">Blog</a></li>
+	<!-- <li><a href="/contact.php">contact us</a></li> -->
+	<li><a href="http://www.dreamsyssoft.com/download.php">Downloads</a></li><!--
+	<li><a href="/custapps.php">Custom Applications</a></li> -->
+	</ul>
+	</div>
+</div>
+
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/PqAPbTuc2cR.html" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/PqAPbTuc2cR_002.html" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="product-list" class="section">
+	<h3 class="section-header">Share</h3>
+	<div class="section-body">
+	<ul>
+	<li><div class="share"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 70px; height: 15px;"><iframe title="+1" data-gapiattached="true" src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/fastbutton.html" name="I0_1440462132662" id="I0_1440462132662" vspace="0" tabindex="0" style="position: static; top: 0px; width: 70px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" width="100%" frameborder="0"></iframe></div></div></li>
+	<li><div class="share"><div fb-iframe-plugin-query="app_id=&amp;container_width=177&amp;href=http%3A%2F%2Fwww.dreamsyssoft.com%2Funix-shell-scripting%2Fifelse-tutorial.php&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;show_faces=true&amp;width=100" fb-xfbml-state="rendered" class="fb-like fb_iframe_widget" data-href="http://www.dreamsyssoft.com/unix-shell-scripting/ifelse-tutorial.php" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true"><span style="vertical-align: bottom; width: 76px; height: 20px;"><iframe class="" src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/like.html" style="border: medium none; visibility: visible; width: 76px; height: 20px;" title="fb:like Facebook Social Plugin" scrolling="no" allowfullscreen="true" allowtransparency="true" name="f39ab17c3917756" width="100px" frameborder="0" height="1000px"></iframe></span></div>
+	</div></li>
+	<li><div class="share"><iframe src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/tweet_button.html" style="position: static; visibility: visible; width: 77px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-i1440462133434510687" frameborder="0"></iframe></div></li>
+	<li><div class="share"><iframe data-screen-name="dreamsyssoft" src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/follow_button.html" style="position: static; visibility: visible; width: 146px; height: 20px;" class="twitter-follow-button twitter-follow-button-rendered" allowtransparency="true" scrolling="no" id="twitter-widget-i144046213343299056" frameborder="0"></iframe></div></li>
+	</ul>
+	</div>
+</div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</div>
+
+<hr>
+<b>Like Progressive Metal? Check out my band on Spotify, please follow us!</b>
+<a href="http://www.dreamsyssoft.com/spotify_fr.php"><img src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/fr.png"></a>
+</td>
+<td valign="top">
+<h2 class="topbanner">UNIX &amp; Linux Shell Scripting Tutorial</h2>
+<ul class="topmenu">
+	<li class="topmenuitem"><a href="http://www.dreamsyssoft.com/unix-shell-scripting/tutorial.php"><b>TOC</b></a></li>
+        <li class="topmenuitem"><a href="http://www.dreamsyssoft.com/unix-shell-scripting/intro-tutorial.php"><b>Introduction</b></a></li>
+        <li class="topmenuitem"><a href="http://www.dreamsyssoft.com/unix-shell-scripting/variables-tutorial.php"><b>Variables</b></a></li>
+        <li class="topmenuitem"><a href="http://www.dreamsyssoft.com/unix-shell-scripting/ifelse-tutorial.php"><b>If/Else</b></a></li>
+        <li class="topmenuitem"><a href="http://www.dreamsyssoft.com/unix-shell-scripting/loop-tutorial.php"><b>Looping</b></a></li>
+        <li class="topmenuitem"><a href="http://www.dreamsyssoft.com/unix-shell-scripting/case-tutorial.php"><b>Cases</b></a></li>
+        <li class="topmenuitem"><a href="http://www.dreamsyssoft.com/unix-shell-scripting/functions-tutorial.php"><b>Functions</b></a></li>
+        <li class="topmenuitem"><a href="http://www.dreamsyssoft.com/unix-shell-scripting/read-write-files-tutorial.php"><b>Files</b></a></li>
+        <li class="topmenuitem"><a href="http://www.dreamsyssoft.com/unix-shell-scripting/search-sort-tutorial.php"><b>Search &amp; Sort</b></a></li>
+        <li class="topmenuitem"><a href="http://www.dreamsyssoft.com/unix-shell-scripting/advanced-tutorial.php"><b>Advanced</b></a></li>
+</ul>
+<div align="center">
+<script async="" src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/adsbygoogle.js"></script>
+<!-- unix_top_resp -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6412610587638500" data-ad-slot="9870140667" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="sectionheading">If/Else</h2>
+<p>
+<b>NOTE: </b> Did you know you can use <a href="http://www.dreamsyssoft.com/javascript-shell-scripting/"><b>javascript</b></a> in unix shell scripts?  Check out the <a href="http://www.dreamsyssoft.com/javascript-shell-scripting/ifelse-tutorial.php"><b>if/else JavaScript tutorial!</b></a>
+
+</p>
+<p>
+	In order for a script to be very useful, you will need to be able to 
+test the conditions of variables.  Most programming and scripting
+	languages have some sort of if/else expression and so does the bourne 
+shell.  Unlike most other languages, spaces are very important when
+	using an <b>if</b> statement.  Let's do a simple script that will ask a user for a password before allowing him to continue.  This is obviously
+	not how you would implement such security in a real system, but it will make a good example of using <b>if</b> and <b>else</b> statements.
+	<br>
+</p>
+
+<pre style="" class="prettyprint lang-sh prettyprinted"><span class="com">#!/bin/sh</span><span class="pln">
+</span><span class="com"># This is some secure program that uses security.</span><span class="pln">
+
+VALID_PASSWORD</span><span class="pun">=</span><span class="str">"secret"</span><span class="pln"> </span><span class="com">#this is our password.</span><span class="pln">
+
+echo </span><span class="str">"Please enter the password:"</span><span class="pln">
+read PASSWORD
+
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">"$PASSWORD"</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="str">"$VALID_PASSWORD"</span><span class="pln"> </span><span class="pun">];</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+	echo </span><span class="str">"You have access!"</span><span class="pln">
+</span><span class="kwd">else</span><span class="pln">
+	echo </span><span class="str">"ACCESS DENIED!"</span><span class="pln">
+</span><span class="kwd">fi</span></pre>
+
+<p>
+	Remember that the spacing is very important in the if statement.  Notice that the termination of the if statement is <b>fi</b>.  You will need to use
+	the <b>fi</b> statement to terminate an if whether or not use use an 
+else as well.  You can also replace the "==" with "!=" to test if the 
+variables are NOT equal.
+	There are other tokens that you can put in place of the "==" for other 
+types of tests.  The following table shows the different expressions 
+allowed.
+	<br>
+</p>
+
+<b>Comparisons:</b>
+<table border="1">
+<tbody><tr>
+	<td><b>-eq</b></td><td>equal to</td>
+</tr>
+<tr>
+	<td><b>-ne</b></td><td>not equal to</td>
+</tr>
+<tr>
+	<td><b>-lt</b></td><td>less than</td>
+</tr>
+<tr>
+	<td><b>-le</b></td><td>less than or equal to</td>
+</tr>
+<tr>
+	<td><b>-gt</b></td><td>greater than</td>
+</tr>
+<tr>
+	<td><b>-ge</b></td><td>greater than or equal to</td>
+</tr>
+</tbody></table>
+<br>
+<b>File Operations:</b>
+<table border="1">
+<tbody><tr>
+	<td><b>-s</b></td><td>file exists and is not empty</td>
+</tr>
+<tr>
+	<td><b>-f</b></td><td>file exists and is not a directory</td>
+</tr>
+<tr>
+	<td><b>-d</b></td><td>directory exists</td>
+</tr>
+<tr>
+	<td><b>-x</b></td><td>file is executable</td>
+</tr>
+<tr>
+	<td><b>-w</b></td><td>file is writable</td>
+</tr>
+<tr>
+	<td><b>-r</b></td><td>file is readable</td>
+</tr>
+</tbody></table>
+
+<br>
+
+<p>
+	Let's try using a couple of these in a script.  This next script will 
+ask for a user name, if there is not a file that exists with the name 
+"username_DAT",
+	the script will prompt the user for their age, it will then make sure 
+that they are old enough to use this program and then it will write 
+their age to a file
+	with the name "username_DAT".  If the file already exists, it will just
+ display the age of the user.
+	<br>
+</p>
+
+<pre style="" class="prettyprint lang-sh prettyprinted"><span class="com">#!/bin/sh</span><span class="pln">
+
+</span><span class="com"># Prompt for a user name...</span><span class="pln">
+echo </span><span class="str">"Please enter your name:"</span><span class="pln">
+read USERNAME
+
+</span><span class="com"># Check for the file.</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="pun">-</span><span class="pln">s $</span><span class="pun">{</span><span class="pln">USERNAME</span><span class="pun">}</span><span class="pln">_DAT </span><span class="pun">];</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+        </span><span class="com"># Read the age from the file.</span><span class="pln">
+        AGE</span><span class="pun">=</span><span class="str">`cat ${USERNAME}_DAT`</span><span class="pln">
+        echo </span><span class="str">"You are $AGE years old!"</span><span class="pln">
+</span><span class="kwd">else</span><span class="pln">
+        </span><span class="com"># Ask the user for his/her age</span><span class="pln">
+        echo </span><span class="str">"How old are you?"</span><span class="pln">
+        read AGE
+
+	</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">"$AGE"</span><span class="pln"> </span><span class="pun">-</span><span class="pln">le </span><span class="lit">2</span><span class="pln"> </span><span class="pun">];</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+		echo </span><span class="str">"You are too young!"</span><span class="pln">
+	</span><span class="kwd">else</span><span class="pln">
+		</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">"$AGE"</span><span class="pln"> </span><span class="pun">-</span><span class="pln">ge </span><span class="lit">100</span><span class="pln"> </span><span class="pun">];</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+			echo </span><span class="str">"You are too old!"</span><span class="pln">
+		</span><span class="kwd">else</span><span class="pln">
+        		</span><span class="com"># Write the age to a new file.</span><span class="pln">
+        		echo $AGE </span><span class="pun">&gt;</span><span class="pln"> $</span><span class="pun">{</span><span class="pln">USERNAME</span><span class="pun">}</span><span class="pln">_DAT
+        	</span><span class="kwd">fi</span><span class="pln">
+        </span><span class="kwd">fi</span><span class="pln">
+</span><span class="kwd">fi</span></pre>
+
+<p>
+	Run this program a couple of times.  First run it and give it the user 
+name of "john".  When it asks for an age, enter the age "1".  Notice
+	that it will say that you are too you and then exit.  Now run the 
+program again with the name "john" and the age 200.  This time the 
+script
+	will tell you that you are too old and exit.  Now run the the script 
+again with the name of "john", enter the age 30.  The script exits
+	normally this time, the program created a file called "john_DAT" which 
+contains the text "30".  Finally run the program one more time and give
+	it the name "john".  This time it will not prompt you to enter an age, 
+instead it will read the age from a file and say "Your are 30 years 
+old!".
+</p>
+
+<p>
+	We introduced something else new in this script.  On line 10 of the file, we see the code:
+	<br>
+</p>
+
+<pre style="" class="prettyprint lang-sh prettyprinted"><span class="pln">	AGE</span><span class="pun">=</span><span class="str">`cat ${USERNAME}_DAT`</span></pre>
+
+<p>
+	This is how you execute a command and put the text output from the command into a variable.  The unix command <b>cat</b> reads the file
+	named <b>${USERNAME}_DAT</b> and outputs it to the console.  Instead of putting it to the console in our script, we wrap the command with
+	the character <b>`</b>, this puts the text into our variable AGE.
+	<br>
+</p>
+
+<p>
+	You can test multiple expressions at once by using the <b>||</b> (or) operator or the <b>&amp;&amp;</b>
+ (and) operator.  This can save you from writing
+	extra code to nest if statements.  The above code has a nested if 
+statement where it checks if the age is greater than or equal to 100.  
+This could
+	be changed as well by using <b>elif</b> (else if).  The structure of <b>elif</b> is the same as the structure of <b>if</b>,
+ we will use it in an
+	example below.  In this example, we will check for certain age ranges. 
+ If you are less than 20 or greater than 50, you are out of the age 
+range.  If
+	you are between 20 and 30 you are in your 20's and so on.
+	<br>
+</p>
+
+<pre style="" class="prettyprint lang-sh prettyprinted"><span class="com">#!/bin/sh</span><span class="pln">
+
+</span><span class="com"># Prompt for a user name...</span><span class="pln">
+echo </span><span class="str">"Please enter your age:"</span><span class="pln">
+read AGE
+
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">"$AGE"</span><span class="pln"> </span><span class="pun">-</span><span class="pln">lt </span><span class="lit">20</span><span class="pln"> </span><span class="pun">]</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">"$AGE"</span><span class="pln"> </span><span class="pun">-</span><span class="pln">ge </span><span class="lit">50</span><span class="pln"> </span><span class="pun">];</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+	echo </span><span class="str">"Sorry, you are out of the age range."</span><span class="pln">
+</span><span class="kwd">elif</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">"$AGE"</span><span class="pln"> </span><span class="pun">-</span><span class="pln">ge </span><span class="lit">20</span><span class="pln"> </span><span class="pun">]</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">"$AGE"</span><span class="pln"> </span><span class="pun">-</span><span class="pln">lt </span><span class="lit">30</span><span class="pln"> </span><span class="pun">];</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+	echo </span><span class="str">"You are in your 20s"</span><span class="pln">
+</span><span class="kwd">elif</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">"$AGE"</span><span class="pln"> </span><span class="pun">-</span><span class="pln">ge </span><span class="lit">30</span><span class="pln"> </span><span class="pun">]</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">"$AGE"</span><span class="pln"> </span><span class="pun">-</span><span class="pln">lt </span><span class="lit">40</span><span class="pln"> </span><span class="pun">];</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+	echo </span><span class="str">"You are in your 30s"</span><span class="pln">
+</span><span class="kwd">elif</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">"$AGE"</span><span class="pln"> </span><span class="pun">-</span><span class="pln">ge </span><span class="lit">40</span><span class="pln"> </span><span class="pun">]</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> </span><span class="str">"$AGE"</span><span class="pln"> </span><span class="pun">-</span><span class="pln">lt </span><span class="lit">50</span><span class="pln"> </span><span class="pun">];</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+	echo </span><span class="str">"You are in your 40s"</span><span class="pln">
+</span><span class="kwd">fi</span><span class="pln">
+</span></pre>
+
+<br>
+<p align="center">
+	<a href="http://www.dreamsyssoft.com/unix-shell-scripting/variables-tutorial.php"><b>Prev</b> (Variables)</a> |
+	<a href="http://www.dreamsyssoft.com/unix-shell-scripting/loop-tutorial.php"><b>Next</b> (Looping)</a>
+<br>
+<script async="" src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/adsbygoogle.js"></script>
+<!-- unix_bottom_resp -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6412610587638500" data-ad-slot="5300340267" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p>
+
+</td>
+
+<td id="RightTd" valign="top">
+<script async="" src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/adsbygoogle.js"></script>
+<!-- new_unix_right -->
+<ins class="adsbygoogle" style="display:inline-block;width:120px;height:600px" data-ad-client="ca-pub-6412610587638500" data-ad-slot="6454062269"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<hr>
+<b>Blog Entries</b>
+<br><a href="http://www.dreamsyssoft.com/blog/blog.php?/archives/6-Create-a-simple-REST-web-service-with-Python.html">Blob Entry 1</a><br><a href="http://www.dreamsyssoft.com/blog/blog.php?/archives/5-How-to-use-HBase-Hadoop-Clustered.html">Blob Entry 2</a><br><a href="http://www.dreamsyssoft.com/blog/blog.php?/archives/7-Simple-REST-Web-Service-in-Java-with-Spring-and-CXF.html">Blob Entry 3</a><br><a href="http://www.dreamsyssoft.com/blog/blog.php?/archives/8-Simple-REST-Service-with-Node.js-and-Express.html">Blob Entry 4</a><br><a href="http://www.dreamsyssoft.com/blog/blog.php?/archives/9-REST-Service-with-Node.js,-MongoDB-and-Express.html">Blob Entry 5</a><br><a href="http://www.dreamsyssoft.com/blog/blog.php?/archives/10-Web-Interface-to-a-Node.js-REST-service-using-Jade,-Stylus,-jQuery-and-AJAX..html">Blob Entry 6</a>
+
+</td>
+
+</tr>
+
+</tbody></table>
+
+<br><br>
+
+
+
+<iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="UNIX%20&amp;%20Linux%20Shell%20Scripting%20%28If%20&amp;%20Else%29_files/postmessageRelay.html" id="oauth2relay600125869" name="oauth2relay600125869"></iframe></body></html>

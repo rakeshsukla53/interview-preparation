@@ -1,0 +1,11 @@
+for loops in Bash can be used in several ways:
+- iterating between two integers, a and b
+- iterating between two integers, a and b, and incrementing by c each time
+- iterating through the elements of an array, etc.
+
+
+
+looping || skipping || use of arithmetic operations || how to use for and if command
+
+for i in {1..100}; do    if (( $i % 2 !=  0 )); then   echo "Welcome $i times";   fi; done
+
