@@ -1,0 +1,1 @@
+/**/__twttr.receiveCount({"count":34,"url":"http:\/\/www.thegeekstuff.com\/2010\/01\/awk-introduction-tutorial-7-awk-print-examples\/"});

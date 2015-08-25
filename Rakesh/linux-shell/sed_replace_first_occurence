@@ -1,0 +1,11 @@
+sed 's/\bthe\b/this/1'
+
+Here I am replacing 'the' with 'this' through sed
+
+\b in regular expressions match word boundaries (i.e. the location between the first word character and non-word character):
+
+$ echo "bar embarassment" | sed "s/\bbar\b/no bar/g"
+no bar embarassment
+
+-for matching the exact word we can use word boundary. It is extremely simple to use
+

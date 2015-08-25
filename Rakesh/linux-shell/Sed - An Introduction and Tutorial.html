@@ -1,0 +1,4042 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US"><head><title>
+	Sed - An Introduction and Tutorial
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Description" content="This is the Grymoire's UNIX/Linux SED editor">
+<meta name="Keywords" content="sed, tutorial, UNIX, shell scripts, regular expressions, extended regular expressions, linux, regex">
+<meta name="Author" content="Bruce Barnett">
+<script src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/linkid.js" async="" type="text/javascript"></script><script async="" src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/cbgapi.loaded_1"></script><script src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/analytics.js" async=""></script><script async="" src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/cbgapi.loaded_0"></script><script gapi_processed="true" type="text/javascript" src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/plusone.js"></script>
+<link rel="canonical" href="http://www.grymoire.com/Unix/Sed.html">
+<link href="Sed%20-%20An%20Introduction%20and%20Tutorial_files/myCSS.css" rel="stylesheet" type="text/css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Place this tag in your head or just before your close body tag -->
+</head>
+<body>
+<div id="centerDoc">
+<h1><a name="Sed_-_An_Introduction_and_Tutorial_by_Bruce_Barnett">Sed - An Introduction and Tutorial by Bruce Barnett</a></h1><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px;"><iframe title="+1" data-gapiattached="true" src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/fastbutton.html" name="I0_1440458725959" id="I0_1440458725959" vspace="0" tabindex="0" style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" width="100%" frameborder="0"></iframe></div>
+
+<!-- INCLUDE TopLeader -->
+<script src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/adsbygoogle.js" defer="defer" async=""></script>
+<!-- TopLeader -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3246203470757260" data-ad-slot="7313086580"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<noscript>Your browser does not have Javascript enabled. I use Javascript for analytics, and to show ads which pay for the maintenance</noscript>
+<p><!-- hhmts start -->Last modified: Thu Apr 23 16:37:48 EDT 2015 <!-- hhmts end -->
+</p><h2><a name="Quick_Links" href="http://www.grymoire.com/Unix/Sed.html#TOC">Quick Links</a></h2>
+<table summary="Quick Links" border="1">
+<tbody><tr>
+<th colspan="3">Sed Commands</th>
+</tr>
+<tr>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-58">: label </a></td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-21"># comment </a></td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-35">{....} Block </a></td>
+</tr>
+
+<tr>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-48">= </a>- print line number</td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-40">a \ </a>- Append </td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-58">b label </a> - Branch</td>
+</tr>
+
+<tr>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-42">c \ - change</a></td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-30">d </a> and <a href="http://www.grymoire.com/Unix/Sed.html#uh-51">D </a> - Delete</td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-57">g </a> and <a href="http://www.grymoire.com/Unix/Sed.html#uh-57">G </a> - Get</td>
+</tr>
+
+<tr>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-55">h </a> and <a href="http://www.grymoire.com/Unix/Sed.html#uh-55">H </a> - Hold</td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-41">i \ </a>- Insert</td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-59a">l </a>- Look</td>
+</tr>
+
+<tr>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-51">n </a> and <a href="http://www.grymoire.com/Unix/Sed.html#uh-51">N </a>- Next</td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-31">p </a> and <a href="http://www.grymoire.com/Unix/Sed.html#uh-31">P </a>- Print</td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-34">q </a>- Quit</td>
+</tr>
+
+<tr>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-37">r filename </a>- Read File</td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-1">s/..../..../ </a>- Substitute</td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-59">t label </a>- Test</td>
+</tr>
+
+<tr>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-36">w filename </a>- Write Filename</td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-53">x </a>- eXchange</td>
+<td><a href="http://www.grymoire.com/Unix/Sed.html#uh-49">y/..../..../ </a>- Transform</td>
+</tr>
+</tbody></table>
+
+<table summary="pattern flags" border="1">
+<tbody><tr><th>Sed Pattern Flags</th></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-6">/g </a>- Global</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-10a">/I </a>- Ignore Case</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-9">/p </a>- Print</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-10">/w filename </a>- Write Filename</td></tr>
+</tbody></table>
+
+<table summary="comand line options" border="1">
+<tbody><tr><th colspan="2">Sed Command Line options</th></tr>
+<tr><th>Short Option (Long option)</th><th>Sed version</th></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-15"> -n </a></td><td>Classic</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-13"> -e script</a></td><td>Classic</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-16"> -f scriptfile </a></td><td>Classic</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-13"> -e script (--expression=script) </a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-16"> -f scriptfile (--file=scriptfile) </a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-19b"> -h (--help) </a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-15"> -n  (--quiet  --silent) </a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-19a"> -V (--version) </a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-4a"> -r (--regexp-extended)</a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62h"> -i[SUFFIX] (--in-place[=SUFFIX])</a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62f"> -l N (--line-length=N)</a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62j"> -b (--binary)</a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62g"> -s (--separate)</a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62m"> -z (--null-data)</a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62l"> -u (--unbuffered)</a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62i">  (--follow-symlinks)</a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62c">  (--posix)</a></td><td>GNU sed</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62h"> -i SUFFIX</a></td><td>Mac OS X, FreeBSD</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62f1"> -a</a></td><td>Mac OS X, FreeBSD</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62l"> -l</a></td><td>Max OS X, FreeBSD</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62f3"> -E</a></td><td>Mac OS X, FreeBSD</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62f3"> -r</a></td><td>FreeBSD</td></tr>
+<tr><td><a href="http://www.grymoire.com/Unix/Sed.html#uh-62f2"> -I SUFFIX</a></td><td>FreeBSD</td></tr>
+
+</tbody></table>
+
+<h3><a name="Table_of_Contents" href="http://www.grymoire.com/Unix/Sed.html#TOC">Table of Contents</a></h3>
+<p> <b>Note - You can click on the table of contents sections to jump to that section. </b>
+</p><p><b>Then click on the section header of any section to jump back to the table of contents. </b>
+</p><ul>
+<li><a href="http://www.grymoire.com/Unix/Sed.html#uh-0" name="toc-uh-0">The Awful Truth about sed</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-1" name="toc-uh-1">The essential command: s for substitution</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-2" name="toc-uh-2">The slash as a delimiter</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-3" name="toc-uh-3">Using &amp; as the matched string</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-4" name="toc-uh-4">Using \1 to keep part of the pattern</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-4a" name="toc-uh-4a">Extended Regular Expressions</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-5" name="toc-uh-5">Sed Pattern Flags</a>
+<ul>
+<li><a href="http://www.grymoire.com/Unix/Sed.html#uh-6" name="toc-uh-6">/g - Global replacement</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-7" name="toc-uh-7">Is sed recursive?</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-8" name="toc-uh-8">/1, /2, etc. Specifying which occurrence</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-9" name="toc-uh-9">/p - print</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-10" name="toc-uh-10">Write to a file with /w filename</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-10a" name="toc-uh-10a">/I - Ignore Case</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-11" name="toc-uh-11">Combining substitution flags</a>
+</li></ul>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-12" name="toc-uh-12">Arguments and invocation of sed</a>
+<ul>
+<li><a href="http://www.grymoire.com/Unix/Sed.html#uh-13" name="toc-uh-13">Multiple commands with  -e command</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-14" name="toc-uh-14">Filenames on the command line</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-15" name="toc-uh-15">sed -n: no printing</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-15a" name="toc-uh-15a">Using 'sed /pattern/'</a>
+<ul>
+<li><a href="http://www.grymoire.com/Unix/Sed.html#uh-15b" name="toc-uh-15b">Using 'sed -n /pattern/p' to duplicate the function of grep</a>
+</li></ul>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-16" name="toc-uh-16">sed -f scriptname</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-17" name="toc-uh-17">sed in shell scripts</a>
+<ul>
+<li><a href="http://www.grymoire.com/Unix/Sed.html#uh-18" name="toc-uh-18">Quoting multiple sed lines in the C shell</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-19" name="toc-uh-19">Quoting multiple sed lines in the Bourne shell</a>
+</li></ul>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-19a" name="toc-uh-19a">sed -V</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-19b" name="toc-uh-19b">sed -h</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-20" name="toc-uh-20">A sed interpreter script</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-21" name="toc-uh-21">Sed Comments</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-22" name="toc-uh-22">Passing arguments into a sed script</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-23" name="toc-uh-23">Using sed in a shell here-is document</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-24" name="toc-uh-24">Multiple commands and order of execution</a>
+</li></ul>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-25" name="toc-uh-25">Addresses and Ranges of Text</a>
+<ul>
+<li><a href="http://www.grymoire.com/Unix/Sed.html#uh-26" name="toc-uh-26">Restricting to a line number</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-27" name="toc-uh-27">Patterns</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-28" name="toc-uh-28">Ranges by line number</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-29" name="toc-uh-29">Ranges by patterns</a>
+</li></ul>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-30" name="toc-uh-30">Delete with d</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-31" name="toc-uh-31">Printing with p</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-32" name="toc-uh-32">Reversing the restriction with !</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-33" name="toc-uh-33">Relationships between d, p, and !</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-34" name="toc-uh-34">The q or quit command</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-35" name="toc-uh-35">Grouping with { and }</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-35a" name="toc-uh-35a">Operating in a pattern range except for the patterns</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-36" name="toc-uh-36">Writing a file with the 'w' command</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-37" name="toc-uh-37">Reading in a file with the 'r' command</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-38" name="toc-uh-38">SunOS and the # Comment Command</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-39" name="toc-uh-39">Adding, Changing, Inserting new lines</a>
+<ul>
+<li><a href="http://www.grymoire.com/Unix/Sed.html#uh-40" name="toc-uh-40">Append a line with 'a'</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-41" name="toc-uh-41">Insert a line with 'i'</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-42" name="toc-uh-42">Change a line with 'c'</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-43" name="toc-uh-43">Leading tabs and spaces in a sed script</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-44" name="toc-uh-44">Adding more than one line</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-45" name="toc-uh-45">Adding lines and the pattern space</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-46" name="toc-uh-46">Address ranges and the above commands</a>
+</li></ul>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-47" name="toc-uh-47">Multi-Line Patterns</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-48" name="toc-uh-48">Print line number with =</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-49" name="toc-uh-49">Transform with y</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-50" name="toc-uh-50">Displaying control characters with a l</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-51" name="toc-uh-51">Working with Multiple Lines</a>
+<ul>
+<li><a href="http://www.grymoire.com/Unix/Sed.html#uh-51a" name="toc-uh-51a">Matching three lines with sed</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-51b" name="toc-uh-51b">Matching patterns that span multiple lines</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-nl" name="toc-uh-nl">Using newlines in sed scripts</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-52" name="toc-uh-52">The Hold Buffer</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-53" name="toc-uh-53">Exchange with x</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-54" name="toc-uh-54">Example of Context Grep</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-55" name="toc-uh-55">Hold with h or H</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-56" name="toc-uh-56">Keeping more than one line in the hold buffer</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-57" name="toc-uh-57">Get with g or G</a>
+</li></ul>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-58" name="toc-uh-58">Flow Control</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-59" name="toc-uh-59">Testing with t</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-59a" name="toc-uh-59a">Debugging with l</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-60" name="toc-uh-60">An alternate way of adding comments</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-61" name="toc-uh-61">The poorly documented ;</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62" name="toc-uh-62">Passing regular expressions as arguments</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62a" name="toc-uh-62a">Inserting binary characters</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62b" name="toc-uh-62b">GNU sed Command Line arguments</a>
+<ul>
+<li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62c" name="toc-uh-62c">The -posix argument</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62d" name="toc-uh-62d">The --version argument</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62e" name="toc-uh-62e">The -h Help argument</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62f" name="toc-uh-62f">The -l Line Length Argument</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62g" name="toc-uh-62g">The -s Separate argument</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62h" name="toc-uh-62h">The -i in-place argument</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62i" name="toc-uh-62i">The --follow-symlinks argument</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62j" name="toc-uh-62j">The -b Binary argument</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62k" name="toc-uh-62k">The -r Extended Regular Expression argument</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62l" name="toc-uh-62l">The -u Unbuffered argument</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62m" name="toc-uh-62m">The -z Null Data argument</a>
+</li></ul>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62n" name="toc-uh-62n">FreeBSD Extensions</a>
+<ul>
+  <li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62n1" name="toc-uh-62n1">-a or delayed open</a>
+  </li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62n2" name="toc-uh-62n2">The -I in-place argument</a>
+  </li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62n3" name="toc-uh-62n3">-E or Extended Regular Expressions</a>
+</li></ul>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-62o" name="toc-uh-62o">Using word boundries</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-63" name="toc-uh-63">Command Summary</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-64" name="toc-uh-64">In Conclusion</a>
+</li><li><a href="http://www.grymoire.com/Unix/Sed.html#uh-65" name="toc-uh-65">More References</a>
+</li></ul>
+
+<p>Copyright 1994, 1995 Bruce Barnett and General Electric Company
+</p><p>Copyright 2001,2005,2007,2011,2013 Bruce Barnett
+</p><p>All rights reserved
+</p><p>You are allowed to print copies of this tutorial for your personal
+use, and link to this page, but you are not allowed to make electronic
+copies, or redistribute this tutorial in any form without permission.
+</p><p> Original version written in 1994 and published in the Sun Observer
+</p><h2><a name="Introduction_to_Sed" href="http://www.grymoire.com/Unix/Sed.html#TOC">Introduction to Sed</a></h2>
+<p>How to use sed, a special editor for modifying files automatically.
+If you want to write a program to make changes in a file, sed is the
+tool to use.
+
+</p><p>There are a few programs that are the real workhorse in the UNIX
+toolbox.
+These programs are simple to use for simple applications, yet have a
+rich set of commands for performing complex actions.
+Don't let the complex potential of a program keep you from making use
+of the simpler aspects. I'll start with
+the simple concepts and introduce the advanced topics later on.
+<br>
+When I first wrote this (in 1994), most versions of sed
+did not allow you to place comments inside the script.
+Lines starting with the '#' characters are comments.
+Newer versions of sed may support comments at the end of the line as well.
+</p><p>One way to think of this is that the old, "classic" version was 
+the basis of GNU, FreeBSD and Solaris verisons of sed. And to help you 
+understand what I had to work with, here is the <a href="http://docs.oracle.com/cd/E26502_01/html/E29030/sed-1b.html#scrolltoc">sed(1) manual page from Sun/Oracle</a>.
+</p><h2><a name="uh-0" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-0">The Awful Truth about sed</a></h2>
+<p>
+<i>Sed</i> is the ultimate <b>s</b>tream <b>ed</b>itor. 
+If that sounds strange, picture a stream flowing through a pipe.
+Okay, you can't see a stream if it's inside a pipe.
+That's what I get for attempting a flowing analogy.
+You want literature, read James Joyce.
+</p><p>Anyhow, 
+<i>sed</i> is a marvelous utility.
+Unfortunately, most people never learn its real power.
+The language is very simple, but the
+documentation is terrible. The Solaris on-line manual pages for
+<i>sed</i> are five pages long, and
+two of those pages describe the 34 different errors you can get.
+A program that spends as much space documenting the errors as it
+does
+documenting the language has a serious learning curve.
+</p><p>
+<b>Do not fret!</b> It is not your fault you don't understand
+<i>sed</i>. I will cover 
+<i>sed</i> completely.
+But I will describe the features in the order that I learned them.
+I didn't learn everything at once. You don't need to either.
+</p><h2><a name="uh-1" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-1">The essential command: s for substitution</a></h2>
+<p>
+<i>Sed</i> has several commands, but most people only learn the substitute command:
+<i>s</i>. The substitute command changes all occurrences of the regular
+expression into a new value. A simple example is changing
+"day" in the "old" file to
+"night" in the "new" file:
+
+</p><pre>sed s/day/night/ &lt;old &gt;new
+</pre>
+<p> Or another way (for UNIX beginners), 
+
+</p><pre>sed s/day/night/ old &gt;new
+</pre>
+
+<p>and for those who want to test this:
+
+</p><pre>echo day | sed s/day/night/ 
+</pre>
+
+<p>This will output "night".
+</p><p>I didn't put quotes around the argument because this example didn't need them.
+If you read my earlier tutorial <a href="http://www.grymoire.com/Unix/Quote.html">on quotes</a>, you would understand why it doesn't
+need quotes. However, I recommend you do use quotes.
+If you have meta-characters in the command, quotes are necessary.
+And if you aren't sure, it's a good habit, and I will henceforth quote future
+examples to emphasize the "best practice."
+Using the strong (single quote) character, that would be:
+
+</p><pre>sed 's/day/night/' &lt;old &gt;new
+</pre>
+
+<p> I must emphasize that the sed editor changes exactly what you tell it to.
+So if you executed
+
+</p><pre>echo Sunday | sed 's/day/night/'
+</pre>
+<p>
+This would output the word "Sunnight" because sed found the string "day" in the input.
+</p><p>
+Another important concept is that sed is line oriented. Suppose you have the input file:
+</p><pre>one two three, one two three
+four three two one
+one hundred
+</pre>
+<p>and you used the command
+</p><pre>sed 's/one/ONE/' &lt;file
+</pre>
+<p>The output would be
+</p><pre>ONE two three, one two three
+four three two ONE
+ONE hundred
+</pre>
+<p>Note that this changed "one" to "ONE" once on each line.
+The first line had "one" twice, but only the first occurrence was 
+changed.
+That is the default behavior. If you want something different, you will 
+have to use some of the options that are available. I'll explain them 
+later.
+</p><p>
+So let's continue. 
+</p><p>There are four parts to this substitute command:
+</p><pre>s	  Substitute command
+/../../	  Delimiter
+one	  Regular Expression Pattern Search Pattern
+ONE	  Replacement string
+</pre> 
+<p>The search pattern is on the left hand side and the replacement string is on the right hand side.
+</p><p>We've covered <a href="http://www.grymoire.com/Unix/Quote.html">quoting</a> and  <a href="http://www.grymoire.com/Unix/Regular.html"> regular expressions.</a>. That's 90% of the
+effort needed to learn the substitute command. 
+To put it another way, you already know how to handle 90% of the most
+frequent uses of <i>sed.</i> There are a ... few fine points that any future sed expert should know about.
+(You just finished section 1. There are only 63 more sections to cover. :-)
+Oh. And you may want to bookmark this page, .... just in case you don't finish.
+
+</p><h2><a name="uh-2" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-2">The slash as a delimiter</a></h2>
+<p>The character after the 
+<i>s</i> is the delimiter. It is conventionally  a slash, because 
+this is what
+<i>ed</i>, 
+<i>more</i>, and
+<i>vi</i> use.
+It can be anything you want, however.
+If you want to change a pathname that contains a slash -  say /usr/local/bin to /common/bin - you could
+use the backslash to quote the slash:
+
+</p><pre>sed 's/\/usr\/local\/bin/\/common\/bin/' &lt;old &gt;new
+</pre>
+<p>Gulp. Some call this a 'Picket Fence' and it's ugly. It is easier to read if you use an underline instead of a slash
+as a delimiter:
+
+</p><pre>sed 's_/usr/local/bin_/common/bin_' &lt;old &gt;new
+</pre>
+<p>Some people use colons:
+
+</p><pre>sed 's:/usr/local/bin:/common/bin:' &lt;old &gt;new
+</pre>
+<p>Others use the "|" character. 
+
+</p><pre>sed 's|/usr/local/bin|/common/bin|' &lt;old &gt;new
+</pre>
+<p>
+Pick one you like. As long as it's not in the string you are looking 
+for, anything goes. And remember that you need three delimiters. If you 
+get a "Unterminated `s' command" it's because you are missing one of 
+them.
+</p><h2><a name="uh-3" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-3">Using &amp; as the matched string</a></h2><p>Sometimes you want to search for a pattern and add some characters,
+like parenthesis,
+around or near
+the pattern you found. It is easy to do this if you are looking for a
+particular string:
+
+</p><pre>sed 's/abc/(abc)/' &lt;old &gt;new
+</pre>
+<p>
+This won't work if you don't know exactly what you will find.
+How can you put the string you found in the replacement string 
+if you don't know what it is?
+</p><p>The solution requires the special character
+"&amp;." It corresponds to the pattern found.
+
+</p><pre>sed 's/[a-z]*/(&amp;)/' &lt;old &gt;new
+</pre>
+<p>
+You can have any number of
+"&amp;" in the replacement string.
+You could also double a pattern, e.g.  the first number of a line:
+
+</p><pre>% echo "123 abc" | sed 's/[0-9]*/&amp; &amp;/'
+123 123 abc
+</pre>
+<p>Let me slightly amend this example.  Sed will match the first string,
+and make it as greedy as possible.  
+I'll cover that later.
+If you don't want it to be so greedy (i.e. limit the matching), you need to put restrictions on the match. 
+</p><p>The first match for '[0-9]*' is
+the first character on the line, as this matches zero or more
+numbers. So if the input was "abc 123" the output would be unchanged (well, except for a space before the letters).
+A better way to duplicate the number is to make sure it matches a number:
+
+</p><pre>% echo "123 abc" | sed 's/[0-9][0-9]*/&amp; &amp;/'
+123 123 abc
+</pre>
+<p> The string "abc" is unchanged, because it was not matched by the
+regular expression. If you wanted to eliminate "abc" from the output,
+you must expand the regular expression to match the rest of the line
+and explicitly exclude part of the expression using "(", ")" and "\1",
+which is the next topic.
+
+</p><h2><a name="uh-4a" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-4a">Extended Regular Expressions</a></h2>
+<p>Let me add a quick comment here because there is another way to write
+ the above script.
+"[0-9]*" matches zero or more numbers.
+"[0-9][0-9]*" matches one or more numbers.
+Another way to do this is to use the "+" meta-character and use the 
+pattern "[0-9]+" as the "+"
+is a special character when using "extended regular expressions."
+Extended regular expressions have more power, but sed scripts that 
+treated "+" as a normal character would break. Therefore you must 
+explicitly enable this extension with a command line option.
+</p><p>
+GNU sed turns this feature on if you use the "-r" command line option.
+So the above could also be written using
+</p><pre>% echo "123 abc" | sed -r 's/[0-9]+/&amp; &amp;/'
+123 123 abc
+</pre>
+<p>Mac OS X and FreeBSD uses <a href="http://www.grymoire.com/Unix/Sed.html#uh-62h2">-E</a> instead of <a href="http://www.grymoire.com/Unix/Sed.html#uh-62k">-r</a>.
+
+
+For more information on extended regular expressions, see <a href="http://www.grymoire.com/Unix/Regular.html">Regular Expressions</a> and the <a href="http://www.grymoire.com/Unix/Sed.html#uh-62k">description of the -r command line argument</a>
+
+</p><h2><a name="uh-4" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-4">Using \1 to keep part of the pattern</a></h2><p>I have already described the use of
+"(" 
+")" and
+"1" in my tutorial on <a href="http://www.grymoire.com/Unix/Regular.html">
+regular expressions.</a>
+To review, the escaped
+parentheses (that is, parentheses  with backslashes before them) 
+remember a substring of the characters matched by the regular 
+expression. You can use this to exclude part of the characters matched 
+by the regular expression.
+The
+"\1" is the first remembered pattern, and the
+"\2" is the second remembered pattern.
+Sed has up to nine remembered patterns.
+</p><p>
+If you wanted to keep the first word of a line, and delete the rest
+of the line,
+mark the important part with the parenthesis:
+
+</p><pre>sed 's/\([a-z]*\).*/\1/'
+</pre>
+<p>I should elaborate on this. Regular expressions are greedy, and try
+to match as much as possible. "[a-z]*" matches zero or more lower case
+letters, and tries to match as many characters as possible. The ".*" matches zero or
+more characters after the first match. Since the first one grabs all
+of the contiguous lower case letters, the second matches anything else. Therefore
+if you type
+
+</p><pre>echo abcd123 | sed 's/\([a-z]*\).*/\1/'
+</pre>
+<p> This will output "abcd" and delete the numbers.
+</p><p>If you want to switch two words around, you can remember two patterns
+and
+change the order around:
+
+</p><pre>sed 's/\([a-z]*\) \([a-z]*\)/\2 \1/'
+</pre>
+<p>Note the space between the two remembered patterns. This is used to
+make sure two words are found. However, this will do nothing if a
+single word is found, or any lines with no letters.
+You may want to insist that words have at least one letter by using
+
+</p><pre>sed 's/\([a-z][a-z]*\) \([a-z][a-z]*\)/\2 \1/'
+</pre>
+<p>or by using extended regular expressions (note that '(' and ')' no longer need to have a backslash):
+</p><pre>sed -r 's/([a-z]+) ([a-z]+)/\2 \1/' # Using GNU sed
+sed -E 's/([a-z]+) ([a-z]+)/\2 \1/' # Using Apple Mac OS X
+</pre>
+<p>The
+"\1" doesn't have to be in the replacement string (in the right hand side). It can be in the pattern
+you are searching for (in the left hand side).
+If you want to eliminate duplicated words, you can try:
+
+</p><pre>sed 's/\([a-z]*\) \1/\1/'
+</pre>
+<p>
+If you want to detect duplicated words, you can use 
+</p><pre>sed -n '/\([a-z][a-z]*\) \1/p'
+</pre>
+<p>or with extended regular expressions
+</p><pre>sed -rn '/([a-z]+) \1/p' # GNU sed
+sed -En '/([a-z]+) \1/p' # Mac OS X
+</pre>
+<p>This, when used as a filter, will print lines with duplicated words.
+</p><p>The numeric value can have up to nine values:
+"\1" thru
+"\9." 
+If you wanted to reverse the first three characters on a line, you can use
+</p><pre>sed 's/^\(.\)\(.\)\(.\)/\3\2\1/'
+</pre>
+<h2><a name="uh-5" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-5">Sed Pattern Flags</a></h2><p>You
+ can add additional flags after the last delimiter.
+You might have noticed I used a 'p' at the end of the previous 
+substitute command. I also added the '-n' option. Let me first cover the
+ 'p' and other pattern flags.
+These flags can specify what happens when a match is found.
+Let me describe them.
+</p><h2><a name="uh-6" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-6">/g - Global replacement</a></h2><p>Most UNIX utilities work on files, reading a line at a time.
+<i>Sed</i>, by default, is the same way.
+If you tell it to change a word, it will only change the first
+occurrence of the word on a line.
+You may want to make the change on every word on the line instead of
+the first. For an example, let's place parentheses around words on a
+line.
+Instead of using a pattern like
+"[A-Za-z]*" which won't match words like
+"won't," we will use a pattern,
+"[^ ]*," that matches everything except a space.
+Well, this will also match anything because 
+"*" means 
+<b>zero or more</b>. The current version of Solaris's 
+<i>sed</i> (as I wrote this) can get unhappy with patterns like this, and generate errors
+like
+"Output line too long"
+or even run forever.
+I consider this a bug, and have reported this to Sun.
+As a work-around, you must avoid matching the null string
+when using the
+"g" flag to 
+<i>sed</i>. A work-around example is:
+"[^ ][^ ]*." The following will put parenthesis around the first word:
+
+</p><pre>sed 's/[^ ]*/(&amp;)/' &lt;old &gt;new
+</pre>
+<p>
+If you want it to make changes for every word, add a 
+"g" after the last delimiter and use the work-around:
+
+</p><pre>sed 's/[^ ][^ ]*/(&amp;)/g' &lt;old &gt;new
+</pre>
+<h2><a name="uh-7" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-7">Is sed recursive?</a></h2>
+<p>
+<i>Sed</i> only operates on patterns found in the in-coming data.
+That is, the input line is read, and when a pattern is matched, the
+modified output is generated, and the
+<b>rest</b> of the input line is scanned. The
+"s" command will not scan the newly created output.
+That is, 
+you don't have to worry about expressions like:
+
+</p><pre>sed 's/loop/loop the loop/g' &lt;old &gt;new
+</pre>
+<p>
+This will not cause an infinite loop.
+If a second
+"s" command is executed, it could modify the results of a previous
+command. I will show you how to execute multiple commands later.
+</p><h2><a name="uh-8" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-8">/1, /2, etc. Specifying which occurrence</a></h2>
+<p>With no flags, the first matched substitution is changed.
+With the
+"g" option, all matches are changed.
+If you want to modify a particular pattern that is not the first one on
+the line, you could use 
+"\(" and
+"\)" to mark each pattern, and use
+"\1" to put the first pattern back unchanged. This next example
+keeps the first word on the line but deletes the second:
+
+</p><pre>sed 's/\([a-zA-Z]*\) \([a-zA-Z]*\) /\1 /' &lt;old &gt;new
+</pre>
+<p>Yuck. There is an easier way to do this. You can add a number after the
+substitution command to indicate you only want to match that particular
+pattern. Example:
+
+</p><pre>sed 's/[a-zA-Z]* //2' &lt;old &gt;new
+</pre>
+<p>
+You can combine a number with the g (global) flag. For instance, if you 
+want to leave the first word alone, but change the second, third, etc. 
+to be DELETED instead, use /2g:
+
+</p><pre>sed 's/[a-zA-Z]* /DELETED /2g' &lt;old &gt;new
+</pre>
+<p>I've heard that combining the number with the g command does not work
+ on The MacOS, and perhaps the FreeSBD version of sed as well.
+
+</p><p> Don't get /2 and \2 confused. The /2 is used at the end. \2 is used in inside the replacement field.
+</p><p>Note the space after the
+"*" character. Without the space, 
+<i>sed</i> will run a long, long time.
+(Note: this bug is probably fixed by now.)
+This is because the number flag and the
+"g" flag have the same bug.
+You should also be able to use the pattern
+
+</p><pre>sed 's/[^ ]*//2' &lt;old &gt;new
+</pre>
+<p>but this also eats CPU.
+If this works on your computer, and it does on some UNIX systems, you could 
+remove the encrypted password from the password file:
+
+</p><pre>sed 's/[^:]*//2' &lt;/etc/passwd &gt;/etc/password.new
+</pre>
+<p>But this didn't work for me the time I wrote this. Using
+"[^:][^:]*" as a work-around doesn't help because it won't match
+an non-existent password, and instead delete the third field, which is
+the user ID!
+Instead you have to use the ugly parenthesis:
+
+</p><pre>sed 's/^\([^:]*\):[^:]:/\1::/'  &lt;/etc/passwd &gt;/etc/password.new
+</pre>
+<p>You could also add a character to the first pattern so that it
+no longer matches the null pattern:
+
+</p><pre>sed 's/[^:]*:/:/2'  &lt;/etc/passwd &gt;/etc/password.new
+</pre>
+<p>The number flag is not restricted to a single digit. It can be any number
+from 1 to 512. If you wanted to add a colon after the 80th character
+in each line, you could type:
+
+</p><pre>sed 's/./&amp;:/80' &lt;file &gt;new
+</pre>
+<p>
+You can also do it the hard way by using 80 dots:
+
+</p><pre>sed 's/^................................................................................/&amp;:/' &lt;file &gt;new
+</pre>
+
+<h2><a name="uh-9" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-9">/p - print</a></h2><p>By default, 
+<i>sed</i> prints every line.
+If it makes a substitution, the new text is printed instead of the
+old one.
+If you use an optional argument to sed, 
+"sed -n," it will not, by default, print any new lines.
+I'll cover this and other options later.
+When the
+"-n" option is used, the
+"p" flag will cause the modified line to be printed.
+Here is one way to duplicate the function of
+<i>grep</i> with
+<i>sed</i>: 
+
+</p><pre>sed -n 's/pattern/&amp;/p' &lt;file
+</pre>
+<p>But a simpler version is described <a href="http://www.grymoire.com/Unix/Sed.html#uh-15b">later</a>
+
+</p><h2><a name="uh-10" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-10">Write to a file with /w filename</a></h2><p>There is one more flag that can follow the third delimiter.
+With it, you can specify a file that will receive the modified data.
+An example is the following, which will write all lines that start
+with an even number, followed by a space, to the file
+<i>even</i>: 
+<br>
+</p><pre>sed -n 's/^[0-9]*[02468] /&amp;/w even' &lt;file 
+</pre>
+
+<p>In this example, the output file isn't needed, as the
+input was not modified. 
+You must have exactly one space between the 
+<i>w</i> and the filename. You can also have ten files open with one
+instance of
+<i>sed</i>. This allows you to split up a stream of data into separate files.
+Using the previous example combined with multiple substitution
+commands described later, you could split a file into
+ten pieces depending on the last digit of the first number.
+You could also use this method to log error or debugging information
+to a special file.
+</p><h2><a name="uh-10a" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-10a">/I - Ignore Case</a></h2>
+<p>GNU has added another pattern flags - /I
+</p><p> This flag makes the pattern match case insensitive. This will match abc, aBc, ABC, AbC, etc.:
+</p><pre>sed -n '/abc/I p' &lt;old &gt;new
+</pre>
+<p>Note that a space after the '/I' and the  'p' (print) command 
+emphasizes that the 'p' is not a modifier of the pattern matching 
+process, , but a command to execute <b>after</b> the pattern matching.
+
+</p><h2><a name="uh-11" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-11">Combining substitution flags</a></h2>
+<p>You can combine flags when it makes sense. 
+Please note that the 
+"w" has to be the last flag.
+For example the following command works:
+
+</p><pre>sed -n 's/a/A/2pw /tmp/file' &lt;old &gt;new
+</pre>
+<p>Next I will discuss the options to 
+<i>sed</i>, and different ways to
+invoke
+<i>sed</i>. 
+</p><h2><a name="uh-12" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-12">Arguments and invocation of sed</a></h2><p>previously, I have only used one substitute command.
+If you need to make two changes, and you didn't want to read the
+manual, you could pipe together
+multiple 
+<i>sed</i> commands:
+
+</p><pre>sed 's/BEGIN/begin/' &lt;old | sed 's/END/end/' &gt;new
+</pre>
+<p>This used two processes instead of one. A 
+<i>sed</i> guru 
+never uses two processes when one can do.
+</p><h2><a name="uh-13" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-13">Multiple commands with  -e command</a></h2><p>One method of combining multiple commands is to use a
+<i>-e</i> before each command:
+
+</p><pre>sed -e 's/a/A/' -e 's/b/B/' &lt;old &gt;new
+</pre>
+<p>A
+"-e" isn't needed in the earlier examples because
+<i>sed</i> knows that there must always be one command.
+If you give
+<i>sed</i> one argument, it must be a command, and
+<i>sed</i> will edit the data read from standard input.
+</p><p>
+The long argument version is 
+</p><pre>sed --expression='s/a/A/' --expression='s/b/B/' &lt;old &gt;new
+</pre>
+<p>Also see <a href="http://www.grymoire.com/Unix/Sed.html#uh-19">Quoting multiple sed lines in the Bourne shell</a>
+
+</p><h2><a name="uh-14" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-14">Filenames on the command line</a></h2><p>You can specify files on the command line if you wish.
+If there is more than one argument to
+<i>sed</i> that does not start with an option, it must be a filename.
+This next example will count the number of lines in three files
+that don't begin with a
+"#:" 
+
+</p><pre>sed 's/^#.*//'  f1 f2 f3 | grep -v '^$' | wc -l
+</pre>
+<p>Let's break this down into pieces. The
+<i>sed</i> substitute command changes every line that starts with a
+"#" into a blank line.
+<i>Grep</i> was used to filter out (delete) empty lines.
+<i>Wc</i> counts the number of lines left.
+<i>Sed</i> has more commands that make
+<i>grep</i> unnecessary. And <i>grep -c</i> can replace <i>wc -l</i>. I'll discuss how you can duplicate some of <i>grep</i>'s functionality later. 
+</p><p>Of course you could write the last example using the
+"-e" option:
+
+</p><pre>sed -e 's/^#.*//'  f1 f2 f3 | grep -v '^$' | wc -l
+</pre>
+<p>There are two other options to 
+<i>sed.</i> 
+</p><h2><a name="uh-15" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-15">sed -n: no printing</a></h2><p>The
+"-n" option will not print anything unless an explicit request to print 
+is found. I mentioned the
+"/p" flag to the substitute command as one way to turn printing back on.
+Let me clarify this. The command
+
+</p><pre>sed  's/PATTERN/&amp;/p' file
+</pre>
+<p>acts like the
+<i>cat</i> program if PATTERN is not in the file: e.g. nothing is changed.
+If PATTERN is in the file, then each line that has this is printed twice.
+Add the
+"-n" option and the example acts like grep:
+
+</p><pre>sed -n 's/PATTERN/&amp;/p' file
+</pre>
+<p>
+Nothing is printed, except those lines with PATTERN included.
+</p><p>The long argument of the -n command is either
+</p><pre>sed --quiet 's/PATTERN/&amp;/p' file
+</pre>
+<p>or
+</p><pre>sed --silent 's/PATTERN/&amp;/p' file
+</pre>
+<h2><a name="uh-15a" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-15a">Using 'sed /pattern/'</a></h2>
+<p>
+<i>Sed</i> has the ability to specify which lines are to be examined and/or modified, by specifying 
+<a href="http://www.grymoire.com/Unix/Sed.html#uh-15b">addresses</a> 
+before the command.
+I will just describe the simplest version for now - the /PATTERN/ 
+address. When used, only lines that match the pattern are given the 
+command after the address. Briefly, when used with the /p flag, matching
+ lines are printed twice:
+</p><pre>sed '/PATTERN/p' file
+</pre>
+<p> And of course PATTERN is any regular expression.
+</p><p>
+Please note that if you do not include a command, such as the "p" for print, you will get an error. 
+When I type
+</p><pre>echo abc | sed '/a/'
+</pre>
+<p> I get the error
+</p><pre>sed: -e expression #1, char 3: missing command
+</pre>
+<p>
+Also, you don't need to, but I recommend that you place a space after 
+the pattern and the command. This will help you distinquish between 
+flags that modify the pattern matching, and commands to execute after 
+the pattern is matched. Therefore I recommend this style:
+</p><pre>sed '/PATTERN/ p' file
+</pre>
+<h2><a name="uh-15b" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-15b">Using 'sed -n /pattern/p' to duplicate the function of grep</a></h2>
+<p>If you want to duplicate the functionality of grep, combine the -n (noprint) option with the /p print flag:
+</p><pre>sed -n '/PATTERN/p' file
+</pre>
+<h2><a name="uh-16" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-16">sed -f scriptname</a></h2><p>If you have a large number of 
+<i>sed</i> commands, you can put them into a file and use
+
+</p><pre>sed -f sedscript &lt;old &gt;new
+</pre>
+<p>where 
+<i>sedscript</i> could look like this:
+
+</p><pre># sed comment - This script changes lower case vowels to upper case
+s/a/A/g
+s/e/E/g
+s/i/I/g
+s/o/O/g
+s/u/U/g
+</pre>
+<p>When there are several commands in one file,
+each 
+command must be on a separate line.
+</p><p>The long argument version is
+</p><pre>sed --file=sedscript &lt;old &gt;new
+</pre>
+<p>Also see <a href="http://www.grymoire.com/Unix/Sed.html#uh-20">here on writing a script that executes sed directly</a>
+</p><h2><a name="uh-17" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-17">sed in shell scripts</a></h2><p>If you have many commands and they won't fit neatly on one line, you
+can break up the line using a backslash:
+
+</p><pre>sed -e 's/a/A/g' \
+    -e 's/e/E/g' \
+    -e 's/i/I/g' \
+    -e 's/o/O/g' \
+    -e 's/u/U/g'  &lt;old &gt;new
+</pre>
+
+<h2><a name="uh-18" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-18">Quoting multiple sed lines in the C shell</a></h2><p>You can have a large, multi-line 
+<i>sed</i> script in the C shell, but you must tell the C shell that the quote is
+continued across several lines.
+This is done by placing a backslash at the end of each line:
+
+</p><pre>#!/bin/csh -f
+sed 's/a/A/g  \
+s/e/E/g \
+s/i/I/g \
+s/o/O/g \
+s/u/U/g'  &lt;old &gt;new
+</pre>
+
+<h2><a name="uh-19" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-19">Quoting multiple sed lines in the Bourne shell</a></h2>
+<p>The Bourne shell makes this easier as a quote can cover several lines:
+
+</p><pre>#!/bin/sh
+sed '
+s/a/A/g 
+s/e/E/g 
+s/i/I/g 
+s/o/O/g 
+s/u/U/g'  &lt;old &gt;new
+</pre>
+
+<h2><a name="uh-19a" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-19a">sed -V</a></h2>
+<p>The -V option will print the version of sed you are using. The long argument of the command is
+</p><pre>sed --version
+</pre>
+<h2><a name="uh-19b" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-19b">sed -h</a></h2>
+<p>The -h option will print a summary of the sed commands. The long argument of the command is
+</p><pre>sed --help
+</pre>
+<h2><a name="uh-20" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-20">A sed interpreter script</a></h2><p>Another way of executing 
+<i>sed</i> is to use an interpreter script.
+Create a file that contains:
+<br><br>#!/bin/sed -f<br>
+s/a/A/g<br>
+s/e/E/g<br>
+s/i/I/g<br>
+s/o/O/g<br>
+s/u/U/g<br>
+
+</p><p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/CapVowel.sed">CapVowel.sed</a><br>
+If this script was stored in a file with the name
+"CapVowel" and was executable, you could use it with the simple command:
+
+</p><pre>CapVowel &lt;old &gt;new
+</pre>
+
+<h2><a name="uh-21" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-21">Comments</a></h2><p>
+<i>Sed</i> comments are lines where the first non-white character is a
+"#." On many systems, 
+<i>sed</i> can have only one comment, and it must be the first line of the script.
+On the Sun (1988 when I wrote this),
+you can have several comment lines anywhere in the script.
+Modern versions of Sed support this.
+If the first line contains exactly
+"#n" then this does the same thing as the
+"-n" option: turning off printing by default.
+This could not done with a
+<i>sed</i> interpreter script, because the first line must start with 
+"#!/bin/sed -f" as 
+I think
+"#!/bin/sed -nf" 
+generated an error. It worked when I first wrote this (2008).
+Note that 
+"#!/bin/sed -fn" 
+does not work because sed thinks the filename of the script is "n".
+
+However,
+</p><pre>"#!/bin/sed -nf" 
+</pre>
+<p>does work.
+
+</p><h2><a name="uh-22" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-22">Passing arguments into a sed script</a></h2><p>Passing a word into a shell script that calls 
+<i>sed</i> is easy if you remembered <a href="http://www.grymoire.com/Unix/Quote.html">my tutorial on the UNIX quoting mechanism.</a>
+To review, you use the single quotes to turn quoting on and off.
+A simple shell script that uses
+<i>sed</i> to emulate grep is:
+<br><br>#!/bin/sh<br>
+sed -n 's/'$1'/&amp;/p'<br>
+<br>
+However - there is a problem with this script.
+If you have a space as an argument, the script would cause a syntax error
+A better version would protect from this happening:
+
+<br><br></p><pre>#!/bin/sh
+sed -n 's/'"$1"'/&amp;/p'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sedgrep.sed">sedgrep.sed</a><br>
+If this was stored in a file called
+<i>sedgrep</i>, you could type
+
+</p><pre>sedgrep '[A-Z][A-Z]' &lt;file
+</pre>
+<p>
+This would allow sed to act as the grep command.
+</p><h2><a name="uh-23" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-23">Using sed in a shell here-is document</a></h2><p>You can use 
+<i>sed</i> to prompt the user for some parameters and then create a file with
+those parameters filled in.
+You could create a file with dummy values placed inside it, and use
+<i>sed</i> to change those dummy values. A simpler way is to use the
+"here is" document, which uses part of the shell script as if it were standard input:
+</p><pre>#!/bin/sh
+echo -n 'what is the value? '
+read value
+sed  's/XYZ/'$value'/' &lt;&lt;EOF
+The value is XYZ
+EOF
+</pre>
+<p>
+When executed, the script says:
+
+</p><pre>what is the value?
+</pre>
+<p>If you type in
+"123," the next line will be:
+
+</p><pre>The value is 123
+</pre>
+<p>I admit this is a contrived example. 
+"Here is" documents can have values evaluated without the use of sed. This
+example does the same thing:
+
+</p><pre>#!/bin/sh
+echo -n 'what is the value? '
+read value
+cat &lt;&lt;EOF
+The value is $value
+EOF
+</pre>
+<p>However, combining 
+"here is" documents with 
+<i>sed</i> can be useful for some complex cases.
+<br>
+Note that
+<br><br>
+sed  's/XYZ/'$value'/' &lt;&lt;EOF<br>
+<br>
+will give a syntax error if the user types an answer that contains a space, like "a b c".
+Better form would be to put double quotes around the evaluation of the value:
+</p><pre>#!/bin/sh
+echo -n 'what is the value? '
+read value
+sed  's/XYZ/'"$value"'/' &lt;&lt;EOF
+The value is XYZ
+EOF
+</pre>
+<p>I covered this in my <a href="http://www.grymoire.com/unix/Quote.html">tutorial on quotation marks</a>.
+<br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_hereis.sed">sed_hereis.sed</a><br>
+
+</p><h2><a name="uh-24" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-24">Multiple commands and order of execution</a></h2><p>As we explore more of the commands of
+<i>sed</i>, the commands will become complex, and the actual sequence can be
+confusing.
+It's really quite simple. Each line is read in. 
+Each command, in order specified by the user, has a chance to
+operate on the input line.
+After the substitutions are made, the next command has a chance
+to operate on the same line, which may have been modified by earlier
+commands.
+If you ever have a question, the best way to learn what will happen
+is to create a small example. If a complex command doesn't work, make
+it simpler. If you are having problems getting a complex script
+working, break it up into two smaller scripts and pipe the two scripts together.
+</p><h2><a name="uh-25" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-25">Addresses and Ranges of Text</a></h2><p>You have only learned one command, and you can see how
+powerful
+<i>sed</i> is.
+However, all it is doing is a
+<i>grep</i> and substitute.
+That is, the substitute command is treating each line
+by itself, without caring about nearby lines.
+What would be useful is the ability to restrict the operation
+to certain lines. Some useful restrictions might be:
+</p><dl><dd><br>
+
+<ul>
+<li>Specifying a line by its number.<br>
+</li><li>Specifying a range of lines by number.<br>
+</li><li>All lines containing a pattern.<br>
+</li><li>All lines from the beginning of a file to a regular expression<br>
+</li><li>All lines from a regular expression to the end of the file.<br>
+</li><li>All lines between two regular expressions.<br>
+</li></ul>
+</dd></dl><p>
+<i>Sed</i> can do all that and more.
+Every command in
+<i>sed</i> can be proceeded by an address, range or restriction
+like the above examples. The restriction or address immediately
+precedes the command:
+</p><dl><dd><i>restriction</i> <i>command</i><br>
+
+</dd></dl>
+<h2><a name="uh-26" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-26">Restricting to a line number</a></h2><p>The simplest restriction is a line number. If you wanted to delete the
+first number on line 3, just add a
+"3" before the command:
+
+</p><pre>sed '3 s/[0-9][0-9]*//' &lt;file &gt;new
+</pre>
+
+<h2><a name="uh-27" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-27">Patterns</a></h2><p>Many UNIX utilities like
+<i>vi</i> and
+<i>more</i> use a slash to search for a regular expression.
+<i>Sed</i> uses the same convention, provided you terminate the expression with a
+slash.
+To delete the first number on all lines that
+start with a
+"#," use:
+
+</p><pre>sed '/^#/ s/[0-9][0-9]*//'
+</pre>
+<p>I placed a space after the 
+"/<i>expression</i>/" so it is easier to read. It isn't necessary, but
+without it the command is harder to fathom.
+<i>Sed</i> does provide a few extra options when specifying regular expressions.
+But I'll discuss those later. 
+If the expression starts with a backslash, the next character is the
+delimiter. To use a comma instead of a slash, use:
+
+</p><pre>sed '\,^#, s/[0-9][0-9]*//'
+</pre>
+<p>The main advantage of this feature is searching for slashes.
+Suppose you wanted to search for the string 
+"/usr/local/bin" and you wanted to change it for
+"/common/all/bin." You could use the backslash to escape the slash:
+
+</p><pre>sed '/\/usr\/local\/bin/ s/\/usr\/local/\/common\/all/'
+</pre>
+<p>
+It would be easier to follow if you used an underline instead of
+a slash as a search. This example uses the underline in both the
+search command
+and the substitute command:
+
+</p><pre>sed '\_/usr/local/bin_ s_/usr/local_/common/all_'
+</pre>
+<p>
+This illustrates why 
+<i>sed</i> scripts get the reputation for obscurity.
+I could be perverse and show you the example that will search for all
+lines that start with a
+"g," and change each
+"g" on that line to an
+"s:" 
+
+</p><pre>sed '/^g/s/g/s/g'
+</pre>
+<p>
+Adding a space and using an underscore after the substitute command
+makes this 
+<b>much</b> easier to read:
+
+</p><pre>sed '/^g/ s_g_s_g'
+</pre>
+<p>
+Er, I take that back. It's hopeless. 
+There is a lesson here: Use comments liberally in a
+<i>sed</i> script.
+You may have to remove the comments to run the script under a
+different (older) operating system, but you now know how to write a 
+<i>sed</i> script to do that very easily!
+Comments are a Good Thing.
+You may have understood the script perfectly when you wrote it. 
+But six months from now it could look like modem noise. And if you don't
+ understand that reference, imagine an 8-month-old child typing on a 
+computer.
+</p><h2><a name="uh-28" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-28">Ranges by line number</a></h2><p>You can specify a range on line numbers by inserting a comma between
+the numbers. To restrict a substitution to the first 100 lines, you
+can use:
+
+</p><pre>sed '1,100 s/A/a/'
+</pre>
+<p>
+If you know exactly how many lines are in a file, you can 
+explicitly state that number to perform the substitution on the rest
+of the file. In this case, assume you used
+<i>wc</i> to find out there are 532 lines in the file:
+
+</p><pre>sed '101,532 s/A/a/'
+</pre>
+<p>
+An easier way is to use the special character
+"$," which means the last line in the file.
+
+</p><pre>sed '101,$ s/A/a/'
+</pre>
+<p>
+The
+"$" is one of those conventions that mean
+"last" in utilities like
+<i>cat -e</i>, 
+<i>vi</i>, and
+<i>ed</i>. 
+"cat -e" 
+Line numbers are cumulative if several files are edited. That is,
+
+</p><pre>sed '200,300 s/A/a/' f1 f2 f3 &gt;new
+</pre>
+<p>
+is the same as
+
+</p><pre>cat f1 f2 f3 | sed '200,300 s/A/a/' &gt;new
+</pre>
+
+<h2><a name="uh-29" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-29">Ranges by patterns</a></h2><p>You can specify two regular expressions as the range.
+Assuming a
+"#" starts a comment, you can search for a keyword,
+remove all comments until you see the second keyword.
+In this case the two keywords are
+"start" and
+"stop:" 
+
+</p><pre>sed '/start/,/stop/ s/#.*//'
+</pre>
+<p>The first pattern turns on a flag that tells
+<i>sed</i> to perform the substitute command on every line.
+The second pattern turns off the flag.
+If the 
+"start" and
+"stop" pattern occurs twice, the substitution is done both times.
+If the
+"stop" pattern is missing, the flag is never turned off, and the
+substitution
+will be performed on every line until the end of the file.
+</p><p>You should know that if the 
+"start"
+pattern is found, the substitution occurs on the same line that contains 
+"start."
+This turns on a switch, which is line oriented. That is,
+the next line is read and the substitute command is checked.
+If it contains
+"stop"
+the switch is turned off. 
+Switches are line oriented, and not word oriented.
+</p><p>You can combine line numbers and regular expressions.
+This example will remove comments from the beginning of the file until
+it finds the keyword
+"start:" 
+
+</p><pre>sed -e '1,/start/ s/#.*//'
+</pre>
+<p>
+This example will remove comments everywhere except the lines
+<b>between</b> the two keywords:
+
+</p><pre>sed -e '1,/start/ s/#.*//' -e '/stop/,$ s/#.*//'
+</pre>
+<p>
+The last example has a range that overlaps the
+"/start/,/stop/" range, as both ranges operate on the lines that contain the keywords.
+I will show you later how to restrict a command up to, 
+<b>but not including</b> the line containing the specified pattern.
+It is in <a href="http://www.grymoire.com/Unix/Sed.html#uh-35a">Operating in a pattern range except for the patterns</a>
+But I have to cover some more basic principles.
+</p><p>Before I start discussing the various commands, I should explain that
+some commands cannot operate on a range of lines. I will let you know
+when I mention the commands. In this next section I will describe three commands, one 
+of which cannot operate on a range.
+</p><h2><a name="uh-30" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-30">Delete with d</a></h2>
+<p>Using ranges can be confusing, so you should expect to do some
+experimentation
+when you are trying out a new script. 
+A useful command deletes 
+every line that matches the restriction: 
+"d." If you want to look at the first 10 lines of a file, you can use:
+
+</p><pre>sed '11,$ d' &lt;file 
+</pre>
+<p>
+which is similar in function to the
+<i>head</i> command.
+If you want to chop off the header of a mail message, which is
+everything up to the first blank line, use:
+
+</p><pre>sed '1,/^$/ d' &lt;file
+</pre>
+<p>
+You can duplicate the function of the
+<i>tail</i> command, assuming you know the length of a file.
+<i>Wc</i> can count the lines, and
+<i>expr</i> can subtract 10 from the number of lines.
+A Bourne shell script to look at the last 10 lines of a file 
+might look like this:
+<br><br>#!/bin/sh<br>
+#print last 10 lines of file<br>
+# First argument is the filename<br>
+lines=`wc -l $1 | awk '{print $1}' `<br>
+start=`expr $lines - 10`<br>
+sed "1,$start d" $1<br>
+
+</p><p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_tail.sh">sed_tail.sh</a><br>
+The range for deletions can be regular expressions pairs to mark the
+begin and end of the operation.
+Or it can be a single regular expression.
+Deleting all lines that start with a
+"#" is easy:
+
+</p><pre>sed '/^#/ d'
+</pre>
+<p>
+Removing comments and blank lines takes two commands.
+The first removes every character from the
+"#" to the end of the line, and the second deletes all blank lines:
+
+</p><pre>sed -e 's/#.*//' -e '/^$/ d'
+</pre>
+<p>
+A third one should be added to remove all blanks and tabs
+immediately before the end of line:
+
+</p><pre>sed -e 's/#.*//' -e 's/[ ^I]*$//' -e '/^$/ d' 
+</pre>
+<p>
+The character
+"^I" is a 
+<i>CTRL-I</i> or tab character.
+You would have to explicitly type in the tab.
+Note the order of operations above, which is in that order for a very
+good reason.
+Comments might start
+in the middle of a line, with white space characters before them.
+Therefore comments are first removed from a line, potentially leaving
+white space characters that were before the comment.
+The second command removes all trailing blanks, so
+that lines that are now blank are
+converted to empty lines.
+The last command deletes empty lines.
+Together, the three commands remove all lines containing only
+comments, tabs or spaces.
+</p><p>This demonstrates the pattern space
+<i>sed</i> uses to operate on a line.
+The actual operation 
+<i>sed</i> uses is:
+</p><dl><dd><br>
+
+<ul>
+<li>Copy the input line into the pattern space.<br>
+</li><li>Apply the first <br>
+<i>sed</i> command on the pattern space, if the address restriction is true.<br>
+</li><li>Repeat with the next sed expression, again<br>
+operating on the pattern space.<br>
+</li><li>When the last operation is performed, write out the pattern space<br>
+and read in the next line from the input file.<br>
+</li></ul>
+</dd></dl>
+<h2><a name="uh-31" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-31">Printing with p</a></h2><p>Another useful command is the print command: 
+"p." If
+<i>sed</i> wasn't started with an
+"-n" option, the
+"p" command will duplicate the input. The command
+
+</p><pre>sed 'p'
+</pre>
+<p>
+will duplicate every line. If you wanted to double every empty line,
+use:
+
+</p><pre>sed '/^$/ p'
+</pre>
+<p>
+Adding the 
+"-n" option turns off printing unless you request it.
+Another way of duplicating
+<i>head</i>'s functionality is to print only the lines you want.
+This example prints the first 10 lines:
+
+</p><pre>sed -n '1,10 p' &lt;file
+</pre>
+<p>
+<i>Sed</i> can act like
+<i>grep</i> by combining the print operator to function on all lines that 
+match a regular expression:
+
+</p><pre>sed -n '/match/ p' 
+</pre>
+<p>
+which is the same as:
+
+</p><pre>grep match
+</pre>
+<h2><a name="uh-32" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-32">Reversing the restriction with !</a></h2><p>Sometimes you need to perform an action on every line except 
+those that match a regular expression, or those outside of a range of
+addresses. The
+"!" character, which often means
+<i>not</i> in UNIX utilities, inverts the address restriction.
+You remember that
+
+</p><pre>sed -n '/match/ p'
+</pre>
+<p>
+
+acts like the 
+<i>grep</i> command. The
+"-v" option to
+<i>grep</i> prints all lines that don't contain the pattern.
+<i>Sed</i> can do this with
+
+</p><pre>sed -n '/match/ !p' &lt;/tmp/b
+</pre>
+
+<h2><a name="uh-33" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-33">Relationships between d, p, and !</a></h2><p>As you may have noticed, there are often several ways to 
+solve the same problem with 
+<i>sed</i>. This is because 
+<i>print</i> and
+<i>delete</i> are opposite functions, and
+it appears that
+"!p" is similar to
+"d," while
+"!d" is similar to 
+"p." I wanted to test this, so I created a 20 line file, and tried every
+different combination.
+The following table, which shows the results, 
+demonstrates the difference:
+
+</p><table summary="relations between d, p, and !" border="">
+<tbody><tr>
+<td colspan="4" align="center">Relations between d, p, and !</td>
+</tr>
+<tr>
+<th>Sed</th>
+<th>Range</th>
+<th>Command</th>
+<th>Results</th>
+</tr>
+<tr><td colspan="4"></td></tr>
+<tr>
+<td>sed -n</td> 
+<td>1,10</td>
+<td>p</td>
+<td>Print first 10 lines</td>
+</tr>
+<tr>  
+<td>sed -n</td>
+<td>11,$</td>
+<td>!p</td>
+<td>Print first 10 lines</td>
+</tr>
+<tr>
+<td>  sed</td>
+<td>1,10</td>
+<td>!d</td>
+<td>Print first 10 lines</td>
+</tr>
+<tr>  
+<td>sed</td>
+<td>11,$</td>
+<td>d</td>
+<td>Print first 10 lines</td>
+</tr>
+<tr><td colspan="4"></td></tr>
+<tr>  
+<td>sed -n</td>
+<td>1,10</td>
+<td>!p</td>
+<td>Print last 10 lines</td>
+</tr>
+<tr>  
+<td>sed -n</td>
+<td>11,$</td>
+<td>p</td>
+<td>Print last 10 lines</td>
+</tr>
+<tr>  
+<td>sed</td>
+<td>1,10</td>
+<td>d</td>
+<td>Print last 10 lines</td>
+</tr>
+<tr>  
+<td>sed</td>
+<td>11,$</td>
+<td>!d</td>
+<td>Print last 10 lines</td>
+</tr>
+<tr><td colspan="4"></td></tr>
+<tr>  
+<td>sed -n</td>
+<td>1,10</td>
+<td>d</td>
+<td>Nothing printed</td>
+</tr>
+<tr>  
+<td>sed -n</td>
+<td>1,10</td>
+<td>!d</td>
+<td>Nothing printed</td>
+</tr>
+<tr>  
+<td>sed -n</td>
+<td>11,$</td>
+<td>d</td>
+<td>Nothing printed</td>
+</tr>
+<tr>  
+<td>sed -n</td>
+<td>11,$</td>
+<td>!d</td>
+<td>Nothing printed</td>
+</tr>
+<tr><td colspan="4"></td></tr>
+<tr>  
+<td>sed</td>
+<td>1,10</td>
+<td>p</td>
+<td>Print first 10 lines twice, then next 10 lines once</td>
+</tr><tr>
+<td>sed</td>
+<td>11,$</td>
+<td>!p</td>
+<td>Print first 10 lines twice, then last 10 lines once</td>
+</tr>
+<tr><td colspan="4"></td></tr>
+<tr>  
+<td>sed</td>
+<td>1,10</td>
+<td>!p</td>
+<td>Print first 10 lines once, then last 10 lines twice</td>
+</tr>
+<tr>  
+<td>sed</td>
+<td>11,$</td>
+<td>p</td>
+<td>Print first 10 lines once, then last 10 lines twice</td>
+</tr>
+</tbody></table>
+<p>This table shows that the following commands are identical:
+
+</p><pre>sed -n '1,10 p'
+sed -n '11,$ !p'
+sed '1,10 !d'
+sed '11,$ d'
+</pre>
+<p>
+It also shows that the
+"!" command "inverts" the address range, operating on the other lines.
+</p><h2><a name="uh-34" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-34">The q or quit command</a></h2><p>There is one more simple command that can restrict the changes to a
+set of lines. It is the
+"q" command: quit.
+the third way to duplicate the head command is:
+
+</p><pre>sed '11 q'
+</pre>
+<p>
+which quits when the eleventh line is reached.
+This command is most useful when you wish to abort
+the editing after some condition is reached.
+</p><p>The
+"q" command is the one command that does not take a range of addresses.
+Obviously the command
+
+</p><pre>sed '1,10 q'
+</pre>
+<p>
+cannot quit 10 times. Instead
+
+</p><pre>sed '1 q'
+</pre>
+<p>
+or
+
+</p><pre>sed '10 q'
+</pre>
+<p>
+is correct.
+
+</p><h2><a name="uh-35" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-35">Grouping with { and }</a></h2><p>The curly braces, 
+"{" and
+"}," are used to group the
+commands.
+</p><p>Hardly worth the buildup. All that prose and the solution is just
+matching squiggles. Well, there is one complication.
+Since each 
+<i>sed</i> command must start on its own line, the curly braces and the nested
+<i>sed</i> commands must be on separate lines.
+</p><p>Previously, I showed you how to remove comments starting with a 
+"#." If you wanted to restrict the removal to lines between special
+"begin" and
+"end" key words, you could use:
+<br><br></p><pre>#!/bin/sh
+# This is a Bourne shell script that removes #-type comments
+# between 'begin' and 'end' words.
+sed -n '
+	/begin/,/end/ {
+	     s/#.*//
+	     s/[ ^I]*$//
+	     /^$/ d
+	     p
+	}
+'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_begin_end.sh">sed_begin_end.sh</a><br>
+These braces can be nested, which allow you to combine address ranges.
+You could perform the same action as before, but limit the change to
+the first 100 lines:
+<br><br></p><pre>#!/bin/sh
+# This is a Bourne shell script that removes #-type comments
+# between 'begin' and 'end' words.
+sed -n '
+	1,100 {
+		/begin/,/end/ {
+		     s/#.*//
+		     s/[ ^I]*$//
+		     /^$/ d
+		     p
+		}
+	}
+'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_begin_end1.sh">sed_begin_end1.sh</a><br>
+You can place a
+"!" before a set of curly braces.
+This inverts the address, which removes comments from 
+all lines 
+<b>except</b> those between the two reserved words:
+<br><br>
+</p><pre>#!/bin/sh
+sed '
+	/begin/,/end/ !{
+	     s/#.*//
+	     s/[ ^I]*$//
+	     /^$/ d
+	     p
+	}
+'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_begin_end2.sh">sed_begin_end2.sh</a><br>
+</p><h2><a name="uh-35a" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-35a">Operating in a pattern range except for the patterns</a></h2>
+<p>You may remember that I mentioned you can do a substitute on a 
+pattern range, like changing "old" to "new" between a begin/end pattern:
+
+</p><pre>#!/bin/sh
+sed '
+	/begin/,/end/ s/old/new/
+'
+</pre>
+<p>Another way to write this is to use the curly braces for grouping:
+</p><pre>#!/bin/sh
+sed '
+	/begin/,/end/ {
+	    s/old/new/
+	}
+'
+</pre>
+<p>I think this makes the code clearer to understand, and easier to modify, as you will see below.
+</p><p>If you did not want to make any changes where the word "begin" 
+occurred, you could simple add a new condition to skip over that line:
+</p><pre>#!/bin/sh
+sed '
+	/begin/,/end/ {
+	    /begin/n # skip over the line that has "begin" on it
+	    s/old/new/
+	}
+'
+</pre>
+<p>However, skipping over the line that has "end" is trickier. If you 
+use the same method you used for "begin" then the sed engine will not 
+see the "end" to stop the range - it skips over that as well. The 
+solution is to do a substitute on all lines that don't have the "end" by
+ using
+</p><pre>#!/bin/sh
+sed '
+    /begin/,/end/ {
+      /begin/n # skip over the line that has "begin" on it
+      /end/ !{
+        s/old/new/
+      }  
+    }
+'
+</pre>
+
+
+<h2><a name="uh-36" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-36">Writing a file with the 'w' command</a></h2>
+<p>You may remember that the substitute command can write to a file. 
+Here again is the example that will only write lines that start with an 
+even number (and followed by a space):
+<br>
+</p><pre>sed -n 's/^[0-9]*[02468] /&amp;/w even' &lt;file 
+</pre>
+
+<p>I used the 
+"&amp;" in the replacement part of the substitution command so that the line
+would not be changed. A simpler example is to use the
+"w" command, which has the same syntax as the 
+"w" flag in the substitute command:
+<br>
+</p><pre>sed -n '/^[0-9]*[02468]/ w even' &lt;file
+</pre>
+
+<p>Remember - only one space must follow the command.
+Anything else will be considered part of the file name.
+The
+"w" command also has the same limitation as the 
+"w" flag: only 10 files can be opened in 
+<i>sed</i>. 
+</p><h2><a name="uh-37" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-37">Reading in a file with the 'r' command</a></h2>
+<p>There is also a command for reading files.
+The command
+
+</p><pre>sed '$r end' &lt;in&gt;out
+</pre>
+<p>will append the file
+"end" at the end of the file (address
+"$)." The following will insert a file after the line with the word
+"INCLUDE:" 
+
+</p><pre>sed '/INCLUDE/ r file' &lt;in &gt;out
+</pre>
+<p>
+You can use the curly braces to delete the line having the
+"INCLUDE" command on it:
+<br><br></p><pre>#!/bin/sh
+sed '/INCLUDE/ {
+	r file
+	d
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_include.sh">sed_include.sh</a><br>
+</p><p>The order of the delete command
+"d" and the read file command
+"r" is important. Change the order and it will not work.  
+There are two subtle actions that prevent this from working.
+The first is the
+"r" command writes the file to the output stream. The file
+is not inserted into the pattern space, and therefore cannot be
+modified by any command. Therefore the delete command does not affect
+the data read from the file.
+</p><p>The other subtlety is the
+"d" command deletes the current data in the pattern space.
+Once all of the data is deleted, it does make sense that no other
+action will be attempted. Therefore a
+"d" command executed in a curly brace also aborts all further actions.
+As an example, the substitute command below is never executed:
+<br><br></p><pre>#!/bin/sh
+# this example is WRONG
+sed -e '1 {
+	d
+	s/.*//
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_bad_example.sh">sed_bad_example.sh</a><br>
+</p><p>The earlier example is a crude version of the C preprocessor program.
+The file that is included has a predetermined name. It would be nice if
+<i>sed</i> allowed a variable (e.g 
+"\1" ) instead of a fixed file name.
+Alas, 
+<i>sed</i> doesn't have this ability.
+You could work around this limitation by creating
+<i>sed</i> commands on the fly, or by using shell quotes to pass variables into
+the 
+<i>sed</i> script. Suppose you wanted to create a command that would include a
+file like
+<i>cpp</i>, but the filename is an argument to the script.
+An example of this script is:
+
+</p><pre>% include 'sys/param.h' &lt;file.c &gt;file.c.new
+</pre>
+<p>
+A shell script to do this would be:
+
+</p><pre>#!/bin/sh
+# watch out for a '/' in the parameter
+# use alternate search delimiter
+sed -e '\_#INCLUDE &lt;'"$1"'&gt;_{
+	r '"$1"'
+	d
+}'
+</pre>
+<p>
+
+Let me elaborate. If you had a file that contains
+</p><pre>Test first file
+#INCLUDE &lt;file1&gt;
+Test second file
+#INCLUDE &lt;file2&gt;
+</pre>
+<p>you could use the command
+</p><pre>sed_include1.sh file1&lt;input|sed_include1.sh file2
+</pre>
+<p>to include the specified files.
+
+
+</p><p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_include1.sh">sed_include1.sh</a><br>
+</p><h2><a name="uh-38" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-38">SunOS and the # Comment Command</a></h2><p>As we dig deeper into
+<i>sed</i>, comments will make the commands easier to follow.
+The older versions of
+<i>sed</i> only allow one line as a comment, and it must be the first line.
+SunOS (and GNU's sed) allows more than one comment, and these comments don't have to
+be first. 
+The last example could be:
+<br><br></p><pre>#!/bin/sh
+# watch out for a '/' in the parameter
+# use alternate search delimiter
+sed -e '\_#INCLUDE &lt;'"$1"'&gt;_{
+
+	# read the file
+	r '"$1"'
+
+	# delete any characters in the pattern space
+	# and read the next line in
+	d
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_include2.sh">sed_include2.sh</a><br>
+</p><h2><a name="uh-39" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-39">Adding, Changing, Inserting new lines</a></h2><p>
+<i>Sed</i> has three commands used to add new lines to the output stream.
+Because an entire line is added, the new line
+is on a line by itself to emphasize this.
+There is no option, an entire line is used, and it must be on its own
+line.
+If you are familiar with many UNIX utilities, you would expect 
+<i>sed</i> to use a similar convention: lines are continued by ending the
+previous line with a 
+"\". The syntax to these commands is finicky, like the
+"r" and
+"w" commands. 
+</p><h2><a name="uh-40" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-40">Append a line with 'a'</a></h2><p>The
+"a" command appends a line after the range or pattern.
+This example will add a line after every line with
+"WORD:" 
+<br><br></p><pre>#!/bin/sh
+sed '
+/WORD/ a\
+Add this line after every line with WORD
+'
+</pre>
+
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_add_line_after_word.sh">sed_add_line_after_word.sh</a><br>
+</p><p>You could eliminate two lines in the shell script if you wish:
+<br><br></p><pre>#!/bin/sh
+sed '/WORD/ a\
+Add this line after every line with WORD'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_add_line_after_word1.sh">sed_add_line_after_word1.sh</a><br>
+</p><p>I prefer the first form because it's easier to add a new command
+by adding a new line
+and because the intent is clearer.
+There must not be a space after the
+"\". 
+</p><h2><a name="uh-41" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-41">Insert a line with 'i'</a></h2><p>You can insert a new line before the pattern with the
+"i" command:
+<br><br></p><pre>#!/bin/sh
+sed '
+/WORD/ i\
+Add this line before every line with WORD
+'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_add_line_before_word.sh">sed_add_line_before_word.sh</a><br>
+</p><h2><a name="uh-42" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-42">Change a line with 'c'</a></h2><p>You can change the current line with a new line.
+<br><br></p><pre>#!/bin/sh
+sed '
+/WORD/ c\
+Replace the current line with the line
+'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_change_line.sh">sed_change_line.sh</a><br>
+</p><p>A 
+"d" command followed by a
+"a" command won't work, as I discussed earlier.
+The
+"d" command would terminate the current actions.
+You can combine all three actions using curly braces:
+<br><br></p><pre>#!/bin/sh
+sed '
+/WORD/ {
+i\
+Add this line before
+a\
+Add this line after
+c\
+Change the line to this one
+}'
+</pre>
+
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_insert_append_change.sh">sed_insert_append_change.sh</a><br>
+</p><h2><a name="uh-43" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-43">Leading tabs and spaces in a sed script</a></h2><p>
+<i>Sed</i> ignores leading tabs and spaces in all commands.
+However these white space characters may or may not be ignored 
+if they start the text following a
+"a," 
+"c" or
+"i" command. 
+In SunOS, both 
+"features" are available. The Berkeley (and Linux) style sed is in
+/usr/bin, and the AT&amp;T version (System V) is in /usr/5bin/.
+</p><p>To elaborate, the
+<b>/usr/bin/sed</b> command retains white space, while the
+<b>/usr/5bin/sed</b> strips off leading spaces.
+If you want to keep leading spaces, and not care about which version
+of
+<i>sed</i> you are using, put a
+"\" as the first character of the line:
+
+</p><pre>#!/bin/sh
+sed '
+	a\
+\	This line starts with a tab
+'
+</pre>
+<h2><a name="uh-44" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-44">Adding more than one line</a></h2><p>All three commands will allow you to add more than one line.
+Just end each line with a
+"\:" 
+
+</p><pre>#!/bin/sh
+sed '
+/WORD/ a\
+Add this line\
+This line\
+And this line
+'
+</pre>
+
+
+<h2><a name="uh-45" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-45">Adding lines and the pattern space</a></h2><p>I have mentioned the pattern space before. 
+Most commands operate on the pattern space, and subsequent commands
+may act on the results of the last modification.
+The three previous commands, like the read file command,
+add the new lines to the output stream, bypassing the pattern space.
+</p><h2><a name="uh-46" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-46">Address ranges and the above commands</a></h2><p>You may remember that earlier I warned you that some 
+commands can take a range of lines, and others cannot.
+To be precise, the commands 
+"a," 
+"i," 
+"r," and
+"q" will not take a range like
+"1,100" or
+"/begin/,/end/." The documentation states that the read command can take a range, but I
+got an error when I tried this. 
+The
+"c" or change command allows this, and it will let you change several
+lines into one:
+
+</p><pre>#!/bin/sh
+sed '
+/begin/,/end/ c\
+***DELETED***
+'
+
+</pre>
+<p>If you need to do this, you can use the curly braces, as that will let
+you perform the operation on every line:
+
+</p><pre>#!/bin/sh
+# add a blank line after every line
+sed '1,$ {
+	a\
+
+}'
+</pre>
+
+<h2><a name="uh-47" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-47">Multi-Line Patterns</a></h2>
+<p>Most UNIX utilities are line oriented. Regular expressions are line
+oriented.
+Searching for patterns that
+covers more than one line is not an easy task. 
+(Hint: It will be very shortly.)
+</p><p>
+<i>Sed</i> reads in a line of text, performs commands which may modify the line,
+and outputs modification if desired. 
+The main loop of a
+<i>sed</i> script looks like this:
+</p><ol><li>The next line is read from the input file and places it in the pattern
+space. If the end of file is found, and if there are additional files
+to read, the current file is closed, the next file is opened, and the
+first line of the new file is placed into the pattern space.
+</li><li>The line count is incremented by one. Opening a new file does not
+reset this number.
+</li><li>Each 
+<i>sed</i> command is examined. If there is a restriction placed on the command,
+and the current line in the pattern space meets that restriction, the
+command is executed. Some commands, like
+"n" or
+"d" cause 
+<i>sed</i> to go to the top of the loop. 
+The 
+"q" command causes
+<i>sed</i> to stop.
+Otherwise the next command is examined.
+</li><li>After all of the commands are examined, the pattern space is output
+unless 
+<i>sed</i> has the optional
+"-n" argument.
+</li></ol><p>The restriction before the command determines if the command is
+executed.
+If the restriction is a pattern, and the operation is the delete
+command, then the following will delete all lines that have the
+pattern:
+
+</p><pre>/PATTERN/ d
+</pre>
+<p>If the restriction is a pair of numbers, then the deletion will happen
+if the line number is equal to the first number or greater than the
+first number and less than or equal to the last number:
+
+</p><pre>10,20 d
+</pre>
+<p>
+If the restriction is a pair of patterns, there is a variable that is
+kept for each of these pairs.
+If the variable is false and the first pattern is found, the variable
+is made true. If the variable is true, the command is executed.
+If the variable is true, and the last pattern is on the line, after
+the command is executed the variable is turned off:
+
+</p><pre>/begin/,/end/ d
+</pre>
+<p>Whew! That was a mouthful. If you have read carefully up to here, 
+you should have breezed through this.
+You may want to refer back, because I covered several
+subtle points. My choice of words was deliberate. It covers some
+unusual cases, like:
+
+</p><pre># what happens if the second number
+# is less than the first number?
+sed -n '20,1 p' file
+</pre>
+<p>
+and
+
+</p><pre># generate a 10 line file with line numbers
+# and see what happens when two patterns overlap
+yes | head -10 | cat -n | \
+sed -n -e '/1/,/7/ p' -e '/5/,/9/ p'
+</pre>
+<p>
+Enough mental punishment. Here is another review, this time in a table
+format.
+Assume the input file contains the following lines:
+
+</p><pre>AB
+CD
+EF
+GH
+IJ
+</pre>
+<p>
+When
+<i>sed</i> starts up, the first line is placed in the pattern space.
+The next line is 
+"CD." The operations of the
+"n," 
+"d," and
+"p" commands can be summarized as:
+</p><table summary="Command Summary" border="">
+<tbody><tr>
+<th>Pattern Space</th>
+<th>Next Input</th>
+<th>Command</th>
+<th>Output</th>
+<th>New Pattern Space</th>
+<th>New Text Input</th>
+</tr>
+<tr>
+<td>AB</td>
+<td>CD</td>
+<td>n</td>
+<td>&lt;default&gt;</td>
+<td>CD</td>
+<td>EF</td>
+</tr>
+<tr>
+<td>AB</td>
+<td>CD</td>
+<td>d</td>
+<td>-</td>
+<td>CD</td>
+<td>EF</td>
+</tr>
+<tr>
+<td>AB</td>
+<td>CD</td>
+<td>p</td>
+<td>AB</td>
+<td>CD</td>
+<td>EF</td>
+</tr>
+
+</tbody></table>
+
+<p>The
+"n" command may or may not generate output depending upon the existence of
+the
+"-n" flag.
+</p><p>That review is a little easier to follow, isn't it?
+Before I jump into multi-line patterns, I wanted to cover three more commands:
+
+</p><h2><a name="uh-48" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-48">Print line number with =</a></h2><p>
+The
+"=" command prints the current line number to standard output.
+One way to find out the line numbers that contain a pattern is to use:
+
+</p><pre># add line numbers first,
+# then use grep, 
+# then just print the number
+cat -n file | grep 'PATTERN' | awk '{print $1}'
+</pre>
+<p>
+The
+<i>sed</i> solution is:
+
+</p><pre>sed -n '/PATTERN/ =' file
+</pre>
+
+<p>Earlier I used the following to find the number of lines in a file
+
+</p><pre>#!/bin/sh
+lines=`wc -l file | awk '{print $1}' `
+</pre>
+<p>
+Using the
+"=" command can simplify this:
+
+</p><pre>#!/bin/sh
+lines=`sed -n '$=' file `
+</pre>
+<p>
+The
+"=" command only accepts one address, so if you want to print the number
+for
+a range of lines, you must use the curly braces:
+
+</p><pre>#!/bin/sh
+# Just print the line numbers 
+sed -n '/begin/,/end/ {
+=
+d
+}' file
+
+</pre>
+<p>
+Since the 
+"=" command only prints to standard output, you cannot print the line
+number on the same line as the pattern. You need to edit multi-line
+patterns to do this.
+</p><h2><a name="uh-49" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-49">Transform with y</a></h2><p>If you wanted to change a word from lower case to upper case, you
+could write 26 character substitutions, converting
+"a" to
+"A," etc.
+<i>Sed</i> has a command that operates like the
+<i>tr</i> program. 
+It is called the
+"y" command.
+For instance, to change the letters 
+"a" through
+"f" into their upper case form, use:
+
+</p><pre>sed 'y/abcdef/ABCDEF/' file
+</pre>
+<p>
+Here's a sed example that convers all uppercase letters to lowercase letters, like the tr command:
+
+</p><pre>sed 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/' &lt;uppercase &gt;lowercase
+</pre>
+
+<p>If you wanted to convert a line that contained a hexadecimal number
+(e.g. 0x1aff) to
+upper case (0x1AFF), you could use:
+
+</p><pre>sed '/0x[0-9a-zA-Z]*/ y/abcdef/ABCDEF' file
+</pre>
+<p>
+This works fine if there are only numbers in the file.
+If you wanted to change the second word in a line to upper case, and you are using classic sed, you
+are out of luck - unless you use multi-line editing.
+(Hey - I think there is some sort of theme here!)
+</p><p>
+However, GNU sed has a uppercase and lowercase extension.
+</p><h2><a name="uh-50" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-50">Displaying control characters with a l</a></h2><p>The
+"l" command prints the current pattern space.
+It is therefore useful in debugging
+<i>sed</i> scripts. It also converts unprintable characters into
+printing characters by outputting the value in octal preceded by a
+"\" character.
+I found it useful to print out the current pattern space, while
+probing the subtleties of
+<i>sed</i>. 
+</p><h2><a name="uh-51" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-51">Working with Multiple Lines</a></h2><p>There are three new commands used in multiple-line patterns:
+"N," 
+"D," and
+"P." I will explain their relation to the matching 
+"n," 
+"d," and
+"p" single-line commands.
+</p><p>The
+"n" command will print out the current pattern space (unless the
+"-n" flag is used), empty the current pattern space, 
+and read in the next line of input.
+The
+"N" command does
+<b>not</b> print out the current pattern space and does
+<b>not</b> empty the pattern space. It reads in the next line, but appends a new
+line character along with the input line itself to
+the pattern space. 
+</p><p>The
+"d" command deletes the current pattern space, reads in the next line,
+puts the new line into the pattern space, and aborts the
+current 
+command, and starts execution at the first 
+<i>sed</i> command.
+This is called 
+starting a new 
+"cycle." The
+"D" command deletes the first portion of the pattern space, up to the new
+line character, leaving the rest of the pattern alone. Like
+"d," it stops the current command and starts the command cycle over again.
+However, it will not print the current pattern space. You must print
+it yourself, a step earlier.
+If the
+"D" command is executed with a group of other commands in a curly brace,
+commands after the 
+"D" command are ignored.
+The next group of 
+<i>sed</i> commands is executed, unless the pattern space is emptied.
+If this happens, the cycle is started from the top and a new line is
+read.
+</p><p>The
+"p" command prints the entire pattern space.
+The
+"P" command only prints the first part of the pattern space, up to the
+NEWLINE character. Neither the "p" nor the "P" command changes the patterns space.
+</p><p>Some examples might demonstrate 
+"N" by itself isn't very useful. the filter
+
+</p><pre>sed -e 'N'
+</pre>
+<p>
+doesn't modify the input stream. Instead, it combines the first and
+second line, then prints them, combines the third and fourth line, and
+prints them, etc. It does allow you to use a new
+"anchor" character:
+"\n." This matches the new line character that separates multiple lines in
+the pattern space.
+If you wanted to search for a line that ended with the character
+"#," and append the next line to it, you could use
+
+</p><pre>#!/bin/sh
+sed '
+# look for a "#" at the end of the line
+/#$/ {
+# Found one - now read in the next line
+	N
+# delete the "#" and the new line character, 
+	s/#\n//
+}' file
+</pre>
+<p>
+You could search for two lines containing 
+"ONE" and
+"TWO" and only print out the two consecutive lines:
+</p><pre>#!/bin/sh
+sed -n '
+/ONE/ {
+# found "ONE" - read in next line
+	N
+# look for "TWO" on the second line
+# and print if there.
+	/\n.*TWO/ p
+}' file
+</pre>
+<p>The next example would delete everything between
+"ONE" and 
+"TWO:" 
+</p><pre>#!/bin/sh
+sed '
+/ONE/ {
+# append a line
+	N
+# search for TWO on the second line	
+	/\n.*TWO/ {
+# found it - now edit making one line
+		s/ONE.*\n.*TWO/ONE TWO/
+	}
+}' file
+</pre>
+
+<h2><a name="uh-51a" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-51a">Matching three lines with sed</a></h2>
+<p>You can match multiple lines in searches.
+</p><p>
+Here is a way to look for the string "skip3", and if found, delete
+that line and the next two lines.
+
+</p><pre>#!/bin/sh
+sed '/skip3/ {
+           N
+           N
+           s/skip3\n.*\n.*/# 3 lines deleted/
+}'  
+</pre>
+<p>
+Note that it doesn't matter what the next two lines are.
+If you wanted to match 3 particular lines, it's a little more work.
+</p><p>
+This script looks for three lines, where the first line contains
+"one", the second contained "two" and the third contains "three", and
+if found, replace them with the string "1+2+3":
+
+</p><pre>#!/bin/sh
+sed '
+/one/ {
+      N
+	  /two/ {
+			N
+			/three/ {
+			        N
+					s/one\ntwo\nthree/1+2+3/
+					}
+			}
+	  }
+'
+</pre>
+
+<h2><a name="uh-51b" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-51b">Matching patterns that span multiple lines</a></h2>
+<p>You can either search for a particular pattern on two consecutive
+lines,
+or you can search for two consecutive words that may be split on a
+line boundary.
+The next example will look for two words which are either
+on the same line or one is on the end of a line and the second is on
+the beginning of the next line. If found, the first word is deleted:
+</p><pre>#!/bin/sh
+sed '
+/ONE/ {
+# append a line
+	N
+# "ONE TWO" on same line
+	s/ONE TWO/TWO/
+# "ONE
+# TWO" on two consecutive lines
+	s/ONE\nTWO/TWO/
+}' file
+</pre>
+
+
+<p>Let's use the<br>
+
+"D" command, and if we find a line containing<br>
+
+"TWO" immediately after a line containing<br>
+
+"ONE," then delete the first line:<br>
+
+<br><br></p><pre>#!/bin/sh
+sed '
+/ONE/ {
+# append a line
+	N
+# if TWO found, delete the first line
+	/\n.*TWO/ D
+}' file
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_delete_line_after_word.sh">sed_delete_line_after_word.sh</a><br>
+</p><p>If we wanted to print the first line instead of deleting it,
+and not print every other line, change the 
+"D" to a
+"P" and add a 
+"-n" as an argument to 
+<i>sed</i>: 
+<br><br></p><pre>#!/bin/sh
+sed -n '
+# by default - do not print anything
+/ONE/ {
+# append a line
+	N
+# if TWO found, print the first line
+	/\n.*TWO/ P
+}' file
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_print_line_after_word.sh">sed_print_line_after_word.sh</a><br>
+</p><p>It is very common to combine all three multi-line
+commands. 
+The typical order is
+"N," 
+"P" and lastly
+"D." This one will delete everything between
+"ONE" and
+"TWO" if they are on one or two consecutive lines:
+<br><br></p><pre>#!/bin/sh
+sed '
+/ONE/ {
+# append the next line
+	N
+# look for "ONE" followed by "TWO"
+	/ONE.*TWO/ {
+#	delete everything between
+		s/ONE.*TWO/ONE TWO/
+#	print
+		P
+#	then delete the first line
+		D
+	}
+}' file
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_delete_between_two_words.sh">sed_delete_between_two_words.sh</a><br>
+</p><p>Earlier I talked about the
+"=" command, and using it to add line numbers to a file.
+You can use two invocations of
+<i>sed</i> to do this (although it is possible to do it with one, but that must
+wait until next section).
+The first 
+<i>sed</i> command will output a line number on one line, and then print the line
+on the next line.
+The second invocation of
+<i>sed</i> will merge the two lines together:
+<br><br></p><pre>#!/bin/sh
+sed '=' file | \
+sed '{
+	N
+	s/\n/ /
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_merge_two_lines.sh">sed_merge_two_lines.sh</a><br>
+</p><p>If you find it necessary, you can break one line into 
+two lines, edit them, and merge them together again.
+As an example, if you had a file that had a hexadecimal number
+followed by a word, and you wanted to convert the first word to all
+upper case, you can use the
+"y" command, but you must first split the line into two lines, change one
+of the two, and merge them together. 
+That is, a line containing
+
+</p><pre>0x1fff table2
+</pre>
+
+<p>will be changed into two lines:
+
+</p><pre>0x1fff
+table2
+</pre>
+<p>and the first line will be converted into upper case.
+I will use
+<i>tr</i> to convert the space into a new line, and then use <i>sed</i> to do the rest. The command would be
+</p><pre>./sed_split &lt;file
+</pre>
+and <i>sed_split</i> would be:
+<pre>#!/bin/sh
+tr ' ' '\012' | 
+sed ' {
+	y/abcdef/ABCDEF/
+	N
+	s/\n/ /
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_split.sh">sed_split.sh</a><br>
+</p><p>It isn't obvious, but 
+<i>sed</i> could be used instead of 
+<i>tr</i>. You can embed a new line in a substitute command, but you must
+escape it with a backslash. 
+It is unfortunate that you must use
+"\n" in the left side of a substitute command, and an embedded new line
+in the right hand side. Heavy sigh.
+Here is the example:
+</p><pre>#!/bin/sh
+sed '
+s/ /\
+/' | \
+sed ' {
+	y/abcdef/ABCDEF/
+	N
+	s/\n/ /
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_split_merge.sh">sed_split_merge.sh</a><br>
+</p><p>Sometimes I add a special character as a marker, and look for that
+character
+in the input stream. When found, it indicates the place a
+blank used to be. 
+A backslash is a good character, except it must be escaped with a
+backslash, and makes the
+<i>sed</i> script obscure. Save it for that guy who keeps asking dumb questions.
+The 
+<i>sed</i> script to change a blank into a
+"\" following by a new line would be:
+<br><br>#!/bin/sh<br>
+sed 's/ /\\\<br>
+/' file<br>
+
+</p><p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_addslash_before_blank.sh">sed_addslash_before_blank.sh</a><br>
+</p><p>Yeah. That's the ticket. Or use the C shell and really confuse him!
+<br><br>#!/bin/csh -f<br>
+sed '\<br>
+s/ /\\\\<br>
+/' file<br>
+
+</p><p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_addslash_before_blank.csh">sed_addslash_before_blank.csh</a><br>
+</p><p>A few more examples of that, and he'll never ask you a question again!
+I think I'm getting carried away. I'll summarize 
+with a chart that covers the features we've talked about:
+</p><table summary="Sed Chart" border="">
+<tbody><tr>
+<th>Pattern Space</th>
+<th>Next Input</th>
+<th>Command</th>
+<th>Output</th>
+<th>New Pattern Space</th>
+<th>New Text Input</th>
+</tr>
+<tr>
+<td>AB</td>
+<td>CD</td>
+<td>n</td>
+<td>&lt;default&gt;</td>
+<td>CD</td>
+<td>EF</td>
+</tr>
+<tr>
+<td>AB</td>
+<td>CD</td>
+<td>N</td>
+<td>-</td>
+<td>AB\nCD</td>
+<td>EF</td>
+</tr>
+<tr>
+<td>AB</td>
+<td>CD</td>
+<td>d</td>
+<td>-</td>
+<td>-</td>
+<td>EF</td>
+</tr>
+<tr>
+<td>AB</td>
+<td>CD</td>
+<td>D</td>
+<td>-</td>
+<td>-</td>
+<td>EF</td>
+</tr>
+<tr>
+<td>AB</td>
+<td>CD</td>
+<td>p</td>
+<td>AB</td>
+<td>AB</td>
+<td>CD</td>
+</tr>
+<tr>
+<td>AB</td>
+<td>CD</td>
+<td>P</td>
+<td>AB</td>
+<td>AB</td>
+<td>CD</td>
+</tr>
+<tr><td colspan="6"></td>
+</tr><tr>
+<td>AB\nCD</td>
+<td>EF</td>
+<td>n</td>
+<td>&lt;default&gt;</td>
+<td>EF</td>
+<td>GH</td>
+</tr>
+<tr>
+<td>AB\nCD</td>
+<td>EF</td>
+<td>N</td>
+<td>-</td>
+<td>AB\nCD\nEF</td>
+<td>GH</td>
+</tr>
+<tr>
+<td>AB\nCD</td>
+<td>EF</td>
+<td>d</td>
+<td>-</td>
+<td>EF</td>
+<td>GH</td>
+</tr>
+<tr>
+<td>AB\nCD</td>
+<td>EF</td>
+<td>D</td>
+<td>-</td>
+<td>CD</td>
+<td>EF</td>
+</tr>
+<tr>
+<td>AB\nCD</td>
+<td>EF</td>
+<td>p</td>
+<td>AB\nCD</td>
+<td>AB\nCD</td>
+<td>EF</td>
+</tr>
+<tr>
+<td>AB\nCD</td>
+<td>EF</td>
+<td>P</td>
+<td>AB</td>
+<td>AB\nCD</td>
+<td>EF</td>
+</tr>
+
+</tbody></table>
+
+<h2><a name="uh-nl" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-nl">Using newlines in sed scripts</a></h2><p>
+
+Occasionally one wishes to use a new line character in a sed script.
+Well, this has some subtle issues here.
+If one wants to search for a new line, one has to use
+"\n."
+Here is an example where you search for a phrase, and delete the new 
+line character after that phrase - joining two lines together. 
+</p><pre>(echo a;echo x;echo y) | sed '/x$/ {
+N
+s:x\n:x:
+}'
+</pre>
+<p>
+which generates
+</p><pre>a
+xy
+</pre>
+<p>
+However, if you are inserting a new line, don't use "\n" - instead insert a literal new line character:
+</p><pre>(echo a;echo x;echo y) | sed 's:x:X\
+:'
+</pre>
+<p>
+generates
+</p><pre>a
+X
+
+y
+</pre>
+<h2><a name="uh-52" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-52">The Hold Buffer</a></h2><p>So far we have talked about three concepts of 
+<i>sed</i>: (1) The input stream or data before it is modified,
+(2) the output stream or data after it has been modified, and
+(3) the pattern space, or buffer containing characters that can be
+modified and send to the output stream.
+</p><p>There is one more 
+"location" to be covered: the
+<i>hold buffer</i> or
+<i>hold space</i>. Think of it as a spare pattern buffer. It can be used to
+"copy" or
+"remember" the data in the pattern space for later.
+There are five commands that use the hold buffer.
+</p><h2><a name="uh-53" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-53">Exchange with x</a></h2><p>The 
+"x" command eXchanges the pattern space with the hold buffer.
+By itself, the command isn't useful. Executing the 
+<i>sed</i> command
+
+</p><pre>sed 'x'
+</pre>
+<p>
+as a filter adds a blank line in the front, and deletes the last line.
+It looks like it didn't change the input stream significantly, but the
+<i>sed</i> command is modifying every line.
+</p><p>The hold buffer starts out containing a blank line.
+When the
+"x" command
+modifies the first line, line 1 is saved in the hold buffer, and
+the blank line takes the place of the first line.
+The second 
+"x" command exchanges the second line with the hold buffer, which contains
+the first line.  Each subsequent line is exchanged with the preceding
+line.
+The last line is placed in the hold buffer, and is not exchanged a
+second time, so it remains in the hold buffer when the program
+terminates, and never gets printed.
+This illustrates that care must be taken when storing data in the hold
+buffer, because it won't be output unless you explicitly request it. 
+</p><h2><a name="uh-54" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-54">Example of Context Grep</a></h2><p>One use of the hold buffer is to remember previous lines.
+An example of this is a utility that acts like 
+<i>grep</i> as it shows you the lines that match a pattern.
+In addition, it shows you the line before and after the pattern.
+That is, if line 8 contains the pattern, this utility would
+print lines 7, 8 and 9.
+</p><p>One way to do this is to see if the line has the pattern.
+If it does not have the pattern, put the current line in the hold
+buffer. 
+If it does, print the line in the hold buffer, then the current line,
+and then the next line. After each set, three dashes are printed.
+The script checks for the existence of an argument, and if
+missing, prints an error. Passing the argument into the
+<i>sed</i> script is done by turning off the single quote mechanism, inserting
+the
+"$1" into the script, and starting up the single quote again:
+</p><p>
+<br><br>
+</p><pre>#!/bin/sh
+# grep3 - prints out three lines around pattern
+# if there is only one argument, exit
+
+case $# in 
+	1);;
+	*) echo "Usage: $0 pattern";exit;;
+esac;
+# I hope the argument doesn't contain a /
+# if it does, sed will complain
+
+# use sed -n to disable printing 
+# unless we ask for it
+sed -n '
+'/$1/' !{
+	#no match - put the current line in the hold buffer
+	x
+	# delete the old one, which is 
+	# now in the pattern buffer
+	d
+}
+'/$1/' {
+	# a match - get last line
+	x
+	# print it
+	p
+	# get the original line back
+	x
+	# print it
+	p
+	# get the next line 
+	n
+	# print it
+	p
+	# now add three dashes as a marker
+	a\
+---
+	# now put this line into the hold buffer
+	x
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/grep3.sh">grep3.sh</a><br>
+</p><p>You could use this to show the three lines around a keyword, i.e.:
+
+</p><pre>grep3 vt100 &lt;/etc/termcap
+</pre>
+
+<h2><a name="uh-55" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-55">Hold with h or H</a></h2><p>The
+"x" command exchanges the hold buffer and the pattern buffer. Both are
+changed. The
+"h" command copies the pattern buffer into the hold buffer.
+The pattern buffer is unchanged. 
+An identical script to the above uses the hold commands:
+</p><p>
+<br><br>
+</p><pre>#!/bin/sh
+# grep3 version b - another version using the hold commands
+# if there is only one argument, exit
+
+case $# in 
+	1);;
+	*) echo "Usage: $0 pattern";exit;;
+esac;
+
+# again - I hope the argument doesn't contain a /
+
+# use sed -n to disable printing 
+
+sed -n '
+'/$1/' !{
+	# put the non-matching line in the hold buffer
+	h
+}
+'/$1/' {
+	# found a line that matches
+	# append it to the hold buffer
+	H
+	# the hold buffer contains 2 lines
+	# get the next line
+	n
+	# and add it to the hold buffer
+	H
+	# now print it back to the pattern space
+	x
+	# and print it.
+	p
+	# add the three hyphens as a marker
+	a\
+---
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/grep3a.sh">grep3a.sh</a><br>
+
+</p><h2><a name="uh-56" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-56">Keeping more than one line in the hold buffer</a></h2><p>The
+"H" command allows you to combine several lines in the hold buffer.
+It acts like the
+"N" command as lines are appended to the buffer, with a
+"\n" between the lines.
+You can save several lines in the hold buffer, and print them only if
+a particular pattern is found later.
+</p><p>As an example, take a file that uses spaces as the first character of
+a line as a continuation character. The files
+<i>/etc/termcap</i>, 
+<i>/etc/printcap</i>, 
+<i>makefile</i> and mail messages use spaces or tabs to indicate a continuing of an
+entry.
+If you wanted to print the entry before a word, you could use this
+script. I use a
+"^I" to indicate an actual tab character:
+</p><p>
+<br><br>
+</p><pre>#!/bin/sh 
+# print previous entry
+sed -n '
+/^[ ^I]/!{
+	# line does not start with a space or tab,
+	# does it have the pattern we are interested in?
+	'/$1/' {
+		# yes it does. print three dashes
+		i\
+---
+		# get hold buffer, save current line
+		x
+		# now print what was in the hold buffer
+		p
+		# get the original line back
+		x
+	}
+	# store it in the hold buffer
+	h
+}
+# what about lines that start
+# with a space or tab?
+/^[ ^I]/ {
+	# append it to the hold buffer
+	H
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/grep_previous.sh">grep_previous.sh</a><br>
+</p><p>You can also use 
+the 
+"H" to extend the context grep. 
+In this example, 
+the program prints out the two lines before the pattern, instead of a
+single line.
+The method to limit this to two lines is to use the
+"s" command to keep one new line, and deleting extra lines.
+I call it
+<i>grep4</i>: 
+</p><p>
+<br><br>
+</p><pre>#!/bin/sh
+
+# grep4: prints out 4 lines around pattern
+# if there is only one argument, exit
+
+case $# in 
+	1);;
+	*) echo "Usage: $0 pattern";exit;;
+esac;
+
+sed -n '
+'/$1/' !{
+	# does not match - add this line to the hold space
+	H
+	# bring it back into the pattern space
+	x
+	# Two lines would look like .*\n.*
+	# Three lines look like .*\n.*\n.*
+	# Delete extra lines - keep two
+	s/^.*\n\(.*\n.*\)$/\1/
+	# now put the two lines (at most) into 
+	# the hold buffer again
+	x
+}
+'/$1/' {
+	# matches - append the current line
+	H
+	# get the next line
+	n
+	# append that one also
+	H
+	# bring it back, but keep the current line in
+	# the hold buffer. This is the line after the pattern,
+	# and we want to place it in hold in case the next line
+	# has the desired pattern
+	x
+	# print the 4 lines
+	p
+	# add the mark
+	a\
+---
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/grep4.sh">grep4.sh</a><br>
+You can modify this to print any number of lines around a pattern.
+As you can see, you must remember what is in the hold space, and what
+is in the pattern space. There are other ways to write the same
+routine.
+</p><h2><a name="uh-57" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-57">Get with g or G</a></h2><p>Instead of exchanging the hold space with the pattern space, you can
+copy the hold space to the pattern space with the
+"g" command.
+This deletes the pattern space. If you want to append
+to the pattern space, use the
+"G" command. This adds a new line to the pattern space, and copies the
+hold space after the new line.
+</p><p>Here is another version of the 
+"grep3" command. It works just like the previous one, but is implemented
+differently. This illustrates that
+<i>sed</i> has more than one way to solve many problems.
+What is important is you understand your problem, and document your solution:
+</p><p>
+<br><br>
+</p><pre>#!/bin/sh
+# grep3 version c: use 'G'  instead of H
+
+# if there is only one argument, exit
+
+case $# in 
+	1);;
+	*) echo "Usage: $0 pattern";exit;;
+esac;
+
+# again - I hope the argument doesn't contain a /
+
+sed -n '
+'/$1/' !{
+	# put the non-matching line in the hold buffer
+	h
+}
+'/$1/' {
+	# found a line that matches
+	# add the next line to the pattern space
+	N
+	# exchange the previous line with the 
+	# 2 in pattern space
+	x
+	# now add the two lines back
+	G
+	# and print it.
+	p
+	# add the three hyphens as a marker
+	a\
+---
+	# remove first 2 lines
+	s/.*\n.*\n\(.*\)$/\1/
+	# and place in the hold buffer for next time
+	h
+}'
+
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/grep3c.sh">grep3c.sh</a><br>
+
+</p><p>The
+"G" command makes it easy to have two copies of a line.
+Suppose you wanted to the convert the first hexadecimal number to
+uppercase, and don't
+want to use the script I described in an earlier column
+<br><br>
+</p><pre>#!/bin/sh
+# change the first hex number to upper case format
+# uses sed twice
+# used as a filter
+# convert2uc &lt;in &gt;out
+sed '
+s/ /\
+/' | \
+sed ' {
+	y/abcdef/ABCDEF/
+	N
+	s/\n/ /
+}'
+</pre>
+
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/convert2uc.sh">convert2uc.sh</a><br>
+
+</p><p>Here is a solution that does not require two invocations of
+<i>sed:</i> 
+<br><br></p><pre>#!/bin/sh
+# convert2uc version b
+# change the first hex number to upper case format
+# uses sed once
+# used as a filter
+# convert2uc &lt;in &gt;out
+sed '
+{
+	# remember the line
+	h
+	#change the current line to upper case
+	y/abcdef/ABCDEF/
+	# add the old line back
+	G
+	# Keep the first word of the first line, 
+	# and second word of the second line
+	# with one humongous regular expression
+	s/^\([^ ]*\) .*\n[^ ]* \(.*\)/\1 \2/
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/convert2uc1.sh">convert2uc1.sh</a><br>
+Carl Henrik Lunde suggested a way to make this simpler. 
+I was working too hard.
+
+<br><br></p><pre>#!/bin/sh
+# convert2uc version b
+# change the first hex number to upper case format
+# uses sed once
+# used as a filter
+# convert2uc &lt;in &gt;out
+sed '
+{
+	# remember the line
+	h
+	#change the current line to upper case
+	y/abcdef/ABCDEF/
+	# add the old line back
+	G
+	# Keep the first word of the first line, 
+	# and second word of the second line
+	# with one humongous regular expression
+	s/ .* / / # delete all but the first and last word
+}'
+</pre>
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/convert2uc2.sh">convert2uc2.sh</a><br>
+This example only converts the letters 
+"a" through
+"f" to upper case. This was chosen to make the script easier to
+print in these narrow columns. You can easily modify
+the script to convert all letters to uppercase, or to
+change the first letter, second word, etc.
+
+</p><h2><a name="uh-58" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-58">Flow Control</a></h2><p>As you learn about 
+<i>sed</i> you realize that it has its own programming language.
+It is true that it's a very specialized and simple language.
+What language would be complete without a method of changing the flow
+control?
+There are three commands 
+<i>sed</i> uses for this.
+You can specify a label with an text string preceded by a colon.
+The 
+"b" command branches to the label.
+The label follows the command. If no label is there,
+branch to the end of the script.
+The 
+"t" command is used to test conditions. Before I discuss the
+"t" command, I will show you an example using the
+"b" command.
+
+</p><p>This example remembers paragraphs, and if it contains the
+pattern (specified by an argument), 
+the script prints out the entire paragraph.
+<br><br></p><pre>#!/bin/sh
+sed -n '
+# if an empty line, check the paragraph
+/^$/ b para
+# else add it to the hold buffer
+H
+# at end of file, check paragraph
+$ b para
+# now branch to end of script
+b
+# this is where a paragraph is checked for the pattern
+:para
+# return the entire paragraph
+# into the pattern space
+x
+# look for the pattern, if there - print
+/'$1'/ p
+'
+</pre>
+
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/grep_paragraph.sh">grep_paragraph.sh</a><br>
+</p><h2><a name="uh-59" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-59">Testing with t</a></h2>
+<p>You can execute a branch if a pattern is found.
+You may want to execute a branch only if a substitution is made.
+The command
+"t label" will branch to the label
+if the last substitute command modified the pattern space.
+</p><p>One use for this is recursive patterns.
+Suppose you wanted to remove white space inside parenthesis.
+These parentheses might be nested. That is, you would want to 
+delete a string that looked like 
+"(  (  (  ()))    )." The 
+<i>sed</i> expressions
+
+</p><pre>sed 's/([ ^I]*)/g'
+</pre>
+<p>
+would only remove the innermost set. 
+You would have to pipe the data through the script four
+times to remove each set or parenthesis.
+You could use the regular expression
+
+</p><pre>sed 's/([ ^I()]*)/g'
+</pre>
+
+<p>but that would delete non-matching sets of parenthesis.
+The
+"t" command would solve this:
+</p><pre>#!/bin/sh
+sed '
+:again
+	s/([ ^I]*)//
+	t again
+'
+</pre>
+<p>
+An earlier version had a 'g' after the 's' expression. This is not needed.
+</p><p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/delete_nested_parens.sh">delete_nested_parens.sh</a><br>
+</p><h2><a name="uh-59a" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-59a">Debugging with l</a></h2>
+<p> The 'l' command will print the pattern space in an unambiguous form.
+ Non-printing characters are printed in a C-style escaped format. 
+</p><p>This can be useful when debugging a complex multi-line sed script.
+</p><h2><a name="uh-60" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-60">An alternate way of adding comments</a></h2><p>There is one way to add comments in a 
+<i>sed</i> script if you don't have a version that supports it.
+Use the
+"a" command with the line number of zero:
+<br><br>
+</p><pre>#!/bin/sh
+sed '
+/begin/ {
+0i\
+	This is a comment\
+	It can cover several lines\
+	It will work with any version of sed
+}'
+</pre>
+
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_add_comments.sh">sed_add_comments.sh</a><br>
+</p><h2><a name="uh-61" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-61">The poorly documented ;</a></h2><p>There is one more 
+<i>sed</i> command that 
+isn't well documented. It is the
+";" command. This can be used to combined several 
+<i>sed</i> commands on one line. 
+Here is the
+<i>grep4</i> script I described earlier, but without the
+comments or error checking and with semicolons between commands:
+<br><br>#!/bin/sh<br>
+sed -n '<br>
+'/$1/' !{;H;x;s/^.*\n\(.*\n.*\)$/\1/;x;}<br>
+'/$1/' {;H;n;H;x;p;a\<br>
+---<br>
+}'<br>
+
+</p><p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/grep4a.sh">grep4a.sh</a><br>
+</p><p>Yessireebob! Definitely character building.
+I think I have made my point.
+As far as I am concerned, the only time the semicolon is useful
+is when you want to type the 
+<i>sed</i> script on the command line.
+If you are going to place it in a script, format it so it is readable.
+I have mentioned earlier that many versions of 
+<i>sed</i> do not support comments except on the first line.
+You may want to write your scripts with comments in them, and 
+install them in 
+"binary" form without comments.
+This should not be difficult. After all, you have become a 
+<i>sed</i> guru by now. I won't even tell you how to write a script to
+strip out comments. That would be insulting your intelligence.
+Also - some operating systems do NOT let you use semicolons.
+So if you see a script with semicolons, and it does not work on a 
+non-Linux system, replace the semicolon with a new line character. (As 
+long as you are not using csh/tcsh, but that's another topic.
+
+</p><h2><a name="uh-62" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62">Passing regular expressions as arguments</a></h2><p>In the earlier scripts, I mentioned that 
+you would have problems if you passed an argument to the script that
+had a slash in it. In fact, regular expression might cause
+you problems. A script like the following is asking to be broken some
+day:
+</p><pre>#!/bin/sh
+sed 's/'"$1"'//g'
+</pre>
+<p>If the argument contains any of these characters in it, you may get
+a broken script:
+"/\.*[]^$" 
+For instance, if someone types a "/" then the substitute command will 
+see four delimiters instead of three. You will also get syntax errors if
+ you provide a "]" without a "]". 
+One solution is to have the user put a backslash before any of these 
+characters when they pass it as an argument.
+However, the user has to know which characters are special.
+<br>
+Another solution is to add a backslash before each of those characters in the script
+</p><pre>#!/bin/sh
+arg=`echo "$1" | sed 's:[]\[\^\$\.\*\/]:\\\\&amp;:g'`
+sed 's/'"$arg"'//g'
+</pre>
+
+<p><br>Click here to get file: <a href="http://www.grymoire.com/Unix/Scripts/sed_with_regular_expressions1.sh">sed_with_regular_expressions1.sh</a><br>
+If you were searching for the pattern
+"^../," the script would convert this into
+"\^\.\.\/" before passing it to 
+<i>sed</i>. 
+
+</p><h2><a name="uh-62a" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62a">Inserting binary characters</a></h2>
+<p>Dealing with binary characters can be trick, expecially when writing scripts for people to read.
+I can insert a binary character using an editor like EMACS but if I show the binary character, the terminal 
+may change it to show it to you.
+</p><p>
+The easiest way I have found to do this in a script in a portable
+fashion is to use the tr(1) command. It understands octal notations,
+and it can be output into a variable which can be used.
+</p><p>
+Here's a script that will replace the string "ding" with the ASCII bell character:
+</p><pre>#!/bin/sh
+BELL=`echo x | tr 'x' '\007'`
+sed "s/ding/$BELL/"
+</pre>
+<p> Please note that I used double quotes. Since special characters are 
+interpreted, you have to be careful when you use this mechanism.
+
+
+
+
+</p><h2><a name="uh-62b" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62b">GNU sed Command Line arguments</a></h2>
+<p> One of the conventions
+UNIX systems have is to use single letters are command line
+arguments. This makes typing faster, and shorted, which is an
+advantage if you are in a contest. Normal people often find sed's
+terseness cryptic. You can improve the readability of sed scripts by
+using the long word equivalent options.  That is, instead of typing
+
+</p><pre>sed -n 20p
+</pre>
+
+You can type the long word version of the -n argument
+
+<pre>sed --quiet 20p
+</pre>
+
+Or
+<pre>sed --silent 20p
+</pre>
+<p>
+The long form of sed's command line arguments always have 2 hyphens before their names.
+GNU sed has the following long-form command line arguments:
+</p><table summary="List of GNU sed command line arguments" border="">
+	<tbody><tr>
+		<td colspan="2" valign="top">
+			<p>GNU Command Line Arguments</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>Short Form</p>
+		</td>
+		<td>
+			<p>Long Form</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>-n</p>
+		</td>
+		<td>
+			<p>--quiet</p>
+			<p>--silent</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>-e script</p>
+		</td>
+		<td>
+			<p>--expression=SCRIPT</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>-f SCRIPTFILE</p>
+		</td>
+		<td>
+			<p>--file=SCRIPTFILE</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>-i[SUFFIX]</p>
+		</td>
+		<td>
+			<p>--in-place[=SUFFIX]</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>-l N</p>
+		</td>
+		<td>
+			<p>--line-length=N</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p><br>
+			</p>
+		</td>
+		<td>
+			<p>--posix</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>-b</p>
+		</td>
+		<td>
+			<p>--binary</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p><br>
+			</p>
+		</td>
+		<td>
+			<p>--follow-symlinks</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>-r</p>
+		</td>
+		<td>
+			<p>--regular-extended</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>-s</p>
+		</td>
+		<td>
+			<p>--separate</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p>-u</p>
+		</td>
+		<td>
+			<p>--unbuffered</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p><br>
+			</p>
+		</td>
+		<td>
+			<p>--help</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td>
+			<p><br>
+			</p>
+		</td>
+		<td>
+			<p>--version</p>
+		</td>
+	</tr>
+</tbody></table>
+<p>
+Let's define each of these.
+</p><h2><a name="uh-62c" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62c">The -posix argument</a></h2>
+<p>
+The GNU version of sed has many features that are not available in other
+ versions. When portability is important, test your script with the 
+-posix option. If you had an example that used a feature of GNU sed, 
+such as the 'v' command to test the version number, such as
+
+</p><pre>#this is a sed command file
+v 4.0.1
+# print the number of lines
+$=
+</pre>
+
+And you executed it with the command
+
+<pre>sed -nf sedfile --posix &lt;file
+</pre>
+
+then the GNU version of sed program would give you a warning that your sed script is not compatible. It would report:
+
+<pre>sed: -e expression #1, char 2: unknown command: `v'
+</pre>
+<h2><a name="uh-62d" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62d">The --version argument</a></h2>
+<p>
+You can determine which version of sed you are using with the GNU  sed --version command. This is what it outputs on my computer
+
+</p><pre># sed --version
+GNU sed version 4.2.1
+Copyright (C) 2009 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,
+to the extent permitted by law.
+
+GNU sed home page: &lt;http://www.gnu.org/software/sed/&gt;.
+General help using GNU software: &lt;http://www.gnu.org/gethelp/&gt;.
+E-mail bug reports to: &lt;bug-gnu-utils@gnu.org&gt;.
+Be sure to include the word ``sed'' somewhere in the ``Subject:'' field.
+</pre>
+
+<h2><a name="uh-62e" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62e">The -h Help argument</a></h2>
+<p>
+The -h option will print a summary of the sed commands. The long argument of the command is 
+
+</p><pre>sed --help
+</pre>
+
+It provides a nice summary of the command line arguments.
+<h2><a name="uh-62f" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62f">The -l Line Length Argument</a></h2>
+<p>
+
+I've already described the 'l' command. 
+
+The default line width for the 'l' command is 70 characters. This 
+default value can be changed by adding  the '-l N' option and specifying
+ the maximum line length as the number after the '-l'.
+</p><pre>sed -n -l 80 'l' &lt;file
+</pre>
+The long form version of the command line is
+<pre> sed -n --line-length=80 'l' &lt;file
+</pre>
+
+<h2><a name="uh-62g" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62g">The -s Separate argument</a></h2>
+<p>
+
+Normally, when you specify several files on the command line, sed 
+concatenates the files into one stream, and then operates on that single
+ stream. If you had three files, each with 100 lines, then the command
+
+</p><pre>sed -n '1,10 p' file1 file2 file3
+</pre>
+
+would only print the first 10 lines of file file1. The '-s' command 
+tells GNU sed to treat the files are independent files, and to print out
+ the first 10 lines of each file, which is similar to the head command.
+
+Here's another example: If you wanted to print the number of lines of 
+each file, you could use 'wc -l' which prints the number of lines, and 
+the filename, for each file, and at the end print the total number of 
+lines.
+
+Here is a simple shell script that does something similar, just using 
+sed:
+
+<pre>#!/bin/sh
+FILES=$*
+sed -s -n '$=' $FILES # print the number of lines for each file
+sed -n '$=' $FILES # print the total number of lines.
+</pre>
+
+The 'wc -l' command does print out the filenames, unlike the above 
+script.
+A better emulation of the 'wc -l' command would execute the command in a
+ loop, and print the filenames. Here is a more advanced script that does
+ this, but it doesn't use the '-s' command:
+
+<pre>#!/bin/sh
+for F in "$@"
+do
+ NL=`sed -n '$=' &lt; "$F" ` &amp;&amp;  printf "  %d %s\n" $NL "$F"
+done
+TOTAL=`sed -n '$=' "$@"`
+printf "  %d total\n" $TOTAL
+</pre>
+
+<h2><a name="uh-62h" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62h">The -i in-place argument</a></h2>
+<p>
+I've already described in Editing multiple files the way I like to do
+this. For those who want a simpler method, GNU Sed allows you to do
+this with a command line option - "-i". Let's assume that we are going
+to make the same simple change - adding a tab before each line. This
+is a way to do this for all files in a directory with the ".txt"
+extension in the current directory:
+
+</p><pre>sed -i 's/^/\t/' *.txt
+</pre>
+
+The long argument name version is
+ 
+<pre>sed --in-place 's/^/\t/' *.txt
+</pre>
+
+This verison deletes the original file. If you are as cautious as I am, 
+you may prefer to specify an extension, which is used to keep a copy of 
+the original: 
+
+<pre>sed -i.tmp 's/^/\t/' *.txt
+</pre>
+
+And the long argument name version is
+ 
+<pre>sed --in-place=.tmp 's/^/\t/'  *.txt
+</pre>
+
+In the last two versions, the original version of the "a.txt" file
+would have the name "a.txt.tmp". You can then delete the original
+files after you make sure all worked as you expected.  Please consider
+the backup option, and heed my warning. You can easily delete the
+backed-up original file, as long as the extension is unique.
+<p>The GNU version of sed allows you to use "-i" without an argument. The FreeBSD/Mac OS X does not.
+You <b>must</b> provide an extension for the FreeBSD/Mac OS X version.
+If you want to do in-place editing without creating a backup, you can use
+</p><pre>sed -i ''  's/^/\t/'  *.txt
+</pre>
+<h2><a name="uh-62i" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62i">The --follow-symlinks argument</a></h2>
+<p>
+
+The in-place editing feature is handy to have. But what happens if the file you are editing is a symbolic link to another file?
+Let's assume you have a file named "b" in a directory called "tmp", with a symbolic link to this file:
+
+</p><pre>$ ls -l b
+lrwxrwxrwx 1 barnett adm 6 Mar 16 16:03 b.txt -&gt; tmp/b.txt
+</pre>
+
+If you executed the above command to do in place editing, there will be a
+ new file called "b.txt" in the current directory, and "tmp/b.txt" will 
+be unchanged. Now you have two versions of the file, one is changed (in 
+the current directory), and one is not (in the "tmp" directory). And 
+where you had a symbolic link, it has been replaced with a modified 
+version of the original file.
+
+If you want to edit the real file, and keep the symbolic link in
+place, use the "--follow-symlinks" command line option:
+
+<pre>sed -i --follow-symlinks 's/^/\t/' *.txt
+</pre>
+
+This follows the symlink to the original location, and modifies the file
+ in the "tmp" directory, If you specify an extension, the original file 
+will be found with that extension in the same directory ar the real 
+source. Without the --follow-symlinks command line option, the "backup" 
+file "b.tmp" will be in the same directory that held the symbolic link, 
+and will still be a symbolic link - just renamed to give it a new 
+extension.
+<h2><a name="uh-62j" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62j">The -b Binary argument</a></h2>
+<p>
+
+Unix and Linux systems consider the new line character "\n" to be the 
+end of the line. However, MS-DOS, Windows, and Cygwin systems end each 
+line with "\r\n" - Carriage return and line-feed. 
+
+If you are using any of these operating systems, the "-b" or --binary" 
+command line option will treat the carriage return/new line combination 
+as the end of the line.
+Otherwise  the carriage return is treated as an unprintable character 
+immediately before the end-of-line.
+I think. (Note to self - verify this).
+
+</p><h2><a name="uh-62k" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62k">The -r Extended Regular Expression argument</a></h2>
+<p>
+When I mention patterns, such as "s/pattern/", the pattern is a regular 
+expression.
+There are two common classes of regular expressions, the original 
+"basic" expressions, and the "extended" regular expressions.  For more 
+on the differences see <a href="http://www.grymoire.com/Unix/Regular.html">My tutorial on regular expressions</a> and the <a href="http://www.grymoire.com/Unix/Regular.html#uh-12">the section on extended regular expressions</a>.
+
+
+Because the meaning of certain characters are different between the 
+regular and extended expressions, you need a command line argument to 
+enable <i>sed</i> to use the extension.
+To enable this extension, use the "-r" command, as mentioned in <a href="http://www.grymoire.com/Unix/Sed.html#uh-4">the example on finding duplicated words on a line</a>
+</p><pre>sed -r -n '/\([a-z]+\) \1/p'
+</pre>
+<p> or
+</p><pre>sed --regular-extended -quiet '/\([a-z]+\) \1/p'
+</pre>
+<p>I already mentioned that Mac OS X and FreeBSD uses <a href="http://www.grymoire.com/Unix/Sed.html#uh-62h2">-E</a> instead of <a href="http://www.grymoire.com/Unix/Sed.html#uh-62k">-r</a>.
+</p><h2><a name="uh-62l" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62l">The -u Unbuffered argument</a></h2>
+<p>
+
+Normally - Unix and Linux systems apply some intelligence to handling
+standard output. It's assumed that if you are sending results to a
+terminal, you want the output as soon as it becomes
+available. However, if you are sending the output to a file, then it's
+assumed you want better performance, so it buffers the output until
+the buffer is full, and then the contents of the buffer is written to
+the file.  Let me elaborate on this. Let's assume for this example you
+have a very large file, and you are using sed to search for a string,
+and to print it when it is found:
+
+</p><pre>sed -n '/MATCH/p' &lt;file
+</pre>
+
+Since the output is the terminal, as soon as a match is found, it is 
+printed. However, if sed pipes its output to another program, it will 
+buffer the results. But there are times when you want immediate results.
+ This is especially true when you are dealing with large files, or files
+ that occasionally generate data. To summarize, you have lots of input 
+data, and you want sed to process it, and then send this to another 
+program that processes the results, but you want the results when it 
+happens, and not delayed. 
+
+Let me make up a simple example. It's contrived, but it does explain how
+ this works. Here's a program called SlowText that prints numbers from 1
+ to 60, once a second:
+
+<pre>#!/bin/sh
+for i in `seq 1 60`
+do
+  echo $i
+  sleep 1
+done
+</pre>
+
+Let's use sed to search for lines that have the character '1', and have 
+it send results to awk, which will calculate the square of that number. 
+This would be the admittedly contrived script:
+
+<pre>SlowText | sed -n '/1/p' | awk '{print $1*$1}'
+</pre>
+
+This works, but because sed is buffering the results, we have to wait 
+until the buffer fills up, or until the SlowText program exists, before 
+we the results. You can eliminate the buffering, and see the results as 
+soon as SlowText outputs them, by using the "-u" option. With this 
+option, you will see the squares printed as soon as possible:
+
+<pre>SlowText | sed -un '/1/p' | awk '{print $1*$1}'
+</pre>
+<p>The long form of the argument is "--unbuffered".
+</p><p>Mac OS X and FreeBSD use the argument "-l".
+</p><p>GNU Sed 4.2.2 and later will also be unbuffered while reading files, not just writing them.
+</p><h2><a name="uh-62m" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62m">The -z Null Data argument</a></h2>
+<p>
+Normally, sed reads a line by reading a string of characters up to the end-of-line character (new line or carriage return). See <a href="http://www.grymoire.com/Unix/Sed.html#uh-62j">the -b Binary command line argument</a>
+The GNU version of sed added a feature in version 4.2.2 to use the "NULL" character instead.
+This can be useful if you have files that use the NULL as a record separator.
+Some GNU utilities can genertae output that uses a NULL instead a new line,
+such as "find . -print0" or "grep -lZ".
+This feature is useful if you are operating on filenames that might contain spaces or binary characters.
+</p><p>
+For instance, if you wanted to use "find" to search for files and you 
+used the "-print0" option to print a NULL at the end of each filename, 
+you could use sed to delete the directory pathname:
+</p><pre>find . -type f -print0  | sed -z 's:^.*/::' | xargs -0 echo 
+</pre>
+<p>The above example is not terribly useful as the "xargs" use of echo does not retain the ability to
+retain spaces as part of the filename. But is does show how to use the sed "-z" command.
+
+</p><p>GNU grep also has a -Z option to search for strings in files, 
+placing a "NULL" at the end of each filename instead of a new line. And 
+with the -l command, grep will print the filename that contains the 
+string, retaining non-printing and binary characters:
+</p><pre>grep -lZ STRING */*/* | sed -z 's:^.*/::' | xargs -0 echo
+</pre>
+<p>This feature is very useful when users have the ability to create their own filenames.
+
+</p><h2><a name="uh-62n" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62n">FreeBSD Extensions</a></h2>
+<p>Apple uses the FreeBSD version of sed for Mac OS X instead of the GNU
+ sed. However, the FreeBSD version has a couple of additions.
+</p><h2><a name="uh-62n1" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62n1">The -a or delayed open Argument </a></h2>
+<p>
+Normally, as soon as sed starts up, it opens all files that are refered to by the <a href="http://www.grymoire.com/Unix/Sed.html#uh-36">"w"</a> command. The FreeBSD version of sed has an option to delay this action until the "w" command is executed.
+</p><h2><a name="uh-62n2" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62n2">The -I in-place argument</a></h2>
+<p>FreeBSD added a "-I" option that is similar to the <a href="http://www.grymoire.com/Unix/Sed.html#uh-62h">-i</a> option.
+The "-i" option treats the editing each file as a separate instance of
+<i>sed</i>. If the "-I" option is used, then line numbers do not get
+reset at the beginning of each line, and ranges of addresses continue
+from one file to the next. That is, if you used the range
+'/BEGIN/,/END/' and you used the "-I" option, you can have the "BEGIN"
+in the first file, and "END" in the second file, and the commands
+executed within the range would span both files. If you used "-i", then the commands would not.
+</p><p>And like the <a href="http://www.grymoire.com/Unix/Sed.html#uh-62h">-i</a> option, the extension used to store the backup file must be specified.
+
+</p><h2><a name="uh-62n3" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62n3">-E or Extended Regular Expressions</a></h2>
+<p>I mentioned extended regular expressions <a href="http://www.grymoire.com/Unix/Sed.html#uh-4a">earlier</a>.
+FreeBSD (and Mac OS X) uses "-E" to enable this. However, FreeBSD later added the <a href="http://www.grymoire.com/Unix/Sed.html#uh-62k">-r</a> command to be compatible with GNU sed.
+</p><h2><a name="uh-62o" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-62o">Using word boundries</a></h2>
+<p>
+Someone once asked me to help them solve a tricky sed problem involving word boundaries.
+Let's suppose you have the following input
+</p><pre>/usr/bin /usr/local/bin /usr/local /usr/local/project/bin
+</pre>
+<p>
+and you wanted to delete '/usr/local' but leave the other 3 paths alone.
+You could use the simple (and incorrect) command:
+</p><pre>sed 's@/usr/local@@'
+</pre>
+<p>
+which would output
+</p><pre>/usr/bin /bin /usr/local /usr/local/project/bin
+</pre>
+<p>That is, it would mistakenly change '/usr/local/bin'  to '/bin' and 
+not delete '/usr/local'  which was the intention of the programmer.
+The better method is to include spaces around the search:
+</p><pre>sed 's@ /usr/local @ @'
+</pre>
+<p>However, this won't work if '/usr/local' is at the beginning, or at 
+the end of the line. It also won't work if '/usr/local' is the only path
+ on the line.
+To handle these edge cases, you can simply describe all of these 
+conditions as separate cases:
+</p><pre>#!/bin/sh
+sed '
+s@ /usr/local @ @g
+s@^/usr/local @@
+s@ /usr/local$@@
+s@^/usr/local$@@
+'
+</pre>
+<p>This works fine if the string you are searching for is surrounded by a
+ space.
+But what happens if the string is surrounded by other characters, which 
+may be one of several possible characters?
+You can always make up your own class of characters that define the 'end
+ of a word';
+For instance, if your string consists of alphanumeric characters and the
+ slash, the class of characters can be defined by '[a-zA-Z0-9/]' or the 
+more flexible '[[:alnum:]/]'.
+We can define the class fo characters to be all but these, by using the 
+caret, i.e. '[^[:alnum:]/]'.
+And unlike the space before, if you are going to use character classes, 
+you may have to remember what these characters are and not delete them.
+So we can replace the space with '[^[:alnum:]/]' and then change the 
+command to be
+</p><pre>#!/bin/sh
+sed '
+s@\([^[:alnum:]/]\)/usr/local\([^[:alnum:]/]\)@\1\2@g
+s@^/usr/local\([^[:alnum:]/]\)@\1@
+s@\([^[:alnum:]/]\)/usr/local$@\1@
+s@^/usr/local$@@
+'
+</pre>
+<p>The first version would replace ' /usr/local ' with a single space. 
+This method would replace ':/usr/local:' with '::' - because the 
+redundant deliniators are not deleted. Be sure to fix this if you need 
+to.
+</p><p>This method always works, but it is inelegant and error prone.
+There are other methods, but they <b>may not be portable</b>.
+Solaris's version of sed used the special characters ‘\&lt;’ and ‘\&gt;’
+ as anchors that indicated a word boundary. So you could use
+</p><pre>s@\&lt;/usr/local\&gt;@@
+</pre>
+<p>
+However, the GNU version of sed says the usage of these special characters are undefined. According to the manual page:
+</p><pre>Regex syntax clashes (problems with backslashes)
+     `sed' uses the POSIX basic regular expression syntax.  According to
+     the standard, the meaning of some escape sequences is undefined in
+     this syntax;  notable in the case of `sed' are `\|', `\+', `\?',
+     `\`', `\'', `\&lt;', `\&gt;', `\b', `\B', `\w', and `\W'.
+
+     As in all GNU programs that use POSIX basic regular expressions,
+     `sed' interprets these escape sequences as special characters.
+     So, `x\+' matches one or more occurrences of `x'.  `abc\|def'
+     matches either `abc' or `def'.
+</pre>
+<p>When in doubt, experiment. 
+</p><h2><a name="uh-63" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-63">Command Summary</a></h2>
+<p>As I promised earlier, here is a table that summarizes the different
+commands.
+The second column specifies if the command can have a range or pair of
+addresses or a single address or pattern.
+The next four columns specifies which of the four buffers or streams
+are modified by the command. Some commands only affect the output
+stream, others only affect the hold buffer.
+If you remember that the pattern space is output (unless a 
+"-n" was given to
+<i>sed</i>), this table should help you keep track of the various commands.
+</p><table summary="Commands" border="">
+ <tbody><tr>
+ <th>Command</th>
+ <th>Address or Range</th>
+ <th>Modification to<br>Input Stream</th>
+ <th>Modification to<br>Output Stream</th>
+ <th>Modification to<br>Pattern Space</th>
+ <th>Modification to<br>Hold Buffer</th>
+</tr><tr>
+ <td align="center">=</td>
+ <td align="center">-</td>
+ <td align="center">-</td>
+ <td align="center">Y</td>
+ <td align="center">-</td>
+ <td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">a</td>
+<td align="center">Address</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">b</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">c</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">d</td>
+<td align="center">Range</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">D</td>
+<td align="center">Range</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">g</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">G</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">h</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+</tr>
+<tr>
+ <td align="center">H</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+</tr>
+<tr>
+ <td align="center">i</td>
+<td align="center">Address</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">l</td>
+<td align="center">Address</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">n</td>
+<td align="center">Range</td>
+<td align="center">Y</td>
+<td align="center">*</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">N</td>
+<td align="center">Range</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">p</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">P</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">q</td>
+<td align="center">Address</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">r</td>
+<td align="center">Address</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">s</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">t</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">w</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+ <td align="center">x</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+</tr>
+<tr>
+ <td align="center">y</td>
+<td align="center">Range</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">Y</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<p>The
+"n" command may or may not generate output, depending on the
+"-n" option. The 
+"r" command can only have one address, despite the documentation.
+</p><p>Check out my new <a href="http://www.grymoire.com/Unix/SedChart.pdf">Sed Reference Chart</a>
+</p><h2><a name="uh-64" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-64">In Conclusion</a></h2><p>This concludes my tutorial on
+<i>sed</i>. It is possible to find shorter forms of some of my scripts.
+However, I chose these examples to illustrate some basic constructs.
+I wanted clarity, not obscurity.
+I hope you enjoyed it.
+</p><p>
+<!-- INCLUDE Ad1 -->
+<script src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/adsbygoogle.js" async="" defer="defer"></script>
+<!-- Ad1 728x90, created 12/24/07 -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3246203470757260" data-ad-slot="5334774510"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p><h2><a name="uh-65" href="http://www.grymoire.com/Unix/Sed.html#toc-uh-65">More References</a></h2><p>This concludes my tutorial on sed.
+Other of my UNIX shell tutorials can be found 
+<a href="http://www.grymoire.com/Unix/index.html">here.</a>
+Other shell tutorials and references can be found at
+</p><ul>
+  <li><a href="http://www.freebsd.org/cgi/man.cgi?query=sed">FreeBSD Sed Man Page</a>
+  </li><li><a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/sed.1.html">Apple/Mac OS X Sed Man Page</a>
+
+  </li><li><a href="https://www.gnu.org/software/sed/manual/sed.html">GNU Sed Manual</a>
+  </li><li><a href="https://lists.gnu.org/archive/html/info-gnu/2012-12/msg00013.html">GNU Sed 4.2.2 Release Notes</a>
+  </li><li><a href="http://www.freebsd.org/cgi/man.cgi?query=sed&amp;sektion=1&amp;manpath=Unix+Seventh+Edition">sed(1) Seventh Eddition Unix</a>
+  </li><li><a href="http://docs.oracle.com/cd/E26502_01/html/E29030/sed-1b.html#scrolltoc">sed(1) manual page from Sun/Oracle</a>
+  </li><li><a href="http://www.shelldorado.com/links/index.html#tutorials">Heiner's SHELLdorado</a>
+  </li><li><a href="http://cfajohnson.com/shell/">Chris F. A. Johnson's UNIX Shell Page</a>
+  </li><li><a href="http://en.wikipedia.org/wiki/Sed">The Wikipedia Entry on SED</a>
+  </li><li><a href="http://sed.sourceforge.net/sed1line.txt">SED one-liners</a>
+  </li><li><p>And don't forget <a href="http://sed.sourceforge.net/sedfaq.html">The SED FAQ</a>
+</p></li></ul>
+<p>
+<br>This document was originally converted from NROFF to TEXT to HTML.
+<br> Please forgive errors in the translation.
+<br> If you are confused, grab the actual script if possible. No translations occurred in the scripts.
+<br>
+</p><h3><a name="Thanks_for_the_feedback.2C_gang">Thanks for the feedback, gang</a></h3>
+<p>
+<br>Thanks to Keelan Evans, Fredrik Nilsson, and Kurt McKee for spotting some typos.
+<br>Thanks to Wim Stolker and Jose' Sebrosa as well.
+<br>Thanks to Olivier Mengue.
+<br>Thanks to Andrew M. Goth.
+<br>Thanks to David P. Brown.
+<br> Thanks to Axel Schulze for some corrections
+<br> Thanks to Martin Jan for the corrections in sed format (grin)
+<br> Thanks to David Ward for some corrections
+<br>A big thanks for Fazl Rahman for spotting dozens of errors.
+<br> Thanks to Carl Henrik Lunde who suggested an improvement to convert2uc1.sh
+<br> A big thanks to Bryan Hyun Huh who spotted an error in the table and reference chart
+<br> Thanks for input from
+</p><pre>	Marten Jan
+	Gordon Wilson
+	Tom Konantz
+	Peter Bratton
+	Grant Root
+	Keith Briggs
+	Zoltan Miklos
+	Peggy Russell
+	Lorens Kockkum.net
+	John Poulin
+	Rihards
+	Corey Richardson
+	Eric Mathison
+	Ildar Mulyukov 
+	Tom Zhu
+	Abhijeet Rastogi <a href="https://twitter.com/shadyabhi">@shadyabhi</a>
+	Steve LeBlanc   <a href="https://twitter.com/sleveo">@sleveo</a>
+	dontforget yourtowel <a href="https://twitter.com/whatissixbynine">@whatissixbynine</a>
+	Yiming
+	Fei Wang
+	Kenneth R. Beesley
+	Duncan Sung W. Kim <a href="https://twitter.com/DuncanSungWKim">@DuncanSungWKim</a>
+	Juan Eugenio Abadie
+	Zander Hill <a href="https://twitter.com/_ZPH">@_ZPH</a>
+    <a href="https://plus.google.com/u/0/109762614990506375066/posts">Rob Smith</a>
+    <a href="https://plus.google.com/u/0/109762614990506375066/posts">Peter Moore</a>
+
+</pre>
+<p><i>This document was translated by troff2html v0.21 on September 22, 2001 and then manually edited to make it compliant with:</i>
+
+      <a href="http://validator.w3.org/check?uri=referer"><img src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/valid-html401.png" alt="Valid HTML 4.01!" width="88" height="31"></a>
+    </p>
+    
+</div>
+<!-- INCLUDE Navigation -->
+<div id="navigation">
+<img src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/grymoire.jpg" alt="grymoire" width="267" height="200">
+<h4>Grymoire<br> Navigation</h4>
+
+<ul>
+<li><a href="http://www.grymoire.com/Unix/index.html">Unix/Linux</a> 
+<ul>
+<li><a href="http://www.grymoire.com/Unix/Quote.html">Quotes</a> </li> 
+<li><a href="http://www.grymoire.com/Unix/Sh.html">Bourne Shell</a> </li> 
+<li><a href="http://www.grymoire.com/Unix/Csh.html">C Shell</a> </li> 
+<li><a href="http://www.grymoire.com/Unix/Permissions.html">File Permissions</a> </li> 
+<li><a href="http://www.grymoire.com/Unix/Regular.html">Regular Expressions</a> </li> 
+<li><a href="http://www.grymoire.com/Unix/Grep.html">grep</a> </li> 
+<li><a href="http://www.grymoire.com/Unix/Awk.html">awk </a> <img src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/updated.gif" alt="UPDATED"></li> 
+<li><a href="http://www.grymoire.com/Unix/sed.html">sed </a> <img src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/updated.gif" alt="UPDATED"></li> 
+<li><a href="http://www.grymoire.com/Unix/Find.html">find</a> </li> 
+<li><a href="http://www.grymoire.com/Unix/Tar.html">tar</a> </li> 
+<li><a href="http://www.grymoire.com/Unix/Inodes.html">inodes</a> </li> 
+</ul>
+</li><li><a href="http://www.grymoire.com/Security/index.html">Security</a> 
+<ul>
+<li><a href="http://www.grymoire.com/Security/IPv6.html">IPv6 </a> </li> 
+<li><a href="http://www.grymoire.com/Security/Wireless.html">Wireless</a> 
+<ul>
+<li><a href="http://www.grymoire.com/Security/Hardware.html">Hardware</a> </li> 
+</ul>
+</li><li><a href="http://www.grymoire.com/Spam/index.html">spam</a> </li> 
+</ul>
+</li><li><a href="http://www.grymoire.com/Deception/index.html">Deception</a> </li> 
+<li><a href="http://www.grymoire.com/Postscript/index.html">PostScript</a> 
+<ul>
+<li><a href="http://www.grymoire.com/Postscript/Halftones.html">Halftones</a> </li> 
+</ul>
+</li><li><a href="http://www.grymoire.com/Privacy/index.html">Privacy</a> 
+<ul>
+<li><a href="http://www.grymoire.com/Privacy/BillOfRights.html">Bill of Rights</a> </li> 
+</ul>
+</li><li><a href="http://www.grymoire.com/References.html">References</a> 
+<ul>
+<li><a href="http://www.grymoire.com/Unix/CshTop10.txt">Top 10 reasons to avoid CSH</a> </li> 
+<li><a href="http://www.grymoire.com/Unix/SedChart.pdf">sed Chart </a> PDF</li> 
+<li><a href="http://www.grymoire.com/Unix/AwkRef.html">awk Reference </a> HTML</li> 
+</ul>
+</li><li><a href="http://www.grymoire.com/magic.html">Magic                    </a> </li> 
+<li><a href="http://www.grymoire.com/Search.html">Search</a> </li> 
+<li><a href="http://www.grymoire.com/About.html">About</a> </li> 
+<li><a href="http://www.grymoire.com/Unix/donate.html">Donate </a> <img src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/new.gif" alt="NEW"></li>
+</ul>
+
+    <p>Google+: <a href="https://plus.google.com/u/1/+BruceBarnett?rel=author">Bruce Barnett</a>
+    </p><p>Twitter: <a href="https://twitter.com/#%21/grymoire">@grymoire</a>
+    </p><p>Blog: <a href="http://grymoire.wordpress.com/">Wordpress Blog</a>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56335000-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript" async="" src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/adsbygoogle.js"></script>
+<!-- Wide300x600 -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-3246203470757260" data-ad-slot="3280360586"></ins>
+<script type="text/javascript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</p></div>
+
+
+<iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="Sed%20-%20An%20Introduction%20and%20Tutorial_files/postmessageRelay.html" id="oauth2relay678963513" name="oauth2relay678963513"></iframe></body></html>

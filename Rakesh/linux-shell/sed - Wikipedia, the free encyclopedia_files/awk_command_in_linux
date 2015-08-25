@@ -1,0 +1,9 @@
+awk '/search pattern1/ {Actions}
+     /search pattern2/ {Actions}' file
+
+awk is really powerful and can be used for the records and columns
+
+https://www.hackerrank.com/challenges/awk-1 this is the challenge
+
+answer - awk '{if ($2 == "" || $3 == "" || $4 == "") print "Not all scores are available for",$1;}'
+

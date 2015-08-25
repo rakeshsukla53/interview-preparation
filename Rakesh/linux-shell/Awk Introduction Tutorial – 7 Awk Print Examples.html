@@ -1,0 +1,2695 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/css.css" media="screen, projection">
+<title>Awk Introduction Tutorial – 7 Awk Print Examples</title>
+<meta name="description" content="This is the first article on the new awk tutorial series. We’ll be posting several articles on awk in the upcoming weeks that will cover all features of aw">
+<meta name="robots" content="noodp, noydir">
+<link rel="canonical" href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">
+<link rel="alternate" type="application/rss+xml" title="The Geek Stuff feed" href="http://www.thegeekstuff.com/feed/">
+<link rel="pingback" href="http://www.thegeekstuff.com/xmlrpc.php">
+
+<!-- All in One SEO Pack 2.2.6.2 by Michael Torbert of Semper Fi Web Design[295,356] -->
+<meta name="description" content="This is the first article on the new awk tutorial series. We'll be posting several articles on awk in the upcoming weeks that will cover all features of awk">
+
+<link rel="canonical" href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="The Geek Stuff » Awk Introduction Tutorial – 7 Awk Print Examples Comments Feed" href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/feed/">
+		<script async="" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/cbgapi.loaded_1"></script><script async="" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/cbgapi.loaded_0"></script><script src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.thegeekstuff.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script type="text/javascript" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/wp-emoji-release.js"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="shortcut icon" href="http://static.thegeekstuff.com/wp-content/uploads/2015/05/favicon.ico.gzip">
+<script src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/a" type="text/javascript"></script><script src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/inputtools.js" type="text/javascript"></script></head>
+<body class="template-single">
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-5302569-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<div class="container">
+	<div id="header" class="header">
+<p id="logo"><a href="http://www.thegeekstuff.com/"><img src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/thegeekstuff.gif" alt="The Geek Stuff"></a></p><div id="header_ad"><div id="header_ad1">
+<script async="" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/adsbygoogle.js"></script>
+<!-- TGS Logo Header -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8090601437064582" data-ad-slot="4708993701"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div>
+	</div>
+	<span class="menu_control">≡ Menu</span>
+<ul id="menu-tgs-menu" class="menu"><li id="menu-item-15798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-15798"><a href="http://www.thegeekstuff.com/">Home</a></li>
+<li id="menu-item-15797" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15797"><a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Free eBook</a></li>
+<li id="menu-item-15805" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15805"><a href="http://www.thegeekstuff.com/best-of-the-blog/">Start Here</a></li>
+<li id="menu-item-15800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15800"><a href="http://www.thegeekstuff.com/contact/">Contact</a></li>
+<li id="menu-item-15802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15802"><a href="http://www.thegeekstuff.com/about/">About</a></li>
+</ul>
+	<div class="columns">
+		<div class="content">
+			<div id="post-3059" class="post_box grt top" itemscope="" itemtype="http://schema.org/Article">
+				<div class="headline_area">
+					<h1 class="headline" itemprop="name">Awk Introduction Tutorial – 7 Awk Print Examples</h1>
+					<div class="byline small">
+						<span class="post_author_intro">by</span> <span class="post_author" itemprop="author">Sasikala</span>
+						<meta itemprop="datePublished" content="2010-01-06">
+						<meta itemprop="dateModified" content="2013-05-12">
+						<span class="post_date_intro">on</span> <span class="post_date" title="2010-01-06">January 6, 2010</span>
+					</div>
+				</div>
+				<div class="post_content" itemprop="articleBody">
+<div style="margin:7px 0px 6px 0px; padding:5px;">
+
+<div style="float:left; width=95px">
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/fastbutton.html" name="I0_1440459928662" id="I0_1440459928662" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" width="100%" frameborder="0"></iframe></div>
+</div>
+
+<div style="float:left; padding:2px; width:90px"><iframe src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/like_002.html" scrolling="no" style="border:none; overflow:hidden; width:450px; height:21px;" allowtransparency="true" frameborder="0"></iframe>
+</div>
+
+<div style="width=95px">
+<iframe src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/tweet_button.html" style="position: static; visibility: visible; width: 80px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-i1440459929192843356" frameborder="0"></iframe><script type="text/javascript" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/widgets.js"></script>
+</div>
+
+</div>
+<p><img class="alignright size-medium wp-image-3230" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/awk-tutorial-introduction-300x176.png" alt="Linux Awk Tutorial - Introduction and Awk Examples" width="300" height="176"></p>
+<p>This is the first article on the new awk tutorial series. We’ll be 
+posting several articles on awk in the upcoming weeks that will cover 
+all features of awk with practical examples.</p>
+<p>In this article, let us review the fundamental awk working methodology along with 7 practical awk print examples.<br>
+<span id="more-3059"></span><br>
+<strong>Note:</strong> Make sure you review our earlier <a href="http://www.thegeekstuff.com/tag/sed-tips-and-tricks/">Sed Tutorial Series</a>.</p>
+<h2>Awk Introduction and Printing Operations</h2>
+<p>Awk is a programming language which allows easy manipulation of 
+structured data and the generation of formatted reports. Awk stands for 
+the names of its authors “<strong>A</strong>ho, <strong> W</strong>einberger, and <strong>K</strong>ernighan”</p>
+<p>The Awk is mostly used for pattern scanning and processing. It 
+searches one or more files to see if they contain lines that matches 
+with the specified patterns and then perform associated actions.</p>
+<p>Some of the key features of Awk are:</p>
+<ul>
+<li>Awk views a text file as records and fields.</li>
+<li>Like common programming language, Awk has variables, conditionals and loops</li>
+<li>Awk has arithmetic and string operators.</li>
+<li>Awk can generate formatted reports</li>
+</ul>
+<p>Awk reads from a file or from its standard input, and outputs to its 
+standard output. Awk does not get along with non-text files.</p>
+    <center>
+      <div style="margin-left:2px; margin-top:10px; margin-bottom:10px; ">
+
+        <!-- AD BLOCK -->
+		
+<script async="" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/adsbygoogle.js"></script>
+<!-- TGS Inside Content -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-8090601437064582" data-ad-slot="8643685131"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <!-- END AD BLOCK -->
+
+	  </div>
+    </center>
+
+
+<pre>Syntax:
+
+awk '/search pattern1/ {Actions}
+     /search pattern2/ {Actions}' file</pre>
+<p>In the above awk syntax:</p>
+<ul>
+<li>search pattern is a regular expression.</li>
+<li>Actions – statement(s) to be performed.</li>
+<li>several patterns and actions are possible in Awk.</li>
+<li>file – Input file.</li>
+<li>Single quotes around program is to avoid shell not to interpret any of its special characters.</li>
+</ul>
+<h2>Awk Working Methodology</h2>
+<ol>
+<li>Awk reads the input files one line at a time.</li>
+<li>For each line, it matches with given pattern in the given order, if matches performs the corresponding action.</li>
+<li>If no pattern matches, no action will be performed.</li>
+<li>In the above syntax, either search pattern or action are optional, But not both.</li>
+<li>If the search pattern is not given, then Awk performs the given actions for each line of the input.</li>
+<li>If the action is not given, print all that lines that matches with the given patterns which is the default action.</li>
+<li>Empty braces with out any action does nothing. It wont perform default printing operation.</li>
+<li>Each statement in Actions should be delimited by semicolon.</li>
+</ol>
+<p>Let us create employee.txt file which has the following content, which will be used in the<br>
+examples mentioned below.</p>
+<pre>$cat employee.txt
+100  Thomas  Manager    Sales       $5,000
+200  Jason   Developer  Technology  $5,500
+300  Sanjay  Sysadmin   Technology  $7,000
+400  Nisha   Manager    Marketing   $9,500
+500  Randy   DBA        Technology  $6,000</pre>
+<h3>Awk Example 1. Default behavior of Awk</h3>
+<p>By default Awk prints every line from the file.</p>
+<pre>$ awk '{print;}' employee.txt
+100  Thomas  Manager    Sales       $5,000
+200  Jason   Developer  Technology  $5,500
+300  Sanjay  Sysadmin   Technology  $7,000
+400  Nisha   Manager    Marketing   $9,500
+500  Randy   DBA        Technology  $6,000</pre>
+<p>In the above example pattern is not given. So the actions are applicable to all the lines.<br>
+Action print with out any argument prints the whole line by default. So it prints all the<br>
+lines of the file with out fail. Actions has to be enclosed with in the braces.</p>
+<h3>Awk Example 2. Print the lines which matches with the pattern.</h3>
+<pre>$ awk '/Thomas/
+&gt; /Nisha/' employee.txt
+100  Thomas  Manager    Sales       $5,000
+400  Nisha   Manager    Marketing   $9,500</pre>
+<p>In the above example it prints all the line which matches with the 
+‘Thomas’ or ‘Nisha’. It has two patterns. Awk accepts any number of 
+patterns, but each set (patterns and its corresponding actions) has to 
+be separated by newline.</p>
+<h3>Awk Example 3. Print only specific field.</h3>
+<p>Awk has number of built in variables. For each record i.e line, it 
+splits the record delimited by whitespace character by default and 
+stores it in the $n variables. If the line has 4 words, it will be 
+stored in $1, $2, $3 and $4. $0 represents whole line. NF is a built in 
+variable which represents total number of fields in a record.</p>
+<pre>$ awk '{print $2,$5;}' employee.txt
+Thomas $5,000
+Jason $5,500
+Sanjay $7,000
+Nisha $9,500
+Randy $6,000
+
+$ awk '{print $2,$NF;}' employee.txt
+Thomas $5,000
+Jason $5,500
+Sanjay $7,000
+Nisha $9,500
+Randy $6,000</pre>
+<p>In the above example $2 and $5 represents Name and Salary 
+respectively. We can get the Salary using&nbsp; $NF also, where $NF 
+represents last field. In the print statement ‘,’ is a concatenator.</p>
+<h3>Awk Example 4. Initialization and Final Action</h3>
+<p>Awk has two important patterns which are specified by the keyword called BEGIN and END.</p>
+<pre>Syntax: 
+
+BEGIN { Actions}
+{ACTION} # Action for everyline in a file
+END { Actions }
+
+# is for comments in Awk</pre>
+<p>Actions specified in the BEGIN section will be executed before starts reading the lines from the input.<br>
+END actions will be performed after completing the reading and processing the lines from the input.</p>
+<pre>$ awk 'BEGIN {print "Name\tDesignation\tDepartment\tSalary";}
+&gt; {print $2,"\t",$3,"\t",$4,"\t",$NF;}
+&gt; END{print "Report Generated\n--------------";
+&gt; }' employee.txt
+Name	Designation	Department	Salary
+Thomas 	 Manager 	 Sales 	         $5,000
+Jason 	 Developer 	 Technology 	 $5,500
+Sanjay 	 Sysadmin 	 Technology 	 $7,000
+Nisha 	 Manager 	 Marketing 	 $9,500
+Randy 	 DBA 	 	 Technology 	 $6,000
+Report Generated
+--------------</pre>
+<p>In the above example, it prints headline and last file for the reports.</p>
+<h3>Awk Example 5. Find the employees who has employee id greater than 200</h3>
+<pre>$ awk '$1 &gt;200' employee.txt
+300  Sanjay  Sysadmin   Technology  $7,000
+400  Nisha   Manager    Marketing   $9,500
+500  Randy   DBA        Technology  $6,000</pre>
+<p>In the above example, first field ($1) is employee id. So if $1 is 
+greater than 200, then just do the default print action to print the 
+whole line.</p>
+<h3>Awk Example 6. Print the list of employees in Technology department</h3>
+<p>Now department name is available as a fourth field, so need to check 
+if $4 matches with the string “Technology”, if yes print the line.</p>
+<pre>$ awk '$4 ~/Technology/' employee.txt
+200  Jason   Developer  Technology  $5,500
+300  Sanjay  Sysadmin   Technology  $7,000
+500  Randy   DBA        Technology  $6,000</pre>
+<p>Operator ~ is for comparing with the regular expressions. If it 
+matches the default action i.e print whole line will be&nbsp; performed.</p>
+<h3>Awk Example 7. Print number of employees in Technology department</h3>
+<p>The below example, checks if the department is Technology, if it is 
+yes, in the Action, just increment the count variable, which was 
+initialized with zero in the BEGIN section.</p>
+<pre>$ awk 'BEGIN { count=0;}
+$4 ~ /Technology/ { count++; }
+END { print "Number of employees in Technology Dept =",count;}' employee.txt
+Number of employees in Tehcnology Dept = 3</pre>
+<p>Then at the end of the process, just print the value of count which gives you the number of employees in Technology department.</p>
+<h3>Recommended Reading</h3>
+<p><strong><img class="frame alignright size-full" title="Sed and Awk 101 Hacks" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/sed-and-awk-132.png"><a href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/" rel="nofollow">Sed and Awk 101 Hacks</a>, by Ramesh Natarajan</strong>.
+ I spend several hours a day on UNIX / Linux environment dealing with 
+text files (data, config, and log files). I use Sed and Awk for all my 
+my text manipulation work. Based on my Sed and Awk experience, I’ve 
+written Sed and Awk 101 Hacks eBook that contains 101 practical examples
+ on various advanced features of Sed and Awk that will enhance your UNIX
+ / Linux life. Even if you’ve been using Sed and Awk for several years 
+and have not read this book, please do yourself a favor and read this 
+book. You’ll be amazed with the capabilities of Sed and Awk utilities.</p>
+<h3>Additional Awk Articles</h3>
+<ul>
+<li><a href="http://www.thegeekstuff.com/2010/01/awk-tutorial-understand-awk-variables-with-3-practical-examples/">Awk User-defined Variables with 3 Practical Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/01/8-powerful-awk-built-in-variables-fs-ofs-rs-ors-nr-nf-filename-fnr/">8 Powerful Awk Built-in Variables</a> – FS, OFS, RS, ORS, NR, NF, FILENAME, FNR</li>
+<li><a href="http://www.thegeekstuff.com/2010/02/unix-awk-operators/">7 Powerful Awk Operators Examples</a> (Unary, Binary, Arithmetic, String, Assignment, Conditional, Reg-Ex Awk Operators)</li>
+<li><a href="http://www.thegeekstuff.com/2010/02/awk-conditional-statements/">4 Awk If Statement Examples</a> ( if, if else, if else if, : ? )</li>
+<li><a href="http://www.thegeekstuff.com/2010/02/unix-awk-do-while-for-loops/">Caught In the Loop?</a> Awk While, Do While, For Loop, Break, Continue, Exit Examples</li>
+</ul>
+<div style="margin:7px 0px 3px 0px; padding:5px; background:#F2F0E8">
+
+<div style="float:left; width=95px">
+<div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/fastbutton_002.html" name="I1_1440459928672" id="I1_1440459928672" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" width="100%" frameborder="0"></iframe></div>
+</div>
+
+<div style="float:left; width=95px">
+<iframe src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/tweet_button_002.html" style="position: static; visibility: visible; width: 80px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-i1440459929193209237" frameborder="0"></iframe><script type="text/javascript" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/widgets.js"></script>
+</div>
+
+<div style="float:left; padding:2px; width:90px"><iframe src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/like_002.html" scrolling="no" style="border:none; overflow:hidden; width:450px; height:21px;" allowtransparency="true" frameborder="0"></iframe>
+</div>
+
+<div style="padding:1px">
+&gt;&nbsp;<a href="#commentform" rel="nofollow">Add your comment</a>
+</div>
+
+</div>
+<h3>If you enjoyed this article, you might also like..</h3>
+<table>
+<tbody><tr>
+<td valign="top">
+<ol>
+<li><a href="http://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/">50 Linux Sysadmin Tutorials</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/11/50-linux-commands/">50 Most Frequently Used Linux Commands (With Examples)</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/12/linux-performance-monitoring-tools/">Top 25 Best Linux Performance Monitoring and Debugging Tools</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">Mommy, I found it! – 15 Practical Linux Find Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Linux 101 Hacks 2nd Edition eBook</a>&nbsp;<img title="Linux 101 Hacks Book" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/free-small.png" alt="Linux 101 Hacks Book"></li>
+</ol>
+</td>
+<td>
+<ul>
+<li><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">Awk Introduction – 7 Awk Print Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Advanced Sed Substitution Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/8-essential-vim-editor-navigation-fundamentals/">8 Essential Vim Editor Navigation Fundamentals</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/06/iptables-rules-examples/">25 Most Frequently Used Linux IPTables Rules Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/turbocharge-putty-with-12-powerful-add-ons-software-for-geeks-3/">Turbocharge PuTTY with 12 Powerful Add-Ons</a></li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+<br>
+<center>
+<table id="booktable">
+<tbody><tr>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/bash-101-hacks-ebook/"><img title="Bash 101 Hacks Book" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/bash-132.png" alt="Bash 101 Hacks Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/"><img title="Sed and Awk 101 Hacks Book" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/sed-and-awk-132.png" alt="Sed and Awk 101 Hacks Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/nagios-core-ebook/"><img title="Nagios Core 3 Book" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/nagios-core-132.png" alt="Nagios Core 3 Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/vim-101-hacks-ebook/"><img title="Vim 101 Hacks Book" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/vim-101-hacks-132.png" alt="Vim 101 Hacks Book"></a>
+</td>
+</tr>
+</tbody></table>
+</center>
+<br>
+				</div>
+				<p class="post_tags" itemprop="keywords">
+					<span class="post_tags_intro">Tagged as:</span>
+					<a href="http://www.thegeekstuff.com/tag/awk-action-block/" rel="tag">Awk ACTION Block</a>,
+					<a href="http://www.thegeekstuff.com/tag/awk-begin-block/" rel="tag">Awk BEGIN Block</a>,
+					<a href="http://www.thegeekstuff.com/tag/awk-begin-end/" rel="tag">Awk Begin End</a>,
+					<a href="http://www.thegeekstuff.com/tag/awk-end-block/" rel="tag">Awk END Block</a>,
+					<a href="http://www.thegeekstuff.com/tag/awk-tutorial-examples/" rel="tag">Awk Tutorial Examples</a>,
+					<a href="http://www.thegeekstuff.com/tag/linux-awk-examples/" rel="tag">Linux Awk Examples</a>,
+					<a href="http://www.thegeekstuff.com/tag/linux-awk-tutorial/" rel="tag">Linux Awk Tutorial</a>,
+					<a href="http://www.thegeekstuff.com/tag/unix-awk-examples/" rel="tag">Unix Awk Examples</a>,
+					<a href="http://www.thegeekstuff.com/tag/unix-awk-tutorial/" rel="tag">Unix Awk Tutorial</a>
+				</p>
+			</div>
+			<div id="comments">
+				<p class="comments_intro"><span class="bracket">{</span> <span class="num_comments">108</span> comments… <a href="#commentform" rel="nofollow">add one</a> <span class="bracket">}</span></p>
+				<ul class="comment_list">
+					<li class="comment even thread-even depth-1" id="comment-28511">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.sandcmills.co.uk/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.sandcmills.co.uk/" rel="external nofollow" class="url">Steve Mills</a></span>
+							<span class="comment_date">January 6, 2010, 3:38 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-28511"><p>I have 
+only just started reading these articles. So far I think they are well 
+written and the explanations are clearly done with an awareness as to 
+how they might possibly be misunderstood and hence extra layers of 
+detail are presented where that might happen. For example, pointing out 
+that the tilde (~) is used to compare with regular expressions when the 
+reader might have otherwise expected an equals sign – without the 
+explanation the reader might have decided that the tilde represented the
+ same thing as an equals sign.</p>
+<p>I shall be reading more.</p>
+<p>Thanks for posting these articles.</p>
+<p>Kind Regards<br>
+Steve</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-28511" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-28523">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.danielreimann.us/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.danielreimann.us/" rel="external nofollow" class="url">Daniel Reimann</a></span>
+							<span class="comment_date">January 6, 2010, 6:02 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-28523"><p>Thank you
+ for the post here on awk.  I use it frequently, but it is always good 
+to have some updates and reminders.  Happy New Year.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-28523" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-28627">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://go-linux.blogspot.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://go-linux.blogspot.com/" rel="external nofollow" class="url">Lawrence</a></span>
+							<span class="comment_date">January 7, 2010, 4:34 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-28627"><p>awk is awesome! thanks for your sharing.</p>
+<p>Best Regards,<br>
+Lawrence</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-28627" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-28877">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://twitter.com/knusper2000" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://twitter.com/knusper2000" rel="external nofollow" class="url">Knusper</a></span>
+							<span class="comment_date">January 9, 2010, 5:15 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-28877"><p>Hi… Good article – now I know what ark is, and what I could use it for – well written…. I follow you now on twitter!</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-28877" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-29040">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Harsh</span>
+							<span class="comment_date">January 10, 2010, 10:08 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-29040"><p>Thanks for posting a tutorial on awk with illustrated examples.<br>
+I Will be expecting other articles on awk <img src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-29040" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment byuser comment-author-admin odd alt thread-odd thread-alt depth-1" id="comment-29531">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ramesh Natarajan</span>
+							<span class="comment_date">January 14, 2010, 9:23 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-29531"><p>@Steve,</p>
+<p>Yeah. ~ can be little confusing in this context, if not explained properly.  Thanks for you comment.</p>
+<p>@Daniel,</p>
+<p>Yeah. Most other readers of the blog are in similar position like 
+you. So, we are here to give constant updated and remainders of the 
+functionality that they already know.</p>
+<p>@Lawrence, Harsh,</p>
+<p>Thanks for the very nice comment. I’m glad you liked this article.</p>
+<p>@Knusper,</p>
+<p>Thanks for <a href="http://www.twitter.com/thegeekstuff" rel="nofollow">following us on twitter</a>.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-29531" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-40211">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">thalafan</span>
+							<span class="comment_date">March 21, 2010, 10:24 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-40211"><p>Nandraka  Ulladhu!!!</p>
+<p>I guess the example 2 can be done without a new line like below? Pattern as regex.</p>
+<p>~/bin$ awk ‘/Jason|Randy/’ employee<br>
+200  Jason   Developer  Technology  $5,500<br>
+500  Randy   DBA        Technology  $6,000</p>
+<p>And also what does the ; stands for? End of Pattern?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-40211" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-41987">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Andreia Amaral</span>
+							<span class="comment_date">April 7, 2010, 5:14 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-41987"><p>Hi,</p>
+<p>I want to use an if else statement like this:<br>
+if $10&gt;10 print $0 &gt; filename1<br>
+else print $0&gt; filename2</p>
+<p>but it’s not working it is not creating filename1 or filename2, how can I do this?<br>
+thanks?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-41987" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-57862">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ashu Agrawal</span>
+							<span class="comment_date">August 6, 2010, 10:31 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-57862"><p>Grt post.Thanks for making me understand the awk working</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-57862" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-64888">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">avinash</span>
+							<span class="comment_date">October 1, 2010, 7:30 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-64888"><p>hi, this is avinash….<br>
+       suppose u have a emp table like this:<br>
+    id           name        designation         salary<br>
+     1           avi              manager            1000<br>
+     2           ash             manager             1500<br>
+     3          nash             manager             2000<br>
+    4           varma           trainee                 500<br>
+     5          chow            trainee                 600<br>
+    6           hemanth        trainee                800</p>
+<p>  using awk command, i hav to print manager total salary and trainee total salary….<br>
+  i need a program….. can any one plz post it</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-64888" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-65977">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">vikas</span>
+							<span class="comment_date">October 13, 2010, 1:34 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-65977"><p>Hi…..@Avinash…..<br>
+u can try this one…….<br>
+awk ‘BEGIN {man_sal=0;trainee_sal=0;}<br>
+$3 ~/manager/ {man_sal+=$NF}<br>
+/trainee/ {trainee_sal+=$NF}<br>
+END {print “Total salary of manager’s and trainee’s are=”man_sal,trainee_sal}’  in_file.name</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-65977" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-66268">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">siva</span>
+							<span class="comment_date">October 15, 2010, 1:44 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-66268"><p>Hello forum members,</p>
+<p>Thanks for AWK tutorials ,it was very help ful to me.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-66268" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-66808">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">avinash</span>
+							<span class="comment_date">October 19, 2010, 5:12 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-66808"><p>@ vikas<br>
+ thanks you</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-66808" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-67114">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">wish</span>
+							<span class="comment_date">October 21, 2010, 3:36 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-67114"><p>hi all,<br>
+   if i have a issue file like:</p>
+<p>101     add      open      vish      iuo</p>
+<p>if exit and login again i should get the increment of the first field like</p>
+<p>102   add      open      vish      iuo</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-67114" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-67909">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">mounika</span>
+							<span class="comment_date">October 27, 2010, 10:40 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-67909"><p>its simply superb to understand </p>
+<p>its is very useful for the beginning learners and its is very help in exams time also</p>
+<p>so guys read and enjoy wd the unix</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-67909" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-70111">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/" rel="external nofollow" class="url">Lynda Zhang</a></span>
+							<span class="comment_date">November 17, 2010, 12:36 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-70111"><p>This is very help. How about if I want to print the salary seperated by commas, e.g. 2,000 instead of 2000</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-70111" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-76363">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ikem</span>
+							<span class="comment_date">December 30, 2010, 8:22 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-76363"><p>You’ve made a little typo:</p>
+<p>&gt; Number of employees in _Tehcnology_ Dept = 3</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-76363" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-83346">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">sudha</span>
+							<span class="comment_date">February 2, 2011, 12:38 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-83346"><p>vary vary healpul to every one</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-83346" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-94949">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">eben</span>
+							<span class="comment_date">March 27, 2011, 11:28 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-94949"><p>Its very useful for beginers like me…………</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-94949" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-96635">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">kalandar</span>
+							<span class="comment_date">April 7, 2011, 8:58 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-96635"><p>Hi,<br>
+I found this article to be very useful. Anybody who wants to know what 
+an awk is , this will give a fair idea. Looking forward to similar 
+articles on other topics of unix.</p>
+<p>Thanks <img src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-96635" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-100270">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Bhagyaraj</span>
+							<span class="comment_date">April 24, 2011, 1:38 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-100270"><p>Hi,</p>
+<p>Good,<br>
+Please try teach in Youtube to try differntly.<br>
+It will be more success.</p>
+<p>Keep it up,<br>
+I need to take an exam on awk, let me see how much I can  successed.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-100270" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-110502">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">kernelkid</span>
+							<span class="comment_date">June 10, 2011, 6:48 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-110502"><p>very simple and easy to understand, thanks a lot, it help me a lot</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-110502" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-111715">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">liju</span>
+							<span class="comment_date">June 14, 2011, 3:05 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-111715"><p>good simple article <img src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-111715" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-115422">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Marija</span>
+							<span class="comment_date">June 30, 2011, 9:03 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-115422"><p>I have read few geekstuff articles until now, explanations provided are the best I have ever seen so far! Great job <img src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"> Thanks a lot <img src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-115422" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-118332">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Muslim</span>
+							<span class="comment_date">July 19, 2011, 12:02 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-118332"><p>hi,</p>
+<p>i have the question that how to using print command “awk” to sort or transpose this data from many coloums to 2 columns only<br>
+#input file<br>
+NAME      JAN      FEB   MARCH    APRIL   MAY     JUNE    JULY<br>
+——-        —–      ——   ———-   ——–   ——     ——-     ——<br>
+BEN        5,000    6,000   7,000      8,000   6,500   7,500      9,000<br>
+YONG     4,000    5,500   6,000      5,800  7,000    8,000     8,5000</p>
+<p># output should be as below.<br>
+BEN  5,000<br>
+BEN  6,000<br>
+BEN  7,000<br>
+BEN  8,000<br>
+BEN  6,500<br>
+BEN  7,500<br>
+BEN  9,000<br>
+YONG  4,000<br>
+YONG  5,500<br>
+YONG  6,000<br>
+YONG  5,800<br>
+YONG  7,000<br>
+YONG  8,000<br>
+YONG  8,5000<br>
+Anyone can help.thanks<br>
+@muss</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-118332" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-121468">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nails carmody</span>
+							<span class="comment_date">August 9, 2011, 1:08 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-121468"><p>I know it’s late, but …</p>
+<p>#!/bin/bash</p>
+<p>awk ‘ {<br>
+# skip the first two lines<br>
+if (NR == 1 || NR == 2)<br>
+   continue</p>
+<p>for(i=2; i&lt;=NF; i++)<br>
+      printf("%s %s\n", $1, $i)<br>
+} ' datafile.txt</p>
+<p>Nice site!  I learned some new things about sed I didn't know.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-121468" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-124730">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Sudhanshu</span>
+							<span class="comment_date">August 29, 2011, 1:00 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-124730"><p>The article is simply awesome!!!</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-124730" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-184356">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Kalim</span>
+							<span class="comment_date">January 25, 2012, 9:03 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-184356"><p>Very gud information for beginners. Thanks</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-184356" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-198843">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Len Richards</span>
+							<span class="comment_date">February 15, 2012, 3:46 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-198843"><p>We have 
+duplicate titles in our library database. I am able to find the 
+duplicates but can’t figure out how to print the line above that matches
+ the regular expression and that line also has the same expression. Each
+ set of duplicates has a space between: example. I would match on 
+SERSOL-EBK</p>
+<p>2012 Joe ate my dog|SERSOL-EBK|122456<br>
+2012 Joe ate my dog|SERSOL-EBK|122459</p>
+<p>2011 Joe ate my toaster|SERSOL-EBK|122433<br>
+2011 Joe ate my toaster|SERSOL-EBK|125567</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-198843" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-202905">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Neha</span>
+							<span class="comment_date">March 1, 2012, 12:37 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-202905"><p>hi..<br>
+i want to capture these data through awk.</p>
+<p>596583.46875(E) 4924298.34375(N)<br>
+geology@PERMANENT in PERMANENT  (9)sand</p>
+<p>604960.78125(E) 4922837.53125(N)<br>
+geology@PERMANENT in PERMANENT  (6)shale</p>
+<p>596911.40625(E) 4920512.15625(N)<br>
+geology@PERMANENT in PERMANENT  (4)sandstone</p>
+<p>the output should be :<br>
+insert into mytable values(596583.46875,4924298.34375,geology@PERMANENT,shale);<br>
+insert into mytable values(604960.78125,4922837.53125,geology@PERMANENT,shale);</p>
+<p>any help would be grateful.<br>
+—<br>
+sorry i need to put shale within single codes so that i can insert into 
+my table.insert into mytable 
+values(596583.46875,4924298.34375,geology@PERMANENT,’shale’);<br>
+—<br>
+Thank u</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-202905" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-261809">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">subhojit777</span>
+							<span class="comment_date">June 30, 2012, 12:55 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-261809"><p>Great article. Thanks you <img src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-261809" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-265319">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Mimi</span>
+							<span class="comment_date">July 6, 2012, 2:20 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-265319"><p>Thank you for this site – you really saved me a lot of time. This is easy to follow and really helped me understand awk.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-265319" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-270939">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">sudarshan</span>
+							<span class="comment_date">July 17, 2012, 7:38 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-270939"><p>Hi All,</p>
+<p>I have a log file with the contents as below.</p>
+<p>09:30:51 [00082] TIMER iatesystems.hub.logging.TimerLog: 
+MPI_MxmRunMatch: 09:30:52 [00082] TIMER 
+iatesystems.hub.logging.TimerLog: MPI_MxmRunMatch:<br>
+09:30:53 [00082] TIMER iatesystems.hub.logging.TimerLog: MPI_MxmRunMatch: </p>
+<p>This will have entities based on the timestamp shown above (i.e. 09:30:51, 09:30:52, etc).</p>
+<p>Now my requirement is, I need to get the number of entries per an hour.<br>
+For example if the first record is with timestamp as 09:30:51.<br>
+Till 10:30:51 timestamp’s record I need to get the number of records.</p>
+<p>Can you please help me to get this?</p>
+<p>Thanks,<br>
+Sudarshan</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-270939" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-284823">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Steven</span>
+							<span class="comment_date">August 13, 2012, 8:54 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-284823"><p>Neha try this<br>
+suppose your data filename=log.txt<br>
+insert statements be put in insert.sql<br>
+————————————————————-<br>
+awk ‘BEGIN {str=”insert into mytable values(“;}<br>
+{if ((NR % 3)==1)<br>
+  { #print “NR1 is:” NR;</p>
+<p>   instr=str””substr($1,1,12)”,”substr($2,1,13);<br>
+   #print “str1 is:” instr;<br>
+  }<br>
+else if ((NR % 3)==2)<br>
+  {#print “NR2 is:”NR;<br>
+   instr=instr”,”$1″,””‘”‘”‘””ashale””‘”‘”‘””)”;<br>
+   print instr &gt;”insert.sql”;<br>
+  }<br>
+else ((NR % 3)==0)<br>
+  {# print “NR3 is:”NR;<br>
+   str=”insert into mytable values(“;<br>
+  }<br>
+fi}<br>
+END{}’ log.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-284823" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-301056">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Prabhu</span>
+							<span class="comment_date">September 11, 2012, 5:29 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-301056"><p>Comma delimited file in below format</p>
+<p>Name, Address,Start_Date,End_date</p>
+<p>But for few records there is extra comma in the Address field<br>
+As<br>
+Mark, 110A ,  Stuart Mark, 01/01/2012,06/07/2012</p>
+<p>Please help me as how to remove this extra comma, Out of 1 million record am having this issue in 10000 records</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-301056" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-301514">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nails</span>
+							<span class="comment_date">September 11, 2012, 1:36 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-301514"><p>Prabhu:<br>
+If the number of fields is greater than 4, assume there is comma that 
+makes field 2 into field 2 and field 3. Then, combine field 2 into field
+ 2 and field 3:</p>
+<p>awk ‘ BEGIN { FS=OFS=”,” }<br>
+{<br>
+if(NF &gt; 4)<br>
+   $2=”$2 $3″<br>
+print $0<br>
+} ‘ datafile.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-301514" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-309741">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Prabhu</span>
+							<span class="comment_date">September 18, 2012, 3:38 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-309741"><p>Thanks Nalis, Appreciate your help</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-309741" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-369920">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Kiran Indrala</span>
+							<span class="comment_date">November 7, 2012, 11:33 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-369920"><p>It is really very helpfull for beginers.i really appreciate you for sharing this info.</p>
+<p>Thanks,<br>
+Kiran Indrala</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-369920" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-416336">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.iab-online.org/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.iab-online.org/" rel="external nofollow" class="url">R.S.Wadhwa</a></span>
+							<span class="comment_date">December 5, 2012, 4:46 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-416336"><p>Hello,<br>
+I have the following output:<br>
+[Server, Modul, Version, timestamp]<br>
+Serversv10 ;admin ;1.0.2 ;2012.12.03-14:07:39<br>
+Serversv10 ;admin ;0.1.2 ;2012.12.03-14:07:39<br>
+Serversv10 ;admin ;0.0.1 ;2012.12.04-09:29:45<br>
+Serversv10 ;admin ;0.0.12 ;2012.12.03-10:23:31<br>
+Serversv10 ;admin ;0.0.2 ;2012.12.03-14:07:39<br>
+Serversv10 ;admin ;1.0.1 ;2012.12.04-09:29:45<br>
+Serversv10 ;admin ;0.0.8 ;2012.12.04-09:34:39<br>
+Serversv10 ;project ;0.0.1 ;2012.12.03-14:08:37<br>
+Serversv11 ;admin ;0.0.6 ;2012.12.03-10:23:31<br>
+Serversv10 ;project ;0.0.1 ;2012.12.04-08:22:09<br>
+Serversv11 ;admin ;0.0.6 ;2012.12.03-13:58:58<br>
+Serversv11 ;admin ;0.0.6 ;2012.12.03-11:39:15<br>
+Serversv11 ;admin ;0.0.7 ;2012.12.03-14:07:39<br>
+Serversv11 ;basis ;0.0.1 ;2012.12.03-11:39:59<br>
+Serversv11 ;project ;0.0.1 ;2012.12.03-12:08:48<br>
+Serversv11 ;project ;0.0.1 ;2012.12.03-14:08:37<br>
+Serversv12 ;admin ;0.0.6 ;2012.12.03-10:23:31<br>
+Serversv12 ;admin ;0.0.6 ;2012.12.03-11:47:35<br>
+Serversv11 ;project ;0.0.1 ;2012.12.03-12:08:31<br>
+Serversv12 ;admin ;0.0.7 ;2012.12.03-14:07:39<br>
+Serversv12 ;basis ;0.0.1 ;2012.12.03-12:06:45<br>
+Serversv12 ;config ;0.0.1 ;2012.12.03-12:04:57<br>
+Serversv12 ;admin ;0.0.6 ;2012.12.03-13:58:58</p>
+<p>and want to sort it as follows<br>
+[Server, Modul, Version, timestamp]<br>
+Serversv10 ;admin ;1.0.2 ;2012.12.03-14:07:39<br>
+Serversv10 ;admin ;0.1.2 ;2012.12.03-14:07:39<br>
+Serversv10 ;admin ;0.0.12 ;2012.12.03-10:23:31<br>
+Serversv10 ;admin ;0.0.8 ;2012.12.04-09:34:39<br>
+Serversv10 ;admin ;0.0.2 ;2012.12.03-14:07:39<br>
+Serversv10 ;project ;1.0.1 ;2012.12.03-14:08:37<br>
+Serversv10 ;project ;0.0.1 ;2012.12.03-14:08:37<br>
+the rest with the same order<br>
+Can you please help?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-416336" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-417003">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nails</span>
+							<span class="comment_date">December 5, 2012, 11:28 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-417003"><p>R.S.</p>
+<p>Sorry, but I do not see a consistent sort order for your output.   Please clarify exactly what you want.</p>
+<p>Anyway, the Unix/Linux sort command might do what you want.  Assuming
+ the field seperator is a semi-colon, this command sorts by the first 
+field, then the second, and then the fourth (the time stamp)</p>
+<p>sort -t “;” -k 1,1 -k 2,2 -k 4,4  file.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-417003" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-418757">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/" rel="external nofollow" class="url">Amit</a></span>
+							<span class="comment_date">December 6, 2012, 6:23 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-418757"><p>I am having files in below format </p>
+<p>2012-04-30 00:00:05,266   1335692570491, Request received from client
+ :: Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 12486685 / 
+2012-04-30 00:00:05.196<br>
+2012-04-30 00:00:05,313   1335692570492, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 12486685 / 
+2012-04-30 00:00:05.260<br>
+2012-04-30 00:00:12,740   1335692570493, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 83022172 / 
+2012-04-30 00:00:12.687<br>
+2012-04-30 00:00:12,868   1335692570494, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 83022172 / 
+2012-04-30 00:00:12.822<br>
+2012-04-30 23:59:15,450   1335692590664, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 1437954504 / 
+2012-04-30 23:59:15.404<br>
+2012-04-30 23:59:15,645   1335692590665, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 200178220 / 
+2012-04-30 23:59:15.600<br>
+2012-04-30 23:59:17,177   1335692590666, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 1437954504 / 
+2012-04-30 23:59:17.128<br>
+2012-04-30 23:59:18,574   1335692590667, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 200178220 / 
+2012-04-30 23:59:18.513<br>
+2012-04-30 23:59:21,322   1335692590668, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 200178220 / 
+2012-04-30 23:59:21.274<br>
+2012-04-30 23:59:34,467   1335692590669, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 228289416 / 
+2012-04-30 23:59:34.410<br>
+2012-04-30 23:59:34,493   1335692590670, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 228289416 / 
+2012-04-30 23:59:34.434<br>
+2012-04-30 23:59:40,094   1335692590671, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 1195793760 / 
+2012-04-30 23:59:40.054<br>
+2012-04-30 23:59:40,168   1335692590672, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 1195793760 / 
+2012-04-30 23:59:40.127<br>
+2012-04-30 23:59:40,560   1335692590673, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CHECK_REQ / 1195793760 / 
+2012-04-30 23:59:40.523<br>
+2012-04-30 23:59:41,289   1335692590674, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 1195793760 / 
+2012-04-30 23:59:41.011<br>
+2012-04-30 23:59:46,895   1335692590675, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 1174256481 / 
+2012-04-30 23:59:46.827<br>
+2012-04-30 23:59:46,914   1335692590676, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 1174256481 / 
+2012-04-30 23:59:46.841<br>
+2012-04-30 23:59:56,228   1335692590677, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_LIST_REQ / 298656228 / 
+2012-04-30 23:59:56.167<br>
+2012-04-30 23:59:58,399   1335692590678, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_LIST_REQ / 1181525888 / 
+2012-04-30 23:59:58.318<br>
+2012-04-30 23:59:58,499   1335692590679, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 298656228 / 
+2012-04-30 23:59:58.436<br>
+2012-04-30 23:59:58,661   1335692590681, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 298656228 / 
+2012-04-30 23:59:58.605<br>
+2012-04-30 23:59:58,663   1335692590680, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 298656228 / 
+2012-04-30 23:59:58.600<br>
+2012-04-30 23:59:58,706   1335692590682, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 298656228 / 
+2012-04-30 23:59:58.644<br>
+2012-04-30 23:59:58,971   1335692590683, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CHECK_REQ / 298656228 / 
+2012-04-30 23:59:58.902<br>
+2012-04-30 23:59:59,058   1335692590684, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_LIST_REQ / 1220865349 / 
+2012-04-30 23:59:59.010<br>
+2012-04-30 23:59:59,794   1335692590685, Request received from client ::
+ Transaction / PRS_ID / Timestamp :: Amit_CARD_DATA_REQ / 1220865349 / 
+2012-04-30 23:59:59.741</p>
+<p>now i want the output in below format</p>
+<p>2012-04-30 | 2012-04-30 23:59:59 | 1335692590685 | Amit_CARD_DATA_REQ | 1220865349</p>
+<p>1st field  is extracted from the timestamp filed 2012-04-30 23:59:59</p>
+<p>—<br>
+In the above the adjacent row will be present as a single row….While copying it in the website its getting split into 2 rows<br>
+—</p>
+<p>Please help me on this</p>
+<p>thanks,<br>
+Amit</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-418757" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-424582">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Badri</span>
+							<span class="comment_date">December 9, 2012, 2:31 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-424582"><p>Nice and simple article.<br>
+example 5 indicates print, angular brackets and ; are optional.. is that correct?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-424582" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-480853">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Kokanee</span>
+							<span class="comment_date">January 7, 2013, 12:52 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-480853"><p>Best AWK introduction I’ve come across.  Thanks!!</p>
+<p>&gt;K&lt;</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-480853" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-543873">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">priya</span>
+							<span class="comment_date">February 17, 2013, 10:30 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-543873"><p>i want awk program to display employee details</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-543873" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-584132">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Linda</span>
+							<span class="comment_date">March 18, 2013, 9:37 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-584132"><p>Hi All,</p>
+<p>I have a question on how to read n+ line in a file and substitute the data in a template file.Below is the example</p>
+<p>**NAME**</p>
+<p>ANNE  80</p>
+<p>**Template.txt**</p>
+<p>$NAME’s mark is $MARK. </p>
+<p>I managed to read the data, substitute into the template and append to RESULT as below. </p>
+<p>NAME=`awk ‘{print$1}’ NAME`  ; MARK=`awk ‘{print$2}’ NAME`</p>
+<p>sed -e “s|NAME|$NAME|” -e “s|MARK|$MARK|”  Template.txt   &gt;&gt; RESULT</p>
+<p>The RESULT will be</p>
+<p>ANNE’s mark is 80.</p>
+<p>But when the are few rows of data, i dont know how to read the second line and the rest.  I have 300 rows of data.</p>
+<p>**NAME**</p>
+<p>ANNE  80 </p>
+<p>SHAWN 30 </p>
+<p>NINA  50 </p>
+<p>Can anyone help me since im newbiew in scripting. </p>
+<p>Thanks in advance <img src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-584132" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-679753">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Eeshani</span>
+							<span class="comment_date">April 18, 2013, 11:26 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-679753"><p>Hi all,</p>
+<p>I have a doubt<br>
+I want to use a variable in the matching of regular expression field<br>
+i.e i am reading a string from the user and I want to match it in awk against the whole file</p>
+<p>read var;<br>
+cat int_out.txt | awk /var instead of reg exp/ { print $1};</p>
+<p>Can any1 help me regarding this</p>
+<p>thanks</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-679753" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-682593">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Nails Carmody</span>
+							<span class="comment_date">April 19, 2013, 11:30 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-682593"><p>There are a number of ways of embedding a shell variable in an awk script.  This link describes them:</p>
+<p><a href="http://tek-tips.com/faqs.cfm?fid=1281" rel="nofollow">http://tek-tips.com/faqs.cfm?fid=1281</a></p>
+<p>Post a more descriptive example if you require more help.  Thanks.</p>
+<p>Nails.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-682593" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-753669">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">arun k</span>
+							<span class="comment_date">May 20, 2013, 4:16 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-753669"><p>way of explanation is really nice …. thanks a lot</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-753669" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-754167">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">sisila</span>
+							<span class="comment_date">May 21, 2013, 12:03 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-754167"><p>thank you!</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-754167" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-794424">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Soumya</span>
+							<span class="comment_date">June 7, 2013, 11:12 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-794424"><p>Worth reading and understandable, thanks a lot</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-794424" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-846724">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">mantu</span>
+							<span class="comment_date">July 17, 2013, 5:55 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-846724"><p>i want to add zero in between character . how i ll do dat ?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-846724" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-852109">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Aravind</span>
+							<span class="comment_date">July 22, 2013, 6:51 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-852109"><p>How do I read a ( ` ) separated file using the awk command?? Can I read each column by column of the (`) delimited file??</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-852109" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-853999">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Nails Carmody</span>
+							<span class="comment_date">July 23, 2013, 1:49 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-853999"><p>Aravind:</p>
+<p>Does your data file look like this (back tic delimited):</p>
+<p>one`two`three<br>
+four`five`six</p>
+<p>awk has an internal Field Seperator variable which allows to change the field delimiter:</p>
+<p>#!/bin/bash</p>
+<p>awk ‘ BEGIN { FS=”`” }<br>
+{<br>
+print $2 # print the second field<br>
+} ‘ datafile.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-853999" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-855125">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anshul</span>
+							<span class="comment_date">July 24, 2013, 8:52 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-855125"><p>Hi,</p>
+<p>below are the 2 lines from my log file:-<br>
+2013-05-14 12:40:06,524 (http-172.24.90.20-5555-17) [        
+LoginLogger.java:55 :INFO ]  [Login ID:superadmin] [User ID:SU001] 
+[Network ID:NG] [User Name:superadmin] [User Type:OPERATOR] [Category 
+Code:SUADM] [Log Type:LOGIN] [Login Time:14/05/13 12:40:06] [Logout 
+Time: ] [IP Address:172.16.100.11] [Browser Type:Mozilla/4.0 
+(compatible; MSIE 7.0; Windows NT 6.1; Trident/5.0; SLCC2; .NET CLR 
+2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; 
+InfoPath.2; .NET4.0C)] [Other Information:Successfully Login]</p>
+<p>2013-05-14 13:04:43,797 
+(ContainerBackgroundProcessor[StandardEngine[Catalina]]) [        
+LoginLogger.java:55 :INFO ]  [Login ID:netadm] [User 
+ID:PT130306.1715.012115] [Network ID:NG] [User Name:Network Admin] [User
+ Type:OPERATOR] [Category Code:NWADM] [Log Type:LOGOUT] [Login 
+Time:14/05/13 11:26:03] [Logout Time:14/05/13 13:04:43] [IP 
+Address:172.24.180.35] [Browser Type:Mozilla/4.0 (compatible; MSIE 7.0; 
+Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 
+3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3)] [Other 
+Information:Logged Out successfuly]\</p>
+<p>All lines are not same in my log file, Now my requirement is that i 
+want only 5 fields from each line, and they are not on same place in all
+ lines.</p>
+<p>I want following fields in csv file Login ID,User Name,Log Type, Login Time, IP Address.</p>
+<p>Thanks for your help.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-855125" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-855980">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Nails Carmody</span>
+							<span class="comment_date">July 25, 2013, 12:30 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-855980"><p>Anshul:</p>
+<p>Since the fields are not in order, I use a for loop to look at each 
+field and match each of the 5 feilds you are interested in and then 
+print out each of the 5 variables for each line processed:</p>
+<p>awk ‘ BEGIN { FS=”[” ; myarr[1]=0}<br>
+{<br>
+loginid=””<br>
+username=””<br>
+logtype=””<br>
+logintime=””<br>
+ipaddress=””<br>
+for(i=1; i&lt;=NF; i++)<br>
+   {<br>
+   if($i ~ /Login ID/)<br>
+     {<br>
+     sub("Login ID:","",$i)    # delete the field identifier<br>
+     sub("]","",$i)    # delete the ]<br>
+     sub(/[ \t]+$/, "", $i) # delete trailing whitespace<br>
+     loginid=$i<br>
+     }</p>
+<p>   if($i ~ /User Name/)<br>
+     {<br>
+     sub("User Name:","",$i)    # delete the field identifier<br>
+     sub("]","",$i)    # delete the ]<br>
+     sub(/[ \t]+$/, "", $i) # delete trailing whitespace<br>
+     username=$i<br>
+     }</p>
+<p>   if($i ~ /Log Type/)<br>
+     {<br>
+     sub("Log Type:","",$i)    # delete the field identifier<br>
+     sub("]","",$i)    # delete the ]<br>
+     sub(/[ \t]+$/, "", $i) # delete trailing whitespace<br>
+     logtype=$i<br>
+     }</p>
+<p>   if($i ~ /Login Time/)<br>
+     {<br>
+     sub("Login Time:","",$i)<br>
+     sub("]","",$i)    # delete the ]<br>
+     sub(/[ \t]+$/, "", $i) # delete trailing whitespace<br>
+     logintime=$i<br>
+     }</p>
+<p>   if($i ~ /IP Address/)<br>
+     {<br>
+     sub("IP Address:","",$i)    # delete the field identifier<br>
+     sub("]","",$i)    # delete the ]<br>
+     sub(/[ \t]+$/, "", $i) # delete trailing whitespace<br>
+     ipaddress=$i<br>
+     }<br>
+   }</p>
+<p>printf("%s,%s,%s,%s,%s\n", loginid,  username,  logtype, logintime, ipaddress)</p>
+<p>} ' logfile.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-855980" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-856165">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anshul</span>
+							<span class="comment_date">July 25, 2013, 3:33 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-856165"><p>Nails:-</p>
+<p>Thanks a lot for your wonderful scripts, it worked in one go. I am very oblidged for your kind help.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-856165" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-856965">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Nails Carmody</span>
+							<span class="comment_date">July 25, 2013, 4:23 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-856965"><p>Anshul:</p>
+<p>Thank you for the kind words.  Much appreciated!</p>
+<p>BTW, let me point out that by mistake I left an unused array declaration in the script:</p>
+<p>myarr[1]=0</p>
+<p>That can be deleted.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-856965" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-883313">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">maria</span>
+							<span class="comment_date">August 12, 2013, 11:28 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-883313"><p>I have a log file and would like to count the number of the same value of first column,<br>
+for example count = 4  for -8.7, count  = 4 for -7.8 … I am able to grep
+ -v manually ; however, I would like to have the output as</p>
+<p>cnt   value   …</p>
+<p>4      -8.7<br>
+4      -7.8<br>
+1      -6.9<br>
+1      -2.5<br>
+2      -1.4</p>
+<p>=========</p>
+<p>input file</p>
+<p>-8.7  check<br>
+-8.7  check<br>
+-8.7  check<br>
+-8.7  check<br>
+-7.8  check<br>
+-7.8  check<br>
+-7.8  check<br>
+-7.8  check<br>
+-6.9  check<br>
+-2.5  check<br>
+-1.4  check<br>
+-1.4  check</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-883313" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-883346">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">maria</span>
+							<span class="comment_date">August 12, 2013, 11:53 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-883346"><p>I would like to have the two line table from</p>
+<p>BEN       $5,000<br>
+BEN       $6,000<br>
+BEN       $7,000<br>
+BEN       $8,000<br>
+BEN       $6,500<br>
+BEN       $7,500<br>
+BEN       $9,000<br>
+YONG      $4,000<br>
+YONG      $5,500<br>
+YONG      $6,000<br>
+YONG      $5,800<br>
+YONG      $7,000<br>
+YONG      $8,000<br>
+YONG      $8,5000</p>
+<p>to</p>
+<p>BEN    5,000 6,000 7,000 8,000 6,500 7,500 9,000<br>
+YONG 4,000 5,500 6,000 5,800 7,000 8,000 8,5000</p>
+<p>Thanks as I am learning awk now</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-883346" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-883462">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">maria</span>
+							<span class="comment_date">August 13, 2013, 1:37 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-883462"><p>I am able to have the counting script</p>
+<p>BEGIN { print “cnt  “,”value” }<br>
+ {<br>
+ Slack[$1]++;<br>
+ }<br>
+END {<br>
+  for (var in Slack) {<br>
+    print Slack[var],”  “, var<br>
+    }<br>
+ }</p>
+<p>and the output file looks like</p>
+<p>cnt   value<br>
+1<br>
+2    1.0<br>
+3    7.8<br>
+4    6.9<br>
+1    1.1<br>
+4    0.2<br>
+2    0.4<br>
+4    6.0<br>
+2    -0.0<br>
+1    -6.9<br>
+4    -7.8<br>
+4    -8.7<br>
+2    7.3<br>
+4    6.4<br>
+2    -0.5<br>
+2    -1.4<br>
+10    -0.7<br>
+1    -2.5<br>
+==========</p>
+<p>my questions:<br>
+ 1) why I have the first line of  “1” and no value?  how to remove it?<br>
+ 2) how to do the print-out with the sorted column, for example, sort 1st column, sort 2nd column</p>
+<p>Thx</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-883462" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-889522">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nails</span>
+							<span class="comment_date">August 16, 2013, 3:13 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-889522"><p>First, 
+you probably are getting the first line printed “1” because you have a 
+line in the data file that is whitespace (space character, tab, or 
+newline) .  Get rid of it by including something like this in the first 
+line of your awk script:</p>
+<p>if(/^[ /t]*$/)<br>
+    next</p>
+<p>Second, the newer versions of GNU awk (such as gawk) has an internal 
+sort routine called asort.  Check it out at the GNU awk User’s Guide:</p>
+<p><a href="http://www.gnu.org/software/gawk/manual/gawk.html" rel="nofollow">http://www.gnu.org/software/gawk/manual/gawk.html</a></p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-889522" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-910020">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Oche J Ejembi</span>
+							<span class="comment_date">August 30, 2013, 1:17 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-910020"><p>Thanks for this. BEST AWK tutorial on the World Wide Web.</p>
+<p>It seemed like an assembly language to me before I read this and 
+after reading other tutorials, but yours has explained it in simple 
+language and with easy examples to follow. Thanks!</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-910020" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-940288">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Deiveegaraja Andaver</span>
+							<span class="comment_date">September 19, 2013, 4:43 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-940288"><p>Thanks for the Great article..<br>
+Here after I will tell to my friends, I know AWK utility.. Thanks again for the great article..</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-940288" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-960357">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Raji</span>
+							<span class="comment_date">October 2, 2013, 8:27 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-960357"><p>its very useful for our assignments thanks…………:-)</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-960357" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-973316">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">akhel</span>
+							<span class="comment_date">October 10, 2013, 4:36 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-973316"><p>thank you its very helpful me</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-973316" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1000827">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Sujay</span>
+							<span class="comment_date">October 26, 2013, 12:54 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1000827"><p>Hi all,<br>
+I was doing some string manipulation in my script and wanted to try 
+using awk. However, I have been stuck with string compare. A simplified 
+form of my conundrum is given below:</p>
+<p>This works:<br>
+$ echo ‘”status”:”Completed”‘ | awk ‘BEGIN{FS=”:”} /”status”/ {print $2}’<br>
+“Completed” &lt;– prints the correct word</p>
+<p>This doesn't:<br>
+$ echo '"status":"Completed"' | awk 'BEGIN{FS=":"} /"status"/ {print ($2 == "Completed") ? "Yes" : "No"}'<br>
+No &lt;– Shouldn't this output be Yes given $2 is "Completed"?</p>
+<p>In the second one above, I'd have expected to see the output as "Yes"
+ (since the second element is "Completed"), but it's been obstinately 
+printing "No".</p>
+<p>What am I doing wrong?</p>
+<p>Btw, what I really need to do is set a variable if the string compare
+ is successful. The print-test was just to see if it's work at all, and 
+looks like I need to rethink.</p>
+<p>Any help is highly appreciated.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1000827" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1048644">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ravi</span>
+							<span class="comment_date">November 20, 2013, 3:49 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1048644"><p>this is my script</p>
+<p>#!/bin/bash<br>
+KEEP=30 # days<br>
+SOURCE=/apps/tibco/domain/xxxxxxxx/xxxxxxxxx<br>
+DST=/apps/tibco/domain/xxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxx</p>
+<p>for item in `find $SOURCE -type f -mtime +$KEEP | sed ‘s#.*/##”; do<br>
+           DDATE=`stat –format=”%y” “$SOURCE/$item” | awk ‘{print $1}’<br>
+    if [ -z “$DDATE” ]; then<br>
+        continue<br>
+    fi</p>
+<p>    # Make directory if needed<br>
+    if [ -d “$DST/$DDATE” ]; then<br>
+        mkdir “$DST/$DDATE”<br>
+    fi</p>
+<p>    mv “$SOURCE/$item” “$DST/$DDATE/$item”<br>
+    gzip “$DST/$DDATE/$item”<br>
+done<br>
+=========================================<br>
+Errors<br>
+./archive.sh: line 9: syntax error near unexpected token `|’<br>
+./archive.sh: line 9: `           DDATE=`stat –format=”%y” “$SOURCE/$item” | awk ‘{print $1}’`’</p>
+<p>I have only one ` at the end of the line.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1048644" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1050588">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nails</span>
+							<span class="comment_date">November 21, 2013, 5:21 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1050588"><p>I see several problems with your script:</p>
+<p>First, I see that your command subsitution isn’t correct; I choose to
+ use the bash method of command substituion:  $(….)    instead of `…..`</p>
+<p>for item in $(find for item in $(find $SOURCE -type f -mtime +$KEEP | sed ‘s#.*/##’)<br>
+do</p>
+<p>Second, I thing you are mixing the quotation marks around the sed command.</p>
+<p>Also, are you sure that your syntax for the stat command is correct?  I thought the format keyword is used with the -c option.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1050588" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1159222">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">shilpa</span>
+							<span class="comment_date">December 31, 2013, 6:36 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1159222"><p>Write an AWK command to list all the files except the one which is having name as “sample”</p>
+<p>Write an AWK command to concatenate owner and group name of all the files in a directory.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1159222" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1166271">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Philip Warner</span>
+							<span class="comment_date">January 3, 2014, 5:20 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1166271"><p>Try these programs then type nawk -f circle or gawk -f circle).<br>
+Create file circle:<br>
+BEGIN { # circle    nawk -f circle<br>
+    do { loopCount++<br>
+         system( “nawk -f s.circle” )<br>
+         printf(“Another one? “)<br>
+         getline<br>
+         if ( $1 ~ /[Yy]/ ) { continue }<br>
+         exit<br>
+   } while ( loopCount )<br>
+}<br>
+END { # Display loop count<br>
+      printf(“Ran circle %d times.\n”, loopCount)<br>
+}<br>
+Create file s.circle:<br>
+BEGIN { # s.circle<br>
+   do { printf(“Type the radius ? “)<br>
+        getline<br>
+        r = $1 + 0<br>
+        if ( r &gt; 0 ) { exit }<br>
+        printf(“Radius must be positive\n”)<br>
+   } while ( 1 )<br>
+}<br>
+#<br>
+# Main<br>
+#<br>
+END { #<br>
+      tau = 710 / 113<br>
+      circumference = c = tau * r<br>
+      printf(“The circumference is %f and the area is %f\n”, c, c * r / 2 )<br>
+}</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1166271" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1176503">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Aashish Joshi</span>
+							<span class="comment_date">January 7, 2014, 2:40 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1176503"><p>Hi,</p>
+<p>Good to learn.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1176503" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1176513">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Aashish Joshi</span>
+							<span class="comment_date">January 7, 2014, 2:45 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1176513"><p>Can you please provide the same understaindings for sed also</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1176513" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1181074">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">kk Menon</span>
+							<span class="comment_date">January 8, 2014, 10:09 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1181074"><p>i need to concatenate 1st 4 characters of previous line to the next few lines.<br>
+How should I achieve this?</p>
+<p>Thanks</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1181074" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1184372">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Philip Warner</span>
+							<span class="comment_date">January 10, 2014, 4:03 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1184372"><p>Item 66, the close round bracket is in the wrong place, it should be:<br>
+nawk ‘/status/ {print ($2 == “Completed” ? “Yes” : “No” ) }’<br>
+and this works (produces “Yes”).</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1184372" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1207371">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">cgs</span>
+							<span class="comment_date">January 17, 2014, 10:47 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1207371"><p>how do i convert the following</p>
+<p>mira 23 43 56 abcd<br>
+mira 32 55 abcd xyz</p>
+<p>raju 12 4a 5/7 4:4 abcd<br>
+raju 23 4r 3:4 ab<br>
+——————————————————–<br>
+to </p>
+<p>Mira 23 43 56 abcd 32 55 abcd xyz</p>
+<p>Raju  12 4a 5/7 4:4 abcd 23 4r 3:4 ab</p>
+<p>————————————————————-</p>
+<p>awk and print $1 can capture columns, but what about lines with same 
+“name” in first columns to be grouped with all values in columns.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1207371" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1212583">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nails</span>
+							<span class="comment_date">January 19, 2014, 2:06 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1212583"><p>How about something like this? It’s a break point report that wipes out the first field until the first field changes:</p>
+<p>#!/bin/bash</p>
+<p>awk ‘ BEGIN { prevrec=”” ; fr=0 }<br>
+{<br>
+if(NF == 0)<br>
+   next # skip blank lines</p>
+<p>if(prevrec == “” || prevrec != $1)<br>
+   {<br>
+   prevrec=$1<br>
+   if(fr == 0)<br>
+      {<br>
+      printf “\n%s”, $0<br>
+      fr==0<br>
+      }<br>
+   else<br>
+      {<br>
+      $1=”” # wipe out the first field<br>
+      printf ” %s”, $0<br>
+      fr=1<br>
+      }<br>
+   }<br>
+else<br>
+   {<br>
+   $1=””<br>
+   printf “%s”, $0<br>
+   }</p>
+<p>} END { printf “\n” } ‘ mytxt.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1212583" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1281911">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Nikhil</span>
+							<span class="comment_date">February 18, 2014, 3:46 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1281911"><p>Thanks for the post, it helped me to give a start.<br>
+Can you provide me some of the basic questions, i can give a try..</p>
+<p>Thanks in Advance,<br>
+Nikhil</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1281911" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1295853">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">kalyan chakravarthi G</span>
+							<span class="comment_date">February 25, 2014, 1:37 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1295853"><p>Thanks for your info….I grew up in unix by reading your postss.Nice explanation …..Good work</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1295853" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1315706">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Chenna</span>
+							<span class="comment_date">March 6, 2014, 1:29 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1315706"><p>Hi,<br>
+This output :<br>
+c1t50060E80166CED71d334s2<br>
+c1t50060E80166CED71d335s2<br>
+c1t50060E80166CED71d336s2</p>
+<p>I want like this. i just want to remove last “s2″ from every line.<br>
+Like this:<br>
+c1t50060E80166CED71d334<br>
+c1t50060E80166CED71d335<br>
+c1t50060E80166CED71d336</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1315706" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1317638">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nails</span>
+							<span class="comment_date">March 6, 2014, 3:00 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1317638"><p>#Using sed:</p>
+<p>sed ‘s/s2$//’ test.txt</p>
+<p># this works on my Solaris 9 box using nawk:<br>
+awk ‘ { sub(“s2$”, “”); print } ‘ test.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1317638" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1322746">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Chenna</span>
+							<span class="comment_date">March 7, 2014, 11:34 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1322746"><p>thanks a lot. its working fine</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1322746" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1485909">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nishi</span>
+							<span class="comment_date">April 16, 2014, 5:15 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1485909"><p>Hi</p>
+<p>I have following file content and array of ids :</p>
+<p>20140320 00:08:23.846 INFO  [WebContainer : 84] – anything in line<br>
+20140320 00:08:23.846 Test  [translate : 55] – Virtual and lab lab anything<br>
+20140320 00:08:23.846 Data  [anything : 60] – anything in line<br>
+20140320 00:08:23.847 anyting  [anything : 5] – anything in line<br>
+20140320 00:08:23.846 INFO  [WebContainer : 84] – anything in line<br>
+20140320 00:08:23.846 Test  [translate : 55] – Virtual and lab lab anything<br>
+20140320 00:08:23.846 Data  [anything : 60] – anything in line<br>
+20140320 00:08:23.847 anyting  [anything : 5] – anything in line</p>
+<p>Suppose I have array elements 84 and 55 then only lines which has iside the brackets :</p>
+<p>20140320 00:08:23.846 INFO  [WebContainer : 84] – anything in line<br>
+20140320 00:08:23.846 Test  [translate : 55] – Virtual and lab lab anything<br>
+20140320 00:08:23.846 INFO  [WebContainer : 84] – anything in line<br>
+20140320 00:08:23.846 Test  [translate : 55] – Virtual and lab lab anything</p>
+<p>not sure how many elements are in array, but based on all the elements, lines should direct to output file</p>
+<p>Please help me on this</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1485909" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1487916">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nails</span>
+							<span class="comment_date">April 16, 2014, 10:48 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1487916"><p>One way
+ is to read each line and use cut to save everything between the 
+brackets.  Then use the set command to perform the parsing. The last 
+field can be determined with the eval command, and finally perform the 
+comparison:</p>
+<p>#!/bin/bash</p>
+<p>while read line<br>
+do<br>
+   orgline=”$line”<br>
+   tt=$(echo $line|cut -d'[‘ -f2 | cut -d’]’ -f1)<br>
+   set – $( echo “$tt”)<br>
+   fvalue=$(eval echo “\$$#”)<br>
+   if [[ $fvalue -eq 55 || $fvalue = 84 ]]<br>
+   then<br>
+      echo “$orgline”<br>
+   fi</p>
+<p>done &lt; datafile.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1487916" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1497315">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Nishi</span>
+							<span class="comment_date">April 17, 2014, 11:02 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1497315"><p>Thanks nails,</p>
+<p>I wanted to implement using awk, As there are more than 10000 of lines and this for look eating lot of times.</p>
+<p>here no of threadid is also not fixed, I just gave two entry only it may be more.</p>
+<p>Please suggest me</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1497315" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1501741">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nails</span>
+							<span class="comment_date">April 18, 2014, 10:36 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1501741"><p>First, 
+depending on the progamming implementation, don’t expext awk to be 
+faster.  As awk is an external command, an extra process is spawned.  </p>
+<p>I don’t understand:<br>
+“no of threadid is also not fixed”</p>
+<p>Please post a better example of your data.</p>
+<p>nails</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1501741" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1536635">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nishi</span>
+							<span class="comment_date">April 22, 2014, 10:03 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1536635"><p>thanks Nails,</p>
+<p>The ThreadID is comming from other file as in array such as (55, 84) 
+with two array elements. So here no of threadid, I mean no of elements 
+are not fixed.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1536635" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1555000">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">krishna</span>
+							<span class="comment_date">April 25, 2014, 1:00 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1555000"><p>hi ,<br>
+I have two files as below<br>
+file 1<br>
+machine1 shutdown time 21:30:00<br>
+machine2 shutdown time 21:32:07<br>
+file 2:<br>
+machine1 started  time   22:31:05<br>
+machine2 started  time 21:30:25  </p>
+<p>now , i need a program, if shutdown time is less than started then print output as<br>
+“machine1/machine2  running as expected”<br>
+if shutdown time is greater than started time then print output as<br>
+“machine1/machine2  improper restart  ”</p>
+<p>thanks for help !</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1555000" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1654049">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Tanujib Patra</span>
+							<span class="comment_date">May 8, 2014, 11:28 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1654049"><p>Hi Help,<br>
+I have an INPUT file shown below, I want to convert into the following output file as stated under the OUTPUT FILE.<br>
+Can anybody help me in awk scripts.</p>
+<p>INPUT FILE<br>
+640    0.0      1480     1313.77  1500.09  1694.76  1536.66  1933.32  1583.61<br>
+        2419.99  1699.16  2780.7   1872.48  3156.68  2020.53  4295.82  2596.38<br>
+        5996.92  3417.41<br>
+ 960    0.0      1480     1500     1496.46  1758.46  1538.27  2061.54  1568.46<br>
+        2381.54  1635.82  2741.54  1772.87  3283.08  2030.7   4295.82  2596.38<br>
+        5998.46  3403.47<br>
+………………………………………………………………………………………………………………<br>
+…………………………………..<br>
+OUTPUT FILE:<br>
+640           0.0            1480<br>
+640     1313.77         1500.09<br>
+640     1694.76         1536.66<br>
+640     1933.32         1583.61<br>
+640     2419.99         1699.16<br>
+640     2780.7          1872.48<br>
+640    3156.68         2020.53<br>
+640    4295.82         2596.38<br>
+640     5996.92         3417.41<br>
+960            0.0            1480<br>
+960      1500              1496.46<br>
+960     1758.46         1538.27<br>
+960     2061.54         1568.46<br>
+960     2381.54         1635.82<br>
+960     2741.54         1772.87<br>
+960     3283.08         2030.7<br>
+960     4295.82         2596.38<br>
+960     5998.46         3403.47<br>
+………………………………………<br>
+………………………..</p>
+<p>Thanks in Advance<br>
+Best Regards<br>
+Tanujib</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1654049" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1866211">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">fanyi</span>
+							<span class="comment_date">June 13, 2014, 11:25 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1866211"><p>How to (swap) column four to column two:<br>
+100  Thomas  Manager    Sales       $5,000<br>
+200  Jason   Developer  Technology  $5,500<br>
+300  Sanjay  Sysadmin   Technology  $7,000<br>
+400  Nisha   Manager    Marketing   $9,500<br>
+500  Randy   DBA        Technology  $6,000</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1866211" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1885582">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Lela</span>
+							<span class="comment_date">June 19, 2014, 1:33 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1885582"><p>This is excellent.  Thank you,.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1885582" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1890505">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Harsh</span>
+							<span class="comment_date">June 21, 2014, 1:04 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1890505"><p>Amit, I know a little late but here is the command u were looking for:<br>
+awk ‘{print $1″ | “$19″ “substr($20,1,8) ” | “substr($3,1,length($3)-1) ” | ” $15″ |”$17}’ file1.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1890505" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-2018986">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">More</span>
+							<span class="comment_date">August 1, 2014, 6:03 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-2018986"><p>Hi Friends,<br>
+I did MCA  3 years back (due some problems i didnt do course)<br>
+can i get job in linux<br>
+i learning linux now<br>
+if any one guide me pls</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-2018986" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-2100704">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Sudarshan</span>
+							<span class="comment_date">August 19, 2014, 2:16 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-2100704"><p>Any idea on how to parse |+ as delimiter together. I have a file which looks like below</p>
+<p>123|+MN|+2014<br>
+456|+DE|+2015</p>
+<p>It is |+ separated file. But not able to process |+ as delimiter via 
+awk…I want to parse and print third column i.e. which contains data 
+points 2014 and 2015</p>
+<p>any help would be really appreciated.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-2100704" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-2827083">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://stevie.griesel.co.za/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://stevie.griesel.co.za/" rel="external nofollow" class="url">Stephan</a></span>
+							<span class="comment_date">November 10, 2014, 5:05 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-2827083"><p>Great article, thank you! </p>
+<p>Recently used AWK to get creation date of user by  running:<br>
+sudo passwd -S sys | tail -1 | awk ‘{print $3}</p>
+<p>Had to go through 50 servers one by one to get this info. I know with
+ WMI in Windows I can create batch script to get system info.<br>
+Is it possible to run this script in Linux across more than one server with script or some kind of management tool?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-2827083" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3002762">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Sujith</span>
+							<span class="comment_date">November 23, 2014, 1:21 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3002762"><p>Great article. Many Thanks <img src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3002762" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3014473">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Vignesh</span>
+							<span class="comment_date">November 24, 2014, 4:18 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3014473"><p>Hi Tanujib,</p>
+<p>It is pretty late,but below command will give you the result</p>
+<p>awk ‘{ for (i=2;i&lt;=NF;i=i+2) {print $1,$i,$(i+1)}}' </p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3014473" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3014545">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Vignesh</span>
+							<span class="comment_date">November 24, 2014, 4:31 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3014545"><p>Hi Sudarshan,</p>
+<p>Since + is a special character it must be escaped,below will give you the desired result.</p>
+<p>awk -F’|\\+’ ‘{print $3}’ &lt;&gt;</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3014545" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3014574">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Vignesh</span>
+							<span class="comment_date">November 24, 2014, 4:35 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3014574"><p>Hi fanyi,</p>
+<p>Just swap while printing</p>
+<p>awk ‘{print $1,$4,$3,$2,$5} &lt;&gt;</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3014574" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3227295">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">ramana</span>
+							<span class="comment_date">December 12, 2014, 10:59 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3227295"><p>Hi ,</p>
+<p>i have employee table like below.</p>
+<p>100  Thomas  Manager    Sales       $5,000<br>
+200  Jason   Developer  Technology  $5,500<br>
+300  Sanjay  Sysadmin   Technology  $7,000<br>
+400  Nisha   Manager    Marketing   $9,500<br>
+500  Randy   DBA        Technology  $6,000</p>
+<p>i need data where  $1=300 and $3=Sales (that is employee number 100 and  dept is sales)</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3227295" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3350341">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Abhishek</span>
+							<span class="comment_date">December 23, 2014, 2:19 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3350341"><p>i want to compare two .csv files columnwise in unix using shell scripting</p>
+<p>file1<br>
+METASRCID	BMVTRID	MersionID	COUNTRY	Curr<br>
+MET_CCD   	V14121011081    	RECENT   	US	USD<br>
+MET_CCD   	V141210110810   	RECENT   	US	USD<br>
+MET_CCD   	V141210110811   	RECENT   	GB	GBP<br>
+MET_CCD   	V141210110812   	RECENT   	IE	GBP<br>
+MET_CCD   	V141210110813   	RECENT   	GB	GBP<br>
+MET_CCD   	V141210110814   	RECENT   	AU	AUD<br>
+MET_CCD   	V141210110815   	RECENT   	HK	HKD<br>
+MET_CCD   	V141210110816   	RECENT   	SG	SGD</p>
+<p>file2<br>
+METASRCID	BMVTRID	MersionID	COUNTRY	Curr<br>
+MET_CCD   	V14121011081    	RECENT   	US	USD<br>
+MET_CCD   	V141210110810   	RECENT   	US	USD<br>
+MET_CCD   	V141210110811   	RECENT   	GB	GBP<br>
+MET_CCD   	V141210110812   	RECENT   	IE	GBP<br>
+MET_CCD   	V141210110813   	RECENT   	US	GBP<br>
+MET_CCD   	V141210110814   	RECENT   	AU	AUD<br>
+MET_CCD   	V141210110818   	RECENT   	HK	HKD<br>
+MET_CCD   	V141210110816   	RECENT   	SG	SGD</p>
+<p>output<br>
+msg: Files are not same<br>
+and changes in particular cell should get highlighted</p>
+<p>MET_CCD   	V141210110813   	RECENT   	“US”	GBP<br>
+MET_CCD   	“V141210110818″   	RECENT   	HK	HKD</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3350341" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3568197">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Vignesh</span>
+							<span class="comment_date">January 15, 2015, 10:50 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3568197"><p>Hi Ramana,</p>
+<p>Below would work for you.</p>
+<p>awk ‘($1==100 &amp;&amp; $4==”Sales”)’ &lt;&gt;</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3568197" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3568479">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Vignesh</span>
+							<span class="comment_date">January 15, 2015, 11:51 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3568479"><p>Something like this would help<br>
+grep -Fxvf file1 file2</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3568479" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3579738">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">surendra</span>
+							<span class="comment_date">January 17, 2015, 11:38 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3579738"><p>I have two csv files<br>
+error.csv<br>
+———————————————–<br>
+ “Legacy ID”, “Message”<br>
+12222,”Pass”<br>
+12345,”Fail”</p>
+<p>success.csv<br>
+———————————<br>
+“ID”,”Legacy ID”<br>
+1,12345<br>
+2,45678</p>
+<p>I want to merge these two files and create one file as below<br>
+“ID”,”Legacy ID”,”Message”<br>
+”,12222,”Pass”<br>
+”,12345,”Fail”<br>
+1,12345,”<br>
+2,45678,”</p>
+<p>I am new to linux, can you please help</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3579738" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3592322">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Vignesh</span>
+							<span class="comment_date">January 18, 2015, 10:42 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3592322"><p>Hi Surendra,</p>
+<p>Below would work</p>
+<p> awk ‘NR==FNR{print “\”””,”$0;next} {print $0″,””\””}’  error.csv success.csv</p>
+<p>First print statement would print for first file and next print statement would print for the other file</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3592322" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3606840">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">lily</span>
+							<span class="comment_date">January 20, 2015, 11:00 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3606840"><p>how can I remove the duplicates<br>
+for example<br>
+col1 col2 col3<br>
+a      x       10.3<br>
+a      y        15.7<br>
+a      x        14.3<br>
+b      x       10.3<br>
+b      y        15.7<br>
+b      x        14.3<br>
+I would like to have as<br>
+a      x       10.3<br>
+a      y        15.7<br>
+b      x       10.3<br>
+b      y        15.7<br>
+meaning i want to have unique entries to col1 and col2.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3606840" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3611252">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Vignesh</span>
+							<span class="comment_date">January 20, 2015, 10:31 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3611252"><p>Hi lily,</p>
+<p> Below would work<br>
+awk ‘{k=$1$2;if(!a[k])a[k]=$0} END { for(k in a) {print a[k]} }’ &lt;&gt;</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3611252" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-4017596">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Rakesh</span>
+							<span class="comment_date">April 13, 2015, 12:59 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-4017596"><p>Nice article for someone new to awk</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-4017596" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-4192103">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Arun M</span>
+							<span class="comment_date">June 3, 2015, 9:18 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-4192103"><p>INPUT:<br>
+========<br>
+ilapp_cl1:stg_00  ilapp_ex1:stg_00_r  0:10:34<br>
+ilapp_cl1:test_00 ilapp_ex1:test_00_r 0:10:34<br>
+netezza_cl1:prod_00b netezza_ex1:prod_00b_r 0:20:33<br>
+oracore11g_cl1:ORPP2 oracore11g_ex1:ORPP2_r 9:5:37<br>
+oracore11g_cl1:ORPP2_arch oracore11g_ex1:ORPP2_arch_r 9:5:37<br>
+oracore11g_cl1:ORPP2_redo oracore11g_ex1:ORPP2_redo_r 9:5:37<br>
+vmcore_cl1:clc2_ds_1000 vmcore_ex1:clc2_dsr_1000 12:15:33<br>
+vmcore_cl1:clc2_ds_1001 vmcore_ex1:clc2_dsr_1001 12:15:34<br>
+vmcore_cl1:clc2_ds_1002 vmcore_ex1:clc2_dsr_1002 12:15:34</p>
+<p>OUTPUT:<br>
+===========</p>
+<p>Want to list the output of 3rd column first field is greater than 10 as I pasted below</p>
+<p>vmcore_cl1:clc2_ds_1000 vmcore_ex1:clc2_dsr_1000 12:15:33<br>
+vmcore_cl1:clc2_ds_1001 vmcore_ex1:clc2_dsr_1001 12:15:34<br>
+vmcore_cl1:clc2_ds_1002 vmcore_ex1:clc2_dsr_1002 12:15:34<br>
+vmcore_cl1:clc2_ds_1003 vmcore_ex1:clc2_dsr_1003 12:15:34</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-4192103" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+				</ul>
+				<form id="commentform" method="post" action="http://www.thegeekstuff.com/wp-comments-post.php">
+					<a rel="nofollow" id="cancel-comment-reply-link" href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/#respond" style="display:none;">Cancel reply</a>
+					<p class="comment_form_title">Leave a Comment</p>
+					<p id="comment_form_name">
+						<label for="author">Name</label>
+						<input id="author" class="input_text" name="author" tabindex="1" type="text">
+					</p>
+					<p id="comment_form_email">
+						<label for="email">Email</label>
+						<input id="email" class="input_text" name="email" tabindex="2" type="text">
+					</p>
+					<p id="comment_form_url">
+						<label for="url">Website</label>
+						<input id="url" class="input_text" name="url" tabindex="3" type="text">
+					</p>
+					<p id="comment_form_comment">
+						<label for="comment">Comment</label>
+						<textarea name="comment" id="comment" class="input_text" tabindex="4" rows="6"></textarea>
+					</p>
+					<p id="comment_form_submit">
+						<input id="submit" class="input_submit" name="submit" tabindex="5" value="Submit" type="submit">
+					</p>
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="30903aed3a" type="hidden"></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" type="checkbox">
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+<p style="display: none;"></p><input name="comment_post_ID" value="3059" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+				<input id="ak_js" name="ak_js" value="1440459928178" type="hidden"></form>
+			</div>
+			<div class="prev_next">
+				<p class="next_post">Next post: <a href="http://www.thegeekstuff.com/2010/01/debootstrap-minimal-debian-ubuntu-installation/" rel="next">6 Steps for Minimal Ubuntu Installation Using debootstrap</a></p>
+				<p class="previous_post">Previous post: <a href="http://www.thegeekstuff.com/2010/01/15-practical-unix-linux-top-command-examples/" rel="prev">Can You Top This? 15 Practical Linux Top Command Examples</a></p>
+			</div>
+		</div>
+		<div class="sidebar">
+<div class="widget widget_text" id="text-21">			<div class="textwidget"><a title="Subscribe via RSS" href="http://www.thegeekstuff.com/feed" rel="nofollow">RSS</a>&nbsp; | &nbsp;<a title="Subscribe via Email" href="http://feedburner.google.com/fb/a/mailverify?uri=TheGeekStuff&amp;loc=en_US" rel="nofollow">Email</a>&nbsp; | &nbsp;<a title="Follow us on Twitter" href="http://twitter.com/thegeekstuff" rel="nofollow">Twitter</a>&nbsp; | &nbsp;<a title="Become a fan" href="http://www.facebook.com/thegeekstuff" rel="nofollow">Facebook</a>&nbsp; | &nbsp;<a title="Follow us on Google+" href="https://plus.google.com/112493711428194838421/posts">Google+</a>
+<br><br>
+<form action="http://www.thegeekstuff.com/search" id="cse-search-box">
+  <div>
+    <input name="cx" value="005666763606120661560:zkmegbt_djm" type="hidden">
+    <input name="cof" value="FORID:10" type="hidden">
+    <input name="ie" value="UTF-8" type="hidden">
+    <input style="background: rgb(255, 255, 255) url(&quot;//cse.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center;" name="q" size="30" type="text">
+    <input style="border-color:#CCCCCC #999999 #999999 #CCCCCC; border-style:double; border-width:1px; overflow:visible;" name="sa" value="Search" type="submit">
+  </div>
+<input value="www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/" name="siteurl" type="hidden"><input name="ref" type="hidden"><input name="ss" type="hidden"></form>
+<script type="text/javascript" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script><script src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/a_002" type="text/javascript"></script><link href="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/transliteration.css" type="text/css" rel="stylesheet"><script src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/transliteration.js" type="text/javascript"></script>
+<script type="text/javascript" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/t13n"></script>
+<script type="text/javascript" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/brand"></script>
+<br></div>
+		</div><div class="widget widget_text" id="text-3">			<div class="textwidget"><script async="" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/adsbygoogle.js"></script>
+<!-- TGS Side Bar -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-8090601437064582" data-ad-slot="9054077260"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br></div>
+		</div><div class="widget widget_text" id="text-4"><p class="widget_title">EBOOKS</p>			<div class="textwidget"><ul>
+<li><img title="Linux 101 Hacks Book" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/free-small.png" alt="Linux 101 Hacks Book">&nbsp;<a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Linux 101 Hacks 2nd Edition eBook</a> - Practical Examples to Build a Strong Foundation in Linux</li>
+<li><a href="http://www.thegeekstuff.com/bash-101-hacks-ebook/">Bash 101 Hacks eBook</a> - Take Control of Your Bash Command Line and Shell Scripting</li>
+<li><a href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/">Sed and Awk 101 Hacks eBook</a> - Enhance Your UNIX / Linux Life with Sed and Awk</li>
+<li><a href="http://www.thegeekstuff.com/vim-101-hacks-ebook/">Vim 101 Hacks eBook</a> - Practical Examples for Becoming Fast and Productive in Vim Editor</li>
+<li><a href="http://www.thegeekstuff.com/nagios-core-ebook/">Nagios Core 3 eBook</a> - Monitor Everything, Be Proactive, and Sleep Well</li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-22">			<div class="textwidget"><iframe src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/likebox.html" scrolling="no" style="border:none; overflow:hidden; height:258px;" allowtransparency="true" frameborder="0"></iframe></div>
+		</div><div class="widget widget_text" id="text-17"><p class="widget_title">POPULAR POSTS</p>			<div class="textwidget"><ul>
+<li><a href="http://www.thegeekstuff.com/2009/01/12-amazing-and-essential-linux-books-to-enrich-your-brain-and-library/">12 Amazing and Essential Linux Books To Enrich Your Brain and Library</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/">50 UNIX / Linux Sysadmin Tutorials</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/11/50-linux-commands/">50 Most Frequently Used UNIX / Linux Commands (With Examples)</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/gtd-getting-things-done/">How To Be Productive and Get Things Done Using GTD</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/03/30-things-to-do-when-you-are-bored-and-have-a-computer/">30 Things To Do When you are Bored and have a Computer</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/09/linux-file-system-structure/">Linux Directory Structure (File System Structure) Explained with Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/">Linux Crontab: 15 Awesome Cron Job Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/">Get a Grip on the Grep! – 15 Practical Grep Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/linux-ls-command-examples/">Unix LS Command: 15 Practical Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/15-examples-to-master-linux-command-line-history/">15 Examples To Master Linux Command Line History</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/bug-tracking-system/">Top 10 Open Source Bug Tracking System</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/01/vi-and-vim-macro-tutorial-how-to-record-and-play/">Vi and Vim Macro Tutorial: How To Record and Play</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">Mommy, I found it! -- 15 Practical Linux Find Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/best-gmail-tips-and-tricks/">15 Awesome Gmail Tips and Tricks</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/expertise-in-google-search/">15 Awesome Google Search Tips and Tricks</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/raid-levels-tutorial/">RAID 0, RAID 1, RAID 5, RAID 10 Explained with Diagrams</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/01/15-practical-unix-linux-top-command-examples/">Can You Top This? 15 Practical Linux Top Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/09/top-5-best-network-monitoring-tools/">Top 5 Best System Monitoring Tools</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/top-5-best-linux-os-distributions/">Top 5 Best Linux OS Distributions</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/06/how-to-monitor-remote-linux-host-using-nagios-30/">How To Monitor Remote Linux Host using Nagios 3.0</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">Awk Introduction Tutorial – 7 Awk Print Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/09/rsync-command-examples/">How to Backup Linux? 15 rsync Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/09/the-ultimate-wget-download-guide-with-15-awesome-examples/">The Ultimate Wget Download Guide With 15 Awesome Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/top-5-best-linux-text-editors/">Top 5 Best Linux Text Editors</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/tcpdump-command-examples/">Packet Analyzer: 15 TCPDUMP Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">The Ultimate Bash Array Tutorial with 15 Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/">3 Steps to Perform SSH Login Without Password Using ssh-keygen &amp; ssh-copy-id</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Unix Sed Tutorial: Advanced Sed Substitution Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/03/netstat-command-examples/">UNIX / Linux: 10 Netstat Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/06/the-ultimate-guide-for-creating-strong-passwords/">The Ultimate Guide for Creating Strong Passwords</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/6-steps-to-secure-your-home-wireless-network/">6 Steps to Secure Your Home Wireless Network</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/turbocharge-putty-with-12-powerful-add-ons-software-for-geeks-3/">Turbocharge PuTTY with 12 Powerful Add-Ons</a></li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-19"><p class="widget_title">CATEGORIES</p>			<div class="textwidget"><ul>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/linux/">Linux Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/vim-2/">Vim Editor</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/sed/">Sed Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/awk/">Awk Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/bash-2/">Bash Shell Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/nagios-2/">Nagios Monitoring</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/openssh-2/">OpenSSH</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/iptables/">IPTables Firewall</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/apache/">Apache Web Server</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/mysql/">MySQL Database</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/perl/">Perl Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/google/">Google Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/ubuntu/">Ubuntu Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/postgresql/">PostgreSQL DB</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/hello-world/">Hello World Examples</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/c-programming/">C Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/c-plus-plus/">C++ Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/dell-2/">DELL Server Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/oracle/">Oracle Database</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/vmware/">VMware Tutorials</a></li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-20">			<div class="textwidget"><div id="___person_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 300px; height: 106px;"><iframe title="+Badge" data-gapiattached="true" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/person.html" name="I2_1440459928680" id="I2_1440459928680" vspace="0" tabindex="0" style="position: static; top: 0px; width: 300px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 106px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" width="100%" frameborder="0"></iframe></div></div>
+		</div>		</div>
+	</div>
+	<div class="footer">
+<div id="footer_widgets" class="columns_3">
+	<div class="one-third sidebar first">
+<div class="widget widget_text" id="text-7"><h4 class="widget_title">About The Geek Stuff</h4>			<div class="textwidget"><br>
+<img class="float" title="Ramesh Natarajan" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/ramesh-small.gif" alt="Linux 101 Hacks Book">
+My name is <strong>Ramesh Natarajan</strong>. I will be posting 
+instruction guides, how-to, troubleshooting tips and tricks on Linux, 
+database, hardware, security and web. My focus is to write articles that
+ will either teach you or help you resolve a problem. Read more about <a href="http://www.thegeekstuff.com/about/">Ramesh Natarajan</a> and the blog.</div>
+		</div>	</div>
+	<div class="one-third sidebar">
+<div class="widget widget_text" id="text-9"><h4 class="widget_title">Contact Us</h4>			<div class="textwidget"><br>
+<strong>Email Me :</strong>
+Use this <a href="http://www.thegeekstuff.com/contact" rel="nofollow">Contact Form</a>
+ to get in touch me with your comments, questions or suggestions about 
+this site. You can also simply drop me a line to say hello!.
+<br><br>
+<a title="Follow us on Google+" href="https://plus.google.com/112493711428194838421/posts">Follow us on Google+</a>
+<br><br>
+<a title="Follow us on Twitter" href="http://twitter.com/thegeekstuff" rel="nofollow">Follow us on Twitter</a>
+<br><br>
+<a href="http://www.facebook.com/thegeekstuff" rel="nofollow">Become a fan on Facebook</a>&nbsp;&nbsp;</div>
+		</div>	</div>
+	<div class="one-third sidebar last">
+<div class="widget widget_text" id="text-8"><h4 class="widget_title">Support Us</h4>			<div class="textwidget"><br>
+Support this blog by purchasing one of my ebooks.
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/bash-101-hacks-ebook/">Bash 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/">Sed and Awk 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/vim-101-hacks-ebook/">Vim 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/nagios-core-ebook/">Nagios Core 3 eBook</a></div>
+		</div>	</div>
+	<div style="clear:both;"></div>
+</div>
+		<p class="attribution">Copyright © 2008–2015 Ramesh Natarajan. All rights reserved  | <a href="http://www.thegeekstuff.com/copyright">Terms of Service</a></p>
+	</div>
+</div>
+<script type="text/javascript" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/form.gzip"></script>
+<script type="text/javascript" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/comment-reply.gzip"></script>
+<script type="text/javascript">
+(function(){
+	var classes = document.getElementsByClassName('menu_control');
+	for (i = 0; i < classes.length; i++) {
+		classes[i].onclick = function() {
+			var menu = this.nextElementSibling;
+			if (/show_menu/.test(menu.className))
+				menu.className = menu.className.replace('show_menu', '').trim();
+			else
+				menu.className += ' show_menu';
+		};
+	}
+})();
+</script>
+<noscript><style type="text/css" scoped>.menu { display: block; }</style></noscript>
+<script gapi_processed="true" type="text/javascript" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/plusone.js"></script><iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="Awk%20Introduction%20Tutorial%20%E2%80%93%207%20Awk%20Print%20Examples_files/postmessageRelay.html" id="oauth2relay703632797" name="oauth2relay703632797"></iframe>
+
+
+
+</body></html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Content Delivery Network via Amazon Web Services: CloudFront: static.thegeekstuff.com
+
+ Served from: www.thegeekstuff.com @ 2015-08-24 17:16:10 by W3 Total Cache -->

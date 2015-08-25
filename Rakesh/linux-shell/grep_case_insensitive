@@ -1,0 +1,4 @@
+if you want to search for case insensitive search then you should use
+
+grep -i "pattern" filename
+

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/css.css" media="screen, projection">
+<title>4 Awk If Statement Examples ( if, if else, if else if, :? )</title>
+<meta name="description" content="This article is part of the on-going Awk Tutorial Examples series. In our earlier awk articles, we discussed about awk print, awk user-defined variables, a">
+<meta name="robots" content="noodp, noydir">
+<link rel="canonical" href="http://www.thegeekstuff.com/2010/02/awk-conditional-statements/">
+<link rel="alternate" type="application/rss+xml" title="The Geek Stuff feed" href="http://www.thegeekstuff.com/feed/">
+<link rel="pingback" href="http://www.thegeekstuff.com/xmlrpc.php">
+
+<!-- All in One SEO Pack 2.2.6.2 by Michael Torbert of Semper Fi Web Design[295,361] -->
+<meta name="description" content="This article is part of the on-going Awk Tutorial Examples series. In our earlier awk articles, we discussed about awk print, awk user-defined variables, awk">
+
+<link rel="canonical" href="http://www.thegeekstuff.com/2010/02/awk-conditional-statements/">
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="The Geek Stuff » 4 Awk If Statement Examples ( if, if else, if else if, :? ) Comments Feed" href="http://www.thegeekstuff.com/2010/02/awk-conditional-statements/feed/">
+		<script async="" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/cbgapi.loaded_1"></script><script async="" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/cbgapi.loaded_0"></script><script src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.thegeekstuff.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script type="text/javascript" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/wp-emoji-release.js"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="shortcut icon" href="http://static.thegeekstuff.com/wp-content/uploads/2015/05/favicon.ico.gzip">
+<script src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/a" type="text/javascript"></script><script src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/inputtools.js" type="text/javascript"></script></head>
+<body class="template-single">
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-5302569-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<div class="container">
+	<div id="header" class="header">
+<p id="logo"><a href="http://www.thegeekstuff.com/"><img src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/thegeekstuff.gif" alt="The Geek Stuff"></a></p><div id="header_ad"><div id="header_ad1">
+<script async="" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/adsbygoogle.js"></script>
+<!-- TGS Logo Header -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8090601437064582" data-ad-slot="4708993701"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div>
+	</div>
+	<span class="menu_control">≡ Menu</span>
+<ul id="menu-tgs-menu" class="menu"><li id="menu-item-15798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-15798"><a href="http://www.thegeekstuff.com/">Home</a></li>
+<li id="menu-item-15797" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15797"><a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Free eBook</a></li>
+<li id="menu-item-15805" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15805"><a href="http://www.thegeekstuff.com/best-of-the-blog/">Start Here</a></li>
+<li id="menu-item-15800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15800"><a href="http://www.thegeekstuff.com/contact/">Contact</a></li>
+<li id="menu-item-15802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15802"><a href="http://www.thegeekstuff.com/about/">About</a></li>
+</ul>
+	<div class="columns">
+		<div class="content">
+			<div id="post-3330" class="post_box grt top" itemscope="" itemtype="http://schema.org/Article">
+				<div class="headline_area">
+					<h1 class="headline" itemprop="name">4 Awk If Statement Examples ( if, if else, if else if, :? )</h1>
+					<div class="byline small">
+						<span class="post_author_intro">by</span> <span class="post_author" itemprop="author">Sasikala</span>
+						<meta itemprop="datePublished" content="2010-02-17">
+						<meta itemprop="dateModified" content="2013-03-25">
+						<span class="post_date_intro">on</span> <span class="post_date" title="2010-02-17">February 17, 2010</span>
+					</div>
+				</div>
+				<div class="post_content" itemprop="articleBody">
+<div style="margin:7px 0px 6px 0px; padding:5px;">
+
+<div style="float:left; width=95px">
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/fastbutton.html" name="I0_1440459931005" id="I0_1440459931005" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" width="100%" frameborder="0"></iframe></div>
+</div>
+
+<div style="float:left; padding:2px; width:90px"><iframe src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/like_002.html" scrolling="no" style="border:none; overflow:hidden; width:450px; height:21px;" allowtransparency="true" frameborder="0"></iframe>
+</div>
+
+<div style="width=95px">
+<iframe src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/tweet_button.html" style="position: static; visibility: visible; width: 77px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-i1440459931637682466" frameborder="0"></iframe><script type="text/javascript" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/widgets.js"></script>
+</div>
+
+</div>
+<p><img class="alignright size-medium wp-image-3349" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/awk-tutorial-conditional-statements-300x176.png" alt="Linux Awk Tutorials - Conditional If Else Statement Examples" width="300" height="176">This article is part of the on-going Awk Tutorial Examples series. In our earlier awk articles, we discussed about <a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">awk print</a>, <a href="http://www.thegeekstuff.com/2010/01/awk-tutorial-understand-awk-variables-with-3-practical-examples/">awk user-defined variables</a>, <a href="http://www.thegeekstuff.com/2010/01/8-powerful-awk-built-in-variables-fs-ofs-rs-ors-nr-nf-filename-fnr/">awk built-in variables</a>, and <a href="http://www.thegeekstuff.com/2010/02/unix-awk-operators/">awk operators</a>.</p>
+<p>In this awk tutorial, let us review <strong>awk conditional if statements</strong> with practical examples.<br>
+<span id="more-3330"></span></p>
+<p>Awk supports lot of conditional statements to control the flow of the
+ program. Most of the Awk conditional statement syntax are looks like 
+‘C’ programming language.</p>
+<p>Normally conditional statement checks the condition, before 
+performing any action. If the condition is true action(s) are performed.
+ Similarly action can be performed if the condition is false.</p>
+<p>Conditional statement starts with the keyword called ‘if’. Awk supports two different kind of if statement.</p>
+<ol>
+<li>Awk Simple If statement</li>
+<li>Awk If-Else statement</li>
+<li>Awk If-ElseIf-Ladder</li>
+</ol>
+<h3>Awk Simple If Statement</h3>
+<p><strong>Single Action:</strong> Simple If statement is used to check the conditions, if the condition returns true, it performs its corresponding action(s).</p>
+<pre>Syntax:
+if (conditional-expression)
+	action</pre>
+<ul>
+<li>if is a keyword</li>
+<li>conditional-expression – expression to check conditions</li>
+<li>action – any awk statement to perform action.</li>
+</ul>
+<p><strong>Multiple Action:</strong> If the conditional expression 
+returns true, then action will be performed. If more than one action 
+needs to be performed, the actions should be enclosed in curly braces, 
+separating them into a new line or semicolon as shown below.</p>
+    <center>
+      <div style="margin-left:2px; margin-top:10px; margin-bottom:10px; ">
+
+        <!-- AD BLOCK -->
+		
+<script async="" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/adsbygoogle.js"></script>
+<!-- TGS Inside Content -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-8090601437064582" data-ad-slot="8643685131"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <!-- END AD BLOCK -->
+
+	  </div>
+    </center>
+
+
+<pre>Syntax:
+if (conditional-expression)
+{
+	action1;
+	action2;
+}</pre>
+<p>If the condition is true, all the actions enclosed in braces will be 
+performed in the given order. After all the actions are performed it 
+continues to execute the next statements.</p>
+<h3>Awk If Else Statement</h3>
+<p>In the above simple awk If statement, there is no set of actions in 
+case if the condition is false. In the awk If Else statement you can 
+give the list of action to perform if the condition is false. If the 
+condition returns true action1 will be performed, if the condition is 
+false action 2 will be performed.</p>
+<pre>Syntax:
+if (conditional-expression)
+	action1
+else
+	action2</pre>
+<p>Awk also has conditional operator i.e <strong>ternary operator</strong>
+ ( ?: ) whose feature is similar to the awk If Else Statement. If the 
+conditional-expression is true, action1 will be performed and if the 
+conditional-expression is false action2 will be performed.</p>
+<pre>Syntax:
+
+conditional-expression ? action1 : action2 ;</pre>
+<h3>Awk If Else If ladder</h3>
+<pre>if(conditional-expression1)
+	action1;
+else if(conditional-expression2)
+	action2;
+else if(conditional-expression3)
+	action3;
+	.
+	.
+else
+	action n;</pre>
+<ul>
+<li>If the conditional-expression1 is true then action1 will be performed.</li>
+<li>If the conditional-expression1 is false then conditional-expression2
+ will be checked, if its true, action2 will be performed and goes on 
+like this. Last else part will be performed if none of the 
+conditional-expression is true.</li>
+</ul>
+<p>Now let us create the sample input file which has the student marks.</p>
+<pre>$cat student-marks
+Jones 2143 78 84 77
+Gondrol 2321 56 58 45
+RinRao 2122 38 37
+Edwin 2537 87 97 95
+Dayan 2415 30 47</pre>
+<h3>1. Awk If Example: Check all the marks are exist</h3>
+<pre>$ awk '{
+if ($3 =="" || $4 == "" || $5 == "")
+	print "Some score for the student",$1,"is missing";'
+}' student-marks
+Some score for the student RinRao is missing
+Some score for the student Dayan is missing</pre>
+<p>$3, $4 and $5 are test scores of the student. If test score is equal 
+to empty, it throws the message. || operator is to check any one of 
+marks is not exist, it should alert.</p>
+<h3>2. Awk If Else Example: Generate Pass/Fail Report based on Student marks in each subject</h3>
+<pre>$ awk '{
+if ($3 &gt;=35 &amp;&amp; $4 &gt;= 35 &amp;&amp; $5 &gt;= 35)
+	print $0,"=&gt;","Pass";
+else
+	print $0,"=&gt;","Fail";
+}' student-marks
+Jones 2143 78 84 77 =&gt; Pass
+Gondrol 2321 56 58 45 =&gt; Pass
+RinRao 2122 38 37 =&gt; Fail
+Edwin 2537 87 97 95 =&gt; Pass
+Dayan 2415 30 47 =&gt; Fail</pre>
+<p>The condition for Pass is all the test score mark should be greater 
+than or equal to 35. So all the test scores are checked if greater than 
+35, then it prints the whole line and string “Pass”, else i.e even if 
+any one of the test score doesn’t meet the condition, it prints the 
+whole line and prints the string “Fail”.</p>
+<h3>3. Awk If Else If Example: Find the average and grade for every student</h3>
+<pre>$ cat grade.awk
+{
+total=$3+$4+$5;
+avg=total/3;
+if ( avg &gt;= 90 ) grade="A";
+else if ( avg &gt;= 80) grade ="B";
+else if (avg &gt;= 70) grade ="C";
+else grade="D";
+
+print $0,"=&gt;",grade;
+}
+$ awk -f grade.awk student-marks
+Jones 2143 78 84 77 =&gt; C
+Gondrol 2321 56 58 45 =&gt; D
+RinRao 2122 38 37 =&gt; D
+Edwin 2537 87 97 95 =&gt; A
+Dayan 2415 30 47 =&gt; D</pre>
+<p>In the above awk script, the variable called ‘avg’ has the average of
+ the three test scores. If the average is greater than or equal to 90, 
+then grade is A, or if the average is greater than or equal to 80 then 
+grade is B, if the average is greater than or equal to 70, then the 
+grade is C. Or else the grade is D.</p>
+<h3>4. Awk Ternary ( ?: ) Example: Concatenate every 3 lines of input with a comma.</h3>
+<pre>$ awk 'ORS=NR%3?",":"\n"' student-marks
+Jones 2143 78 84 77,Gondrol 2321 56 58 45,RinRao 2122 38 37
+Edwin 2537 87 97 95,Dayan 2415 30 47,</pre>
+<p>We discussed about <a href="http://www.thegeekstuff.com/2010/01/8-powerful-awk-built-in-variables-fs-ofs-rs-ors-nr-nf-filename-fnr/">awk ORS built-in variable</a>
+ earlier. This variable gets appended after every line that gets output.
+ In this example, it gets changed on every 3rd line from a comma to a 
+newline. For lines 1, 2  it’s a comma, for line 3 it’s a newline, for 
+lines 4, 5 it’s a comma, for line 6 a newline, etc.</p>
+<h3>Recommended Reading</h3>
+<p><strong><img src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/sed-and-awk-125.png" alt="" title="Sed and Awk 101 Hacks" class="frame alignright size-full wp-image-7642" width="125" height="177"><a rel="nofollow" href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/">Sed and Awk 101 Hacks</a>, by Ramesh Natarajan</strong>.
+ I spend several hours a day on UNIX / Linux environment dealing with 
+text files (data, config, and log files). I use Sed and Awk for all my 
+my text manipulation work. Based on my Sed and Awk experience, I’ve 
+written Sed and Awk 101 Hacks eBook that contains 101 practical examples
+ on various advanced features of Sed and Awk that will enhance your UNIX
+ / Linux life. Even if you’ve been using Sed and Awk for several years 
+and have not read this book, please do yourself a favor and read this 
+book. You’ll be amazed with the capabilities of Sed and Awk utilities.</p>
+<div style="margin:7px 0px 3px 0px; padding:5px; background:#F2F0E8">
+
+<div style="float:left; width=95px">
+<div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/fastbutton_002.html" name="I1_1440459931013" id="I1_1440459931013" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" width="100%" frameborder="0"></iframe></div>
+</div>
+
+<div style="float:left; width=95px">
+<iframe src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/tweet_button_002.html" style="position: static; visibility: visible; width: 77px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-i1440459931638240387" frameborder="0"></iframe><script type="text/javascript" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/widgets.js"></script>
+</div>
+
+<div style="float:left; padding:2px; width:90px"><iframe src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/like_002.html" scrolling="no" style="border:none; overflow:hidden; width:450px; height:21px;" allowtransparency="true" frameborder="0"></iframe>
+</div>
+
+<div style="padding:1px">
+&gt;&nbsp;<a href="#commentform" rel="nofollow">Add your comment</a>
+</div>
+
+</div>
+<h3>If you enjoyed this article, you might also like..</h3>
+<table>
+<tbody><tr>
+<td valign="top">
+<ol>
+<li><a href="http://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/">50 Linux Sysadmin Tutorials</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/11/50-linux-commands/">50 Most Frequently Used Linux Commands (With Examples)</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/12/linux-performance-monitoring-tools/">Top 25 Best Linux Performance Monitoring and Debugging Tools</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">Mommy, I found it! – 15 Practical Linux Find Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Linux 101 Hacks 2nd Edition eBook</a>&nbsp;<img title="Linux 101 Hacks Book" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/free-small.png" alt="Linux 101 Hacks Book"></li>
+</ol>
+</td>
+<td>
+<ul>
+<li><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">Awk Introduction – 7 Awk Print Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Advanced Sed Substitution Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/8-essential-vim-editor-navigation-fundamentals/">8 Essential Vim Editor Navigation Fundamentals</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/06/iptables-rules-examples/">25 Most Frequently Used Linux IPTables Rules Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/turbocharge-putty-with-12-powerful-add-ons-software-for-geeks-3/">Turbocharge PuTTY with 12 Powerful Add-Ons</a></li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+<br>
+<center>
+<table id="booktable">
+<tbody><tr>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/bash-101-hacks-ebook/"><img title="Bash 101 Hacks Book" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/bash-132.png" alt="Bash 101 Hacks Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/"><img title="Sed and Awk 101 Hacks Book" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/sed-and-awk-132.png" alt="Sed and Awk 101 Hacks Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/nagios-core-ebook/"><img title="Nagios Core 3 Book" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/nagios-core-132.png" alt="Nagios Core 3 Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/vim-101-hacks-ebook/"><img title="Vim 101 Hacks Book" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/vim-101-hacks-132.png" alt="Vim 101 Hacks Book"></a>
+</td>
+</tr>
+</tbody></table>
+</center>
+<br>
+				</div>
+				<p class="post_tags" itemprop="keywords">
+					<span class="post_tags_intro">Tagged as:</span>
+					<a href="http://www.thegeekstuff.com/tag/awk-else-if/" rel="tag">Awk Else If</a>,
+					<a href="http://www.thegeekstuff.com/tag/awk-if/" rel="tag">Awk If &amp;&amp;</a>,
+					<a href="http://www.thegeekstuff.com/tag/awk-if-statement-examples/" rel="tag">Awk If Statement Examples</a>,
+					<a href="http://www.thegeekstuff.com/tag/awk-if-then-else/" rel="tag">Awk If then Else</a>,
+					<a href="http://www.thegeekstuff.com/tag/awk-tutorial-examples/" rel="tag">Awk Tutorial Examples</a>,
+					<a href="http://www.thegeekstuff.com/tag/if-in-awk/" rel="tag">If in Awk</a>,
+					<a href="http://www.thegeekstuff.com/tag/linux-awk-examples/" rel="tag">Linux Awk Examples</a>,
+					<a href="http://www.thegeekstuff.com/tag/linux-awk-tutorial/" rel="tag">Linux Awk Tutorial</a>,
+					<a href="http://www.thegeekstuff.com/tag/unix-awk-examples/" rel="tag">Unix Awk Examples</a>,
+					<a href="http://www.thegeekstuff.com/tag/unix-awk-tutorial/" rel="tag">Unix Awk Tutorial</a>
+				</p>
+			</div>
+			<div id="comments">
+				<p class="comments_intro"><span class="bracket">{</span> <span class="num_comments">17</span> comments… <a href="#commentform" rel="nofollow">add one</a> <span class="bracket">}</span></p>
+				<ul class="comment_list">
+					<li class="comment even thread-even depth-1" id="comment-35084">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Gary Kronick</span>
+							<span class="comment_date">February 17, 2010, 5:44 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-35084"><p>Here ya go: tertiary = coming next after the second and just before the fourth in position</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-35084" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-35204">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">jameslee</span>
+							<span class="comment_date">February 17, 2010, 11:40 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-35204"><p>first of all i want to know what is “awk”..please give some tutorials from basic</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-35204" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment byuser comment-author-admin even thread-even depth-1" id="comment-36703">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ramesh Natarajan</span>
+							<span class="comment_date">February 26, 2010, 5:05 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-36703"><p>@Jameslee,</p>
+<p>Read our <a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/" rel="nofollow">awk introduction tutorial</a> to understand the basics of awk.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-36703" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-120500">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Stuart</span>
+							<span class="comment_date">August 2, 2011, 1:27 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-120500"><p>Example 1 should read:</p>
+<p>awk ‘{<br>
+if ($3 ==”” || $4 == “” || $5 == “”)<br>
+print “Some score for the student”,$1,”is missing”;<br>
+}’ student-marks</p>
+<p>NOTE:  There is an extra ” ‘ ” character in your example.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-120500" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-126056">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://techinterplay.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://techinterplay.com/" rel="external nofollow" class="url">Faheem</a></span>
+							<span class="comment_date">September 6, 2011, 10:30 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-126056"><p>awk ‘{<br>
+if ($3 ==”” || $4 == “” || $5 == “”)<br>
+	print “Some score for the student”,$1,”is missing”;’<br>
+}’ student-marks</p>
+<p>There is a extra – ‘ – at the end of line ”	print “Some score for the student”,$1,”is missing”;’ ” please remove it,</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-126056" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-131513">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anonymous</span>
+							<span class="comment_date">October 11, 2011, 1:18 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-131513"><p>I am trying to use the following ‘awk’ command to print 60 6-column x 100 row text files to one large text file, i.e.</p>
+<p>awk ‘{print $1, $2, $3, $4, $5, $6}’ textfile1.txt &gt;&gt; Batch_data_file.txt</p>
+<p>The command works for all but four text files.  For each of these 
+four problem text files, it prints the first row of all six columns and 
+nothing more.  Why might ‘awk’ not be printing the remaining 99 rows?</p>
+<p>Any help would be much appreciated.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-131513" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-141660">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">John</span>
+							<span class="comment_date">November 17, 2011, 1:29 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-141660"><p>This is one of the best tutorials I have found online. Well written and it has solved my problem. Thank you.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-141660" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-160941">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">student</span>
+							<span class="comment_date">December 24, 2011, 6:39 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-160941"><p>Thanks for the examples.<br>
+Im not being able to find out what exactly the error is here:<br>
+#include<br>
+void main()<br>
+{<br>
+int numsweet;<br>
+double cost;<br>
+printf(“How many icecream do you want : “);<br>
+scanf(“%f, &amp;numsweet”);<br>
+cost = 12.10 * numsweet;<br>
+if (numsweet &gt; 1000)<br>
+{<br>
+printf(“The store does not have that much icecream in stock!”);<br>
+}<br>
+else<br>
+{<br>
+printf(“You have to pay $%f to the cashier!\n Thankyou!\n”, cost);<br>
+}<br>
+}</p>
+<p>It gives a warning saying says “Possible use of numsweet before definition in funtion main. Plz help! any advice is welcomed.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-160941" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-165950">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">SANTOSH SHROFF V</span>
+							<span class="comment_date">December 29, 2011, 11:19 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-165950"><p>@STUDENT:the scanf statement should be as follows…<br>
+ scanf(“%d”,&amp;numsweet)</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-165950" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-256122">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Carl</span>
+							<span class="comment_date">June 20, 2012, 8:25 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-256122"><p>Could 
+you help me with the following syntax error? When I have one statement 
+after the “if” , the program works. But when I want two statements after
+ an “if” , I get errors.<br>
+Thanks,<br>
+Carl.</p>
+<p>BEGIN { FS = “,” }<br>
+{ if  ( $2 == “”  &amp;&amp;   ( $6 == “Install” || $6 == “Add” || $6 == “New”) )<br>
+  {<br>
+print $1″,”$2″,”$3″,”$4″,”$5″,”$6″,”$7″,”$8″,”$9 &gt; “Email_Asset_Add” ;<br>
+print “$8″,”$9 &gt; “Email_Asset_Add_Mitul” ;<br>
+  }<br>
+   else if ( $2 == “” &amp;&amp; ( $6 == “Change” || $6 == “Update” || $6 == “Existing”) )<br>
+  {<br>
+print $1″,”$2″,”$3″,”$4″,”$5″,”$6″,”$7″,”$8″,”$9 &gt; “Email_Asset_Update” ;<br>
+print “$8″,”$9 &gt; “Email_Asset_Update_Mitul”  ;<br>
+}<br>
+}</p>
+<p>awk -f awk_program  test_email<br>
+awk: newline in string near line 23<br>
+awk: newline in string near line 28</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-256122" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-509503">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Tom</span>
+							<span class="comment_date">January 22, 2013, 2:22 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-509503"><p>BEGIN {<br>
+FS=”|”<br>
+}<br>
+{<br>
+FLD_01=$1<br>
+FLD_02=$2<br>
+FLD_03=$3<br>
+FLD_04=$4<br>
+FLD_05=$5<br>
+FLD_06=$6<br>
+FLD_07=$7<br>
+if   ( FLD_05 = “Tom” ) FLD_08=”Me” ;<br>
+       else if ( FLD_05 = “John” ) FLD_08=”Friend” ;</p>
+<p>printf(“%s|%s|%s|%s|%s|%s|%s|%s\n”, FLD_01, FLD_02, FLD_03, FLD_04, FLD_05, FLD_06, FLD_07, FLD_08)<br>
+}<br>
+END {<br>
+}</p>
+<p>I’m trying to get it to look at field 5, and then make a change to field 8.</p>
+<p>I run nawk -f run.awk tom</p>
+<p>When I run it, it changed all lines to Tom as the 5th field, and changes the 8th to me.</p>
+<p>What am I missing?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-509503" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-824396">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Rusty Shackleford</span>
+							<span class="comment_date">June 26, 2013, 2:11 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-824396"><p>Use == instead of = in your if statement</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-824396" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-885345">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">rupali rane</span>
+							<span class="comment_date">August 14, 2013, 4:14 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-885345"><p>HI,<br>
+i want to display those file which are containing AJZ word<br>
+ it should display all those file wich contains AJZ word from 
+directory(means it should show only those files from directory which 
+contains AJZ word)<br>
+awk ‘{for(i=1;i&lt;=NF;i++)if($i~/AJZ/)print$(i+1)}' test.txt</p>
+<p>plz give me the solution. i tired with this command but not getting result plz tell me the solution<br>
+thanks in advance</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-885345" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-2435396">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">nidhi</span>
+							<span class="comment_date">October 11, 2014, 1:09 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-2435396"><p>Hi, In example 1, how to use awk if i want to know which marks is missing either $3 or $4 or $5</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-2435396" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3153421">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">sayli</span>
+							<span class="comment_date">December 6, 2014, 12:17 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3153421"><p>I want 
+how we can calculate nergy of each node using AWK file, I got many AWK 
+file for calculating for calculating energy but its not properly work.. 
+That awk files calculate only average energy of all node ,not calculate 
+energy of each node</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3153421" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3624026">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Bongo</span>
+							<span class="comment_date">January 22, 2015, 5:17 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3624026"><p>How do I find which student has scored the highest marks in $3?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3624026" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3813985">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Laks</span>
+							<span class="comment_date">February 19, 2015, 9:02 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3813985"><p>Hi 
+experts, am struggling get the below working as this is error out while 
+passing the two arguments for column 2 and 3. Can someone help on how to
+ get this working?</p>
+<p>#!/bin/sh<br>
+COBDATE=`head -1 test.txt|cut -d’,’ -f2|cut -d’ ‘ -f6`<br>
+PREVCOBDATE=`head -1 test.txt|cut -d’=’ -f2|head -c 9`<br>
+awk -v VAR1=”$COBDATE” -v VAR2=$PREVCOBDATE<br>
+ ‘BEGIN{<br>
+FS=”,”<br>
+print  “MIME-Version: 1.0″<br>
+print  “Content-Type: text/html”<br>
+print  “Content-Disposition: inline”<br>
+print  “””FileNames’$VAR1”$VAR2’DOMAIN NAMERemarks”<br>
+}<br>
+ {<br>
+printf “”<br>
+for(i=1;i&lt;=NF;i++)<br>
+printf "%s”, $i<br>
+print “”<br>
+ }<br>
+END{<br>
+print “”<br>
+}’ test1.txt&gt;mail.html</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3813985" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+				</ul>
+				<form id="commentform" method="post" action="http://www.thegeekstuff.com/wp-comments-post.php">
+					<a rel="nofollow" id="cancel-comment-reply-link" href="http://www.thegeekstuff.com/2010/02/awk-conditional-statements/#respond" style="display:none;">Cancel reply</a>
+					<p class="comment_form_title">Leave a Comment</p>
+					<p id="comment_form_name">
+						<label for="author">Name</label>
+						<input id="author" class="input_text" name="author" tabindex="1" type="text">
+					</p>
+					<p id="comment_form_email">
+						<label for="email">Email</label>
+						<input id="email" class="input_text" name="email" tabindex="2" type="text">
+					</p>
+					<p id="comment_form_url">
+						<label for="url">Website</label>
+						<input id="url" class="input_text" name="url" tabindex="3" type="text">
+					</p>
+					<p id="comment_form_comment">
+						<label for="comment">Comment</label>
+						<textarea name="comment" id="comment" class="input_text" tabindex="4" rows="6"></textarea>
+					</p>
+					<p id="comment_form_submit">
+						<input id="submit" class="input_submit" name="submit" tabindex="5" value="Submit" type="submit">
+					</p>
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="82c7043115" type="hidden"></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" type="checkbox">
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+<p style="display: none;"></p><input name="comment_post_ID" value="3330" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+				<input id="ak_js" name="ak_js" value="1440459930747" type="hidden"></form>
+			</div>
+			<div class="prev_next">
+				<p class="next_post">Next post: <a href="http://www.thegeekstuff.com/2010/02/get-source-code-for-any-linux-command/" rel="next">Get Source Code for any Linux Command</a></p>
+				<p class="previous_post">Previous post: <a href="http://www.thegeekstuff.com/2010/02/top-5-best-linux-firewalls/" rel="prev">Top 5 Best Linux Firewalls</a></p>
+			</div>
+		</div>
+		<div class="sidebar">
+<div class="widget widget_text" id="text-21">			<div class="textwidget"><a title="Subscribe via RSS" href="http://www.thegeekstuff.com/feed" rel="nofollow">RSS</a>&nbsp; | &nbsp;<a title="Subscribe via Email" href="http://feedburner.google.com/fb/a/mailverify?uri=TheGeekStuff&amp;loc=en_US" rel="nofollow">Email</a>&nbsp; | &nbsp;<a title="Follow us on Twitter" href="http://twitter.com/thegeekstuff" rel="nofollow">Twitter</a>&nbsp; | &nbsp;<a title="Become a fan" href="http://www.facebook.com/thegeekstuff" rel="nofollow">Facebook</a>&nbsp; | &nbsp;<a title="Follow us on Google+" href="https://plus.google.com/112493711428194838421/posts">Google+</a>
+<br><br>
+<form action="http://www.thegeekstuff.com/search" id="cse-search-box">
+  <div>
+    <input name="cx" value="005666763606120661560:zkmegbt_djm" type="hidden">
+    <input name="cof" value="FORID:10" type="hidden">
+    <input name="ie" value="UTF-8" type="hidden">
+    <input style="background: rgb(255, 255, 255) url(&quot;//cse.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center;" name="q" size="30" type="text">
+    <input style="border-color:#CCCCCC #999999 #999999 #CCCCCC; border-style:double; border-width:1px; overflow:visible;" name="sa" value="Search" type="submit">
+  </div>
+<input value="www.thegeekstuff.com/2010/02/awk-conditional-statements/" name="siteurl" type="hidden"><input name="ref" type="hidden"><input name="ss" type="hidden"></form>
+<script type="text/javascript" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script><script src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/a_002" type="text/javascript"></script><link href="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/transliteration.css" type="text/css" rel="stylesheet"><script src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/transliteration.js" type="text/javascript"></script>
+<script type="text/javascript" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/t13n"></script>
+<script type="text/javascript" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/brand"></script>
+<br></div>
+		</div><div class="widget widget_text" id="text-3">			<div class="textwidget"><script async="" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/adsbygoogle.js"></script>
+<!-- TGS Side Bar -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-8090601437064582" data-ad-slot="9054077260"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br></div>
+		</div><div class="widget widget_text" id="text-4"><p class="widget_title">EBOOKS</p>			<div class="textwidget"><ul>
+<li><img title="Linux 101 Hacks Book" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/free-small.png" alt="Linux 101 Hacks Book">&nbsp;<a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Linux 101 Hacks 2nd Edition eBook</a> - Practical Examples to Build a Strong Foundation in Linux</li>
+<li><a href="http://www.thegeekstuff.com/bash-101-hacks-ebook/">Bash 101 Hacks eBook</a> - Take Control of Your Bash Command Line and Shell Scripting</li>
+<li><a href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/">Sed and Awk 101 Hacks eBook</a> - Enhance Your UNIX / Linux Life with Sed and Awk</li>
+<li><a href="http://www.thegeekstuff.com/vim-101-hacks-ebook/">Vim 101 Hacks eBook</a> - Practical Examples for Becoming Fast and Productive in Vim Editor</li>
+<li><a href="http://www.thegeekstuff.com/nagios-core-ebook/">Nagios Core 3 eBook</a> - Monitor Everything, Be Proactive, and Sleep Well</li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-22">			<div class="textwidget"><iframe src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/likebox.html" scrolling="no" style="border:none; overflow:hidden; height:258px;" allowtransparency="true" frameborder="0"></iframe></div>
+		</div><div class="widget widget_text" id="text-17"><p class="widget_title">POPULAR POSTS</p>			<div class="textwidget"><ul>
+<li><a href="http://www.thegeekstuff.com/2009/01/12-amazing-and-essential-linux-books-to-enrich-your-brain-and-library/">12 Amazing and Essential Linux Books To Enrich Your Brain and Library</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/">50 UNIX / Linux Sysadmin Tutorials</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/11/50-linux-commands/">50 Most Frequently Used UNIX / Linux Commands (With Examples)</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/gtd-getting-things-done/">How To Be Productive and Get Things Done Using GTD</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/03/30-things-to-do-when-you-are-bored-and-have-a-computer/">30 Things To Do When you are Bored and have a Computer</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/09/linux-file-system-structure/">Linux Directory Structure (File System Structure) Explained with Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/">Linux Crontab: 15 Awesome Cron Job Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/">Get a Grip on the Grep! – 15 Practical Grep Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/linux-ls-command-examples/">Unix LS Command: 15 Practical Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/15-examples-to-master-linux-command-line-history/">15 Examples To Master Linux Command Line History</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/bug-tracking-system/">Top 10 Open Source Bug Tracking System</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/01/vi-and-vim-macro-tutorial-how-to-record-and-play/">Vi and Vim Macro Tutorial: How To Record and Play</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">Mommy, I found it! -- 15 Practical Linux Find Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/best-gmail-tips-and-tricks/">15 Awesome Gmail Tips and Tricks</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/expertise-in-google-search/">15 Awesome Google Search Tips and Tricks</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/raid-levels-tutorial/">RAID 0, RAID 1, RAID 5, RAID 10 Explained with Diagrams</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/01/15-practical-unix-linux-top-command-examples/">Can You Top This? 15 Practical Linux Top Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/09/top-5-best-network-monitoring-tools/">Top 5 Best System Monitoring Tools</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/top-5-best-linux-os-distributions/">Top 5 Best Linux OS Distributions</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/06/how-to-monitor-remote-linux-host-using-nagios-30/">How To Monitor Remote Linux Host using Nagios 3.0</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">Awk Introduction Tutorial – 7 Awk Print Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/09/rsync-command-examples/">How to Backup Linux? 15 rsync Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/09/the-ultimate-wget-download-guide-with-15-awesome-examples/">The Ultimate Wget Download Guide With 15 Awesome Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/top-5-best-linux-text-editors/">Top 5 Best Linux Text Editors</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/tcpdump-command-examples/">Packet Analyzer: 15 TCPDUMP Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">The Ultimate Bash Array Tutorial with 15 Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/">3 Steps to Perform SSH Login Without Password Using ssh-keygen &amp; ssh-copy-id</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Unix Sed Tutorial: Advanced Sed Substitution Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/03/netstat-command-examples/">UNIX / Linux: 10 Netstat Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/06/the-ultimate-guide-for-creating-strong-passwords/">The Ultimate Guide for Creating Strong Passwords</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/6-steps-to-secure-your-home-wireless-network/">6 Steps to Secure Your Home Wireless Network</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/turbocharge-putty-with-12-powerful-add-ons-software-for-geeks-3/">Turbocharge PuTTY with 12 Powerful Add-Ons</a></li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-19"><p class="widget_title">CATEGORIES</p>			<div class="textwidget"><ul>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/linux/">Linux Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/vim-2/">Vim Editor</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/sed/">Sed Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/awk/">Awk Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/bash-2/">Bash Shell Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/nagios-2/">Nagios Monitoring</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/openssh-2/">OpenSSH</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/iptables/">IPTables Firewall</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/apache/">Apache Web Server</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/mysql/">MySQL Database</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/perl/">Perl Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/google/">Google Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/ubuntu/">Ubuntu Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/postgresql/">PostgreSQL DB</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/hello-world/">Hello World Examples</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/c-programming/">C Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/c-plus-plus/">C++ Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/dell-2/">DELL Server Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/oracle/">Oracle Database</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/vmware/">VMware Tutorials</a></li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-20">			<div class="textwidget"><div id="___person_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 300px; height: 106px;"><iframe title="+Badge" data-gapiattached="true" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/person.html" name="I2_1440459931020" id="I2_1440459931020" vspace="0" tabindex="0" style="position: static; top: 0px; width: 300px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 106px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" width="100%" frameborder="0"></iframe></div></div>
+		</div>		</div>
+	</div>
+	<div class="footer">
+<div id="footer_widgets" class="columns_3">
+	<div class="one-third sidebar first">
+<div class="widget widget_text" id="text-7"><h4 class="widget_title">About The Geek Stuff</h4>			<div class="textwidget"><br>
+<img class="float" title="Ramesh Natarajan" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/ramesh-small.gif" alt="Linux 101 Hacks Book">
+My name is <strong>Ramesh Natarajan</strong>. I will be posting 
+instruction guides, how-to, troubleshooting tips and tricks on Linux, 
+database, hardware, security and web. My focus is to write articles that
+ will either teach you or help you resolve a problem. Read more about <a href="http://www.thegeekstuff.com/about/">Ramesh Natarajan</a> and the blog.</div>
+		</div>	</div>
+	<div class="one-third sidebar">
+<div class="widget widget_text" id="text-9"><h4 class="widget_title">Contact Us</h4>			<div class="textwidget"><br>
+<strong>Email Me :</strong>
+Use this <a href="http://www.thegeekstuff.com/contact" rel="nofollow">Contact Form</a>
+ to get in touch me with your comments, questions or suggestions about 
+this site. You can also simply drop me a line to say hello!.
+<br><br>
+<a title="Follow us on Google+" href="https://plus.google.com/112493711428194838421/posts">Follow us on Google+</a>
+<br><br>
+<a title="Follow us on Twitter" href="http://twitter.com/thegeekstuff" rel="nofollow">Follow us on Twitter</a>
+<br><br>
+<a href="http://www.facebook.com/thegeekstuff" rel="nofollow">Become a fan on Facebook</a>&nbsp;&nbsp;</div>
+		</div>	</div>
+	<div class="one-third sidebar last">
+<div class="widget widget_text" id="text-8"><h4 class="widget_title">Support Us</h4>			<div class="textwidget"><br>
+Support this blog by purchasing one of my ebooks.
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/bash-101-hacks-ebook/">Bash 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/">Sed and Awk 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/vim-101-hacks-ebook/">Vim 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/nagios-core-ebook/">Nagios Core 3 eBook</a></div>
+		</div>	</div>
+	<div style="clear:both;"></div>
+</div>
+		<p class="attribution">Copyright © 2008–2015 Ramesh Natarajan. All rights reserved  | <a href="http://www.thegeekstuff.com/copyright">Terms of Service</a></p>
+	</div>
+</div>
+<script type="text/javascript" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/form.gzip"></script>
+<script type="text/javascript" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/comment-reply.gzip"></script>
+<script type="text/javascript">
+(function(){
+	var classes = document.getElementsByClassName('menu_control');
+	for (i = 0; i < classes.length; i++) {
+		classes[i].onclick = function() {
+			var menu = this.nextElementSibling;
+			if (/show_menu/.test(menu.className))
+				menu.className = menu.className.replace('show_menu', '').trim();
+			else
+				menu.className += ' show_menu';
+		};
+	}
+})();
+</script>
+<noscript><style type="text/css" scoped>.menu { display: block; }</style></noscript>
+<script gapi_processed="true" type="text/javascript" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/plusone.js"></script><iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="4%20Awk%20If%20Statement%20Examples%20%28%20if,%20if%20else,%20if%20else%20if,%20:%3F%20%29_files/postmessageRelay.html" id="oauth2relay1579982267" name="oauth2relay1579982267"></iframe>
+
+
+
+</body></html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Content Delivery Network via Amazon Web Services: CloudFront: static.thegeekstuff.com
+
+ Served from: www.thegeekstuff.com @ 2015-08-24 16:16:41 by W3 Total Cache -->

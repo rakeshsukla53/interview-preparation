@@ -1,0 +1,2866 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/css.css" media="screen, projection">
+<title>15 Practical Grep Command Examples In Linux / UNIX</title>
+<meta name="description" content="Photo courtesy of Alexôme’s You should get a grip on the Linux grep command. This is part of the on-going 15 Examples series, where 15 detailed examples w">
+<meta name="robots" content="noodp, noydir">
+<link rel="canonical" href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/">
+<link rel="alternate" type="application/rss+xml" title="The Geek Stuff feed" href="http://www.thegeekstuff.com/feed/">
+<link rel="pingback" href="http://www.thegeekstuff.com/xmlrpc.php">
+
+<!-- All in One SEO Pack 2.2.6.2 by Michael Torbert of Semper Fi Web Design[295,352] -->
+<meta name="description" content="Photo courtesy of Alexôme's You should get a grip on the Linux grep command. This is part of the on-going 15 Examples series, where 15 detailed examples">
+
+<link rel="canonical" href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/">
+<!-- /all in one seo pack -->
+<link rel="alternate" type="application/rss+xml" title="The Geek Stuff » 15 Practical Grep Command Examples In Linux / UNIX Comments Feed" href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/feed/">
+		<script async="" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/cbgapi.loaded_1"></script><script async="" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/cbgapi.loaded_0"></script><script src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.thegeekstuff.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script type="text/javascript" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/wp-emoji-release.js"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="shortcut icon" href="http://static.thegeekstuff.com/wp-content/uploads/2015/05/favicon.ico.gzip">
+<script src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/a" type="text/javascript"></script><script src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/inputtools.js" type="text/javascript"></script></head>
+<body class="template-single">
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-5302569-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<div class="container">
+	<div id="header" class="header">
+<p id="logo"><a href="http://www.thegeekstuff.com/"><img src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/thegeekstuff.gif" alt="The Geek Stuff"></a></p><div id="header_ad"><div id="header_ad1">
+<script async="" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/adsbygoogle.js"></script>
+<!-- TGS Logo Header -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8090601437064582" data-ad-slot="4708993701"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div>
+	</div>
+	<span class="menu_control">≡ Menu</span>
+<ul id="menu-tgs-menu" class="menu"><li id="menu-item-15798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-15798"><a href="http://www.thegeekstuff.com/">Home</a></li>
+<li id="menu-item-15797" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15797"><a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Free eBook</a></li>
+<li id="menu-item-15805" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15805"><a href="http://www.thegeekstuff.com/best-of-the-blog/">Start Here</a></li>
+<li id="menu-item-15800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15800"><a href="http://www.thegeekstuff.com/contact/">Contact</a></li>
+<li id="menu-item-15802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15802"><a href="http://www.thegeekstuff.com/about/">About</a></li>
+</ul>
+	<div class="columns">
+		<div class="content">
+			<div id="post-433" class="post_box grt top" itemscope="" itemtype="http://schema.org/Article">
+				<div class="headline_area">
+					<h1 class="headline" itemprop="name">15 Practical Grep Command Examples In Linux / UNIX</h1>
+					<div class="byline small">
+						<span class="post_author_intro">by</span> <span class="post_author" itemprop="author">SathiyaMoorthy</span>
+						<meta itemprop="datePublished" content="2009-03-26">
+						<meta itemprop="dateModified" content="2014-06-12">
+						<span class="post_date_intro">on</span> <span class="post_date" title="2009-03-26">March 26, 2009</span>
+					</div>
+				</div>
+				<div class="post_content" itemprop="articleBody">
+<div style="margin:7px 0px 6px 0px; padding:5px;">
+
+<div style="float:left; width=95px">
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/fastbutton.html" name="I0_1440458189467" id="I0_1440458189467" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" width="100%" frameborder="0"></iframe></div>
+</div>
+
+<div style="float:left; padding:2px; width:90px"><iframe src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/like_002.html" scrolling="no" style="border:none; overflow:hidden; width:450px; height:21px;" allowtransparency="true" frameborder="0"></iframe>
+</div>
+
+<div style="width=95px">
+<iframe src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/tweet_button.html" style="position: static; visibility: visible; width: 86px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-i1440458189720340606" frameborder="0"></iframe><script type="text/javascript" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/widgets.js"></script>
+</div>
+
+</div>
+<div class="optional_excerpt"><img title="Get a Grip - Linux Grep Command" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/tight-grip-230x300.jpg" alt="Grip on the Unix Grep Command"><br>
+<small>Photo courtesy of <a href="http://www.flickr.com/photos/alexome/55253524/">Alexôme’s</a></small></div>
+<p>You should get a grip on the Linux grep command. </p>
+<p>This is part of the on-going 15 Examples series, where 15 detailed 
+examples will be provided for a specific command or functionality.&nbsp;
+ Earlier we discussed 15 practical examples for Linux <a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">find command</a>,&nbsp; Linux <a href="http://www.thegeekstuff.com/2008/08/15-examples-to-master-linux-command-line-history/">command line history</a> and <a href="http://www.thegeekstuff.com/2009/01/15-practical-usages-of-mysqladmin-command-for-administering-mysql-server/">mysqladmin command</a>.<br>
+<code> </code><br>
+<code> </code><br>
+In this article let us review 15 practical examples of Linux grep command that will be very useful to both newbies and experts.<br>
+<code> </code><br>
+<span id="more-433"></span></p>
+<p><code> </code><br>
+First create the following demo_file that will be used in the examples below to demonstrate grep command.<br>
+<code> </code></p>
+<pre>$ cat demo_file
+THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
+this line is the 1st lower case line in this file.
+This Line Has All Its First Character Of The Word With Upper Case.
+
+Two lines above this line is empty.
+And this is the last line.</pre>
+<h3>1. Search for the given string in a single file</h3>
+<p>The basic usage of grep command is to search for a specific string in the specified file as shown below.</p>
+<pre>Syntax:
+grep "literal_string" filename</pre>
+<p><code> </code></p>
+<pre>$ grep "this" demo_file
+this line is the 1st lower case line in this file.
+Two lines above this line is empty.
+And this is the last line.</pre>
+<h3>2. Checking for the given string in multiple files.</h3>
+<pre>Syntax:
+grep "string" FILE_PATTERN</pre>
+<p><code> </code><br>
+This is also a basic usage of grep command. For this example, let us 
+copy the demo_file to demo_file1. The grep output will also include the 
+file name in front of the line that matched the specific pattern as 
+shown below. When the Linux shell sees the meta character, it does the 
+expansion and gives all the files as input to grep.</p>
+<pre>$ cp demo_file demo_file1
+
+$ grep "this" demo_*
+demo_file:this line is the 1st lower case line in this file.
+demo_file:Two lines above this line is empty.
+demo_file:And this is the last line.
+demo_file1:this line is the 1st lower case line in this file.
+demo_file1:Two lines above this line is empty.
+demo_file1:And this is the last line.</pre>
+<h3>3. Case insensitive search using grep -i</h3>
+<pre>Syntax:
+grep -i "string" FILE</pre>
+<p><code> </code><br>
+This is also a basic usage of the grep. This searches for the given 
+string/pattern case insensitively. So it matches all the words such as 
+“the”, “THE” and “The” case insensitively as shown below.</p>
+    <center>
+      <div style="margin-left:2px; margin-top:10px; margin-bottom:10px; ">
+
+        <!-- AD BLOCK -->
+		
+<script async="" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/adsbygoogle.js"></script>
+<!-- TGS Inside Content -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-8090601437064582" data-ad-slot="8643685131"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <!-- END AD BLOCK -->
+
+	  </div>
+    </center>
+
+
+<pre>$ grep -i "the" demo_file
+THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
+this line is the 1st lower case line in this file.
+This Line Has All Its First Character Of The Word With Upper Case.
+And this is the last line.</pre>
+<h3>4. Match regular expression in files</h3>
+<pre>Syntax:
+grep "REGEX" filename</pre>
+<p><code> </code><br>
+This is a very powerful feature, if you can use use regular expression 
+effectively. In the following example, it searches for all the pattern 
+that starts with “lines” and ends with “empty” with anything in-between.
+ i.e To search “lines[anything in-between]empty” in the demo_file.</p>
+<pre>$ grep "lines.*empty" demo_file
+Two lines above this line is empty.</pre>
+<p>From documentation of grep: A regular expression may be followed by one of several repetition operators:</p>
+<ul>
+<li>? The preceding item is optional and matched at most once.</li>
+<li>* The preceding item will be matched zero or more times.</li>
+<li>+ The preceding item will be matched one or more times.</li>
+<li>{n} The preceding item is matched exactly n times.</li>
+<li>{n,} The preceding item is matched n or more times.</li>
+<li>{,m} The preceding item is matched at most m times.</li>
+<li>{n,m} The preceding item is matched at least n times, but not more than m times.</li>
+</ul>
+<h3>5. Checking for full words, not for sub-strings using grep -w</h3>
+<p>If you want to search for a word, and to avoid it to match the 
+substrings use -w option. Just doing out a normal search will show out 
+all the lines.<br>
+<code> </code><br>
+The following example is the regular grep where it is searching for 
+“is”. When you search for “is”, without any option it will show out 
+“is”, “his”, “this” and everything which has the substring “is”.</p>
+<pre>$ grep -i "is" demo_file
+THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
+this line is the 1st lower case line in this file.
+This Line Has All Its First Character Of The Word With Upper Case.
+Two lines above this line is empty.
+And this is the last line.</pre>
+<p><code> </code><br>
+The following example is the WORD grep where it is searching only for 
+the word “is”. Please note that this output does not contain the line 
+“This Line Has All Its First Character Of The Word With Upper Case”, 
+even though “is” is there in the “This”, as the following is looking 
+only for the word “is” and not for “this”.</p>
+<pre>$ grep -iw "is" demo_file
+THIS LINE IS THE 1ST UPPER CASE LINE IN THIS FILE.
+this line is the 1st lower case line in this file.
+Two lines above this line is empty.
+And this is the last line.</pre>
+<h3>6. Displaying lines before/after/around the match using grep -A, -B and -C</h3>
+<p>When doing a grep on a huge file, it may be useful to see some lines 
+after the match. You might feel handy if grep can show you not only the 
+matching lines but also the lines after/before/around the match.</p>
+<p><code> </code><br>
+Please create the following demo_text file for this example.</p>
+<pre>$ cat demo_text
+4. Vim Word Navigation
+
+You may want to do several navigation in relation to the words, such as:
+
+ * e - go to the end of the current word.
+ * E - go to the end of the current WORD.
+ * b - go to the previous (before) word.
+ * B - go to the previous (before) WORD.
+ * w - go to the next word.
+ * W - go to the next WORD.
+
+WORD - WORD consists of a sequence of non-blank characters, separated with white space.
+word - word consists of a sequence of letters, digits and underscores.
+
+Example to show the difference between WORD and word
+
+ * 192.168.1.1 - single WORD
+ * 192.168.1.1 - seven words.</pre>
+<h4>6.1 Display N lines after match</h4>
+<p>-A is the option which prints the specified N lines after the match as shown below.</p>
+<pre>Syntax:
+grep -A &lt;N&gt; "string" FILENAME</pre>
+<p><code> </code><br>
+The following example prints the matched line, along with the 3 lines after it.</p>
+<pre>$ grep -A 3 -i "example" demo_text
+Example to show the difference between WORD and word
+
+* 192.168.1.1 - single WORD
+* 192.168.1.1 - seven words.</pre>
+<h4>6.2 Display N lines before match</h4>
+<p>-B is the option which prints the specified N lines before the match.</p>
+<pre>Syntax:
+grep -B &lt;N&gt; "string" FILENAME
+</pre>
+<p><code> </code><br>
+When you had option to show the N lines after match, you have the -B option for the opposite.</p>
+<pre>$ grep -B 2 "single WORD" demo_text
+Example to show the difference between WORD and word
+
+* 192.168.1.1 - single WORD</pre>
+<h4>6.3 Display N lines around match</h4>
+<p>-C is the option which prints the specified N lines before the match.
+ In some occasion you might want the match to be appeared with the lines
+ from both the side. This options shows N lines in both the side(before 
+&amp; after) of match.</p>
+<pre>$ grep -C 2 "Example" demo_text
+word - word consists of a sequence of letters, digits and underscores.
+
+Example to show the difference between WORD and word
+
+* 192.168.1.1 - single WORD</pre>
+<h3>7. Highlighting the search using GREP_OPTIONS</h3>
+<p>As grep prints out lines from the file by the pattern / string you 
+had given, if you wanted it to highlight which part matches the line, 
+then you need to follow the following way.<br>
+<code> </code><br>
+When you do the following export you will get the highlighting of the 
+matched searches. In the following example, it will highlight all the 
+this when you set the GREP_OPTIONS environment variable as shown below.</p>
+<pre>$ export GREP_OPTIONS='--color=auto' GREP_COLOR='100;8'
+
+$ grep this demo_file
+<strong>this</strong> line is the 1st lower case line in this file.
+Two lines above <strong>this</strong> line is empty.
+And <strong>this</strong> is the last line.</pre>
+<h3>8. Searching in all files recursively using grep -r</h3>
+<p>When you want to search in all the files under the current directory 
+and its sub directory. -r option is the one which you need to use. The 
+following example will look for the string “ramesh” in all the files in 
+the current directory and all it’s subdirectory.</p>
+<pre>$ grep -r "ramesh" *</pre>
+<h3>9. Invert match using grep -v</h3>
+<p>You had different options to show the lines matched, to show the 
+lines before match, and to show the lines after match, and to highlight 
+match. So definitely You’d also want the option -v to do invert match.<br>
+<code> </code><br>
+When you want to display the lines which does not matches the given 
+string/pattern, use the option -v as shown below. This example will 
+display all the lines that did not match the word “go”.</p>
+<pre>$ grep -v "go" demo_text
+4. Vim Word Navigation
+
+You may want to do several navigation in relation to the words, such as:
+
+WORD - WORD consists of a sequence of non-blank characters, separated with white space.
+word - word consists of a sequence of letters, digits and underscores.
+
+Example to show the difference between WORD and word
+
+* 192.168.1.1 - single WORD
+* 192.168.1.1 - seven words.</pre>
+<h3>10. display the lines which does not matches all the given pattern.</h3>
+<pre>Syntax:
+grep -v -e "pattern" -e "pattern"</pre>
+<p><code> </code></p>
+<pre>$ cat test-file.txt
+a
+b
+c
+d
+
+$ grep -v -e "a" -e "b" -e "c" test-file.txt
+d</pre>
+<h3>11. Counting the number of matches using grep -c</h3>
+<p>When you want to count that how many lines matches the given pattern/string, then use the option -c.</p>
+<pre>Syntax:
+grep -c "pattern" filename</pre>
+<p><code> </code></p>
+<pre>$ grep -c "go" demo_text
+6</pre>
+<p><code> </code><br>
+When you want do find out how many lines matches the pattern</p>
+<pre>$ grep -c this demo_file
+3</pre>
+<p><code> </code><br>
+When you want do find out how many lines that does not match the pattern</p>
+<pre>$ grep -v -c this demo_file
+4</pre>
+<h3>12. Display only the file names which matches the given pattern using grep -l</h3>
+<p>If you want the grep to show out only the file names which matched the given pattern, use the -l (lower-case L) option.<br>
+<code> </code><br>
+When you give multiple files to the grep as input, it displays the names
+ of file which contains the text that matches the pattern, will be very 
+handy when you try to find some notes in your whole directory structure.</p>
+<pre>$ grep -l this demo_*
+demo_file
+demo_file1</pre>
+<h3>13. Show only the matched string</h3>
+<p>By default grep will show the line which matches the given 
+pattern/string, but if you want the grep to show out only the matched 
+string of the pattern then use the -o option.<br>
+<code> </code><br>
+It might not be that much useful when you give the string straight 
+forward. But it becomes very useful when you give a regex pattern and 
+trying to see what it matches as</p>
+<pre>$ grep -o "is.*line" demo_file
+is line is the 1st lower case line
+is line
+is is the last line</pre>
+<h3>14. Show the position of match in the line</h3>
+<p>When you want grep to show the position where it matches the pattern in the file, use the following options as</p>
+<pre>Syntax:
+grep -o -b "pattern" file</pre>
+<p><code> </code></p>
+<pre>$ cat temp-file.txt
+12345
+12345
+
+$ grep -o -b "3" temp-file.txt
+2:3
+8:3</pre>
+<p><code> </code><br>
+<strong>Note:</strong> The output of the grep command above is not the position in the line, it is byte offset of the whole file.</p>
+<h3>15. Show line number while displaying the output using grep -n</h3>
+<p>To show the line number of file with the line matched. It does 
+1-based line numbering for each file. Use -n option to utilize this 
+feature.</p>
+<pre>$ grep -n "go" demo_text
+5: * e - go to the end of the current word.
+6: * E - go to the end of the current WORD.
+7: * b - go to the previous (before) word.
+8: * B - go to the previous (before) WORD.
+9: * w - go to the next word.
+10: * W - go to the next WORD.</pre>
+<h3>Additional Grep Tutorials</h3>
+<ul>
+<li><a href="http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/">7 Linux Grep OR, Grep AND, Grep NOT Operator Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/01/regular-expressions-in-grep-command/">Regular Expressions in Grep Command with 10 Examples – Part I</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/01/advanced-regular-expressions-in-grep-command-with-10-examples-%e2%80%93-part-ii/">Advanced Regular Expressions in Grep Command with 10 Examples – Part II</a></li>
+<li>Search in a *.bz2 file using <a href="http://www.thegeekstuff.com/2010/10/bzcommand-examples/">bzgrep</a>, and *.gz file using <a href="http://www.thegeekstuff.com/2009/05/zcat-zless-zgrep-zdiff-zcmp-zmore-gzip-file-operations-on-the-compressed-files/">zgrep</a></li>
+</ul>
+<h3>Awesome Linux Articles</h3>
+<p>Following are few awesome <strong>15 examples</strong> articles that you might find helpful.</p>
+<ul>
+<li><a href="http://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/">Linux Crontab: 15 Awesome Cron Job Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">Mommy, I found it! — 15 Practical Linux Find Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/15-examples-to-master-linux-command-line-history/">15 Examples To Master Linux Command Line History</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/linux-ls-command-examples/">Unix LS Command: 15 Practical Examples</a></li>
+</ul>
+<div style="margin:7px 0px 3px 0px; padding:5px; background:#F2F0E8">
+
+<div style="float:left; width=95px">
+<div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/fastbutton_002.html" name="I1_1440458189478" id="I1_1440458189478" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" width="100%" frameborder="0"></iframe></div>
+</div>
+
+<div style="float:left; width=95px">
+<iframe src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/tweet_button_002.html" style="position: static; visibility: visible; width: 86px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-i1440458189721139457" frameborder="0"></iframe><script type="text/javascript" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/widgets.js"></script>
+</div>
+
+<div style="float:left; padding:2px; width:90px"><iframe src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/like_002.html" scrolling="no" style="border:none; overflow:hidden; width:450px; height:21px;" allowtransparency="true" frameborder="0"></iframe>
+</div>
+
+<div style="padding:1px">
+&gt;&nbsp;<a href="#commentform" rel="nofollow">Add your comment</a>
+</div>
+
+</div>
+<h3>If you enjoyed this article, you might also like..</h3>
+<table>
+<tbody><tr>
+<td valign="top">
+<ol>
+<li><a href="http://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/">50 Linux Sysadmin Tutorials</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/11/50-linux-commands/">50 Most Frequently Used Linux Commands (With Examples)</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/12/linux-performance-monitoring-tools/">Top 25 Best Linux Performance Monitoring and Debugging Tools</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">Mommy, I found it! – 15 Practical Linux Find Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Linux 101 Hacks 2nd Edition eBook</a>&nbsp;<img title="Linux 101 Hacks Book" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/free-small.png" alt="Linux 101 Hacks Book"></li>
+</ol>
+</td>
+<td>
+<ul>
+<li><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">Awk Introduction – 7 Awk Print Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Advanced Sed Substitution Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/8-essential-vim-editor-navigation-fundamentals/">8 Essential Vim Editor Navigation Fundamentals</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/06/iptables-rules-examples/">25 Most Frequently Used Linux IPTables Rules Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/turbocharge-putty-with-12-powerful-add-ons-software-for-geeks-3/">Turbocharge PuTTY with 12 Powerful Add-Ons</a></li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+<br>
+<center>
+<table id="booktable">
+<tbody><tr>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/bash-101-hacks-ebook/"><img title="Bash 101 Hacks Book" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/bash-132.png" alt="Bash 101 Hacks Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/"><img title="Sed and Awk 101 Hacks Book" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/sed-and-awk-132.png" alt="Sed and Awk 101 Hacks Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/nagios-core-ebook/"><img title="Nagios Core 3 Book" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/nagios-core-132.png" alt="Nagios Core 3 Book"></a>
+</td>
+<td>
+<a rel="nofollow" href="http://www.thegeekstuff.com/vim-101-hacks-ebook/"><img title="Vim 101 Hacks Book" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/vim-101-hacks-132.png" alt="Vim 101 Hacks Book"></a>
+</td>
+</tr>
+</tbody></table>
+</center>
+<br>
+				</div>
+				<p class="post_tags" itemprop="keywords">
+					<span class="post_tags_intro">Tagged as:</span>
+					<a href="http://www.thegeekstuff.com/tag/file-search-utility/" rel="tag">File Search Utility</a>,
+					<a href="http://www.thegeekstuff.com/tag/grep-command/" rel="tag">Grep Command</a>,
+					<a href="http://www.thegeekstuff.com/tag/highlight-search-output/" rel="tag">Highlight Search Output</a>,
+					<a href="http://www.thegeekstuff.com/tag/linux-full-text-searching/" rel="tag">Linux Full-Text Searching</a>,
+					<a href="http://www.thegeekstuff.com/tag/linux-grep-command/" rel="tag">Linux Grep Command</a>,
+					<a href="http://www.thegeekstuff.com/tag/search-file-content/" rel="tag">Search File Content</a>,
+					<a href="http://www.thegeekstuff.com/tag/search-multiple-files/" rel="tag">Search Multiple Files</a>
+				</p>
+			</div>
+			<div id="comments">
+				<p class="comments_intro"><span class="bracket">{</span> <span class="num_comments">126</span> comments… <a href="#commentform" rel="nofollow">add one</a> <span class="bracket">}</span></p>
+				<ul class="comment_list">
+					<li class="comment even thread-even depth-1" id="comment-7577">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://thisblog.runsfreesoftware.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://thisblog.runsfreesoftware.com/" rel="external nofollow" class="url">Joao Trindade</a></span>
+							<span class="comment_date">March 28, 2009, 3:54 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-7577"><p>You have a small glitch:<br>
+&gt;&gt; 4. Match regular expression in files using grep -i</p>
+<p>Don’t you mean:<br>
+4. Match regular expression in files using grep -e</p>
+<p>The rest of the post is great.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-7577" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment byuser comment-author-admin odd alt thread-odd thread-alt depth-1" id="comment-7605">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ramesh</span>
+							<span class="comment_date">March 29, 2009, 12:16 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-7605"><p>Joao,</p>
+<p>Thanks for pointing it out. I have corrected it.  Also, we can do REGEX without the option -e as shown in the example #4. </p>
+<p><code>&nbsp;</code><br>
+From Man Pages:</p>
+<pre>SYNOPSIS
+  grep [options] PATTERN [FILE...]
+  grep [options] [-e PATTERN | -f FILE] [FILE...]
+
+
+-e PATTERN, --regexp=PATTERN
+Use PATTERN as the pattern; useful to protect patterns beginning with -.
+</pre>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-7605" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-7708">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">dragon</span>
+							<span class="comment_date">March 31, 2009, 11:26 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-7708"><p>Hi:</p>
+<p>FYI, tip 14 will be<br>
+2:3<br>
+8:3<br>
+on Ubuntu system. (including the \n character I guess</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-7708" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment byuser comment-author-admin odd alt thread-odd thread-alt depth-1" id="comment-7711">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ramesh</span>
+							<span class="comment_date">March 31, 2009, 11:44 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-7711"><p>Dragon,</p>
+<p>Thanks for pointing it out. I’ve corrected it.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-7711" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-9103">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.know.eu/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.know.eu/" rel="external nofollow" class="url">Francesco Talamona</a></span>
+							<span class="comment_date">April 26, 2009, 2:48 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-9103"><p>I find very useful the following command, when you have to deal with a very lengthy configuration file full of comments:</p>
+<p>  grep -v -E ‘^\#|^$’ /etc/squid/squid.conf</p>
+<p>It skips every line beginning with an hash (#) or empty, so you can 
+see at a glance the 15 lines edited out of a +4400 lines text file.</p>
+<p>BTW interesting topics, great posts…</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-9103" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-9737">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">albar</span>
+							<span class="comment_date">May 7, 2009, 7:51 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-9737"><p>help me<br>
+how to bzgrep : ^C02<br>
+but  ^C is count  as one special character,<br>
+in this word:<br>
+data1^C02data2</p>
+<p>thank’s</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-9737" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment byuser comment-author-admin even thread-even depth-1" id="comment-9807">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ramesh Natarajan</span>
+							<span class="comment_date">May 8, 2009, 5:51 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-9807"><p><strong>@Francesco Talamona,</strong><br>
+Thanks a lot for sharing your grep command example. Yes. all those  
+empty lines and comment lines can get very annoying when you do grep. 
+So, it is an excellent idea to hide them in the grep output with your 
+examples.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-9807" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-10078">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">sasikala</span>
+							<span class="comment_date">May 11, 2009, 9:41 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-10078"><p>@albar,</p>
+<p>try like this<br>
+grep ‘\^C02′</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-10078" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-10095">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">albar</span>
+							<span class="comment_date">May 12, 2009, 1:18 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-10095"><p>@sasikala ,<br>
+i do have try that too, but still got nothing,<br>
+but it works when ^ and C count as two character </p>
+<p>thank’s</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-10095" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment byuser comment-author-sathiya bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-10109">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">SathiyaMoorthy</span>
+							<span class="comment_date">May 12, 2009, 4:33 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-10109"><p>@albar</p>
+<p>You should type ^C as ctrl-v + ctrl-c in grep as single character as<br>
+$ grep ^C02 file</p>
+<p>Dont escape, dont type it as ^ C as two characters. Hope this helps.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-10109" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-10159">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">albar</span>
+							<span class="comment_date">May 12, 2009, 8:59 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-10159"><p>@sathiya,<br>
+god bless u all<br>
+it work’s thanks</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-10159" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-10582">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Manish Patel</span>
+							<span class="comment_date">May 21, 2009, 7:00 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-10582"><p>Hi </p>
+<p>I am trying to exclude the last word of all the line like sync.php, uploads.php, backup.php</p>
+<p>File text include as below</p>
+<p>/usr/home/htdocs/drag-and-drop/htdocs.php<br>
+/usr/home//htdocs/sms/publish/pages/sync.php<br>
+/usr/home/htdocs/track/backup.php<br>
+/usr/home/htdocs/smstest/smstest.php<br>
+/usr/home/htdocs/uploads.php<br>
+/usr/home/htdocs/017/backup.php</p>
+<p>How can I achieve that using grep or sed or awk </p>
+<p>Also how I can use “*” wildcard in sed command like to replace *.php to *.txt or any other extension.</p>
+<p>Thank you in advance.</p>
+<p>Manish</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-10582" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-10586">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Francesco Talamona</span>
+							<span class="comment_date">May 21, 2009, 10:36 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-10586"><p>Are you restricted to sed or awk?</p>
+<p>1)<br>
+dirname  ‘/usr/home/htdocs/drag-and-drop/htdocs.php’<br>
+/usr/home/htdocs/drag-and-drop</p>
+<p>2)<br>
+rename does what you want</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-10586" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-10707">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Manish Patel</span>
+							<span class="comment_date">May 24, 2009, 6:55 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-10707"><p>Hi,</p>
+<p>Those lines are the contents of the text file and I don’t want to 
+change the actual directory or the file on server. I want to change the 
+contents of the file where all file file names ending at the line should
+ be removed. So the final file contents should look like this </p>
+<p>cat filecontenet.txt<br>
+/usr/home/htdocs/drag-and-drop/<br>
+/usr/home//htdocs/sms/publish/pages/<br>
+/usr/home/htdocs/track/<br>
+/usr/home/htdocs/smstest/<br>
+/usr/home/htdocs/<br>
+/usr/home/htdocs/</p>
+<p>I think rename would not help here in editing file contents.</p>
+<p>Thank you<br>
+                  Manish</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-10707" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-10720">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.thegeekstuff.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.thegeekstuff.com/" rel="external nofollow" class="url">SathiyaMoorthy</a></span>
+							<span class="comment_date">May 24, 2009, 11:43 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-10720"><p>rev filecontenet.txt | cut -d’/’ -f2- | rev</p>
+<p>rev filecontenet.txt –&gt; reverses the file and pipes to cut command.<br>
+cut -d’/’ -f2-  –&gt; cuts off the first field ( cuts off last field, as it is reversed ).<br>
+rev –&gt; prints the output given order.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-10720" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-10876">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">P0B0T</span>
+							<span class="comment_date">May 26, 2009, 11:36 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-10876"><p>Manish,</p>
+<p>I believe you’re looking for the following</p>
+<p>sed -e ‘s/.php$//’ filecontenet.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-10876" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-10877">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">P0B0T</span>
+							<span class="comment_date">May 26, 2009, 11:39 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-10877"><p>Sorry, didn’t read your requirement carefully.</p>
+<p>Try this:</p>
+<p>sed -e ‘s/\/[^/]*.php$/\//’ filecontenet.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-10877" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-11227">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Manish Patel</span>
+							<span class="comment_date">June 5, 2009, 5:31 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-11227"><p>Hi </p>
+<p>Thank you to Sathiya Moorthy and  P0B0T. </p>
+<p>Both solution worked very nicely for me. </p>
+<p>P0B0T can you explain how your command works for each defined option ’s/\/[^/]*.php$/\//’</p>
+<p>Thank you<br>
+                   Manish</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-11227" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-11335">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">mano</span>
+							<span class="comment_date">June 10, 2009, 3:00 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-11335"><p>The above
+ info on grep is really great. I want to search for a string in all the 
+files in the directory and add a $ symbol at the start of the searched 
+line and save in the same file.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-11335" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-11658">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.thegeekstuff.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.thegeekstuff.com/" rel="external nofollow" class="url">SathiyaMoorthy</a></span>
+							<span class="comment_date">June 18, 2009, 10:49 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-11658"><p>@mano<br>
+More than using grep for this requirement, you can use sed which is:<br>
+sed -i ‘s/.*abc.*/$&amp;/’ *</p>
+<p>-i : edit the input file.<br>
+s/// : substitute the matched pattern with the replacement string.<br>
+/.*abc.*/ : match the string abc<br>
+/$&amp;/ : Replace with $ followed by matched string.<br>
+* : all the files in the current directory.</p>
+<p>This is one way of satisfying your requirement, there may be other efficient ways.</p>
+<p>Hope this helps.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-11658" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-11660">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">mano</span>
+							<span class="comment_date">June 19, 2009, 12:17 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-11660"><p>Hi 
+SathiaMoorthy, Thank u so much. it works fine. If I need to search for 
+files in all subdirectories, how should this “sed” command modified?</p>
+<p>Thanks in advance.</p>
+<p>mano</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-11660" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-11995">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.thegeekstuff.com/tag/vi-vim-tips-and-tricks/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.thegeekstuff.com/tag/vi-vim-tips-and-tricks/" rel="external nofollow" class="url">SathiyaMoorthy</a></span>
+							<span class="comment_date">June 27, 2009, 12:05 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-11995"><p>@mano<br>
+Modification in sed command is not needed.</p>
+<p>To search for all files in the subdirectory.<br>
+find . -type f</p>
+<p>Execute the command on all those files with -exec.<br>
+find . -type f -exec sed -i ‘s/.*abc.*/#&amp;/’ {} \;</p>
+<p>But think twice before executing this command, because it will 
+recursively edit all the files. Taking backup before executing this 
+command is wise.</p>
+<p>Refer the earlier article <a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/" rel="nofollow"> linux find command examples</a>.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-11995" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-12139">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Vidya</span>
+							<span class="comment_date">July 1, 2009, 2:59 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-12139"><p>Hi,</p>
+<p>I want to grep next 3 words in a line from the matching criteria word..<br>
+like if the line is </p>
+<p>This is -g gateway -e enterprise -s server</p>
+<p>Then I want to grep “-g gateway -e enterprise” from the line</p>
+<p>Can you please help me in this case.<br>
+Here gateway and enterprise value can be anything so need to grep next 3 words starting form “-g”</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-12139" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment byuser comment-author-sathiya bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-12147">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">SathiyaMoorthy</span>
+							<span class="comment_date">July 1, 2009, 5:58 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-12147"><p>@Vidhya</p>
+<p>$ grep -o -E — “-g \w+ -e \w+” FILENAME<br>
+-g gateway -e enterprise</p>
+<p>Explanation of the above command.,</p>
+<p> -o : only matching ( point 13. )<br>
+ -E : extended regexp<br>
+ — : indicate end of options<br>
+ \w+ : word</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-12147" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-12151">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Vidya</span>
+							<span class="comment_date">July 1, 2009, 9:00 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-12151"><p>Hi Sathiya,<br>
+Its not working.<br>
+It says<br>
+grep: illegal option — o<br>
+grep: illegal option — E<br>
+Usage: grep -hblcnsviw pattern file . . .</p>
+<p>I am working on Solaris and setting shell as bash.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-12151" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-17598">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://blog.amit-agarwal.co.in/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://blog.amit-agarwal.co.in/" rel="external nofollow" class="url">Amit Agarwal</a></span>
+							<span class="comment_date">September 21, 2009, 6:18 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-17598"><p>grep 
+version on solaris is little older and as man would show you all these 
+options are not available, so you can try ack (standalone) version which
+ is very powerful and requires only perl to be installed.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-17598" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-18852">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">learner</span>
+							<span class="comment_date">October 7, 2009, 5:31 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-18852"><p>Hi,<br>
+How to use grep to find lines containing multiple strings<br>
+ex: line1:Today is oct 7, wednesday. not 8th<br>
+     line2: This is not summer.<br>
+     line3: when is summer?<br>
+I want to return line2 containing strings “not” and “summer” both.</p>
+<p>Thank You.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-18852" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment byuser comment-author-sathiya bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-18869">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">SathiyaMoorthy</span>
+							<span class="comment_date">October 7, 2009, 10:41 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-18869"><p><strong>@learner</strong></p>
+<p>There are several ways possible, use the one which you find as appropriate.</p>
+<pre>$ grep "not.*summer" file1
+line2: This is not summer.
+
+$ grep "not" file1 | grep "summer"
+line2: This is not summer.
+</pre>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-18869" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-18914">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">learner</span>
+							<span class="comment_date">October 7, 2009, 10:56 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-18914"><p>@SathiyaMoorthy</p>
+<p>Thank You for your very quick reply.</p>
+<p>My question was not piping and hard coding every string , as i 
+mentioned multiple strings, i was looking for something in likes of<br>
+grep -F ‘string1<br>
+string2<br>
+string3<br>
+string4<br>
+…..<br>
+stringn’ filename<br>
+which returns single occurrence of something like either string1 
+,string2,.. stringn or all .., what i wanted was only string1 and 
+string2 and ……. stringn begin returned.<br>
+[please note that i will be provided with strings as newline separated 
+strings ,which i don’t want to parse again and i have constraint of 
+using grep only]</p>
+<p>Thank You.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-18914" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-24442">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ashish</span>
+							<span class="comment_date">December 1, 2009, 4:07 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-24442"><p>Hi,</p>
+<p>I need to sthing like this<br>
+I have a file containing 400 domainId values seprated by new line<br>
+ex. domain.txt<br>
+domain1<br>
+domain2<br>
+domain3…</p>
+<p>I have a script that takes each domain and calls an api that returns me an xml.<br>
+like this for each domain<br>
+val1<br>
+domain1<br>
+val2<br>
+val3<br>
+val4<br>
+XXX<br>
+val1</p>
+<p>now i want to spit out the domain name in a file that does not matches domainid value XXX.</p>
+<p>how can  i do it using grep<br>
+TIA</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-24442" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-24445">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ashish</span>
+							<span class="comment_date">December 1, 2009, 4:16 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-24445"><p>Hi,</p>
+<p>I need to sthing like this<br>
+I have a file containing 400 domainId values seprated by new line<br>
+ex. domain.txt<br>
+domain1<br>
+domain2<br>
+domain3…</p>
+<p>I have a script that takes each domain and calls an api that returns me an xml.<br>
+like this for each domain</p>
+<p>&lt;tag1&gt;val1&lt;/tag1&gt;<br>
+&lt;domain&gt;domain1&lt;/domain&gt;<br>
+&lt;tag2&gt;val2&lt;/tag2&gt;<br>
+&lt;tag3&gt;val3&lt;/tag3&gt;<br>
+&lt;tag4&gt;val4&lt;/tag4&gt;<br>
+&lt;domainid&gt;XXX&lt;/domainid&gt;<br>
+&lt;tag5&gt;val1&lt;/tag5&gt;</p>
+<p>now i want to spit out the domain name in a file that does not matches domainid value XXX.</p>
+<p>how can i do it using grep<br>
+TIA</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-24445" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-26475">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Varun</span>
+							<span class="comment_date">December 17, 2009, 7:16 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-26475"><p>Hi,<br>
+The options mentioned in point 6 for displaying the context with A, B, 
+&amp; C does not seem to work on Solaris 10 with both grep &amp; egrep</p>
+<p>Is there a version of this grep available for Solaris?</p>
+<p>Thank you,<br>
+Varun.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-26475" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-26926">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Jawn Hewz</span>
+							<span class="comment_date">December 21, 2009, 7:54 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-26926"><p>Does the 
+-b (byte offset) work when greping binary files?  I do not get an offset
+ returned when I grep a binary file, but I do when using a text file.  I
+ am using grep under Cygwin.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-26926" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-29069">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://ingafety.wordpress.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://ingafety.wordpress.com/" rel="external nofollow" class="url">fety</a></span>
+							<span class="comment_date">January 11, 2010, 3:32 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-29069"><p>thanks very much for this tutorial. it is very helpful..</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-29069" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-30788">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.elblogolico.com.ar/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.elblogolico.com.ar/" rel="external nofollow" class="url">eMancu</a></span>
+							<span class="comment_date">January 24, 2010, 12:49 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-30788"><p>Awsome tutorial!<br>
+I’m reading all your blog, its amazing!</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-30788" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-31545">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Raghu Baba</span>
+							<span class="comment_date">January 30, 2010, 4:44 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-31545"><p>Hai.. I want to Parse my file .. Word to Excel .. so tell me some grep &amp; cut commands…</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-31545" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-32026">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Jeff Floyd</span>
+							<span class="comment_date">February 1, 2010, 6:54 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-32026"><p>Whats the difference between $ grep -c ill memo and $ grep -n ill memo?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-32026" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-32595">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://-none-/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://-none-/" rel="external nofollow" class="url">joeq</a></span>
+							<span class="comment_date">February 4, 2010, 3:57 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-32595"><p>hi<br>
+i got 1 problem…how can i find a numbers like 99,000,000.95 in my server database using unix command..<br>
+tq</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-32595" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-35646">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">abhishek</span>
+							<span class="comment_date">February 21, 2010, 4:31 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-35646"><p>content was very useful</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-35646" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-38395">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anonymous</span>
+							<span class="comment_date">March 8, 2010, 4:26 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-38395"><p>Hi,</p>
+<p>Those lines are the contents of the text file and I don’t want to 
+change the actual directory or the file on server. I want to change the 
+contents of the file where all file file names ending at the line should
+ be removed. So the final file contents should look like this</p>
+<p>cat filecontenet.txt<br>
+/usr/home/htdocs/drag-and-drop/<br>
+/usr/home//htdocs/sms/publish/pages/<br>
+/usr/home/htdocs/track/<br>
+/usr/home/htdocs/smstest/<br>
+/usr/home/htdocs/<br>
+/usr/home/htdocs/</p>
+<p>I think rename would not help here in editing file contents.</p>
+<p>for this question ,  awk really helpful with single line command</p>
+<p>go to the current directory<br>
+ls -l | grep -v ^d | awk ‘{print $9}’  &gt; new.txt</p>
+<p>$9 — is the last filed which is filename only when u list with option ls -l ,<br>
+new.txt contains only the filenames which you wnated to filter out</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-38395" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-40715">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">skipper</span>
+							<span class="comment_date">March 26, 2010, 5:54 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-40715"><p>nice article</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-40715" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-41675">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">VIKAS</span>
+							<span class="comment_date">April 4, 2010, 7:23 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-41675"><p>Excellent stuff, just loved grep -A,B,C options<br>
+and<br>
+grep -o “xxxx.*yyyy” kinda commands.</p>
+<p>This will help me a lot, I used awk more in my shell scripts, But I have got a new friend “grep” for some selective printing <img src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/simple-smile.png" alt=":-)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-41675" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-43129">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Sam</span>
+							<span class="comment_date">April 17, 2010, 3:35 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-43129"><p>I have just finish reading this wonderful article. Let me answer this:<br>
+Whats the difference between $ grep -c ill memo and $ grep -n ill memo?<br>
+grep -c return the number lines that matched ill in memo.<br>
+grep -n return the matched lines with line-number as prefix.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-43129" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-43646">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Chong</span>
+							<span class="comment_date">April 20, 2010, 3:05 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-43646"><p>how to grep a statement contain ‘*’  from a file at the same time to match the first character too.</p>
+<p>example the statement in filename profile.txt :-</p>
+<p>“Mary stay at uttana*istana with her grandmum”</p>
+<p>current grep statement :-<br>
+grep “^Mary stay at uttana*istana” profile.txt</p>
+<p>result: no row matched the grep statement because of *<br>
+How to use grep command for the combine condition of statement with * and match the front word?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-43646" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-45275">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">vm</span>
+							<span class="comment_date">April 30, 2010, 8:24 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-45275"><p>In bash script without using perl, how i can grep a number from a file if there exists a number greater than 80 in that file.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-45275" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-49906">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">palash</span>
+							<span class="comment_date">June 13, 2010, 12:14 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-49906"><p>grep -c 
+“pattern” filename returns the number of lines that matches the pattern,
+ even if the  pattern occurred for more than one time in any line. Is 
+there any option to know how many times the pattern matched in a file?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-49906" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-50604">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">mathan</span>
+							<span class="comment_date">June 20, 2010, 10:21 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-50604"><p>HI,<br>
+ I am new to linux…<br>
+can you tell me how to exit from grep command….<br>
+mistakenly i type grep filename </p>
+<p>But it’s nothing shown…. pls looking for quick reply…</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-50604" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment byuser comment-author-sathiya bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-52328">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">SathiyaMoorthy</span>
+							<span class="comment_date">July 4, 2010, 7:20 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-52328"><p>@mathan</p>
+<p>There is nothing like exiting from grep.</p>
+<p>First argument to grep is taken as PATTERN, not as filename. So as 
+far as i understand it is waiting for input to match. So just exit from 
+it using CTRL+D.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-52328" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-63485">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://rosshuggett.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://rosshuggett.com/" rel="external nofollow" class="url">Ross Huggett</a></span>
+							<span class="comment_date">September 16, 2010, 5:04 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-63485"><p>Nice article. Thanks.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-63485" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-65456">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">ec</span>
+							<span class="comment_date">October 6, 2010, 6:14 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-65456"><p>Hi to all,<br>
+I just started to learn linux a month ago<br>
+Can I extract 2 to 6 letter words from a text file using one grep command only!<br>
+To mention that each word is on its own line<br>
+what’s the grep command to do this job?<br>
+I tried any combination of grep and not the result which I am looking for</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-65456" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-89079">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Lou</span>
+							<span class="comment_date">February 24, 2011, 1:16 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-89079"><p>Is there a way to grep for a word on in a file and return that line plus the next?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-89079" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-89447">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Francesco Talamona</span>
+							<span class="comment_date">February 26, 2011, 3:33 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-89447"><p>@ Lou:</p>
+<p>  cat testfile.txt<br>
+first line<br>
+matching line<br>
+following line<br>
+ending line</p>
+<p>  grep matching -B 1 testfile.txt<br>
+first line<br>
+matching line</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-89447" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-99512">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">abhishek kumar</span>
+							<span class="comment_date">April 19, 2011, 12:53 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-99512"><p>really to nice and too simple to understand,</p>
+<p>thats great</p>
+<p>thank you</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-99512" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-99741">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Nikita</span>
+							<span class="comment_date">April 21, 2011, 12:06 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-99741"><p>PLEASE HELP ON QUESTION B.</p>
+<p>You are searching a file for lines that contain US state 
+abbreviations in parentheses. e.g.: (ma),(NH),(Ky), etc. So you decide 
+to match any line containing ( ) with exactly two characters (not 
+letters) in between.<br>
+A) What grep will get this done?</p>
+<p>My Answer—&gt;   grep ‘([a-zA-Z][A-Za-z])’ file  </p>
+<p>You now notice that some of the lines that the grep from part A 
+matched contain the the string (expired). You want to eliminate these 
+lines from your output, so you decide to pipe your output to another 
+grep.<br>
+B) What will the new command be? (both greps with the pipe) </p>
+<p>My Answer —&gt;  grep –v grep | grep ‘([a-zA-Z] [A-Za-z])’   ——-&gt;  PLEASE HELP!</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-99741" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-99924">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Francesco Talamona</span>
+							<span class="comment_date">April 22, 2011, 12:44 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-99924"><p>@Nikita:<br>
+One step is enough:<br>
+egrep ‘\([a-zA-Z]{2}\)’ file</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-99924" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-101128">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">suprabhat</span>
+							<span class="comment_date">April 27, 2011, 3:26 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-101128"><p>How to display all lines that have less than 9 character in a file</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-101128" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-103631">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Paul</span>
+							<span class="comment_date">May 16, 2011, 3:09 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-103631"><p>I’m new to linux; was wondering what does \# after the grep command accomplish, as shown in the example below?</p>
+<p>grep \# input*.txt | awk ‘{print $4}’ | sort | uniq &gt; output.txt</p>
+<p>thank you</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-103631" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-103777">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Dinesh</span>
+							<span class="comment_date">May 17, 2011, 4:03 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-103777"><p>For a given patern like<br>
+Fri Nov 26 16:04:52 2010<br>
+I want to grep for all the lines in a file having the above format.<br>
+But I have all the values except for the time, that is “16:04:52 ” , the data I have is<br>
+“Fri Nov 26 2010 ” . The file is having 5 years of date with the timestamp as specified above.<br>
+Please let me know How shall I grep the file to get all the lines on the date “Fri Nov 26 2010 ” .</p>
+<p>thanks</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-103777" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-106227">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">shyam</span>
+							<span class="comment_date">May 29, 2011, 10:45 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-106227"><p>i have a doubt here i tried to look at output of cmd</p>
+<p>grep “[^A-Z]” file.txt</p>
+<p>this is showing all characters excluding capital letter<br>
+what does this command actually do</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-106227" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-119284">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">shivaraj Patil</span>
+							<span class="comment_date">July 25, 2011, 11:14 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-119284"><p>HI i have a file with this values<br>
+100     first line<br>
+101     second line<br>
+101<br>
+102<br>
+102<br>
+109<br>
+now i need a script that can take two lines and find which is greatest</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-119284" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-126683">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">sudheer</span>
+							<span class="comment_date">September 10, 2011, 8:32 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-126683"><p>1)	Use 
+grep (or awk) to output all lines in a given file which contain employee
+ ID numbers. Assume that each employee ID number consists of 1-4 digits 
+followed by two letters: the first is either a W or a S and the second 
+is either a C or a T. ID numbers never start with 0s. Further assume 
+that an employee ID is always proceeded by some type of white space – 
+tab, blank, new line etc. However, there might be characters after it, 
+for example punctuation.<br>
+What to turn in: Turn in three things: </p>
+<p>a.	A file with the regular expression which can directly be used by grep (or awk) </p>
+<p>b.	A text file which you used to test your regular expression. Make 
+sure that you include valid and ‘invalid’ employee IDs, have them at the
+ beginning and the end of lines, sentences, etc. </p>
+<p>c.	A second document which re-writes the regular expression in a more
+ human-readable form and explains the purpose of the different 
+components of the regular expression. Also include a short explanation 
+of your test cases. </p>
+<p>2)	Use grep (or awk) to output all the lines in a given file which 
+contain a decimal number (e.g. a number which includes a decimal point).
+ Decimal numbers do not have leading zeros but they might have trailing 
+zeros. Assume the number is always surrounded by white space. </p>
+<p>What to turn in: The same three things as above (except, of course, for this problem). </p>
+<p>3)	Write a regular expression for the valid identifiers in Java. You 
+are allowed to use ‘shortcuts’, but need to make sure that you specify 
+exactly what they are (e.g. if you use digit specify that that means 0, 
+1, 2, 3, ….9.)</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-126683" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-128552">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Dinesh</span>
+							<span class="comment_date">September 22, 2011, 12:43 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-128552"><p>Paul</p>
+<p>grep \# input*.txt | awk ‘{print $4}’ | sort | uniq &gt; output.txt</p>
+<p>Since # is a special character,we are treating # as # by putting backslash infront of that.<br>
+Noe Greap searches for pattern # in a list of file starting as input and
+ nding a txt and then awk prints the 4th field and sort is doing sorting
+ the 4th field returns from awk and unis is doing uniq operation.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-128552" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-128554">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Dinesh</span>
+							<span class="comment_date">September 22, 2011, 12:45 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-128554"><p>Shyam</p>
+<p>grep “[^A-Z]” file.txt</p>
+<p>Grep will print the lines that does not start with CAPTIAL LETTERS.</p>
+<p>Using ^ inside the [] will do the work opposite to the pattern what you have been searching for …</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-128554" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-160288">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">haydarekarrar</span>
+							<span class="comment_date">December 23, 2011, 4:29 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-160288"><p>Just a minor thing the last result line is removed in the example above, this should be the result: </p>
+<p>$ grep “this” greptest.txt<br>
+this line is the 1st lower case line in this file.<br>
+Two lines above this line is empty.<br>
+And this is the last line.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-160288" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-182113">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">gotham</span>
+							<span class="comment_date">January 22, 2012, 4:32 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-182113"><p>awesome. thanks a lot.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-182113" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-188354">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">edward</span>
+							<span class="comment_date">January 31, 2012, 2:20 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-188354"><p>For example my data is (file.ave) :</p>
+<p>MRR 120101000000 UTC+07 AVE    60 STF   150 ASL<br>
+H      150    300    450    600    750    900<br>
+TF  0.0149 0.0515 0.1171<br>
+F00 -67.04<br>
+F01 -69.27</p>
+<p>I use grep as:<br>
+grep -r ‘MRR’ *.ave &gt; time_0101.txt. In this case all file goes to 
+time_0101.txt, I have many files and I need each output goes to specific
+ file name. Any idea ? And how to use grep to take F00 and F01 ? If I 
+use grep -r ‘F’ *.ave, the first line will be taken also because of  
+STF, Thanks for help..</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-188354" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-198147">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">shrikant</span>
+							<span class="comment_date">February 14, 2012, 10:23 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-198147"><p>Thank you <img src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/simple-smile.png" alt=":-)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-198147" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-199749">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://yahoo.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://yahoo.com/" rel="external nofollow" class="url">chinna</a></span>
+							<span class="comment_date">February 19, 2012, 8:48 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-199749"><p>here my 
+question is in a directory i have 10 files.some files contains size in 
+kb’s and some files contains size in mb’s…..i want display the files 
+only which file size is more than 1 mb……<br>
+could anybudy help to find answer for this question….</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-199749" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-208814">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anderson Venturini</span>
+							<span class="comment_date">March 14, 2012, 6:01 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-208814"><p>Great post! It was very useful! thanks a lot! <img src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/1f609.png" alt="😉" draggable="false" class="emoji"></p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-208814" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-219992">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anonymous</span>
+							<span class="comment_date">April 9, 2012, 3:22 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-219992"><p>To 
+answer Chinna…  If you have some files showing M, and some K, then your 
+“ls” command is probably running on a Linux box, and using the “-h” 
+option.</p>
+<p>The preferred method would be NOT to use the “-h” option, and let 
+“ls” print file sizes in bytes, which means that your script will be 
+able to get the same units+detail for all file sizes listed.</p>
+<p>Then you can use “awk” to filter out files where $5 (5th field) is over 1Meg, like this:</p>
+<p>/bin/ls -l | awk ‘$5&gt;=2^20′</p>
+<p>If you only want file names, not ‘ls’ style list, then have awk give you that part of output:<br>
+/bin/ls -l | awk ‘$5&gt;=2^20{print $NF}’</p>
+<p>Note: this does not like file names with spaces…<br>
+—-<br>
+notes for Other postings on this thread:<br>
+To: Francesco Talamona<br>
+    (who was using “grep” to remove ##_comments from long config files)<br>
+    grep -v -E ‘^\#|^$’ /etc/squid/squid.conf<br>
+You may want to remove comments that do NOT start on the first char of a line,<br>
+and ‘sed’ is more useful for that<br>
+    sed  ‘s/#.*$//;/^[ ]*$/d’ /etc/squid/squid.conf<br>
+This will remove comments from each line, then discard the line if blank, or only spaces remain.<br>
+=========<br>
+Also, where the -B and -A options are described for “grep”…<br>
+This is for GNU/Linux, and not supported for most Non-Linux boxes.</p>
+<p>#–JETS</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-219992" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-222948">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">KHEE</span>
+							<span class="comment_date">April 15, 2012, 8:39 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-222948"><p>Hi expert,</p>
+<p>i am new to unix env…<br>
+try to use certain command to help me generate 1 output file as below:</p>
+<p>input file:<br>
+A<br>
+A/I 0.2 0.3 0.8<br>
+B<br>
+B/I 0.6 0.8 0.9<br>
+C<br>
+C 0.8 2.1 6.0</p>
+<p>I just want to grep all A B C only, where want to skip the line which
+ have the number together. And my output file pattern is A B C D…etc ( 
+A, B,C all are a word).</p>
+<p>mean i want first,second line, and skip 3rd &amp; 4th lines, thanks for help.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-222948" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-225170">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">krishna</span>
+							<span class="comment_date">April 20, 2012, 9:15 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-225170"><p>How do you find using regular expression, characters beginning with and ending with any characters.</p>
+<p>In    AXyz122311Xyslasd22344ssaa Aklsssx@sdddf#4=sadsss kaaAASds<br>
+How do we get the characters “slas” out that begins with “11Xy” and ends with “d223″ in UNIX using regular expression?</p>
+<p>echo $MSG | grep -o ‘(?&lt;=11Xy).+(?=d223)'</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-225170" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-232377">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">bala</span>
+							<span class="comment_date">May 10, 2012, 9:12 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-232377"><p>@krishna,<br>
+echo $MSG | grep -o 11Xy.*d223</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-232377" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-237791">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">guru</span>
+							<span class="comment_date">May 22, 2012, 11:52 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-237791"><p>i need answer for the following question<br>
+using grep, determine  count of and print the list of words having 
+uppercase letters when the input sentence is given in command line</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-237791" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-238762">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">mitchell fox</span>
+							<span class="comment_date">May 24, 2012, 7:45 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-238762"><p>I know this is a simple grep or grep/sed question:<br>
+I have a log file with identified errors.The errors will lines 
+containing the words  “Patient ID: 12345678999″ (quote marks are mine). i
+ substituted the number 12345678999 for a real number. The real number 
+will be any combination of 11 integers. So I would want to grep for 
+Patient ID: 12345678999 but just end up with the numbers themselves, not
+ the rest of the lines.<br>
+Example of result I would like:<br>
+12345678999<br>
+23678900456<br>
+Thanks</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-238762" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-262482">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Albert</span>
+							<span class="comment_date">July 1, 2012, 10:10 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-262482"><p>Hi,</p>
+<p>Is there any way to find strings  longer than 50 charachter within files with grep?</p>
+<p>Thanks,</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-262482" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-270807">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Abhishek Verma</span>
+							<span class="comment_date">July 17, 2012, 1:15 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-270807"><p>It’s really great …….</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-270807" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-275407">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">SANKET</span>
+							<span class="comment_date">July 25, 2012, 7:46 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-275407"><p>Helo anyone tell me how find word from directory contains number of files using grep command and any other command</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-275407" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-279223">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">sam</span>
+							<span class="comment_date">July 31, 2012, 4:06 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-279223"><p>Hey i am
+ trying to just write first simple script. Here what I am trying to do 
+is pass the word which I want to find in array from command line. After 
+that it should print all entires which contain that word. Say I want to 
+find Jacob from command line but its not returning any result. </p>
+<p>#! usr/bin/perl</p>
+<p>use Fcntl;<br>
+print “content-type: text/html \n\n”; </p>
+<p>print “Enter word : “;<br>
+$word = ;</p>
+<p>@myNames = (‘Jacob’, ‘Michael’, ‘Joshua’, ‘Matthew’, ‘Alexander’, ‘Andrew’);<br>
+@grepNames = grep(/$word/, @myNames); </p>
+<p>foreach $Names(@grepNames)<br>
+{<br>
+	print $Names;<br>
+	print “\n”;<br>
+}</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-279223" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-295730">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ravneet</span>
+							<span class="comment_date">September 4, 2012, 7:10 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-295730"><p>Answer to Palash:<br>
+ $grep -o pattern file name | wc -w</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-295730" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-295878">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://www.investcloud.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://www.investcloud.com/" rel="external nofollow" class="url">Victor Wood</a></span>
+							<span class="comment_date">September 4, 2012, 1:11 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-295878"><p>Answer to SANKET:<br>
+if I understand your question correctly:<br>
+ls -1 | grep “P.*Entity\.java” –count<br>
+will do a listing of your directory, send it to a grep search, and then 
+count the matches, many people would drop the -1 and abbreviate the 
+–count to:<br>
+ls | grep “P.*Entity\.java” -c</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-295878" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-339017">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">sravan Ch</span>
+							<span class="comment_date">October 15, 2012, 6:15 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-339017"><p>hi there!<br>
+needed help here..</p>
+<p>how to display counts of ids in a file next to each other ?<br>
+ex:<br>
+file name: images01.txt<br>
+ids present in the file: 10001,10002,10003,10004</p>
+<p>to-display: id followed by counts<br>
+10001 = 100<br>
+10003 =  50</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-339017" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-354449">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anonymous</span>
+							<span class="comment_date">October 27, 2012, 2:06 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-354449"><p>Helllo ,<br>
+i want to run a script on linux terminal when i press the submit button on webpage…<br>
+it is possible..?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-354449" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-354974">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Vikas</span>
+							<span class="comment_date">October 28, 2012, 1:11 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-354974"><p>Mr. Anonymous, </p>
+<p>Do you think this is the right forum to ask this question? </p>
+<p>By the way, this can be handled through PHP. Google it and find it how. Post in a relevant thread if you face difficulties. </p>
+<p>Regards<br>
+Vikas</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-354974" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-443619">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">murali</span>
+							<span class="comment_date">December 18, 2012, 10:55 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-443619"><p>i want only single command,<br>
+i.e lines starting with $</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-443619" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-556835">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Bama</span>
+							<span class="comment_date">March 1, 2013, 10:49 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-556835"><p>#1 – “$ grep “this” demo_file” –  returned two lines:<br>
+“this line is the 1st lower case line in this file.”<br>
+“Two lines above this line is empty.”</p>
+<p>Shouldn’t it also also include this line?<br>
+“And this is the last line.”</p>
+<p>Thanks or the article, I’ve chosen today to get my grep on!</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-556835" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-680093">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">bon</span>
+							<span class="comment_date">April 19, 2013, 12:48 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-680093"><p>Hi All,<br>
+Thank you very much for this website.<br>
+I have one query:<br>
+How to search directory by name.<br>
+Suppose, I want to store all the directories in an array with name “abc” only.<br>
+I tried this:</p>
+<p>$name=”abc”;<br>
+@array_1= grep (/$name/), $curr_dir; #curr_dir is any directory</p>
+<p>________________________________________________________________________________</p>
+<p>But the problem is, this command also matches directory with name “abcd”, “aabc”, “abc24″ etc<br>
+Can you please help me?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-680093" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-716974">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Tony</span>
+							<span class="comment_date">April 26, 2013, 4:35 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-716974"><p>How can I
+ find any lines in a source file that contain 2 search strings.  When I 
+tried using a pipe I got an error.  Am running on TNS Guardian (not 
+unix).</p>
+<p>Thanks!</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-716974" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-782804">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">velpandian</span>
+							<span class="comment_date">June 5, 2013, 12:46 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-782804"><p># ifconfig<br>
+eth0      Link encap:Ethernet  HWaddr 54:04:a6:8a:42:58<br>
+          inet addr:10.2.0.170  Bcast:10.2.0.255  Mask:255.255.255.0<br>
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1<br>
+          RX packets:95309 errors:0 dropped:0 overruns:0 frame:0<br>
+          TX packets:45 errors:0 dropped:0 overruns:0 carrier:0<br>
+          collisions:0 txqueuelen:100<br>
+          RX bytes:8865945 (8.4 MiB)  TX bytes:5438 (5.3 KiB)</p>
+<p>From the above input i want to grep only IP address and subnetmask, 
+that single grep command should be capable to do grep for any ip and any
+ subnetmask. Here i have 10.2.0.170 as IP and subnetmask as 
+255.255.255.0, so i want to grep only IP and subnetmask.<br>
+If i have 1.1.1.1 as IP and 255.128.0.0 as subnetmask in this case the 
+“same command” should capable to do grep IP and subnetmask</p>
+<p>Thanks in advance</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-782804" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-893428">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">gill bate$</span>
+							<span class="comment_date">August 19, 2013, 6:45 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-893428"><p>$ grep -l this demo_*<br>
+demo_file<br>
+demo_file1</p>
+<p>okay. How do you find all files with a given extension using grep ?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-893428" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-905821">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Sandeep</span>
+							<span class="comment_date">August 28, 2013, 3:09 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-905821"><p>Hi,<br>
+I have query below:<br>
+Sample data file:<br>
+26/Jul/2013:11:57:24 -0400 TAN101 active<br>
+26/Jul/2013:11:55:24 -0400 TAN102 active<br>
+26/Jul/2013:10:55:24 -0400 TAN101 Idle<br>
+26/Jul/2013:10:50:24 -0400 TAN103 idle<br>
+26/Jul/2013:10:53:24 -0400 TAN103 active<br>
+26/Jul/2013:10:43:24 -0400 TAN103 active</p>
+<p>Query is:I want the output as group by count.I mean number of records
+ with TAN101,number of records with TAN102,number of records with TAN103
+ .</p>
+<p>TAN101  2<br>
+TAN102  1<br>
+TAN103  3</p>
+<p>Please help me .</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-905821" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-942012">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Raj</span>
+							<span class="comment_date">September 20, 2013, 11:58 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-942012"><p>How can I grep this ?</p>
+<p>if [ “$EUID” = “0” ]</p>
+<p>I want to grep this from /etc/profile and add somelines below it</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-942012" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-956737">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">shanmugam</span>
+							<span class="comment_date">September 29, 2013, 2:46 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-956737"><p>Hi,</p>
+<p>I am beginner in using Linux Grep command and I got search for words with “489” in a file as follows:<br>
+LRD489E<br>
+LRD489<br>
+LR489-SPAD<br>
+LR489(W)<br>
+U489-AB</p>
+<p>I tried using grep command as follows:<br>
+egrep -o ‘[A-Z]*489[A-Z]*’  FLG.id</p>
+<p>the results I get<br>
+LRD489E<br>
+LRD489</p>
+<p>how to get<br>
+LR489-SPAD<br>
+LR489(W)</p>
+<p>Any help appreciated.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-956737" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-963221">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">John Hsu</span>
+							<span class="comment_date">October 4, 2013, 1:38 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-963221"><p>Remove tons of abc files<br>
+ll  | grep abc | awk ‘{print “rm “$8″ “}’ | csh</p>
+<p>Note:<br>
+“$8″ — column 8 of ll comand</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-963221" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1049838">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Amitha</span>
+							<span class="comment_date">November 21, 2013, 7:29 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1049838"><p>Hi,</p>
+<p>could you please tell me what does “grep -i xyz | grep -v grep” means????</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1049838" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1151278">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Irfan</span>
+							<span class="comment_date">December 28, 2013, 1:13 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1151278"><p>grep -A
+ or -B or -C does not work usually. is there any sed, awk or any other 
+function that can perform an equivalent operation? what grep utility 
+will I need to run these parameters?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1151278" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1156907">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Amit</span>
+							<span class="comment_date">December 30, 2013, 7:04 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1156907"><p>Nice Tutorial …</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1156907" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1158866">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">LakshmiNarayana</span>
+							<span class="comment_date">December 31, 2013, 3:24 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1158866"><p>HI Sandeep ,<br>
+store input in file named “GroupFile”<br>
+grep -o “\(TAN[[:digit:]]\+\)” GroupFile | sort | uniq -c</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1158866" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1175545">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">CLIFF</span>
+							<span class="comment_date">January 6, 2014, 5:32 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1175545"><p>Dear Sir:<br>
+I have a file… in which I intend to extract the pattern (a few lines) starting<br>
+with “set_multicycle_path” then some string (*) then “-from” then some string (*)<br>
+then “-through ” then some string (*) then “-end ” then some string (*), where<br>
+these strings have variable lines, and then the end of these strings afterwards were ]</p>
+<p>How to use grep (but not a perl) to extract these lines?<br>
+Thanks</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1175545" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1201700">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://yahoo.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://yahoo.com/" rel="external nofollow" class="url">NiceGuy</a></span>
+							<span class="comment_date">January 15, 2014, 6:08 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1201700"><p>Nice posts……</p>
+<p>cat myfile.txt |grep *.al &gt; output.txt<br>
+I want to grep a file that contains repetition of words (in this case 
+“.al”) using the command above. But I want only one occurrence of each 
+word to be written to another text file called “output.txt”. How can I 
+use the grep command to accomplish this?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1201700" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1201723">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://yahoo.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://yahoo.com/" rel="external nofollow" class="url">NiceGuy</a></span>
+							<span class="comment_date">January 15, 2014, 6:16 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1201723"><p>To be a bit clearer on my request above…..</p>
+<p>In myfile.txt, there could be two or more lines with “46.al” for 
+example but I want only one line of “46.al” to be written to output.txt.</p>
+<p>Say for example myfile.txt contains the following lines:</p>
+<p>46.al<br>
+477.al<br>
+446.al<br>
+46.al<br>
+xyz.al<br>
+46.al<br>
+46.al<br>
+I want “output.txt” to contain the following: 46.al, 477.al, 446.al, xyz.al</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1201723" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1271583">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Gobinath</span>
+							<span class="comment_date">February 13, 2014, 7:19 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1271583"><p>Hi,<br>
+Is there any grep for the below mentioned scenario.<br>
+In file.txt file,<br>
+line1<br>
+line2<br>
+line3<br>
+Function(“line1″,<br>
+                “line2″);<br>
+line2<br>
+line3<br>
+.<br>
+.<br>
+Now i want to grep only the word ‘line 2′ from the function<br>
+How its possible any idea<br>
+TIA</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1271583" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1278300">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">SP</span>
+							<span class="comment_date">February 16, 2014, 6:35 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1278300"><p>I want 
+to use grep twice for 2 conditions in a single search….let’s say i want 
+to search all fies modified on 10-Dec-13. So in my current directory i m
+ typing…below commad for result.<br>
+ls -lt | grep -c “^-” | grep “10 Dec”</p>
+<p>but the above command is not working</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1278300" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1279943">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Sanket Patil</span>
+							<span class="comment_date">February 17, 2014, 3:56 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1279943"><p>@SP<br>
+Use below command<br>
+ls -lt | grep -i “Dec  10″</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1279943" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1590743">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ed</span>
+							<span class="comment_date">April 30, 2014, 12:12 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1590743"><p>how can
+ I grep a file web.log which contains  \\ with mostly no data, however, I
+ would like to find only those values of swingSACovering that HAVE data.
+ In other words, there may be 4000 or so xml elements which do not 
+contain any values. But 2 or 3 will contain data with 6 digits, such as 
+148231<br>
+ \148231\ I only want to find the data elements with data.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1590743" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1647720">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">ss</span>
+							<span class="comment_date">May 8, 2014, 4:52 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1647720"><p>if we want to find a particular word from a text file what command should i use can anyone help me with shell script..<br>
+example<br>
+i have more than 16000 lines in which i have to find the occurence particular word</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1647720" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1737252">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">oneteam</span>
+							<span class="comment_date">May 20, 2014, 5:42 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1737252"><p>hi<br>
+i am using the grep command to search for exceptions.<br>
+grep -w exception server.log<br>
+This is giving me the output as,<br>
+2014-05-19 09:48:17,523 346652103 INFO (Thread-4038 
+(HornetQ-client-global-threads-573435074):) END – processException:: 
+exception logged into database<br>
+which is just the first line of the exception<br>
+how to capture the whole exception !</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1737252" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1751054">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Dave Horrocks</span>
+							<span class="comment_date">May 22, 2014, 6:56 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1751054"><p>Can someone help?</p>
+<p>How do I bzgrep : ^C02 when ^C is count as one special character, such as in this word:<br>
+data1^C02data2 ?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1751054" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-1798575">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Raj</span>
+							<span class="comment_date">May 29, 2014, 9:03 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1798575"><p>How to search for lines that have only single dot in it .<br>
+#grep  “^ *\.” abc   ….. to search lines that have only dots it in .i.e no matter how many dots , but only dots in line .<br>
+But to search for lines that have only single dot in it ?????</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1798575" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1851116">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">auchomage</span>
+							<span class="comment_date">June 9, 2014, 12:05 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-1851116"><p>I’m not
+ very good with linux/unix, and you kept the language simple, along with
+ the examples, so I could follow it without difficulty.</p>
+<p>Now I’m a whole lot more confident on how to use grep.</p>
+<p>Thank you very much, this is a great article.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-1851116" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-2034579">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">sandeep</span>
+							<span class="comment_date">August 5, 2014, 5:42 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-2034579"><p>How to fiilter the Attributes in a file..<br>
+   Ex:- If a file has 10 fields——-&gt;How can we filter 1,3,5,7,9 fields</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-2034579" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-2037691">
+						<div class="comment_head">
+							<span class="avatar"><a href="http://blog.reachvikas.com/" rel="nofollow"></a></span>
+							<span class="comment_author"><a href="http://blog.reachvikas.com/" rel="external nofollow" class="url">VIKAS</a></span>
+							<span class="comment_date">August 5, 2014, 11:48 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-2037691"><p>Hi Sandeep,</p>
+<p>awk would be easiest for your requirement. Try this</p>
+<p>cat /your/file | awk ‘{ print $1 “\t” $3 “\t” $5 “\t” $7 }’</p>
+<p>Regards,<br>
+Vikas</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-2037691" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-2038286">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">karthick</span>
+							<span class="comment_date">August 6, 2014, 3:21 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-2038286"><p>thanks, very usefull command.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-2038286" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-2193592">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Sam</span>
+							<span class="comment_date">September 6, 2014, 1:35 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-2193592"><p>how to linux shell pipeline do?<br>
+grep nd xyz | wc-i</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-2193592" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3205561">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Ryan</span>
+							<span class="comment_date">December 10, 2014, 7:57 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3205561"><p>My Goal
+ is to be  able to grep a large directory with Log Files,  for any and 
+all items contained in a list and output to a separate file all 
+information that matches.</p>
+<p>for example the list will contain multiple IP’s and I want to grep many logs files for any of the matching IP’s</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3205561" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3538404">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">norman</span>
+							<span class="comment_date">January 12, 2015, 4:22 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3538404"><p>o be a bit clearer on my request above…..</p>
+<p>In myfile.txt, there could be two or more lines with “46.al” for 
+example but I want only one line of “46.al” to be written to output.txt.</p>
+<p>Say for example myfile.txt contains the following lines:</p>
+<p>46.al<br>
+477.al<br>
+446.al<br>
+46.al<br>
+xyz.al<br>
+46.al<br>
+46.al<br>
+I want “output.txt” to contain the following: 46.al, 477.al, 446.al, xyz.al</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3538404" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3538434">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">norman ndovi</span>
+							<span class="comment_date">January 12, 2015, 4:29 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3538434"><p>my file has<br>
+123<br>
+124<br>
+125<br>
+135<br>
+134<br>
+136 and i want to display thoz with 4 and 6<br>
+pliz help me nw now</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3538434" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3861580">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">JS</span>
+							<span class="comment_date">March 3, 2015, 6:52 pm</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3861580"><p>Superb…Explained very well…..</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3861580" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3893909">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Vasanth</span>
+							<span class="comment_date">March 12, 2015, 2:30 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3893909"><p>Hello All,</p>
+<p>New to Unix. </p>
+<p>I am not sure whether to use grep or awk for my below requirement.</p>
+<p>1) Read a file and move it line by line to a different file<br>
+2) If a part of the line has a particular string, then instead of 
+writing the string, we have to pull instead data from a different file.</p>
+<p>Let me know if you have any further questions.</p>
+<p>Regards,<br>
+Vasanth</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3893909" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3929561">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">moshie71</span>
+							<span class="comment_date">March 19, 2015, 7:05 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3929561"><p>Great post, thank you!!!!<br>
+Just one question how do you revert the following:<br>
+$ export GREP_OPTIONS=’–color=auto’ GREP_COLOR=’100;8′ ?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3929561" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-3986522">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">GD</span>
+							<span class="comment_date">April 1, 2015, 8:43 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-3986522"><p>Hi,<br>
+I am very new to scripting and just trying something, I have written 
+simple script and doing grep to the process and checking the count. but 
+when I debug this script, I am getting something else. Please see the 
+below script and debug output :-<br>
+SCript :-<br>
+monname=$1<br>
+NUM_PROC=$(ps -ef | grep wd.sap* | grep -v grep | wc -l)<br>
+if [[ $NUM_PROC -gt “0” ]]; then<br>
+/usr/lpp/OV/bin/opcmon $monname=1<br>
+else<br>
+/usr/lpp/OV/bin/opcmon $monname=0<br>
+fi<br>
+exit 0<br>
+Debug output :- </p>
+<p>bhau + monname=SAP_WEBDISP_Process_Monitor<br>
++ + ps -ef<br>
++ wc -l<br>
++ grep wd.sap*<br>
++ grep -v grep<br>
+NUM_PROC=       1<br>
++ echo 1<br>
+1<br>
++ + echo 1<br>
+NUM_PROC=1<br>
++ [[ 1 -gt 0 ]]<br>
++ /usr/lpp/OV/bin/opcmon SAP_WEBDISP_Process_Monitor=1<br>
++ exit 0<br>
+————————————–</p>
+<p>I am just surprising, how this script is evaluating the PS command. 
+Help me if i am doing something wrong or can be possible in other way to
+ capture my requirement.</p>
+<p>Thanks GD</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-3986522" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-4009240">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Anand</span>
+							<span class="comment_date">April 9, 2015, 7:00 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-4009240"><p>Hi Norman,</p>
+<p> Please go through this chapter : </p>
+<p>Regular Expressions in Grep Command with 10 Examples – Part I</p>
+<p>Assuming that your file name is file1.txt. PLease provide the following command</p>
+<p>grep -e “4\|6″ file1.txt</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-4009240" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-4131554">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">BASU</span>
+							<span class="comment_date">May 18, 2015, 9:33 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-4131554"><p>HI<br>
+I HAVE A FILE LIKE<br>
+123AAAA1956  255<br>
+123AAAA1976  255<br>
+123AAAA1980  255</p>
+<p>I WANT TO EXTRACT FULL DATA (FULL LINE) FROM THE ABOVE FILE WHICH IS 
+LESS THAN 1978  STARTING FROM 8th POSITION TO 11th POSITION. I WANT TO 
+MEAN THAT AFTER GIVING COMMAND THE OUTPUT WILL BE<br>
+123AAAA1956  255<br>
+123AAAA1976  255</p>
+<p>CAN IT BE POSSIBLE WITH GREP COMMAND ?</p>
+<p>ANY HELP FROM ANY BODY IS HIGHLY  APPRECIABLE.</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-4131554" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-4280044">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Sujesh</span>
+							<span class="comment_date">June 25, 2015, 2:54 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-4280044"><p>What is the command to display only the lines of a file with exactly 5 characters?</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-4280044" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment even thread-even depth-1" id="comment-4292341">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">Manjunath</span>
+							<span class="comment_date">June 29, 2015, 9:41 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-4292341"><p>Great Article!!</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-4292341" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+					<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-4320156">
+						<div class="comment_head">
+							<span class="avatar"></span>
+							<span class="comment_author">prakash mahato</span>
+							<span class="comment_date">July 10, 2015, 12:21 am</span>
+						</div>
+						<div class="comment_text grt" id="comment-body-4320156"><p>Hi i 
+have a query to find out from a table field called ‘design ation ‘, In 
+the designation column many attributes are there likes Hr, Programmer, 
+Trainee Programmer, Soft Programmer and Admin.<br>
+but I want to find out only Programmer not Trainee Programmer  nor Soft Programmer nor others<br>
+How can i do using greep command please help me or else send me in my mail</p>
+						</div>
+						<div class="comment_footer">
+							<a class="comment_permalink" href="#comment-4320156" title="permalink to this comment" rel="nofollow">Link</a>
+						</div>
+</li><!-- #comment-## -->
+				</ul>
+				<form id="commentform" method="post" action="http://www.thegeekstuff.com/wp-comments-post.php">
+					<a rel="nofollow" id="cancel-comment-reply-link" href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/#respond" style="display:none;">Cancel reply</a>
+					<p class="comment_form_title">Leave a Comment</p>
+					<p id="comment_form_name">
+						<label for="author">Name</label>
+						<input id="author" class="input_text" name="author" tabindex="1" type="text">
+					</p>
+					<p id="comment_form_email">
+						<label for="email">Email</label>
+						<input id="email" class="input_text" name="email" tabindex="2" type="text">
+					</p>
+					<p id="comment_form_url">
+						<label for="url">Website</label>
+						<input id="url" class="input_text" name="url" tabindex="3" type="text">
+					</p>
+					<p id="comment_form_comment">
+						<label for="comment">Comment</label>
+						<textarea name="comment" id="comment" class="input_text" tabindex="4" rows="6"></textarea>
+					</p>
+					<p id="comment_form_submit">
+						<input id="submit" class="input_submit" name="submit" tabindex="5" value="Submit" type="submit">
+					</p>
+<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="1c4a2b50ad" type="hidden"></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" type="checkbox">
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+<p style="display: none;"></p><input name="comment_post_ID" value="433" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+				<input id="ak_js" name="ak_js" value="1440458189428" type="hidden"></form>
+			</div>
+			<div class="prev_next">
+				<p class="next_post">Next post: <a href="http://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your-linux-system/" rel="next">4 Ways to Identify Who is Logged-In on Your Linux System</a></p>
+				<p class="previous_post">Previous post: <a href="http://www.thegeekstuff.com/2009/03/mergecap-and-tshark-merge-packet-dumps-and-analyze-network-traffic/" rel="prev">Mergecap and Tshark: Merge Packet Dumps and Analyze Network Traffic</a></p>
+			</div>
+		</div>
+		<div class="sidebar">
+<div class="widget widget_text" id="text-21">			<div class="textwidget"><a title="Subscribe via RSS" href="http://www.thegeekstuff.com/feed" rel="nofollow">RSS</a>&nbsp; | &nbsp;<a title="Subscribe via Email" href="http://feedburner.google.com/fb/a/mailverify?uri=TheGeekStuff&amp;loc=en_US" rel="nofollow">Email</a>&nbsp; | &nbsp;<a title="Follow us on Twitter" href="http://twitter.com/thegeekstuff" rel="nofollow">Twitter</a>&nbsp; | &nbsp;<a title="Become a fan" href="http://www.facebook.com/thegeekstuff" rel="nofollow">Facebook</a>&nbsp; | &nbsp;<a title="Follow us on Google+" href="https://plus.google.com/112493711428194838421/posts">Google+</a>
+<br><br>
+<form action="http://www.thegeekstuff.com/search" id="cse-search-box">
+  <div>
+    <input name="cx" value="005666763606120661560:zkmegbt_djm" type="hidden">
+    <input name="cof" value="FORID:10" type="hidden">
+    <input name="ie" value="UTF-8" type="hidden">
+    <input style="background: rgb(255, 255, 255) url(&quot;//cse.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center;" name="q" size="30" type="text">
+    <input style="border-color:#CCCCCC #999999 #999999 #CCCCCC; border-style:double; border-width:1px; overflow:visible;" name="sa" value="Search" type="submit">
+  </div>
+<input value="www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/" name="siteurl" type="hidden"><input name="ref" type="hidden"><input name="ss" type="hidden"></form>
+<script type="text/javascript" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script><script src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/a_002" type="text/javascript"></script><link href="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/transliteration.css" type="text/css" rel="stylesheet"><script src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/transliteration.js" type="text/javascript"></script>
+<script type="text/javascript" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/t13n"></script>
+<script type="text/javascript" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/brand"></script>
+<br></div>
+		</div><div class="widget widget_text" id="text-3">			<div class="textwidget"><script async="" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/adsbygoogle.js"></script>
+<!-- TGS Side Bar -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-8090601437064582" data-ad-slot="9054077260"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br></div>
+		</div><div class="widget widget_text" id="text-4"><p class="widget_title">EBOOKS</p>			<div class="textwidget"><ul>
+<li><img title="Linux 101 Hacks Book" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/free-small.png" alt="Linux 101 Hacks Book">&nbsp;<a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Linux 101 Hacks 2nd Edition eBook</a> - Practical Examples to Build a Strong Foundation in Linux</li>
+<li><a href="http://www.thegeekstuff.com/bash-101-hacks-ebook/">Bash 101 Hacks eBook</a> - Take Control of Your Bash Command Line and Shell Scripting</li>
+<li><a href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/">Sed and Awk 101 Hacks eBook</a> - Enhance Your UNIX / Linux Life with Sed and Awk</li>
+<li><a href="http://www.thegeekstuff.com/vim-101-hacks-ebook/">Vim 101 Hacks eBook</a> - Practical Examples for Becoming Fast and Productive in Vim Editor</li>
+<li><a href="http://www.thegeekstuff.com/nagios-core-ebook/">Nagios Core 3 eBook</a> - Monitor Everything, Be Proactive, and Sleep Well</li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-22">			<div class="textwidget"><iframe src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/likebox.html" scrolling="no" style="border:none; overflow:hidden; height:258px;" allowtransparency="true" frameborder="0"></iframe></div>
+		</div><div class="widget widget_text" id="text-17"><p class="widget_title">POPULAR POSTS</p>			<div class="textwidget"><ul>
+<li><a href="http://www.thegeekstuff.com/2009/01/12-amazing-and-essential-linux-books-to-enrich-your-brain-and-library/">12 Amazing and Essential Linux Books To Enrich Your Brain and Library</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/">50 UNIX / Linux Sysadmin Tutorials</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/11/50-linux-commands/">50 Most Frequently Used UNIX / Linux Commands (With Examples)</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/gtd-getting-things-done/">How To Be Productive and Get Things Done Using GTD</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/03/30-things-to-do-when-you-are-bored-and-have-a-computer/">30 Things To Do When you are Bored and have a Computer</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/09/linux-file-system-structure/">Linux Directory Structure (File System Structure) Explained with Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/">Linux Crontab: 15 Awesome Cron Job Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/">Get a Grip on the Grep! – 15 Practical Grep Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/linux-ls-command-examples/">Unix LS Command: 15 Practical Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/15-examples-to-master-linux-command-line-history/">15 Examples To Master Linux Command Line History</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/bug-tracking-system/">Top 10 Open Source Bug Tracking System</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/01/vi-and-vim-macro-tutorial-how-to-record-and-play/">Vi and Vim Macro Tutorial: How To Record and Play</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">Mommy, I found it! -- 15 Practical Linux Find Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/best-gmail-tips-and-tricks/">15 Awesome Gmail Tips and Tricks</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/expertise-in-google-search/">15 Awesome Google Search Tips and Tricks</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/raid-levels-tutorial/">RAID 0, RAID 1, RAID 5, RAID 10 Explained with Diagrams</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/01/15-practical-unix-linux-top-command-examples/">Can You Top This? 15 Practical Linux Top Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/09/top-5-best-network-monitoring-tools/">Top 5 Best System Monitoring Tools</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/top-5-best-linux-os-distributions/">Top 5 Best Linux OS Distributions</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/06/how-to-monitor-remote-linux-host-using-nagios-30/">How To Monitor Remote Linux Host using Nagios 3.0</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">Awk Introduction Tutorial – 7 Awk Print Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/09/rsync-command-examples/">How to Backup Linux? 15 rsync Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/09/the-ultimate-wget-download-guide-with-15-awesome-examples/">The Ultimate Wget Download Guide With 15 Awesome Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/top-5-best-linux-text-editors/">Top 5 Best Linux Text Editors</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/tcpdump-command-examples/">Packet Analyzer: 15 TCPDUMP Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">The Ultimate Bash Array Tutorial with 15 Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/">3 Steps to Perform SSH Login Without Password Using ssh-keygen &amp; ssh-copy-id</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Unix Sed Tutorial: Advanced Sed Substitution Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/03/netstat-command-examples/">UNIX / Linux: 10 Netstat Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/06/the-ultimate-guide-for-creating-strong-passwords/">The Ultimate Guide for Creating Strong Passwords</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/6-steps-to-secure-your-home-wireless-network/">6 Steps to Secure Your Home Wireless Network</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/turbocharge-putty-with-12-powerful-add-ons-software-for-geeks-3/">Turbocharge PuTTY with 12 Powerful Add-Ons</a></li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-19"><p class="widget_title">CATEGORIES</p>			<div class="textwidget"><ul>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/linux/">Linux Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/vim-2/">Vim Editor</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/sed/">Sed Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/awk/">Awk Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/bash-2/">Bash Shell Scripting</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/nagios-2/">Nagios Monitoring</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/openssh-2/">OpenSSH</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/iptables/">IPTables Firewall</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/apache/">Apache Web Server</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/mysql/">MySQL Database</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/perl/">Perl Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/google/">Google Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/ubuntu/">Ubuntu Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/postgresql/">PostgreSQL DB</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/hello-world/">Hello World Examples</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/c-programming/">C Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/c-plus-plus/">C++ Programming</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/dell-2/">DELL Server Tutorials</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/oracle/">Oracle Database</a></li>
+<li><a rel="nofollow" href="http://www.thegeekstuff.com/category/vmware/">VMware Tutorials</a></li>
+</ul></div>
+		</div><div class="widget widget_text" id="text-20">			<div class="textwidget"><div id="___person_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 300px; height: 106px;"><iframe title="+Badge" data-gapiattached="true" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/person.html" name="I2_1440458189487" id="I2_1440458189487" vspace="0" tabindex="0" style="position: static; top: 0px; width: 300px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 106px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" width="100%" frameborder="0"></iframe></div></div>
+		</div>		</div>
+	</div>
+	<div class="footer">
+<div id="footer_widgets" class="columns_3">
+	<div class="one-third sidebar first">
+<div class="widget widget_text" id="text-7"><h4 class="widget_title">About The Geek Stuff</h4>			<div class="textwidget"><br>
+<img class="float" title="Ramesh Natarajan" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/ramesh-small.gif" alt="Linux 101 Hacks Book">
+My name is <strong>Ramesh Natarajan</strong>. I will be posting 
+instruction guides, how-to, troubleshooting tips and tricks on Linux, 
+database, hardware, security and web. My focus is to write articles that
+ will either teach you or help you resolve a problem. Read more about <a href="http://www.thegeekstuff.com/about/">Ramesh Natarajan</a> and the blog.</div>
+		</div>	</div>
+	<div class="one-third sidebar">
+<div class="widget widget_text" id="text-9"><h4 class="widget_title">Contact Us</h4>			<div class="textwidget"><br>
+<strong>Email Me :</strong>
+Use this <a href="http://www.thegeekstuff.com/contact" rel="nofollow">Contact Form</a>
+ to get in touch me with your comments, questions or suggestions about 
+this site. You can also simply drop me a line to say hello!.
+<br><br>
+<a title="Follow us on Google+" href="https://plus.google.com/112493711428194838421/posts">Follow us on Google+</a>
+<br><br>
+<a title="Follow us on Twitter" href="http://twitter.com/thegeekstuff" rel="nofollow">Follow us on Twitter</a>
+<br><br>
+<a href="http://www.facebook.com/thegeekstuff" rel="nofollow">Become a fan on Facebook</a>&nbsp;&nbsp;</div>
+		</div>	</div>
+	<div class="one-third sidebar last">
+<div class="widget widget_text" id="text-8"><h4 class="widget_title">Support Us</h4>			<div class="textwidget"><br>
+Support this blog by purchasing one of my ebooks.
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/bash-101-hacks-ebook/">Bash 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/">Sed and Awk 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/vim-101-hacks-ebook/">Vim 101 Hacks eBook</a>
+<br><br>
+<a rel="nofollow" href="http://www.thegeekstuff.com/nagios-core-ebook/">Nagios Core 3 eBook</a></div>
+		</div>	</div>
+	<div style="clear:both;"></div>
+</div>
+		<p class="attribution">Copyright © 2008–2015 Ramesh Natarajan. All rights reserved  | <a href="http://www.thegeekstuff.com/copyright">Terms of Service</a></p>
+	</div>
+</div>
+<script type="text/javascript" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/form.gzip"></script>
+<script type="text/javascript" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/comment-reply.gzip"></script>
+<script type="text/javascript">
+(function(){
+	var classes = document.getElementsByClassName('menu_control');
+	for (i = 0; i < classes.length; i++) {
+		classes[i].onclick = function() {
+			var menu = this.nextElementSibling;
+			if (/show_menu/.test(menu.className))
+				menu.className = menu.className.replace('show_menu', '').trim();
+			else
+				menu.className += ' show_menu';
+		};
+	}
+})();
+</script>
+<noscript><style type="text/css" scoped>.menu { display: block; }</style></noscript>
+<script gapi_processed="true" type="text/javascript" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/plusone.js"></script>
+
+
+
+<iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="15%20Practical%20Grep%20Command%20Examples%20In%20Linux%20_%20UNIX_files/postmessageRelay.html" id="oauth2relay366888075" name="oauth2relay366888075"></iframe></body></html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Content Delivery Network via Amazon Web Services: CloudFront: static.thegeekstuff.com
+
+ Served from: www.thegeekstuff.com @ 2015-08-24 17:16:28 by W3 Total Cache -->
