@@ -27,16 +27,9 @@ bf.close()
 '''
 NOTES:
 
+Bloom Filters Description - https://www.pinterest.com/pin/429953095654194981/
 
-
-
-
-
-
-
-
-
-
+https://www.pinterest.com/pin/429953095654194979/
 
 '''
 
