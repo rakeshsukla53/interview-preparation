@@ -4,6 +4,7 @@ t = trie(an=0, ant=1, all=2, allot=3, alloy=4, aloe=5, are=6, be=7)
 
 print t
 
+#https://www.youtube.com/watch?v=RIUY7ieyH40
 '''
 A trie is an tree data structure that is used to store a mapping where the keys are sequences, usually strings over an alphabet. In addition to implementing the mapping interface, tries facilitate finding the items for a given prefix, and vice versa, finding the items whose keys are prefixes of a given key K. As a common special case, finding the longest-prefix item is also supported.
 '''
