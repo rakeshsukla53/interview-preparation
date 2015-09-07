@@ -1,0 +1,22 @@
+
+
+What is distributed computing?
+
+Traditionally computation is performed on single computers
+Larger scale projects - Larger Scale Effect the processing power may not enough for single computers. So we need more processing power here.
+
+1- So we distribute the workload across mutiple computers so that we can easily solve our task
+
+2- All the computers are working on unison so we get the results fast.
+
+3- All the tasks are not suitable for distributed computing
+
+4- It is extremely difficult to divide a task if where intermediate steps require the result from previous steps.
+
+5- parallel tasks are best for distributed computing. Since one task doesn't rely on other tasks
+
+6- Host computer will ran the main program ..divide the task..host will generate intermediate result ...combine all the results
+
+7- Distributed computing is also known as horizontal computing
+
+8-

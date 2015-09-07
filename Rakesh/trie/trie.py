@@ -13,6 +13,7 @@ A trie is an tree data structure that is used to store a mapping where the keys 
 Algorithmically, tries are more efficient than binary search trees (BSTs) both in lookup time and memory when they contain many keys sharing relatively few prefixes. Unlike hash tables, trie keys don’t need to be hashable.
 '''
 
+
 #Trie data strcuture https://reterwebber.wordpress.com/2014/01/22/data-structure-in-python-trie/
 # >>> from pytrie import SortedStringTrie as trie
 # >>> t = trie(an=0, ant=1, all=2, allot=3, alloy=4, aloe=5, are=6, be=7)
@@ -38,3 +39,27 @@ Algorithmically, tries are more efficient than binary search trees (BSTs) both i
 # ['all', 'allot']
 # >>> list(t.iter_prefix_items('antonym'))
 # [('an', 0), ('ant', 1)]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

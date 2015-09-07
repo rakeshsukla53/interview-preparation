@@ -1,0 +1,14 @@
+1- what all columns are you are interested in.
+
+2- split it and take that patricular record.
+
+3- depending upon your analysis. You can have any number of columns.
+
+4- Your key values can be anything. It can be one key or composite key.
+
+5- Taking processing to the data
+
+6- Biggest advantage is the processing data in parallel.
+
+7-
+

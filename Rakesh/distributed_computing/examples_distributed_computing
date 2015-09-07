@@ -1,0 +1,25 @@
+
+1- MapReduce is useful in a wide range of applications, including distributed pattern-based searching, distributed sorting, web link-graph reversal, Singular Value Decomposition,[13] web access log stats, inverted index construction, document clustering, machine learning,[14] and statistical machine translation. Moreover, the MapReduce model has been adapted to several computing environments like multi-core and many-core systems,[15][16][17] desktop grids,[18] volunteer computing environments,[19] dynamic cloud environments,[20] and mobile environments.
+
+2- At Google, MapReduce was used to completely regenerate Google's index of the World Wide Web. It replaced the old ad hoc programs that updated the index and ran the various analyses.
+
+3- For example Facebook,
+
+If you upload a piture on facebook there is a very high chance that the data will be stored in different computers since this is a distributed computing.
+
+India - One Server
+US - One Server
+
+4- Divide the workload like grading divide the grading among different TAs
+
+5- Distributed computing is all about horizontal.
+
+6- One type of master -> slave and peer to peer.
+
+7- master maintains all the address of data but we will have single point of failure
+
+8- indivudal machines are called as nodes, and group of nodes is known as cluster.
+
+9- peer to peer will have no single point of failure.
+
+
