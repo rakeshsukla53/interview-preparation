@@ -1,0 +1,14 @@
+
+https://www.youtube.com/watch?v=WqQRQz_XYg4
+1- Distributed Hash Tables
+
+   -> One example of distributed hash tables is Chord. Chord is Scalable, distributed "lookup service".
+   Key->Values (E.g , DNS, directories)
+
+2- DNS service and directories , proveable correctness
+
+3- A distributed hash table (DHT) is a class of a decentralized distributed system that provides a lookup service similar to a hash table; (key, value) pairs are stored in a DHT, and any participating node can efficiently retrieve the value associated with a given key. Responsibility for maintaining the mapping from keys to values is distributed among the nodes, in such a way that a change in the set of participants causes a minimal amount of disruption. This allows a DHT to scale to extremely large numbers of nodes and to handle continual node arrivals, departures, and failures.
+DHTs form an infrastructure that can be used to build more complex services, such as anycast, cooperative Web caching, distributed file systems, domain name services, instant messaging, multicast, and also peer-to-peer file sharing and content distribution systems. Notable distributed networks that use DHTs include BitTorrent's distributed tracker, the Coral Content Distribution Network, the Kad network, the Storm botnet, Freenet and the YaCy search engine.
+
+4- The main goal of distributed hash tables is to distribute the data among different nodes and retrieval.
+
