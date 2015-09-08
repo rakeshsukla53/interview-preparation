@@ -1,0 +1,4 @@
+1 - Design a collaborative text editor where each participant has infinte undo/redo.
+
+At a high level very naive approach: each participant generates a string of actions associated with a timestamp. It's a product design decision whether to use client side timestamps or server side timestamps for each action. From the server side, it's a matter of merging these action sorted by timestamp. Every participants series of actions are stored, so every time participant sends an undo or redo update that action with the latest timestamp (so that it's the latest action now). Action is defined as a character (including backspace and cursor move)
+
