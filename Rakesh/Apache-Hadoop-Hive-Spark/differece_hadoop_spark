@@ -1,0 +1,17 @@
+Apache Spark vs Apache Hadoop
+
+1- Apache Spark runs-in memory on the cluster, and that's isn't tied to Hadoop Map Reduce Paradigm. This makes the repeated process to the same data faster.
+2- Spark can run as a standalone or on top of Hadoop YARN, where it can read data directly from HDFS. Companies like Yahoo, Intel, Baidu, Trend Micro and Groupon are already using it.
+3- Apache Spark processes data in-memory while Hadoop MapReduce persists back to the disk after a map or reduce action, so Spark should outperform Hadoop MapReduce.
+4-Spark needs a lot of memory. Much like standard DBs, it loads a process into memory and keeps it there until further notice, for the sake of caching. If Spark runs on Hadoop YARN with other resource-demanding services, or if the data is too big to fit entirely into the memory, then there could be major performance degradations for Spark.
+5-MapReduce, however, kills its processes as soon as a job is done, so it can easily run alongside other services with minor performance differences.
+6-Spark performs better when all the data fits in the memory, especially on dedicated clusters; Hadoop MapReduce is designed for data that doesn’t fit in the memory and it can run well alongside other services.
+7-Spark has comfortable APIs for Java, Scala and Python, and also includes Spark SQL (formerly known as Shark) for the SQL savvy. Thanks to Spark’s simple building blocks, it’s easy to write user-defined functions. It even includes an interactive mode for running commands with immediate feedback.
+8-Hadoop MapReduce is written in Java and is infamous for being very difficult to program. Pig makes it easier, though it requires some time to learn the syntax, and Hive adds SQL compatibility to the plate. Some Hadoop tools can also run MapReduce jobs without any programming. Xplenty is a data integration service that is built on top of Hadoop and also does not require any programming or deployment.
+9-MapReduce doesn’t have an interactive mode, although Hive includes a command line interface. Projects like Impala, Presto and Tez want to bring full interactive querying to Hadoop.
+10-The memory in the Spark cluster should be at least as large as the amount of data you need to process, because the data has to fit into the memory for optimal performance. So, if you need to process really Big Data, Hadoop will definitely be the cheaper option since hard disk space comes at a much lower rate than memory space.
+11-Spark has excellent performance and is highly cost-effective thanks to in-memory data processing. It’s compatible with all of Hadoop’s data sources and file formats, and thanks to friendly APIs that are available in several languages, it also has a faster learning curve. Spark even includes graph processing and machine-learning capabilities.
+12-Hadoop MapReduce is a more mature platform and it was built for batch processing. It can be more cost-effective than Spark for truly Big Data that doesn’t fit in memory and also due to the greater availability of experienced staff. Furthermore, the Hadoop MapReduce ecosystem is currently bigger thanks to many supporting projects, tools and cloud services.
+13-But even if Spark looks like the big winner, the chances are that you won’t use it on its own—you still need HDFS to store the data and you may want to use HBase, Hive, Pig, Impala or other Hadoop projects. This means you’ll still need to run Hadoop and MapReduce alongside Spark for a full Big Data package.
+
+
