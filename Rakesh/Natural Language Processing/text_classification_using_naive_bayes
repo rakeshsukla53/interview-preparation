@@ -1,0 +1,34 @@
+1- Assigning subject categories, topics or genres
+2- Spam Detection
+3- Authorship identification
+4- Age/Gender indentification
+5- Language Indentification
+6- Sentiment Analysis
+
+Text Classification
+
+1- Spam detection
+
+
+   You can have a list of email ids which can be used to detect spammers
+   Black list address
+   Sentences like you have won million dollar
+   you have been selected
+
+
+2- Naive Bayes
+
+   Naive Bayes is based on bayes classification which is based on conditional probability
+   see the image
+
+3- for a document d and a class c
+
+   P(c/d) = P(d/c)P(c)
+            ----------
+            P(d)
+
+   For each class c what is the probability of having in d
+
+4- Here you will have two sets, one is training sets and other is testing sets
+
+5-

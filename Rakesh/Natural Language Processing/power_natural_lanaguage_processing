@@ -1,0 +1,25 @@
+1- There are various algorithms which will be used in natural language processing.
+
+   Viterbi
+   Naive Bayes, Maxent Classifiers
+   N-gram language modelling
+   Statistical Parsing
+
+
+2- NLP is not perfect there are lots of ambiguity because of language and incorrect usage of english words.
+
+3- if you do \. it means this is a simple . not that you have take care of all the conditions.
+
+4- Tokenizing
+
+5- Once we tokenize all the words, the second is Normalization. Them. You can easily do all such things using NLP
+
+   We want to match U.S.A and USA
+
+6- mininum edit distance is an alogrithm
+
+7- Questions of mininum edit distance is explained here https://www.youtube.com/watch?v=We3YDTzNXEk
+
+8- Text Classification using Naive Bayes
+
+    How to classify ads using Naive Bayes
