@@ -1,7 +1,9 @@
 __author__ = 'rakesh'
 
-from itertools import combinations
+#Take hint from these comments http://stackoverflow.com/questions/25750240/how-to-find-pairs-with-product-greater-than-sum
 
+
+from itertools import combinations
 
 def C(n, A, B):
 
@@ -15,6 +17,7 @@ def solution(A, B):
 
         P, Q = i
         if C(P, A, B)*C(Q, A, B) >= C(P, A, B) +C(Q, A, B):
+            print i
 
             count += 1
 
