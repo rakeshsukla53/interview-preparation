@@ -19,8 +19,3 @@ for i in range(len(rowString)):
             dynamicMatrix[i+1][j+1] = max(dynamicMatrix[i+1][j], dynamicMatrix[i][j+1])
 
 print dynamicMatrix[len(rowString)][len(columnString)]
-
-#you can solve this problem in O(n*n)
-
-#In every case you need to retain the previous value , while here I am saving the data in memory but
-
