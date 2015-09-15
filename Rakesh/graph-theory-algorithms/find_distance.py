@@ -2,7 +2,7 @@ __author__ = 'rakesh'
 
 #follow this links for more information
 # This is a dictionary whose keys are the nodes of the graph. For each key, the corresponding value is a list containing the nodes that are connected by a direct arc from this node. This is about as simple as it gets (even simpler, the nodes could be represented by numbers instead of names, but names are more convenient and can easily be made to carry more information, such as city names).
-#
+
 # Let's write a simple function to determine a path between two nodes. It takes a graph and the start and end nodes as arguments. It will return a list of nodes (including the start and end nodes) comprising the path. When no path can be found, it returns None. The same node will not occur more than once on the path returned (i.e. it won't contain cycles). The algorithm uses an important technique called backtracking: it tries each possibility in turn until it finds a solution.
 
 graph = {'A': ['B', 'C', 'K'],
@@ -53,6 +53,8 @@ def find_path(graph, start, end, path=[]):
 
                 9- it is also an example which shows how can we go deep inside the function using recursion and backtrack if the condtion doesn't match.
                 10- Understand recursion here
+
+                11- this is valid for undirected graph
                 '''
                 if newpath: return  newpath
         return None
