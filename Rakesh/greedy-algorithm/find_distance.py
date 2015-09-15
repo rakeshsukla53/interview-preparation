@@ -44,10 +44,19 @@ def find_path(graph, start, end, path=[]):
                 Finding the output and savings its state.
 
                 This is a perfect example on how to use recursion
+
+                6- newpath = find_path(graph, node, end, path) save the previous state and then check its condition. If the conditon is met then move forward.
+
+                7- Dynamic programming involves saving previous state of the value so here we will use recursion and meoization
+
+                8- Now do you know the meaning of return function , function and value = function. Recursion is extremely powerful
+
+                9- it is also an example which shows how can we go deep inside the function using recursion and backtrack if the condtion doesn't match.
+                10- Understand recursion here
                 '''
                 if newpath: return  newpath
         return None
 
-print find_path(graph, 'A', 'Z')
+print find_path(graph, 'A', 'K')
 
 
