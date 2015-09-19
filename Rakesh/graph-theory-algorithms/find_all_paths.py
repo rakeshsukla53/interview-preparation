@@ -1,14 +1,9 @@
 __author__ = 'rakesh'
 
-graph = {'A': ['B', 'C', 'K'],
-             'B': ['C', 'D'],
-             'C': ['D'],
-             'D': ['C'],
-             'E': ['F'],
-             'F': ['C'],
-             'K': ['S'],
-             'S': ['L', 'P', 'D'],
-             'P': ['Z']}
+graph = {'A': ['B'],
+             'B': ['C'],
+             'C': ['D', 'F']}
+
 
 def find_path(graph, start, end, path=[]):
         path = path + [start]
