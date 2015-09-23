@@ -192,31 +192,72 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
             if oldpath:
                 print "->".join(oldpath)
 
+    def binaryRightSideView(self, paths=[]):
+        paths = paths + [self.value]
+        if self.left == None and self.right == None:
+            return paths
+        if self.right != None:
+            newpath = self.right.binaryRightSideView(paths)
+            if newpath:
+                print newpath #Stand on the right side of the tree and then check
+
+    def findParent(self, data, parent=None):
+        if data > self.value:
+            if self.right is None:
+                return None, None
+            return self.right.findParent(data, self)
+
+        elif data < self.value:
+            if self.left is None:
+                return None, None
+            return self.left.findParent(data, self)   #refer to this note to under
+            # http://www.pythontutor.com/visualize.html#mode=display
+            #you need to return the value because everything is recursive here
+
+        else:
+            return parent.getRootValue()
+
+    def lowestCommonAncestor(self, p, q):
+        '''
+        find the lowest common ancestor of two nodes
+        '''
+        if (p > self.value and q < self.value) or (p < self.value and q > self.value):
+            return self.value  #that will be the root
+        if p > self.value and q > self.value:
+            return self.right.lowestCommonAncestor(p, q)
+        if p < self.value and q < self.value:
+            return self.left.lowestCommonAncestor(p, q)
+        if p == self.value and (q > self.value or q < self.value):
+            return p
+        if q == self.value and (p > self.value or p < self.value):
+            return q
+
 def height(tree):   #you can print out the  height of the tree
     if tree == None:
         return 0
     else:
         return 1 + max(height(tree.left), height(tree.right))
 
-root = BinarySearchTree(8)
+root = BinarySearchTree(6)
 
-root.insert(3)
-root.insert(10)
 root.insert(2)
-root.insert(4)
+root.insert(1)
 root.insert(5)
-root.insert(9)
-root.insert(11)
-root.insert(13)
-root.insert(14)
-
+root.insert(4)
+# root.insert(4)
+# root.insert(3)
+# root.insert(5)
+# root.insert(8)
+# root.insert(7)
+# root.insert(9)
 #root.delete(3)  # 1 is deleted from the binary tree
 
 #root.compare_two_tree(node)
 #Questions
 
 #print root.reverseTree()
-root.rootToLeaf()
+#root.binaryRightSideView()
+print root.lowestCommonAncestor(4, 2)
 
 '''
 p = height(root.left)
