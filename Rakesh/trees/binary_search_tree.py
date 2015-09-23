@@ -80,6 +80,10 @@ class BinaryTree:
         if self.rightChild:
             self.rightChild.preOrder()
 
+    def rootToLeaf(self):
+
+
+
 def height(tree):   #you can print out the height of the tree
     if tree == None:
         return -1
@@ -88,14 +92,14 @@ def height(tree):   #you can print out the height of the tree
 
 k = BinaryTree(10)
 k.insertLeft(20)
-#k.insertLeft(5)
-#k.insertLeft(4)
-#k.insertLeft(3)
-#k.insertLeft(2)
-k.insertRight(30)
+k.insertLeft(30)
+k.insertLeft(40)
+
+
+
 #k.endLeftChild().insertLeft(30)  #you can go the extreme of the left child and insert some values there
 #print k.getRootValue()   #K is always the top of the root and it is always pointing to the top value
-k.inOrder()  #use this http://www.codeskulptor.org/viz/index.html for checking the visualization of it
+#k.inOrder()  #use this http://www.codeskulptor.org/viz/index.html for checking the visualization of it
 
 #you can create whatever type of tree you want to create here
 #print height(k)

@@ -172,14 +172,31 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
             count += 1
         return count
 
+    def reverseTree(self):
+        self.left, self.right = self.right, self.left
+        if self.left != None:
+            self.left.reverseTree()
+        if self.right != None:
+            self.right.reverseTree()
 
-def height(tree):   #you can print out the height of the tree
+    def rootToLeaf(self, paths=[]):
+        paths = paths + [str(self.value)]
+        if self.left == None and self.right == None:
+            return paths
+        if self.left != None:
+            newpath = self.left.rootToLeaf(paths)
+            if newpath:
+                print "->".join(newpath)
+        if self.right != None:
+            oldpath = self.right.rootToLeaf(paths)
+            if oldpath:
+                print "->".join(oldpath)
+
+def height(tree):   #you can print out the  height of the tree
     if tree == None:
         return 0
     else:
-
         return 1 + max(height(tree.left), height(tree.right))
-
 
 root = BinarySearchTree(8)
 
@@ -195,16 +212,13 @@ root.insert(14)
 
 #root.delete(3)  # 1 is deleted from the binary tree
 
-node = BinarySearchTree(8)
-node.insert(3)
-node.insert(10)
-node.insert(2)
-node.insert(4)
-node.insert(9)
-node.insert(11)
-
 #root.compare_two_tree(node)
 #Questions
+
+#print root.reverseTree()
+root.rootToLeaf()
+
+'''
 p = height(root.left)
 
 q = height(root.right)
@@ -214,7 +228,7 @@ print "Total diameter of the tree is %d" %(p + q + 1)   #diameter of the tree
 #for finding diameter the length of right subtree and length of left subtree and add 1
 
 #the height of tree is calculated recursively
-
+'''
 
 
 
