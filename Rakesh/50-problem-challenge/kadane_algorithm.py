@@ -1,6 +1,8 @@
 __author__ = 'rakesh'
 
 #it is an linear time algorithm
+#this is how using two pointers and single array you will solve most of the questions
+#Solve using this logic
 
 import sys
 
