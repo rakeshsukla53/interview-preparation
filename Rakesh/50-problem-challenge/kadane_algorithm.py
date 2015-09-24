@@ -20,13 +20,13 @@ def kadaneAlgorithm(array):
             maxValue = array[i]
         if i > 0:
             if array[i] + maxCurr > maxCurr or array[i] + maxCurr > 0:
-                if array[i] > 0 and maxCurr < 0:
+                if array[i] > 0 and maxCurr <= 0:
                     p, q = i, i
                     maxCurr = array[i]
                     if maxCurr > maxValue:
                         maxValue = maxCurr
                         r, s = p, q
-                elif array[i] > 0 and maxCurr > 0:
+                elif array[i] > 0 and maxCurr >= 0:
                     q += 1
                     maxCurr = maxCurr + array[i]
                     if maxCurr > maxValue:
@@ -50,5 +50,5 @@ def kadaneAlgorithm(array):
 
     return maxValue, r, s
 
-print kadaneAlgorithm([-2, 1, -3, -4])
+print kadaneAlgorithm([-1, -1, 0, 4, -3, 5])
 
