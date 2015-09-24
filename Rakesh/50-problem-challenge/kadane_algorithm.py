@@ -9,6 +9,8 @@ def kadaneAlgorithm(array):
     :param array:
     :return: the maximum sum of the subarry and the indexes
     '''
+    if len(array) < 1:
+        return None
     maxCurr = -sys.maxint
     maxValue = -sys.maxint
     p, q, r, s = 0, 0, 0, 0
@@ -48,5 +50,5 @@ def kadaneAlgorithm(array):
 
     return maxValue, r, s
 
-print kadaneAlgorithm([-1, -22, 3, 5, -11, 6])
+print kadaneAlgorithm([-2, 1, -3, -4])
 
