@@ -271,20 +271,23 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
         :return the inorder successor of the node
         '''
         presentValue = self.valueExist(data)
-        if presentValue.right == None:
-            try:
-                while self.returnParent(presentValue.getRootValue()).left != presentValue:
-                    presentValue = self.returnParent(presentValue.getRootValue())
-                    if presentValue is None:
-                        return None
+        if presentValue is not None:
+            if presentValue.right == None:
+                try:
+                    while self.returnParent(presentValue.getRootValue()).left != presentValue:
+                        presentValue = self.returnParent(presentValue.getRootValue())
+                        if presentValue is None:
+                            return None
+                    return self.returnParent(presentValue.getRootValue())
+                except AttributeError:
+                    return None
+            else:
+                presentValue = presentValue.right
+                while presentValue.left != None:
+                    presentValue = presentValue.left
                 return presentValue
-            except AttributeError:
-                return None
         else:
-            presentValue = presentValue.right
-            while presentValue.left != None:
-                presentValue = presentValue.left
-            return presentValue
+            return None
 
 def height(tree):   #you can print out the  height of the tree
     if tree == None:
@@ -305,7 +308,7 @@ root.insert(16)
 root.insert(25)
 root.insert(27)
 root.insert(13)
-print root.inorderSuccessor(15).getRootValue()
+print root.inorderSuccessor(11).getRootValue()
 #root.delete(3)  # 1 is deleted from the binary tree
 
 #root.compare_two_tree(node)
