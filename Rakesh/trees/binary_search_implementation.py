@@ -120,7 +120,6 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
                 else:
                     parent.right = n
                 del node
-
         else:
             parent = node
             successor = node.right
@@ -232,24 +231,81 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
         if q == self.value and (p > self.value or p < self.value):
             return q
 
+    def returnParent(self, data, parent=None):
+        '''
+        :return parent of the node and through parent we can findout which is right or left node
+        '''
+        if data > self.value:
+            if self.right != None:
+                return self.right.returnParent(data, self)
+            else:
+                return None
+        if data < self.value:
+            if self.left != None:
+                return self.left.returnParent(data, self)
+            else:
+                return None
+        if self.value == data:
+            return parent
+
+    def valueExist(self, data):
+        '''
+        Checking whether the value exist in the tree or not
+        :return True or False (Whether the value exists or not
+        '''
+        if data > self.value:
+            if self.right != None:
+                return self.right.valueExist(data)
+            else:
+                return None
+        if data < self.value:
+            if self.left != None:
+                return self.left.valueExist(data)
+            else:
+                return None
+        if self.value == data:
+            return self
+
+    def inorderSuccessor(self, data):
+        '''
+        :return the inorder successor of the node
+        '''
+        presentValue = self.valueExist(data)
+        if presentValue.right == None:
+            try:
+                while self.returnParent(presentValue.getRootValue()).left != presentValue:
+                    presentValue = self.returnParent(presentValue.getRootValue())
+                    if presentValue is None:
+                        return None
+                return presentValue
+            except AttributeError:
+                return None
+        else:
+            presentValue = presentValue.right
+            while presentValue.left != None:
+                presentValue = presentValue.left
+            return presentValue
+
 def height(tree):   #you can print out the  height of the tree
     if tree == None:
         return 0
     else:
         return 1 + max(height(tree.left), height(tree.right))
 
-root = BinarySearchTree(6)
+root = BinarySearchTree(15)
 
-root.insert(2)
-root.insert(1)
-root.insert(5)
-root.insert(4)
-# root.insert(4)
-# root.insert(3)
-# root.insert(5)
-# root.insert(8)
-# root.insert(7)
-# root.insert(9)
+root.insert(10)
+root.insert(8)
+root.insert(6)
+root.insert(12)
+root.insert(11)
+root.insert(20)
+root.insert(17)
+root.insert(16)
+root.insert(25)
+root.insert(27)
+root.insert(13)
+print root.inorderSuccessor(15).getRootValue()
 #root.delete(3)  # 1 is deleted from the binary tree
 
 #root.compare_two_tree(node)
@@ -257,7 +313,7 @@ root.insert(4)
 
 #print root.reverseTree()
 #root.binaryRightSideView()
-print root.lowestCommonAncestor(4, 2)
+#print root.lowestCommonAncestor(4, 2)
 
 '''
 p = height(root.left)
