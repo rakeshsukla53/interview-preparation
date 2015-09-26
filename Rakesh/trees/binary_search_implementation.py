@@ -289,35 +289,46 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
         else:
             return None
 
+    def invertBinaryTree(self):
+        '''
+        invert the binary tree and it is fairly very simple
+        '''
+        self.left, self.right = self.right, self.left
+        if self.left != None:
+            self.left.invertBinaryTree()
+        if self.right != None:
+            self.right.invertBinaryTree()
+
+
 def height(tree):   #you can print out the  height of the tree
     if tree == None:
         return 0
     else:
         return 1 + max(height(tree.left), height(tree.right))
 
-root = BinarySearchTree(15)
+root = BinarySearchTree(10)
 
-root.insert(10)
-root.insert(8)
+root.insert(5)
+root.insert(4)
 root.insert(6)
-root.insert(12)
-root.insert(11)
-root.insert(20)
-root.insert(17)
-root.insert(16)
-root.insert(25)
-root.insert(27)
 root.insert(13)
-print root.inorderSuccessor(11).getRootValue()
-#root.delete(3)  # 1 is deleted from the binary tree
-
+root.insert(12)
+root.insert(14)
+# root.insert(20)
+# root.insert(17)
+# root.insert(16)
+# root.insert(25)
+# root.insert(27)
+# root.insert(13)
+# print root.inorderSuccessor(11).getRootValue()
+# #root.delete(3)  # 1 is deleted from the binary tree
 #root.compare_two_tree(node)
 #Questions
-
+root.invertBinaryTree()
 #print root.reverseTree()
 #root.binaryRightSideView()
 #print root.lowestCommonAncestor(4, 2)
-
+root.inOrder()
 '''
 p = height(root.left)
 
