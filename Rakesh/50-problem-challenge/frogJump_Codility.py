@@ -13,7 +13,7 @@ def solution(A, X, D):
 
     positionTime = defaultdict(int)  #Dictionary of position time
     earliestTime = []
-    if D > X:
+    if D >= X:
         return 0
 
     if min(A) > D:
@@ -39,7 +39,6 @@ def solution(A, X, D):
 
     return max(earliestTime)
 
-
-#print solution([1,9], 11, 2)
+print solution([3, 5, 6, 7, 8, 10], 28, 10)
 
 
