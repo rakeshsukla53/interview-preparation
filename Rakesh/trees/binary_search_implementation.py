@@ -299,6 +299,22 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
         if self.right != None:
             self.right.invertBinaryTree()
 
+    def breadthForSearch(self):  #so the breadth for search if perfectly working
+        from collections import deque
+        '''
+        for breadth for search you have the use the deque
+        '''
+        result = []
+        d = deque()
+        d.append(self)
+        while len(d) != 0:
+            if d[0].left != None:
+                d.append(d[0].left)
+            if d[0].right != None:
+                d.append(d[0].right)
+            result.append(d.popleft().value)
+
+        return result
 
 def height(tree):   #you can print out the  height of the tree
     if tree == None:
@@ -334,8 +350,9 @@ root.insert(6)
 root.insert(13)
 root.insert(12)
 root.insert(14)
+print root.breadthForSearch()
 #print isValidBST(root)
-root.preOrder()
+#root.preOrder()
 # root.insert(20)
 # root.insert(17)
 # root.insert(16)
