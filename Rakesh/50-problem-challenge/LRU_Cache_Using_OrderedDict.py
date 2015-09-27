@@ -39,8 +39,6 @@ class LRUCache(object):
                 self.cache[key] = value
 
 
-
-
 testLru = LRUCache(2)
 print testLru.get(2)
 print testLru.set(2, 6)

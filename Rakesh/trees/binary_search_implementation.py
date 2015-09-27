@@ -306,6 +306,26 @@ def height(tree):   #you can print out the  height of the tree
     else:
         return 1 + max(height(tree.left), height(tree.right))
 
+def isValidBST(root, validBinaryTree=[]):
+        """
+        :type root: TreeNode
+        :rtype: bool
+        """
+        if root is None:
+            return False
+
+        if root.left != None:
+            isValidBST(root.left, validBinaryTree)
+        validBinaryTree.append(root.value)
+        if root.right != None:
+            isValidBST(root.right, validBinaryTree)
+
+        for i in range(len(validBinaryTree)-1):
+            if validBinaryTree[i] > validBinaryTree[i+1]:
+                return False
+
+        return True
+
 root = BinarySearchTree(10)
 
 root.insert(5)
@@ -314,6 +334,7 @@ root.insert(6)
 root.insert(13)
 root.insert(12)
 root.insert(14)
+print isValidBST(root)
 # root.insert(20)
 # root.insert(17)
 # root.insert(16)
@@ -324,11 +345,11 @@ root.insert(14)
 # #root.delete(3)  # 1 is deleted from the binary tree
 #root.compare_two_tree(node)
 #Questions
-root.invertBinaryTree()
+#root.invertBinaryTree()
 #print root.reverseTree()
 #root.binaryRightSideView()
 #print root.lowestCommonAncestor(4, 2)
-root.inOrder()
+#root.inOrder()
 '''
 p = height(root.left)
 
