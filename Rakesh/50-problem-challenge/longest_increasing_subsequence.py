@@ -31,3 +31,5 @@ def solution(A):
     return tempArray, max(tempArray)
 
 print solution([-2, 4, -3, 0, 6, 2, 3])  #start counting backwarrd and capture all the values
+
+#these questios can be solved using two pointers. Always remember to use two pointers for such question
