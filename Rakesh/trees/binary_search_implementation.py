@@ -316,6 +316,10 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
 
         return result
 
+
+
+
+
 def height(tree):   #you can print out the  height of the tree
     if tree == None:
         return 0
@@ -345,12 +349,13 @@ def isValidBST(root, validBinaryTree=[]):
 root = BinarySearchTree(10)
 
 root.insert(5)
-root.insert(4)
+root.insert(3)
 root.insert(6)
-root.insert(13)
-root.insert(12)
-root.insert(14)
-print root.breadthForSearch()
+root.insert(11)
+root.upsideDownBinaryTree(root)
+# root.insert(12)
+# root.insert(14)
+# print root.breadthForSearch()
 #print isValidBST(root)
 #root.preOrder()
 # root.insert(20)
