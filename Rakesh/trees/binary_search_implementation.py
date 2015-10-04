@@ -316,10 +316,6 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
 
         return result
 
-
-
-
-
 def height(tree):   #you can print out the  height of the tree
     if tree == None:
         return 0
