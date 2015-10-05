@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/python-iterators/Iter and next will be automatically called.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/python-iterators/Iterator_behavior.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/python-iterators/int object doesn't contain __getitem class which will be invoked automatically.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/python-iterators/generators.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/python-iterators/iterators.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/python-iterators/remove_while_iteration.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/trees/preOrderTraversalVerification.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/trees/iterative_preorder_traversal.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/trees/level_wise_printing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/trees/preorder_sequence_verify.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/trees/smallest_path_between_root_leaf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/trees/binary_search_implementation.py" afterPath="$PROJECT_DIR$/Rakesh/trees/binary_search_implementation.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/Desktop/MobHTML/introduction.txt" afterPath="$USER_HOME$/Desktop/MobHTML/introduction.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -78,17 +78,27 @@
         <entry file="file://$PROJECT_DIR$/Rakesh/python-iterators/iterators.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="23" selection-end-column="10" />
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generators.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Rakesh/python-iterators/generators.py">
+      <file leaf-file-name="preorder_sequence_verify.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Rakesh/trees/preorder_sequence_verify.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4491018">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.65868264">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iterative_preorder_traversal.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rakesh/trees/iterative_preorder_traversal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -109,10 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Rakesh/distributed_computing/examples_distributed_computing" />
-        <option value="$PROJECT_DIR$/Rakesh/distributed_computing/distributed_hash_table" />
-        <option value="$PROJECT_DIR$/../mp3-on-commandline/string_cleaning_different_approach.py" />
-        <option value="$PROJECT_DIR$/Rakesh/distributed_computing/Design_website_like_github" />
         <option value="$PROJECT_DIR$/Rakesh/trees/find_the_second_largest_element.py" />
         <option value="$PROJECT_DIR$/Rakesh/sorting/two sorted lists and outputs a sorted list that is their union.”.py" />
         <option value="$PROJECT_DIR$/Rakesh/Natural Language Processing/Queries_Trending_Topics" />
@@ -155,11 +161,15 @@
         <option value="$PROJECT_DIR$/Rakesh/trees/binary_tree_upside_doww.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/Recover Binary Search Tree.py" />
         <option value="$USER_HOME$/Desktop/MobHTML/introduction.txt" />
-        <option value="$PROJECT_DIR$/Rakesh/trees/binary_search_implementation.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/Binary Tree Maximum Path Sum Not solved yet.py" />
         <option value="$PROJECT_DIR$/Rakesh/python-iterators/remove_while_iteration.py" />
         <option value="$PROJECT_DIR$/Rakesh/python-iterators/iterators.py" />
         <option value="$PROJECT_DIR$/Rakesh/python-iterators/generators.py" />
+        <option value="$PROJECT_DIR$/Rakesh/trees/level_wise_printing.py" />
+        <option value="$PROJECT_DIR$/Rakesh/trees/binary_search_implementation.py" />
+        <option value="$PROJECT_DIR$/Rakesh/trees/smallest_path_between_root_leaf.py" />
+        <option value="$PROJECT_DIR$/Rakesh/trees/iterative_preorder_traversal.py" />
+        <option value="$PROJECT_DIR$/Rakesh/trees/preorder_sequence_verify.py" />
       </list>
     </option>
   </component>
@@ -267,24 +277,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="trees" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interview-preparation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interview-preparation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rakesh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python-iterators" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -827,13 +819,20 @@
       <option name="project" value="LOCAL" />
       <updated>1443936327681</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="iter, generators and iterators">
+      <created>1444015408816</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1444015408816</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -850,7 +849,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -890,7 +888,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pigeonhole principal" />
     <MESSAGE value="hashing notes" />
     <MESSAGE value="trie data structure" />
     <MESSAGE value="redBlackTree" />
@@ -915,7 +912,8 @@
     <MESSAGE value="find_unique_number_of_binary_tree" />
     <MESSAGE value="iterative is better than recursion" />
     <MESSAGE value="tree questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="tree questions" />
+    <MESSAGE value="iter, generators and iterators" />
+    <option name="LAST_COMMIT_MESSAGE" value="iter, generators and iterators" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -927,34 +925,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakesh/trees/find_the_second_largest_element.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.056818184">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/bit-manipulation/next_smallest_largest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22727273">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/find_all_paths.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/string_compression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.625">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/maximum_subarraysum_with_negative_values.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1239,13 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/trees/binary_search_implementation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6">
-          <caret line="341" column="0" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/trees/Binary Tree Maximum Path Sum Not solved yet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9">
@@ -1261,10 +1224,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/python-iterators/iterators.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/level_wise_printing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="23" selection-end-column="10" />
+        <state vertical-scroll-proportion="1.0179641">
+          <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -1273,6 +1236,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4491018">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/smallest_path_between_root_leaf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83832335">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/binary_search_implementation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49101797">
+          <caret line="360" column="61" selection-start-line="356" selection-start-column="0" selection-end-line="360" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/python-iterators/iterators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/iterative_preorder_traversal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/preorder_sequence_verify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65868264">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>

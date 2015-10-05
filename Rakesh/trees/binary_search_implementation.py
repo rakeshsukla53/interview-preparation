@@ -305,16 +305,54 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
         for breadth for search you have the use the deque
         '''
         result = []
+        finalResult, n = [], 0
+        if self is None:
+            return list()
         d = deque()
         d.append(self)
+        result.append([self.value])
         while len(d) != 0:
-            if d[0].left != None:
-                d.append(d[0].left)
-            if d[0].right != None:
-                d.append(d[0].right)
-            result.append(d.popleft().value)
+            k = list(d)
+            for node in k:
+                if node.left != None:
+                    finalResult.append(node.left.value)
+                    d.append(node.left)
+                if node.right != None:
+                    finalResult.append(node.right.value)
+                    d.append(node.right)
+                d.popleft()
+            result.append(finalResult)
+            finalResult = []
 
-        return result
+        print result[:-1]
+
+    def levelWisePrinting(self):  #so the breadth for search if perfectly working
+        from collections import deque
+        '''
+        for breadth for search you have the use the deque
+        '''
+        result = []
+        finalResult, n = [], 0
+        if self is None:
+            return list()
+        d = deque()
+        d.append(self)
+        result.append([self.value])
+        while len(d) != 0:
+            k = list(d)
+            for node in k:
+                if node.left != None:
+                    finalResult.append(node.left.value)
+                    d.append(node.left)
+                if node.right != None:
+                    finalResult.append(node.right.value)
+                    d.append(node.right)
+                d.popleft()
+            result.append(finalResult)
+            finalResult = []
+
+        print result[:-1]
+
 
 def height(tree):   #you can print out the  height of the tree
     if tree == None:
@@ -344,11 +382,12 @@ def isValidBST(root, validBinaryTree=[]):
 
 root = BinarySearchTree(10)
 
-root.insert(5)
-root.insert(3)
-root.insert(6)
-root.insert(11)
-root.upsideDownBinaryTree(root)
+root.insert(8)
+root.insert(20)
+root.insert(15)
+root.insert(35)
+#root.upsideDownBinaryTree(root)
+root.breadthForSearch()
 # root.insert(12)
 # root.insert(14)
 # print root.breadthForSearch()
