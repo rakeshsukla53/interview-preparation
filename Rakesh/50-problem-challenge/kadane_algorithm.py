@@ -52,5 +52,5 @@ def kadaneAlgorithm(array):
 
     return maxValue, r, s
 
-print kadaneAlgorithm([0,1,2,3,4,5,6,-18, 21])
+print kadaneAlgorithm([1, -2, 0])
 

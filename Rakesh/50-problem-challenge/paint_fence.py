@@ -7,4 +7,20 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
+        colors = list(range(1, k))
+
+        if n == 1:
+            return k
+
+        if n == 2:
+            from itertools import product
+            count = 0
+            for i in product(colors, repeat=2):
+                count += 1
+            return count
+
+        if n > 2:
+            from itertools import combinations
+
+
 
