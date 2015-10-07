@@ -17,4 +17,4 @@ def find_path(graph, start, end, path=[]):
                 if newpath: print newpath
         return None
 
-print find_path(graph, 'A', 'D')
+find_path(graph, 'A', 'D')
