@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_001.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_002.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_003.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_004.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_005.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_006.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_007.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_008.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_009.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_010.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_011.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_012.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_013.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_014.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_015.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Slides/Selection_016.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/Django Testing Notes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/assertion_exception.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/class_assertion.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/how_to_use_unitest.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/test_example.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Python-testing/testing_using_unittest.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/Desktop/MobHTML/introduction.txt" afterPath="$USER_HOME$/Desktop/MobHTML/introduction.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="interview-preparation.iws" />
@@ -904,22 +881,29 @@
       <option name="project" value="LOCAL" />
       <updated>1444364299447</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="slides for django-testing">
+      <created>1444536712157</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1444536712157</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37810612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37810612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31923077" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31923077" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -928,7 +912,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -968,7 +951,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="kadane algorithm" />
     <MESSAGE value="LRU Cache implementation" />
     <MESSAGE value="whether this is a valid binary search tree" />
     <MESSAGE value="collection deque example" />
@@ -993,7 +975,8 @@
     <MESSAGE value="encoding and decoding of strings" />
     <MESSAGE value="backtracking solution" />
     <MESSAGE value="generating parenthesis" />
-    <option name="LAST_COMMIT_MESSAGE" value="generating parenthesis" />
+    <MESSAGE value="slides for django-testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="slides for django-testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
