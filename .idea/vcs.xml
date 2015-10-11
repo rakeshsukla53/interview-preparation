@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$USER_HOME$/Desktop/MobHTML" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../enigma.io" vcs="Git" />
   </component>
 </project>
