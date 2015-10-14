@@ -7,7 +7,7 @@ graph = {'1': ['2', '3'],
 
 def find_all_paths(graph, start, path=[]):
         path = path + [start]
-        if len(path) == 3:
+        if len(path) == 2:
             return [path]
         if not graph.has_key(start):
             return []
