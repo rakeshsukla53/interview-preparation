@@ -1,6 +1,7 @@
 #
 from collections import defaultdict
 import sys
+
 d = defaultdict(list)
 
 for i in range(7):
