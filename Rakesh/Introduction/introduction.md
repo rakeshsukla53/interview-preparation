@@ -23,7 +23,6 @@ Astrohaus:
 Technology - Python, Django, AWS
 Key Accomplishment - Writing Unit test cases using selenium in Django
 
-
 Outside of Work:
 
 Representing NYU at table tennis in events and tournaments
