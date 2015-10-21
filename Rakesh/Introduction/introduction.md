@@ -14,13 +14,13 @@ Key Accomplishment - I cleaned more than 50 datasets using R and OpenRefine
                      Worked on Django
                      
 Oak Hill Advisors:
-Technology - Python , Django, MS-SQL , Azure
+Technology - Python, Apache Hive, Apache-Map Reduce, Django, MS-SQL , Azure
 Key Accomplishment - I created Django Application which can parse more than 5K PDF files and extract meaningful information from out it, and put in a single file. 
                      Created my own server using OpenStreet API 
                      Visually view their filesystem(How many files are deleting, updated, who is doing that, how many files are moving out)                   
                      
 Astrohaus:
-Technology - Python, Django, AWS
+Technology - Python, Django, AWS, Apache-spark
 Key Accomplishment - Writing Unit test cases using selenium in Django
 
 Outside of Work:
