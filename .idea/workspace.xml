@@ -2,9 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/05bd31d952e10b3e506cfe43e12fe8a7.jpg" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/05bd31d952e10b3e506cfe43e12fe8a7.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/LRU_Cache_Using_OrderedDict.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/LRU_Cache_Using_OrderedDict.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/Ordered_Dict.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/Ordered_Dict.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/WWW.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/WWW.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/WWW1.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/WWW1.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/binaryLevel_Traversal.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/binaryLevel_Traversal.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/binary_tree_whether_node_is_right_or_left.jpg" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/binary_tree_whether_node_is_right_or_left.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/binary_tree_whether_node_is_right_or_left_another_method.jpg" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/binary_tree_whether_node_is_right_or_left_another_method.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/candyProblem.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/candyProblem.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/check_permutation.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/check_permutation.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/combination_function.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/combination_function.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/count_number_of_ones.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/count_number_of_ones.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/counter_challenge.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/counter_challenge.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/deque_collection_python.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/deque_collection_python.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/draw_stairCase.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/draw_stairCase.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/encoding_decoding_strings.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/encoding_decoding_strings.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/findLeader.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/findLeader.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/find_number_of_binary_tree.jpg" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/find_number_of_binary_tree.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/find_peak_element.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/find_peak_element.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/find_the_number_of_binary_tree_1.jpg" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/find_the_number_of_binary_tree_1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/frogJump.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/frogJump.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/frogJump_Codility.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/frogJump_Codility.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/implement_trie_prefix_tree.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/implement_trie_prefix_tree.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/inorder_successor_logic.png" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/inorder_successor_logic.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/kadane_algorithm.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/kadane_algorithm.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/left_right_Binary_Child.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/left_right_Binary_Child.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/longest_increasing_subsequence.jpg" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/longest_increasing_subsequence.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/longest_increasing_subsequence.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/longest_increasing_subsequence.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/longest_substring_optimized.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/longest_substring_optimized.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/longest_substring_without_repeating_characters.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/longest_substring_without_repeating_characters.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/maximize_sum.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/maximize_sum.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/maximize_sum_optimize.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/maximize_sum_optimize.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/maximum_subarraysum_with_negative_values.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/maximum_subarraysum_with_negative_values.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/missing_number.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/missing_number.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/mobile_typo_words.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/mobile_typo_words.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/move_zeros_to_right.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/move_zeros_to_right.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/multiplication_of_strings.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/multiplication_of_strings.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/number_of_islands.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/number_of_islands.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/paint_fence.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/paint_fence.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/palindrome_using_manachar_algorithm.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/palindrome_using_manachar_algorithm.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/peeking_iterator.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/peeking_iterator.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/permutationFunction.png" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/permutationFunction.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/permutationFunction.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/permutationFunction.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/reverse_a_digit.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/reverse_a_digit.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/root_to_leaf.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/root_to_leaf.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/spiral_matrix.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/spiral_matrix.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/string_compression.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/string_compression.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/subset II problem.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/subset II problem.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/subsets.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/subsets.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/subsets_II.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/subsets_II.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/subsets_challenge.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/subsets_challenge.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/subsets_problem_optimized.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/subsets_problem_optimized.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/triangle_inequality.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/triangle_inequality.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/trie_implementation.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/trie_implementation.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/triplet_challenge.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/triplet_challenge.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/valid_parentheses.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/valid_parentheses.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/word_length_dictionary_problem.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/word_length_dictionary_problem.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/50-problem-challenge/wwwwwhbk.py" afterPath="$PROJECT_DIR$/Rakesh/General-Challenges/wwwwwhbk.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../enigma.io/README.md" afterPath="$PROJECT_DIR$/../enigma.io/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/Introduction/introduction.md" afterPath="$PROJECT_DIR$/Rakesh/Introduction/introduction.md" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/Desktop/MobHTML/introduction.txt" afterPath="$USER_HOME$/Desktop/MobHTML/introduction.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -100,30 +157,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="introduction.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Rakesh/Introduction/introduction.md">
-          <provider editor-type-id="MultiMarkdownFxHtmlEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0">
-              <caret line="24" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-            <state />
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41396105">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -617,12 +655,6 @@
       <option name="number" value="Default" />
       <updated>1440448994947</updated>
     </task>
-    <task id="LOCAL-00004" summary="looping conditional arithmatic operations">
-      <created>1440463529689</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1440463529689</updated>
-    </task>
     <task id="LOCAL-00005" summary="cheatsheet for javascript added">
       <created>1440524834176</created>
       <option name="number" value="00005" />
@@ -911,19 +943,26 @@
       <option name="project" value="LOCAL" />
       <updated>1445312461684</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="gitignore files added">
+      <created>1445409430875</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1445409430876</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40026864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40026864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -934,7 +973,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31666666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -975,7 +1013,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="longest increasing subsequence&#10;" />
     <MESSAGE value="whether the word present in dictionary or not&#10;" />
     <MESSAGE value="trie implementation&#10;" />
     <MESSAGE value="how trie feels like using dictionary&#10;" />
@@ -1000,7 +1037,8 @@
     <MESSAGE value="interview questions" />
     <MESSAGE value="subsets new method" />
     <MESSAGE value="zlib function is used for compress and decompress" />
-    <option name="LAST_COMMIT_MESSAGE" value="zlib function is used for compress and decompress" />
+    <MESSAGE value="gitignore files added" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore files added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1012,13 +1050,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/count_number_of_ones.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5988024">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/djisktra.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1026,61 +1057,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/valid_parentheses.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/valid_parentheses.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1377245">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/check_permutation.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/check_permutation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7784431">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/word_length_dictionary_problem.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/word_length_dictionary_problem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9580838">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/counter_challenge.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/counter_challenge.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6886228">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/subsets_problem_optimized.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/subsets_problem_optimized.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.50898206">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/triangle_inequality.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/triangle_inequality.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7185629">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/binary_tree_whether_node_is_right_or_left.jpg">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/binary_tree_whether_node_is_right_or_left.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/encoding_decoding_strings.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/encoding_decoding_strings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4790419">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/triplet_challenge.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/triplet_challenge.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65868264">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
@@ -1116,21 +1147,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/wwwwwhbk.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/wwwwwhbk.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3">
           <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/permutationFunction.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/permutationFunction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/permutationFunction.png">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/permutationFunction.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -1200,7 +1231,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/subsets.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/subsets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47619048">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
@@ -1228,7 +1259,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/subsets_II.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/subsets_II.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08928572">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="41" />
@@ -1312,7 +1343,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/find_peak_element.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/find_peak_element.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
@@ -1333,7 +1364,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/50-problem-challenge/WWW.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/General-Challenges/WWW.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.79324055">
           <caret line="27" column="0" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="0" />
@@ -1359,8 +1390,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="24" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6884562">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1371,10 +1402,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$USER_HOME$/dotfiles/gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41396105">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
