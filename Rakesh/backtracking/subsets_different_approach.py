@@ -15,7 +15,6 @@ class Solution(object):
         nums.sort()
         
         for i in range(len(nums)):
-        
             uniqueSubset.append([nums[i]])
         
             for j in range(len(uniqueSubset)):
