@@ -1,5 +1,3 @@
-__author__ = 'rakesh'
-
 # The idea is the following:
 #
 #     d is an array that contains booleans
