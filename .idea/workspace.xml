@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+    <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="edit distance is not levenstein">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/python-iterators/Selection_070.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/sorting/quick_sort.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/sorting/quick_sort_partition.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/sorting/quick_sort_unstability.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/math/Fraction to Recurring Decimal.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/trees/Kth Smallest Element in a BST.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/sorting/quick_sort.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/sorting/stable vs unstable algorithm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/python-iterators/zip_text_wrap_iterator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../enigma.io/README.md" afterPath="$PROJECT_DIR$/../enigma.io/README.md" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/Desktop/MobHTML/introduction.txt" afterPath="$USER_HOME$/Desktop/MobHTML/introduction.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/word_problem/word_break_problem_no_need_of_permutation.py" afterPath="$PROJECT_DIR$/Rakesh/word_problem/word_break_problem_no_need_of_permutation.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="interview-preparation.iws" />
@@ -27,6 +35,7 @@
     <SUITE FILE_PATH="coverage/interview-preparation$LRU_Cache_Using_OrderedDict.coverage" NAME="LRU_Cache_Using_OrderedDict Coverage Results" MODIFIED="1443339539831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase.coverage" NAME="Unittests in TestCase Coverage Results" MODIFIED="1444518715027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$binaryLevel_Traversal.coverage" NAME="binaryLevel_Traversal Coverage Results" MODIFIED="1443353228034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_interview_preparation.coverage" NAME="Unittests in interview-preparation Coverage Results" MODIFIED="1445583752911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/interview-preparation$assertion_exception.coverage" NAME="assertion_exception Coverage Results" MODIFIED="1444517982333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$hashingInPython.coverage" NAME="hashingInPython Coverage Results" MODIFIED="1440974236779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python" />
     <SUITE FILE_PATH="coverage/interview-preparation$two_sorted_lists_and_outputs_a_sorted_list_that_is_their_union_.coverage" NAME="two sorted lists and outputs a sorted list that is their union.” Coverage Results" MODIFIED="1441687425761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/sorting" />
@@ -38,8 +47,8 @@
     <SUITE FILE_PATH="coverage/interview-preparation$subsets.coverage" NAME="subsets Coverage Results" MODIFIED="1444811866915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$find_number_of_binary_tree.coverage" NAME="find_number_of_binary_tree Coverage Results" MODIFIED="1443851121793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trees" />
     <SUITE FILE_PATH="coverage/interview-preparation$string_cleaning_different_approach.coverage" NAME="string_cleaning_different_approach Coverage Results" MODIFIED="1441678286908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../mp3-on-commandline" />
-    <SUITE FILE_PATH="coverage/interview-preparation$generators.coverage" NAME="generators Coverage Results" MODIFIED="1444015104444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-iterators" />
     <SUITE FILE_PATH="coverage/interview-preparation$peculiar_balance.coverage" NAME="peculiar_balance Coverage Results" MODIFIED="1440563489308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python" />
+    <SUITE FILE_PATH="coverage/interview-preparation$generators.coverage" NAME="generators Coverage Results" MODIFIED="1444015104444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-iterators" />
     <SUITE FILE_PATH="coverage/interview-preparation$Using_class_variables_incorrectly.coverage" NAME="Using class variables incorrectly Coverage Results" MODIFIED="1440449688107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-mistakes" />
     <SUITE FILE_PATH="coverage/interview-preparation$matrix_backtracking.coverage" NAME="matrix_backtracking Coverage Results" MODIFIED="1444811654589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
     <SUITE FILE_PATH="coverage/interview-preparation$Misunderstanding_Python_scope_rules.coverage" NAME="Misunderstanding Python scope rules Coverage Results" MODIFIED="1440450581669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-mistakes" />
@@ -62,6 +71,7 @@
     <SUITE FILE_PATH="coverage/interview-preparation$subset_II_problem.coverage" NAME="subset II problem Coverage Results" MODIFIED="1444079510819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$combination_function.coverage" NAME="combination_function Coverage Results" MODIFIED="1443629151102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_how_to_use_unitest.coverage" NAME="Unittests in how_to_use_unitest Coverage Results" MODIFIED="1444520733827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
+    <SUITE FILE_PATH="coverage/interview-preparation$edit_distance.coverage" NAME="edit_distance Coverage Results" MODIFIED="1445576113615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/edit_distance" />
     <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase__1_.coverage" NAME="Unittests in TestCase (1) Coverage Results" MODIFIED="1444518705603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$find_peak_element.coverage" NAME="find_peak_element Coverage Results" MODIFIED="1445286305365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$binary_tree_upside_doww.coverage" NAME="binary_tree_upside_doww Coverage Results" MODIFIED="1443862223142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trees" />
@@ -69,31 +79,61 @@
     <SUITE FILE_PATH="coverage/interview-preparation$deque_collection_python.coverage" NAME="deque_collection_python Coverage Results" MODIFIED="1443346983505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$watson_improved_question.coverage" NAME="watson_improved_question Coverage Results" MODIFIED="1445312348111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Regular_Expression" />
     <SUITE FILE_PATH="coverage/interview-preparation$candyProblem.coverage" NAME="candyProblem Coverage Results" MODIFIED="1443585714019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$zip_check.coverage" NAME="zip_check Coverage Results" MODIFIED="1445556452663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-iterators" />
     <SUITE FILE_PATH="coverage/interview-preparation$frogJump_Codility.coverage" NAME="frogJump_Codility Coverage Results" MODIFIED="1443333385294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$zip_check.coverage" NAME="zip_check Coverage Results" MODIFIED="1445556452663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-iterators" />
     <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase__3_.coverage" NAME="Unittests in TestCase (3) Coverage Results" MODIFIED="1444518716308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$subsets_challenge.coverage" NAME="subsets_challenge Coverage Results" MODIFIED="1443586557006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$encoding_decoding_strings.coverage" NAME="encoding_decoding_strings Coverage Results" MODIFIED="1444270933514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$word_ladder.coverage" NAME="word_ladder Coverage Results" MODIFIED="1445574204100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/edit_distance" />
     <SUITE FILE_PATH="coverage/interview-preparation$word_length_dictionary_problem.coverage" NAME="word_length_dictionary_problem Coverage Results" MODIFIED="1443504787771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$number_of_islands_map.coverage" NAME="number_of_islands_map Coverage Results" MODIFIED="1445562738996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
     <SUITE FILE_PATH="coverage/interview-preparation$Specifying_parameters_incorrectly_for_an_exception_block.coverage" NAME="Specifying parameters incorrectly for an exception block Coverage Results" MODIFIED="1440450223998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-mistakes" />
     <SUITE FILE_PATH="coverage/interview-preparation$subsets_sum.coverage" NAME="subsets_sum Coverage Results" MODIFIED="1444814596156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
     <SUITE FILE_PATH="coverage/interview-preparation$sum_of_numbers.coverage" NAME="sum_of_numbers Coverage Results" MODIFIED="1440467084283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python" />
     <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase__2_.coverage" NAME="Unittests in TestCase (2) Coverage Results" MODIFIED="1444518706495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$trie_implementation.coverage" NAME="trie_implementation Coverage Results" MODIFIED="1443506793752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trie" />
     <SUITE FILE_PATH="coverage/interview-preparation$subsets_different_approach.coverage" NAME="subsets_different_approach Coverage Results" MODIFIED="1445284063721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Fraction_to_Recurring_Decimal.coverage" NAME="Fraction to Recurring Decimal Coverage Results" MODIFIED="1445586126272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/math" />
     <SUITE FILE_PATH="coverage/interview-preparation$find_distance.coverage" NAME="find_distance Coverage Results" MODIFIED="1444181071345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/graph-theory-algorithms" />
     <SUITE FILE_PATH="coverage/interview-preparation$environment_varibles.coverage" NAME="environment_varibles Coverage Results" MODIFIED="1445300748232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-environment" />
     <SUITE FILE_PATH="coverage/interview-preparation$IBM_Watson_1.coverage" NAME="IBM_Watson_1 Coverage Results" MODIFIED="1444102784060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$find_number_of_citation.coverage" NAME="find_number_of_citation Coverage Results" MODIFIED="1445567722782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
     <SUITE FILE_PATH="coverage/interview-preparation$reverse_a_digit.coverage" NAME="reverse_a_digit Coverage Results" MODIFIED="1442964562928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$simple_Trie.coverage" NAME="simple_Trie Coverage Results" MODIFIED="1444169252632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trie" />
     <SUITE FILE_PATH="coverage/interview-preparation$HBK.coverage" NAME="HBK Coverage Results" MODIFIED="1444188581267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$simple_Trie.coverage" NAME="simple_Trie Coverage Results" MODIFIED="1444169252632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trie" />
     <SUITE FILE_PATH="coverage/interview-preparation$next_smallest_largest.coverage" NAME="next_smallest_largest Coverage Results" MODIFIED="1442553875403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/bit-manipulation" />
     <SUITE FILE_PATH="coverage/interview-preparation$valid_parentheses.coverage" NAME="valid_parentheses Coverage Results" MODIFIED="1444268688807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$kadane_algorithm.coverage" NAME="kadane_algorithm Coverage Results" MODIFIED="1444094542362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$watson_question.coverage" NAME="watson_question Coverage Results" MODIFIED="1445309608139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Regular_Expression" />
+    <SUITE FILE_PATH="coverage/interview-preparation$kadane_algorithm.coverage" NAME="kadane_algorithm Coverage Results" MODIFIED="1444094542362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - bakery@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="video" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -101,11 +141,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="iterators.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Rakesh/python-iterators/iterators.py">
+      <file leaf-file-name="zip_text_wrap_iterator.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Rakesh/python-iterators/zip_text_wrap_iterator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33399603">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.168">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,18 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Rakesh/trees/Unique Binary Search Trees II.py" />
-        <option value="$PROJECT_DIR$/Rakesh/trees/binary_tree_upside_doww.py" />
-        <option value="$PROJECT_DIR$/Rakesh/trees/Recover Binary Search Tree.py" />
-        <option value="$USER_HOME$/Desktop/MobHTML/introduction.txt" />
-        <option value="$PROJECT_DIR$/Rakesh/trees/Binary Tree Maximum Path Sum Not solved yet.py" />
-        <option value="$PROJECT_DIR$/Rakesh/python-iterators/remove_while_iteration.py" />
-        <option value="$PROJECT_DIR$/Rakesh/python-iterators/iterators.py" />
-        <option value="$PROJECT_DIR$/Rakesh/python-iterators/generators.py" />
-        <option value="$PROJECT_DIR$/Rakesh/trees/level_wise_printing.py" />
-        <option value="$PROJECT_DIR$/Rakesh/trees/binary_search_implementation.py" />
-        <option value="$PROJECT_DIR$/Rakesh/trees/smallest_path_between_root_leaf.py" />
-        <option value="$PROJECT_DIR$/Rakesh/trees/iterative_preorder_traversal.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/preorder_sequence_verify.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/balanced_binary_tree.py" />
         <option value="$PROJECT_DIR$/Rakesh/50-problem-challenge/subset II problem.py" />
@@ -171,12 +199,24 @@
         <option value="$PROJECT_DIR$/Rakesh/Regular_Expression/watson_question.py" />
         <option value="$PROJECT_DIR$/Rakesh/Regular_Expression/watson_improved_question.py" />
         <option value="$PROJECT_DIR$/Rakesh/Introduction/introduction.md" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Rakesh/backtracking/subsets_different_approach.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/__init__.py" />
         <option value="$PROJECT_DIR$/Rakesh/python-iterators/zip_check.py" />
         <option value="$PROJECT_DIR$/Rakesh/python-iterators/zigzag_iterators.py" />
         <option value="$PROJECT_DIR$/Rakesh/word_problem/word_break_problem_no_need_of_permutation.py" />
+        <option value="$PROJECT_DIR$/Rakesh/backtracking/number_of_islands_stefan_solution.py" />
+        <option value="$PROJECT_DIR$/Rakesh/backtracking/number_of_islands_map.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Common-interview-problems/find_number_of_citation.py" />
+        <option value="$PROJECT_DIR$/Rakesh/edit_distance/word_ladder.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Rakesh/edit_distance/edit_distance.py" />
+        <option value="$PROJECT_DIR$/Rakesh/math/Fraction to Recurring Decimal.py" />
+        <option value="$PROJECT_DIR$/Rakesh/trees/Kth Smallest Element in a BST.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/8ab859f7-0315-4c17-b807-9a7ca4644997/console.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/fe09e2f1-f2f2-4fad-8cc8-aa13d14b1cd6/console.sql" />
+        <option value="$PROJECT_DIR$/Rakesh/sorting/stable vs unstable algorithm" />
+        <option value="$PROJECT_DIR$/Rakesh/sorting/quick_sort.py" />
+        <option value="$PROJECT_DIR$/Rakesh/python-iterators/zip_text_wrap_iterator.py" />
       </list>
     </option>
   </component>
@@ -189,9 +229,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1535" />
-    <option name="height" value="876" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -236,7 +276,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,6 +310,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,6 +318,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -288,100 +330,105 @@
       <recent name="http://" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Rakesh/python-iterators" />
       <recent name="$PROJECT_DIR$/Rakesh" />
+      <recent name="$PROJECT_DIR$/Rakesh/python-iterators" />
       <recent name="$PROJECT_DIR$/Rakesh/permutation-combination" />
       <recent name="$PROJECT_DIR$/Rakesh/trees" />
       <recent name="$PROJECT_DIR$/Rakesh/backtracking" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.zip_check">
-    <configuration default="false" name="find_peak_element" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Fraction to Recurring Decimal">
+    <configuration default="false" name="find_number_of_citation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/50-problem-challenge/find_peak_element.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Common-interview-problems/find_number_of_citation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="environment_varibles" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="word_ladder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Python-environment" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/edit_distance" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Python-environment/environment_varibles.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/edit_distance/word_ladder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="watson_question" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="edit_distance" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Regular_Expression" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/edit_distance" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Regular_Expression/watson_question.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/edit_distance/edit_distance.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="watson_improved_question" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Unittests in interview-preparation" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Regular_Expression" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Regular_Expression/watson_improved_question.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="zip_check" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Fraction to Recurring Decimal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/python-iterators" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/math" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/python-iterators/zip_check.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/math/Fraction to Recurring Decimal.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -575,19 +622,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.find_peak_element" />
-      <item index="1" class="java.lang.String" itemvalue="Python.environment_varibles" />
-      <item index="2" class="java.lang.String" itemvalue="Python.watson_question" />
-      <item index="3" class="java.lang.String" itemvalue="Python.watson_improved_question" />
-      <item index="4" class="java.lang.String" itemvalue="Python.zip_check" />
+      <item index="0" class="java.lang.String" itemvalue="Python.find_number_of_citation" />
+      <item index="1" class="java.lang.String" itemvalue="Python.word_ladder" />
+      <item index="2" class="java.lang.String" itemvalue="Python.edit_distance" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in interview-preparation" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Fraction to Recurring Decimal" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.zip_check" />
-        <item index="1" class="java.lang.String" itemvalue="Python.watson_improved_question" />
-        <item index="2" class="java.lang.String" itemvalue="Python.watson_question" />
-        <item index="3" class="java.lang.String" itemvalue="Python.environment_varibles" />
-        <item index="4" class="java.lang.String" itemvalue="Python.find_peak_element" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Fraction to Recurring Decimal" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in interview-preparation" />
+        <item index="2" class="java.lang.String" itemvalue="Python.edit_distance" />
+        <item index="3" class="java.lang.String" itemvalue="Python.word_ladder" />
+        <item index="4" class="java.lang.String" itemvalue="Python.find_number_of_citation" />
       </list>
     </recent_temporary>
   </component>
@@ -601,42 +648,6 @@
       <created>1440448994947</created>
       <option name="number" value="Default" />
       <updated>1440448994947</updated>
-    </task>
-    <task id="LOCAL-00008" summary="pigeonhole principal">
-      <created>1440976066883</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1440976066883</updated>
-    </task>
-    <task id="LOCAL-00009" summary="hashing notes">
-      <created>1440976618687</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1440976618687</updated>
-    </task>
-    <task id="LOCAL-00010" summary="trie data structure">
-      <created>1440978447442</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1440978447442</updated>
-    </task>
-    <task id="LOCAL-00011" summary="trie data structure">
-      <created>1440978523552</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1440978523552</updated>
-    </task>
-    <task id="LOCAL-00012" summary="redBlackTree">
-      <created>1440980034401</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1440980034401</updated>
-    </task>
-    <task id="LOCAL-00013" summary="distributed computing and map reduce">
-      <created>1441661187501</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1441661187501</updated>
     </task>
     <task id="LOCAL-00014" summary="distributed hash tables">
       <created>1441673984113</created>
@@ -896,34 +907,71 @@
       <option name="project" value="LOCAL" />
       <updated>1445559784222</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="gitignore &#10;">
+      <created>1445560438953</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1445560438953</updated>
+    </task>
+    <task id="LOCAL-00058" summary="number of island question &#10;">
+      <created>1445562562999</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1445562562999</updated>
+    </task>
+    <task id="LOCAL-00059" summary="perfect usage of map &#10;">
+      <created>1445563096614</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1445563096614</updated>
+    </task>
+    <task id="LOCAL-00060" summary="problems on edit distance">
+      <created>1445575132079</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1445575132080</updated>
+    </task>
+    <task id="LOCAL-00061" summary="problems on edit distance">
+      <created>1445575261357</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1445575261357</updated>
+    </task>
+    <task id="LOCAL-00062" summary="edit distance is not levenstein">
+      <created>1445576210201</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1445576210201</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1535" height="876" extended-state="6" />
+    <frame x="65" y="-4" width="1535" height="904" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2981867" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3082606" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31666666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="165" y="208" width="1335" height="676" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31666666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -943,9 +991,9 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25990596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37564102" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -960,11 +1008,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="how trie feels like using dictionary&#10;" />
-    <MESSAGE value="trie implementation full with insert, search functionality" />
-    <MESSAGE value="candy problem" />
-    <MESSAGE value="permutation" />
-    <MESSAGE value="find_unique_number_of_binary_tree" />
     <MESSAGE value="iterative is better than recursion" />
     <MESSAGE value="tree questions" />
     <MESSAGE value="iter, generators and iterators" />
@@ -985,7 +1028,12 @@
     <MESSAGE value="gitignore files added" />
     <MESSAGE value="new interview solutions&#10;" />
     <MESSAGE value="word_problem_approach &#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="word_problem_approach &#10;" />
+    <MESSAGE value="gitignore &#10;" />
+    <MESSAGE value="number of island question &#10;" />
+    <MESSAGE value="perfect usage of map &#10;" />
+    <MESSAGE value="problems on edit distance" />
+    <MESSAGE value="edit distance is not levenstein" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit distance is not levenstein" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -997,154 +1045,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/triplet_challenge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65868264">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/backtracking_findPath_NxN_maze_path.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/Backtracking_solution.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/backtracking_when_PathNxN.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/find_shortest_path.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/generate_parentheses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41916168">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/wwwwwhbk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/permutation-combination/permutationFunction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/permutation-combination/permutationFunction.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Python-testing/assertion_exception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56886226">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Python-testing/class_assertion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029940119">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Python-testing/testing_using_unittest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35928145">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Python-testing/how_to_use_unitest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74850297">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Python-testing/test_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38922155">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../enigma.io/README.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06382979">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="MultiMarkdownFxHtmlEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/find_distance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.047904193">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Python-testing/Django Testing Notes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/subsets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47619048">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/find_all_paths.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5952381">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/matrix_backtracking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/subsets_sum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/subsets_II.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08928572">
@@ -1265,9 +1165,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/Introduction/introduction.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6884562">
           <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
@@ -1277,6 +1174,9 @@
         <state />
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
     </entry>
@@ -1292,7 +1192,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3">
           <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1300,7 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1308,7 +1206,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1316,7 +1213,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1324,7 +1220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1332,7 +1227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1340,7 +1234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2087475">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1348,7 +1241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6262425">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1356,14 +1248,173 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74950296">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/python-iterators/iterators.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33399603">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.74950296">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/find_second_largest_heapq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58449304">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/perfect_usage_of_map_function.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/number_of_islands_stefan_solution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.364">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/number_of_islands_questions.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/number_of_islands_map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.364">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/find_number_of_citation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.87673956">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.780488">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3577235">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/edit_distance/edit_distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74950296">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/edit_distance/word_ladder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58449304">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/binary_search_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08898305">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/binary_search_implementation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.91101694">
+          <caret line="382" column="20" selection-start-line="382" selection-start-column="20" selection-end-line="382" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/Kth Smallest Element in a BST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12326044">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/math/Fraction to Recurring Decimal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.356">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8ab859f7-0315-4c17-b807-9a7ca4644997/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/10f66d84/fe09e2f1-f2f2-4fad-8cc8-aa13d14b1cd6/video..branch">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/10f66d84/fe09e2f1-f2f2-4fad-8cc8-aa13d14b1cd6/video..customer">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fe09e2f1-f2f2-4fad-8cc8-aa13d14b1cd6/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/sorting/quick_sort_unstability.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/sorting/stable vs unstable algorithm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.224">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/sorting/quick_sort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/python-iterators/zip_text_wrap_iterator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.168">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
