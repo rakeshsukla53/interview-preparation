@@ -13,7 +13,7 @@ import bisect
 
 print bisect.bisect_left([4, 5, 6], 5)
 
-print bisect.bisect([4, 5, 6], 3)
+print bisect.bisect_left([4, 5, 6], 6)
 
 #just go through this documentation and for finding the index it using binary search which is pretty powerful
 
