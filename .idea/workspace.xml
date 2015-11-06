@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="edit distance is not levenstein">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/linked-lists/Floyd_Cycle_Algorithm.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Common-interview-problems/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/subsequence-problems/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/search-algorithm/binary_search_iterative.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/graph-theory-algorithms/breadth_for_search_shortest_reach.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/linked-lists/check_cycle.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/linked-lists/cycle_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/graph-theory-algorithms/even_tree.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Common-interview-problems/find_first_non_repeating_character.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/linked-lists/floyd_cycle_algorithm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Common-interview-problems/meeting_rooms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/permutation-combination/next_permutation.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Balanced-trees/self_balanced_tree.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Common-interview-problems/valid_parenthesis.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rakesh/Common-interview-problems/inorder_successor_logic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rakesh/Common-interview-problems/kadane_algorithm.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rakesh/Common-interview-problems/longest_increasing_subsequence.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rakesh/Common-interview-problems/longest_increasing_subsequence.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rakesh/Common-interview-problems/longest_substring_optimized.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rakesh/Common-interview-problems/longest_substring_without_repeating_characters.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Codility and HackerRank/asymetricIndex.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Codility and HackerRank/aysmmetric_index_optimized.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/python-database/connect_using_peewee.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/python-database/connect_with_mysql.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/python-database/foreign_key_peewee.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Codility and HackerRank/perform_swap_operation.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../enigma.io/README.md" afterPath="$PROJECT_DIR$/../enigma.io/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/graph-theory-algorithms/find_shortest_path.py" afterPath="$PROJECT_DIR$/Rakesh/graph-theory-algorithms/find_shortest_path.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/Desktop/MobHTML/introduction.txt" afterPath="$USER_HOME$/Desktop/MobHTML/introduction.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -40,93 +25,111 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/interview-preparation$count_number_of_ones.coverage" NAME="count_number_of_ones Coverage Results" MODIFIED="1444178093009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$valid_parenthesis.coverage" NAME="valid_parenthesis Coverage Results" MODIFIED="1446100592497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
     <SUITE FILE_PATH="coverage/interview-preparation$Modifying_a_list_while_iterating_over_it.coverage" NAME="Modifying a list while iterating over it Coverage Results" MODIFIED="1440451069516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-mistakes" />
+    <SUITE FILE_PATH="coverage/interview-preparation$foreign_key_peewee.coverage" NAME="foreign_key_peewee Coverage Results" MODIFIED="1446814430731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-database" />
     <SUITE FILE_PATH="coverage/interview-preparation$peculiarQuestion.coverage" NAME="peculiarQuestion Coverage Results" MODIFIED="1440563598863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python" />
     <SUITE FILE_PATH="coverage/interview-preparation$peeking_iterator.coverage" NAME="peeking_iterator Coverage Results" MODIFIED="1442963148124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$LRU_Cache_Using_OrderedDict.coverage" NAME="LRU_Cache_Using_OrderedDict Coverage Results" MODIFIED="1443339539831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase.coverage" NAME="Unittests in TestCase Coverage Results" MODIFIED="1444518715027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$binaryLevel_Traversal.coverage" NAME="binaryLevel_Traversal Coverage Results" MODIFIED="1443353228034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_interview_preparation.coverage" NAME="Unittests in interview-preparation Coverage Results" MODIFIED="1445583752911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/interview-preparation$cycle_test.coverage" NAME="cycle_test Coverage Results" MODIFIED="1446090281070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/linked-lists" />
-    <SUITE FILE_PATH="coverage/interview-preparation$assertion_exception.coverage" NAME="assertion_exception Coverage Results" MODIFIED="1444517982333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$hashingInPython.coverage" NAME="hashingInPython Coverage Results" MODIFIED="1440974236779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python" />
     <SUITE FILE_PATH="coverage/interview-preparation$sum_of_2_numbers_optimized.coverage" NAME="sum of 2 numbers optimized Coverage Results" MODIFIED="1446104128169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
-    <SUITE FILE_PATH="coverage/interview-preparation$two_sorted_lists_and_outputs_a_sorted_list_that_is_their_union_.coverage" NAME="two sorted lists and outputs a sorted list that is their union.” Coverage Results" MODIFIED="1441687425761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/sorting" />
     <SUITE FILE_PATH="coverage/interview-preparation$find_all_paths.coverage" NAME="find_all_paths Coverage Results" MODIFIED="1444181031390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/graph-theory-algorithms" />
+    <SUITE FILE_PATH="coverage/interview-preparation$BinaryGap.coverage" NAME="BinaryGap Coverage Results" MODIFIED="1446574666373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility" />
     <SUITE FILE_PATH="coverage/interview-preparation$trie.coverage" NAME="trie Coverage Results" MODIFIED="1440983963088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trie" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Doctests_in_integer_knapsack.coverage" NAME="Doctests in integer_knapsack Coverage Results" MODIFIED="1446596015234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/dynamic-programming" />
     <SUITE FILE_PATH="coverage/interview-preparation$difference_is_2.coverage" NAME="difference_is_2 Coverage Results" MODIFIED="1441916325235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/General Interview Questions" />
     <SUITE FILE_PATH="coverage/interview-preparation$bloom_filters.coverage" NAME="bloom_filters Coverage Results" MODIFIED="1440972349212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/bloom-filters" />
-    <SUITE FILE_PATH="coverage/interview-preparation$move_zeros_to_right.coverage" NAME="move_zeros_to_right Coverage Results" MODIFIED="1443516868806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Rotate_the_array_by_clockwise.coverage" NAME="Rotate the array by clockwise Coverage Results" MODIFIED="1446732546113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
     <SUITE FILE_PATH="coverage/interview-preparation$subsets.coverage" NAME="subsets Coverage Results" MODIFIED="1444811866915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$find_number_of_binary_tree.coverage" NAME="find_number_of_binary_tree Coverage Results" MODIFIED="1443851121793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trees" />
     <SUITE FILE_PATH="coverage/interview-preparation$string_cleaning_different_approach.coverage" NAME="string_cleaning_different_approach Coverage Results" MODIFIED="1441678286908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../mp3-on-commandline" />
-    <SUITE FILE_PATH="coverage/interview-preparation$generators.coverage" NAME="generators Coverage Results" MODIFIED="1444015104444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-iterators" />
-    <SUITE FILE_PATH="coverage/interview-preparation$peculiar_balance.coverage" NAME="peculiar_balance Coverage Results" MODIFIED="1440563489308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python" />
-    <SUITE FILE_PATH="coverage/interview-preparation$Using_class_variables_incorrectly.coverage" NAME="Using class variables incorrectly Coverage Results" MODIFIED="1440449688107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-mistakes" />
-    <SUITE FILE_PATH="coverage/interview-preparation$matrix_backtracking.coverage" NAME="matrix_backtracking Coverage Results" MODIFIED="1444811654589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
     <SUITE FILE_PATH="coverage/interview-preparation$Misunderstanding_Python_scope_rules.coverage" NAME="Misunderstanding Python scope rules Coverage Results" MODIFIED="1440450581669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-mistakes" />
-    <SUITE FILE_PATH="coverage/interview-preparation$Unittest_test_function__2_.coverage" NAME="Unittest test_function (2) Coverage Results" MODIFIED="1444518699541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
+    <SUITE FILE_PATH="coverage/interview-preparation$count_the_words.coverage" NAME="count_the_words Coverage Results" MODIFIED="1446745002746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/word_problem" />
     <SUITE FILE_PATH="coverage/interview-preparation$meeting_rooms.coverage" NAME="meeting_rooms Coverage Results" MODIFIED="1445881120956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
-    <SUITE FILE_PATH="coverage/interview-preparation$string_compression.coverage" NAME="string_compression Coverage Results" MODIFIED="1442897900266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$draw_stairCase.coverage" NAME="draw_stairCase Coverage Results" MODIFIED="1444085966243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$Misusing_expressions_as_defaults_for_function_arguments.coverage" NAME="Misusing expressions as defaults for function arguments Coverage Results" MODIFIED="1440449445984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-mistakes" />
-    <SUITE FILE_PATH="coverage/interview-preparation$maximize_sum.coverage" NAME="maximize_sum Coverage Results" MODIFIED="1442901839423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$string_compression.coverage" NAME="string_compression Coverage Results" MODIFIED="1442897900266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$perform_swap_operation.coverage" NAME="perform_swap_operation Coverage Results" MODIFIED="1446853557098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
     <SUITE FILE_PATH="coverage/interview-preparation$iterators.coverage" NAME="iterators Coverage Results" MODIFIED="1444014709899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-iterators" />
     <SUITE FILE_PATH="coverage/interview-preparation$Unittest_test_function.coverage" NAME="Unittest test_function Coverage Results" MODIFIED="1444518694678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
-    <SUITE FILE_PATH="coverage/interview-preparation$Unittest_test_function__1_.coverage" NAME="Unittest test_function (1) Coverage Results" MODIFIED="1444518698397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$binary_search_implementation.coverage" NAME="binary_search_implementation Coverage Results" MODIFIED="1443349831522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trees" />
-    <SUITE FILE_PATH="coverage/interview-preparation$find_first_non_repeating_character.coverage" NAME="find_first_non_repeating_character Coverage Results" MODIFIED="1446101417081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
+    <SUITE FILE_PATH="coverage/interview-preparation$aysmmetric_index_optimized.coverage" NAME="aysmmetric_index_optimized Coverage Results" MODIFIED="1446835214404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
     <SUITE FILE_PATH="coverage/interview-preparation$IBM_Watson2.coverage" NAME="IBM_Watson2 Coverage Results" MODIFIED="1444170239415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$longest_increasing_subsequence.coverage" NAME="longest_increasing_subsequence Coverage Results" MODIFIED="1443495486234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$subsets_II.coverage" NAME="subsets_II Coverage Results" MODIFIED="1444813734480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$pecuilarOnlineSolution.coverage" NAME="pecuilarOnlineSolution Coverage Results" MODIFIED="1440550017387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python" />
-    <SUITE FILE_PATH="coverage/interview-preparation$remove_while_iteration.coverage" NAME="remove_while_iteration Coverage Results" MODIFIED="1444003621745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-iterators" />
     <SUITE FILE_PATH="coverage/interview-preparation$permutationFunction.coverage" NAME="permutationFunction Coverage Results" MODIFIED="1444377836798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$Ordered_Dict.coverage" NAME="Ordered_Dict Coverage Results" MODIFIED="1443338525248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$subset_II_problem.coverage" NAME="subset II problem Coverage Results" MODIFIED="1444079510819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$combination_function.coverage" NAME="combination_function Coverage Results" MODIFIED="1443629151102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_how_to_use_unitest.coverage" NAME="Unittests in how_to_use_unitest Coverage Results" MODIFIED="1444520733827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$edit_distance.coverage" NAME="edit_distance Coverage Results" MODIFIED="1445576113615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/edit_distance" />
     <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase__1_.coverage" NAME="Unittests in TestCase (1) Coverage Results" MODIFIED="1444518705603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
-    <SUITE FILE_PATH="coverage/interview-preparation$ordered_dict.coverage" NAME="ordered_dict Coverage Results" MODIFIED="1445856085019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-functionals" />
-    <SUITE FILE_PATH="coverage/interview-preparation$binary_tree_upside_doww.coverage" NAME="binary_tree_upside_doww Coverage Results" MODIFIED="1443862223142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trees" />
     <SUITE FILE_PATH="coverage/interview-preparation$find_peak_element.coverage" NAME="find_peak_element Coverage Results" MODIFIED="1445286305365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$djistra_algorithm.coverage" NAME="djistra_algorithm Coverage Results" MODIFIED="1444181085040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/graph-theory-algorithms" />
-    <SUITE FILE_PATH="coverage/interview-preparation$deque_collection_python.coverage" NAME="deque_collection_python Coverage Results" MODIFIED="1443346983505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$watson_improved_question.coverage" NAME="watson_improved_question Coverage Results" MODIFIED="1445312348111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Regular_Expression" />
-    <SUITE FILE_PATH="coverage/interview-preparation$even_tree.coverage" NAME="even_tree Coverage Results" MODIFIED="1446098877869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/graph-theory-algorithms" />
-    <SUITE FILE_PATH="coverage/interview-preparation$candyProblem.coverage" NAME="candyProblem Coverage Results" MODIFIED="1443585714019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$bisect_algorithm.coverage" NAME="bisect algorithm Coverage Results" MODIFIED="1446609498672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/search-algorithm" />
+    <SUITE FILE_PATH="coverage/interview-preparation$ArrayInversionCount.coverage" NAME="ArrayInversionCount Coverage Results" MODIFIED="1446571546469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility" />
+    <SUITE FILE_PATH="coverage/interview-preparation$non_divsors.coverage" NAME="non-divsors Coverage Results" MODIFIED="1446612254318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility" />
     <SUITE FILE_PATH="coverage/interview-preparation$zip_check.coverage" NAME="zip_check Coverage Results" MODIFIED="1445556452663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-iterators" />
     <SUITE FILE_PATH="coverage/interview-preparation$frogJump_Codility.coverage" NAME="frogJump_Codility Coverage Results" MODIFIED="1443333385294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase__3_.coverage" NAME="Unittests in TestCase (3) Coverage Results" MODIFIED="1444518716308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
-    <SUITE FILE_PATH="coverage/interview-preparation$subsets_challenge.coverage" NAME="subsets_challenge Coverage Results" MODIFIED="1443586557006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$encoding_decoding_strings.coverage" NAME="encoding_decoding_strings Coverage Results" MODIFIED="1444270933514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$word_ladder.coverage" NAME="word_ladder Coverage Results" MODIFIED="1445574204100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/edit_distance" />
-    <SUITE FILE_PATH="coverage/interview-preparation$number_of_islands_map.coverage" NAME="number_of_islands_map Coverage Results" MODIFIED="1445562738996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
     <SUITE FILE_PATH="coverage/interview-preparation$word_length_dictionary_problem.coverage" NAME="word_length_dictionary_problem Coverage Results" MODIFIED="1443504787771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$highest_power_of_N.coverage" NAME="highest_power_of N Coverage Results" MODIFIED="1446615866759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility" />
     <SUITE FILE_PATH="coverage/interview-preparation$Specifying_parameters_incorrectly_for_an_exception_block.coverage" NAME="Specifying parameters incorrectly for an exception block Coverage Results" MODIFIED="1440450223998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-mistakes" />
     <SUITE FILE_PATH="coverage/interview-preparation$subsets_sum.coverage" NAME="subsets_sum Coverage Results" MODIFIED="1444814596156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
-    <SUITE FILE_PATH="coverage/interview-preparation$sum_of_numbers.coverage" NAME="sum_of_numbers Coverage Results" MODIFIED="1440467084283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python" />
-    <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase__2_.coverage" NAME="Unittests in TestCase (2) Coverage Results" MODIFIED="1444518706495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$trie_implementation.coverage" NAME="trie_implementation Coverage Results" MODIFIED="1443506793752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trie" />
-    <SUITE FILE_PATH="coverage/interview-preparation$subsets_different_approach.coverage" NAME="subsets_different_approach Coverage Results" MODIFIED="1446102542409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
-    <SUITE FILE_PATH="coverage/interview-preparation$breadth_for_search_shortest_reach.coverage" NAME="breadth_for_search_shortest_reach Coverage Results" MODIFIED="1446097182137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/graph-theory-algorithms" />
-    <SUITE FILE_PATH="coverage/interview-preparation$Fraction_to_Recurring_Decimal.coverage" NAME="Fraction to Recurring Decimal Coverage Results" MODIFIED="1445586126272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/math" />
     <SUITE FILE_PATH="coverage/interview-preparation$find_distance.coverage" NAME="find_distance Coverage Results" MODIFIED="1444181071345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/graph-theory-algorithms" />
-    <SUITE FILE_PATH="coverage/interview-preparation$environment_varibles.coverage" NAME="environment_varibles Coverage Results" MODIFIED="1445300748232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-environment" />
-    <SUITE FILE_PATH="coverage/interview-preparation$IBM_Watson_1.coverage" NAME="IBM_Watson_1 Coverage Results" MODIFIED="1444102784060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$next_permutation.coverage" NAME="next_permutation Coverage Results" MODIFIED="1446089125551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/permutation-combination" />
-    <SUITE FILE_PATH="coverage/interview-preparation$find_number_of_citation.coverage" NAME="find_number_of_citation Coverage Results" MODIFIED="1445567722782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
     <SUITE FILE_PATH="coverage/interview-preparation$text_wrap.coverage" NAME="text_wrap Coverage Results" MODIFIED="1445855780682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/string-matching-algorithm -general-strings" />
     <SUITE FILE_PATH="coverage/interview-preparation$reverse_a_digit.coverage" NAME="reverse_a_digit Coverage Results" MODIFIED="1442964562928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$sum_of_2_numbers.coverage" NAME="sum of 2 numbers Coverage Results" MODIFIED="1446102432508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh" />
     <SUITE FILE_PATH="coverage/interview-preparation$simple_Trie.coverage" NAME="simple_Trie Coverage Results" MODIFIED="1444169252632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trie" />
-    <SUITE FILE_PATH="coverage/interview-preparation$HBK.coverage" NAME="HBK Coverage Results" MODIFIED="1444188581267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$next_smallest_largest.coverage" NAME="next_smallest_largest Coverage Results" MODIFIED="1442553875403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/bit-manipulation" />
-    <SUITE FILE_PATH="coverage/interview-preparation$valid_parentheses.coverage" NAME="valid_parentheses Coverage Results" MODIFIED="1444268688807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
-    <SUITE FILE_PATH="coverage/interview-preparation$kadane_algorithm.coverage" NAME="kadane_algorithm Coverage Results" MODIFIED="1444094542362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$watson_question.coverage" NAME="watson_question Coverage Results" MODIFIED="1445309608139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Regular_Expression" />
+    <SUITE FILE_PATH="coverage/interview-preparation$kadane_algorithm.coverage" NAME="kadane_algorithm Coverage Results" MODIFIED="1444094542362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$common_child_two_strings.coverage" NAME="common_child_two_strings Coverage Results" MODIFIED="1446596221544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/General Interview Questions" />
+    <SUITE FILE_PATH="coverage/interview-preparation$valid_parenthesis.coverage" NAME="valid_parenthesis Coverage Results" MODIFIED="1446100592497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
+    <SUITE FILE_PATH="coverage/interview-preparation$LRU_Cache_Using_OrderedDict.coverage" NAME="LRU_Cache_Using_OrderedDict Coverage Results" MODIFIED="1443339539831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$connect_with_mysql.coverage" NAME="connect_with_mysql Coverage Results" MODIFIED="1446813632825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-database" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase.coverage" NAME="Unittests in TestCase Coverage Results" MODIFIED="1444518715027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
+    <SUITE FILE_PATH="coverage/interview-preparation$find_bug.coverage" NAME="find_bug Coverage Results" MODIFIED="1446633418247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_interview_preparation.coverage" NAME="Unittests in interview-preparation Coverage Results" MODIFIED="1445583752911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/interview-preparation$assertion_exception.coverage" NAME="assertion_exception Coverage Results" MODIFIED="1444517982333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
+    <SUITE FILE_PATH="coverage/interview-preparation$two_sorted_lists_and_outputs_a_sorted_list_that_is_their_union_.coverage" NAME="two sorted lists and outputs a sorted list that is their union.” Coverage Results" MODIFIED="1441687425761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/sorting" />
+    <SUITE FILE_PATH="coverage/interview-preparation$asymetricIndex.coverage" NAME="asymetricIndex Coverage Results" MODIFIED="1446832994471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
+    <SUITE FILE_PATH="coverage/interview-preparation$contains_duplicates_within_K_distances.coverage" NAME="contains_duplicates_within_K_distances Coverage Results" MODIFIED="1446735867089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
+    <SUITE FILE_PATH="coverage/interview-preparation$move_zeros_to_right.coverage" NAME="move_zeros_to_right Coverage Results" MODIFIED="1443516868806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$generators.coverage" NAME="generators Coverage Results" MODIFIED="1444015104444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-iterators" />
+    <SUITE FILE_PATH="coverage/interview-preparation$peculiar_balance.coverage" NAME="peculiar_balance Coverage Results" MODIFIED="1440563489308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Using_class_variables_incorrectly.coverage" NAME="Using class variables incorrectly Coverage Results" MODIFIED="1440449688107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-mistakes" />
+    <SUITE FILE_PATH="coverage/interview-preparation$matrix_backtracking.coverage" NAME="matrix_backtracking Coverage Results" MODIFIED="1444811654589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Unittest_test_function__2_.coverage" NAME="Unittest test_function (2) Coverage Results" MODIFIED="1444518699541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
+    <SUITE FILE_PATH="coverage/interview-preparation$draw_stairCase.coverage" NAME="draw_stairCase Coverage Results" MODIFIED="1444085966243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$maximize_sum.coverage" NAME="maximize_sum Coverage Results" MODIFIED="1442901839423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Unittest_test_function__1_.coverage" NAME="Unittest test_function (1) Coverage Results" MODIFIED="1444518698397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
+    <SUITE FILE_PATH="coverage/interview-preparation$find_first_non_repeating_character.coverage" NAME="find_first_non_repeating_character Coverage Results" MODIFIED="1446101417081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
+    <SUITE FILE_PATH="coverage/interview-preparation$longest_increasing_subsequence.coverage" NAME="longest_increasing_subsequence Coverage Results" MODIFIED="1443495486234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$remove_while_iteration.coverage" NAME="remove_while_iteration Coverage Results" MODIFIED="1444003621745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-iterators" />
+    <SUITE FILE_PATH="coverage/interview-preparation$pecuilarOnlineSolution.coverage" NAME="pecuilarOnlineSolution Coverage Results" MODIFIED="1440550017387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python" />
+    <SUITE FILE_PATH="coverage/interview-preparation$subset_II_problem.coverage" NAME="subset II problem Coverage Results" MODIFIED="1444079510819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_how_to_use_unitest.coverage" NAME="Unittests in how_to_use_unitest Coverage Results" MODIFIED="1444520733827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
+    <SUITE FILE_PATH="coverage/interview-preparation$ordered_dict.coverage" NAME="ordered_dict Coverage Results" MODIFIED="1445856085019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-functionals" />
+    <SUITE FILE_PATH="coverage/interview-preparation$binary_tree_upside_doww.coverage" NAME="binary_tree_upside_doww Coverage Results" MODIFIED="1443862223142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trees" />
+    <SUITE FILE_PATH="coverage/interview-preparation$deque_collection_python.coverage" NAME="deque_collection_python Coverage Results" MODIFIED="1443346983505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$connect_using_peewee.coverage" NAME="connect_using_peewee Coverage Results" MODIFIED="1446813818735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-database" />
+    <SUITE FILE_PATH="coverage/interview-preparation$watson_improved_question.coverage" NAME="watson_improved_question Coverage Results" MODIFIED="1445312348111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Regular_Expression" />
+    <SUITE FILE_PATH="coverage/interview-preparation$candyProblem.coverage" NAME="candyProblem Coverage Results" MODIFIED="1443585714019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$even_tree.coverage" NAME="even_tree Coverage Results" MODIFIED="1446098877869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/graph-theory-algorithms" />
+    <SUITE FILE_PATH="coverage/interview-preparation$subsets_challenge.coverage" NAME="subsets_challenge Coverage Results" MODIFIED="1443586557006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$encoding_decoding_strings.coverage" NAME="encoding_decoding_strings Coverage Results" MODIFIED="1444270933514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$word_ladder.coverage" NAME="word_ladder Coverage Results" MODIFIED="1445574204100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/edit_distance" />
+    <SUITE FILE_PATH="coverage/interview-preparation$rotate_matrix_only_one_element.coverage" NAME="rotate_matrix_only_one_element Coverage Results" MODIFIED="1446734062829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
+    <SUITE FILE_PATH="coverage/interview-preparation$number_of_islands_map.coverage" NAME="number_of_islands_map Coverage Results" MODIFIED="1445562738996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
+    <SUITE FILE_PATH="coverage/interview-preparation$sum_of_numbers.coverage" NAME="sum_of_numbers Coverage Results" MODIFIED="1440467084283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase__2_.coverage" NAME="Unittests in TestCase (2) Coverage Results" MODIFIED="1444518706495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
+    <SUITE FILE_PATH="coverage/interview-preparation$subsets_different_approach.coverage" NAME="subsets_different_approach Coverage Results" MODIFIED="1446102542409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
+    <SUITE FILE_PATH="coverage/interview-preparation$breadth_for_search_shortest_reach.coverage" NAME="breadth_for_search_shortest_reach Coverage Results" MODIFIED="1446097182137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/graph-theory-algorithms" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Fraction_to_Recurring_Decimal.coverage" NAME="Fraction to Recurring Decimal Coverage Results" MODIFIED="1445586126272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/math" />
+    <SUITE FILE_PATH="coverage/interview-preparation$environment_varibles.coverage" NAME="environment_varibles Coverage Results" MODIFIED="1445300748232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-environment" />
+    <SUITE FILE_PATH="coverage/interview-preparation$IBM_Watson_1.coverage" NAME="IBM_Watson_1 Coverage Results" MODIFIED="1444102784060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$next_permutation.coverage" NAME="next_permutation Coverage Results" MODIFIED="1446089125551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/permutation-combination" />
+    <SUITE FILE_PATH="coverage/interview-preparation$find_number_of_citation.coverage" NAME="find_number_of_citation Coverage Results" MODIFIED="1445567722782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
+    <SUITE FILE_PATH="coverage/interview-preparation$HBK.coverage" NAME="HBK Coverage Results" MODIFIED="1444188581267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$valid_parentheses.coverage" NAME="valid_parentheses Coverage Results" MODIFIED="1444268688807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -162,7 +165,18 @@
     <favorites_list name="interview-preparation" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="perform_swap_operation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/perform_swap_operation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.696281">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -177,34 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Rakesh/Python-testing/class_assertion.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Python-testing/testing_using_unittest.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Python-testing/how_to_use_unitest.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Python-testing/test_example.py" />
-        <option value="$PROJECT_DIR$/../enigma.io/README.md" />
-        <option value="$PROJECT_DIR$/Rakesh/backtracking/matrix_backtracking.py" />
-        <option value="$PROJECT_DIR$/Rakesh/50-problem-challenge/subsets.py" />
-        <option value="$PROJECT_DIR$/Rakesh/backtracking/subsets_sum.py" />
-        <option value="$PROJECT_DIR$/Rakesh/50-problem-challenge/subsets_II.py" />
-        <option value="$PROJECT_DIR$/Rakesh/graph-theory-algorithms/djistra_algorithm.py" />
-        <option value="$PROJECT_DIR$/Rakesh/50-problem-challenge/find_peak_element.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Python-environment/enviroment.json" />
-        <option value="$PROJECT_DIR$/Rakesh/Python-environment/environment_varibles.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Regular_Expression/watson_question.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Regular_Expression/watson_improved_question.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Introduction/introduction.md" />
-        <option value="$PROJECT_DIR$/Rakesh/backtracking/subsets_different_approach.py" />
-        <option value="$PROJECT_DIR$/Rakesh/trees/__init__.py" />
-        <option value="$PROJECT_DIR$/Rakesh/python-iterators/zip_check.py" />
-        <option value="$PROJECT_DIR$/Rakesh/python-iterators/zigzag_iterators.py" />
-        <option value="$PROJECT_DIR$/Rakesh/word_problem/word_break_problem_no_need_of_permutation.py" />
-        <option value="$PROJECT_DIR$/Rakesh/backtracking/number_of_islands_stefan_solution.py" />
-        <option value="$PROJECT_DIR$/Rakesh/backtracking/number_of_islands_map.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Common-interview-problems/find_number_of_citation.py" />
-        <option value="$PROJECT_DIR$/Rakesh/edit_distance/word_ladder.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Rakesh/edit_distance/edit_distance.py" />
-        <option value="$PROJECT_DIR$/Rakesh/math/Fraction to Recurring Decimal.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/Kth Smallest Element in a BST.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/8ab859f7-0315-4c17-b807-9a7ca4644997/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/fe09e2f1-f2f2-4fad-8cc8-aa13d14b1cd6/console.sql" />
@@ -228,6 +214,34 @@
         <option value="$PROJECT_DIR$/Rakesh/search-algorithm/binary_search_iterative.py" />
         <option value="$PROJECT_DIR$/Rakesh/Common-interview-problems/sum of 2 numbers.py" />
         <option value="$PROJECT_DIR$/Rakesh/Common-interview-problems/sum of 2 numbers optimized.py" />
+        <option value="$PROJECT_DIR$/Rakesh/subsets/subsets_problem_optimized.py" />
+        <option value="$PROJECT_DIR$/Rakesh/subsets/subsets_optimized_2.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility/ArrayInversionCount.py" />
+        <option value="$PROJECT_DIR$/Rakesh/string-matching-algorithm -general-strings/StrSymmetryPoint.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility/StrSymmetryPoint.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility/BinaryGap.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility/FibFrog.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility/Peaks.py" />
+        <option value="$PROJECT_DIR$/Rakesh/dynamic-programming/integer_knapsack.py" />
+        <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/common_child_two_strings.py" />
+        <option value="$PROJECT_DIR$/Rakesh/search-algorithm/bisect_example_2.py" />
+        <option value="$PROJECT_DIR$/Rakesh/search-algorithm/bisect_example_1.py" />
+        <option value="$PROJECT_DIR$/Rakesh/search-algorithm/bisect algorithm.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility/non-divsors.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility/non_divisors_optimized.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility/highest_power_of N.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility/find_bug.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/Duplicates 2.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/Rotate the array by clockwise.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/rotate_matrix_only_one_element.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/contains_duplicates_within_K_distances.py" />
+        <option value="$PROJECT_DIR$/Rakesh/word_problem/count_the_words.py" />
+        <option value="$PROJECT_DIR$/Rakesh/python-database/connect_using_peewee.py" />
+        <option value="$PROJECT_DIR$/Rakesh/python-database/connect_with_mysql.py" />
+        <option value="$PROJECT_DIR$/Rakesh/python-database/foreign_key_peewee.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/asymetricIndex.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/aysmmetric_index_optimized.py" />
+        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/perform_swap_operation.py" />
       </list>
     </option>
   </component>
@@ -287,6 +301,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -305,9 +320,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interview-preparation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interview-preparation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Rakesh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,6 +348,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Rakesh/subsets" />
       <recent name="$PROJECT_DIR$/Rakesh/subsequence-problems" />
       <recent name="$PROJECT_DIR$/Rakesh/word_problem" />
       <recent name="$PROJECT_DIR$/Rakesh/trees" />
@@ -328,100 +357,100 @@
       <recent name="http://" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Rakesh/pairing_pairs" />
-      <recent name="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
-      <recent name="$PROJECT_DIR$/Rakesh/subsequence-problems" />
-      <recent name="$PROJECT_DIR$/Rakesh" />
+      <recent name="$PROJECT_DIR$/Rakesh/dynamic-programming" />
       <recent name="$PROJECT_DIR$/Rakesh/trees" />
+      <recent name="$PROJECT_DIR$/Rakesh/word_problem" />
+      <recent name="$PROJECT_DIR$/Rakesh/subsets" />
+      <recent name="$PROJECT_DIR$/Rakesh/pairing_pairs" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.sum of 2 numbers optimized">
-    <configuration default="false" name="valid_parenthesis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.perform_swap_operation">
+    <configuration default="false" name="connect_using_peewee" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/python-database" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Common-interview-problems/valid_parenthesis.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/python-database/connect_using_peewee.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="find_first_non_repeating_character" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="foreign_key_peewee" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/python-database" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Common-interview-problems/find_first_non_repeating_character.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/python-database/foreign_key_peewee.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="sum of 2 numbers" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="perform_swap_operation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Common-interview-problems/sum of 2 numbers.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/perform_swap_operation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="subsets_different_approach" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="asymetricIndex" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/backtracking" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/backtracking/subsets_different_approach.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/asymetricIndex.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="sum of 2 numbers optimized" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="aysmmetric_index_optimized" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Common-interview-problems/sum of 2 numbers optimized.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/aysmmetric_index_optimized.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -615,19 +644,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.valid_parenthesis" />
-      <item index="1" class="java.lang.String" itemvalue="Python.find_first_non_repeating_character" />
-      <item index="2" class="java.lang.String" itemvalue="Python.sum of 2 numbers" />
-      <item index="3" class="java.lang.String" itemvalue="Python.subsets_different_approach" />
-      <item index="4" class="java.lang.String" itemvalue="Python.sum of 2 numbers optimized" />
+      <item index="0" class="java.lang.String" itemvalue="Python.connect_using_peewee" />
+      <item index="1" class="java.lang.String" itemvalue="Python.foreign_key_peewee" />
+      <item index="2" class="java.lang.String" itemvalue="Python.perform_swap_operation" />
+      <item index="3" class="java.lang.String" itemvalue="Python.asymetricIndex" />
+      <item index="4" class="java.lang.String" itemvalue="Python.aysmmetric_index_optimized" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.sum of 2 numbers optimized" />
-        <item index="1" class="java.lang.String" itemvalue="Python.subsets_different_approach" />
-        <item index="2" class="java.lang.String" itemvalue="Python.sum of 2 numbers" />
-        <item index="3" class="java.lang.String" itemvalue="Python.find_first_non_repeating_character" />
-        <item index="4" class="java.lang.String" itemvalue="Python.valid_parenthesis" />
+        <item index="0" class="java.lang.String" itemvalue="Python.perform_swap_operation" />
+        <item index="1" class="java.lang.String" itemvalue="Python.aysmmetric_index_optimized" />
+        <item index="2" class="java.lang.String" itemvalue="Python.asymetricIndex" />
+        <item index="3" class="java.lang.String" itemvalue="Python.foreign_key_peewee" />
+        <item index="4" class="java.lang.String" itemvalue="Python.connect_using_peewee" />
       </list>
     </recent_temporary>
   </component>
@@ -641,42 +670,6 @@
       <created>1440448994947</created>
       <option name="number" value="Default" />
       <updated>1440448994947</updated>
-    </task>
-    <task id="LOCAL-00016" summary="apacheSpark vs Hadoop">
-      <created>1441816395339</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1441816395339</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Python decorators">
-      <created>1442620855760</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1442620855760</updated>
-    </task>
-    <task id="LOCAL-00018" summary="string_compression">
-      <created>1442898010526</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1442898010526</updated>
-    </task>
-    <task id="LOCAL-00019" summary="kadane algorithm">
-      <created>1442955190781</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1442955190781</updated>
-    </task>
-    <task id="LOCAL-00020" summary="LRU Cache implementation">
-      <created>1443339523787</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1443339523787</updated>
-    </task>
-    <task id="LOCAL-00021" summary="whether this is a valid binary search tree">
-      <created>1443343513456</created>
-      <option name="number" value="00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1443343513456</updated>
     </task>
     <task id="LOCAL-00022" summary="collection deque example">
       <created>1443347068557</created>
@@ -936,7 +929,43 @@
       <option name="project" value="LOCAL" />
       <updated>1445856134537</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="algorithms solution">
+      <created>1446104467605</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1446104467639</updated>
+    </task>
+    <task id="LOCAL-00066" summary="codility questions">
+      <created>1446574796424</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1446574796433</updated>
+    </task>
+    <task id="LOCAL-00067" summary="integer knap sack problem">
+      <created>1446596042568</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1446596042568</updated>
+    </task>
+    <task id="LOCAL-00068" summary="bisect examples">
+      <created>1446608931747</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1446608931747</updated>
+    </task>
+    <task id="LOCAL-00069" summary="codility test answers">
+      <created>1446624396515</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1446624396515</updated>
+    </task>
+    <task id="LOCAL-00070" summary="amazon phone interview questions added">
+      <created>1446751561574</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1446751561606</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -948,10 +977,10 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31296173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33646742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31666666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34102565" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -959,12 +988,12 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="165" y="208" width="1335" height="676" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -984,9 +1013,9 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25990596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37564102" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1001,12 +1030,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="iter, generators and iterators" />
-    <MESSAGE value="preorder traversal verification" />
-    <MESSAGE value="subsets sum questions" />
-    <MESSAGE value="hacker rank" />
-    <MESSAGE value="watson" />
-    <MESSAGE value="queen problem" />
     <MESSAGE value="valid parentheses" />
     <MESSAGE value="encoding and decoding of strings" />
     <MESSAGE value="backtracking solution" />
@@ -1026,388 +1049,372 @@
     <MESSAGE value="edit distance is not levenstein" />
     <MESSAGE value="zip iterators awesomeness and textwrap" />
     <MESSAGE value="perserve the order of key value" />
-    <option name="LAST_COMMIT_MESSAGE" value="perserve the order of key value" />
+    <MESSAGE value="algorithms solution" />
+    <MESSAGE value="codility questions" />
+    <MESSAGE value="integer knap sack problem" />
+    <MESSAGE value="bisect examples" />
+    <MESSAGE value="codility test answers" />
+    <MESSAGE value="amazon phone interview questions added" />
+    <option name="LAST_COMMIT_MESSAGE" value="amazon phone interview questions added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/find_second_largest_heapq.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/breeding_like_rabits.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58449304">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/perfect_usage_of_map_function.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/number_of_islands_stefan_solution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.364">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/number_of_islands_questions.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/number_of_islands_map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.364">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/find_number_of_citation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87673956">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.780488">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/.gitignore">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/breeding_like_rabbits_brain_storming.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3577235">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/edit_distance/edit_distance.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/breeding_like_rabbits_optimized_method.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74950296">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/edit_distance/word_ladder.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/BinaryGap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58449304">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/trees/binary_search_tree.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/FibFrog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08898305">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/trees/binary_search_implementation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91101694">
-          <caret line="382" column="20" selection-start-line="382" selection-start-column="20" selection-end-line="382" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/trees/Kth Smallest Element in a BST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12326044">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/math/Fraction to Recurring Decimal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.356">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8ab859f7-0315-4c17-b807-9a7ca4644997/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/10f66d84/fe09e2f1-f2f2-4fad-8cc8-aa13d14b1cd6/video..branch">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/10f66d84/fe09e2f1-f2f2-4fad-8cc8-aa13d14b1cd6/video..customer">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/Peaks.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fe09e2f1-f2f2-4fad-8cc8-aa13d14b1cd6/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/sorting/quick_sort_unstability.png">
+    <entry file="file://$PROJECT_DIR$/Rakesh/dynamic-programming/dynamic_programming_edit_distance.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/sorting/stable vs unstable algorithm">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/recursion_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.224">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/sorting/quick_sort.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/spy_snippet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.344">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/string-matching-algorithm -general-strings/text_wrap.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29224652">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/python-iterators/zip_text_wrap_iterator.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/test1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.250497">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/python-functionals/ordered_dict.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/string_cleaning_different_approach.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79324055">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.496">
+          <caret line="39" column="71" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/trees/inorder_successor_logic.png">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/string_cleaning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/start_end_window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.504">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/stackOverflow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.644">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/stack_when_it_rains.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/when_it_pours_highest_level.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Google-interview/when_it_rains_it_pours.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/deque_collection_python.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/find_number_of_binary_tree.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/meeting_rooms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4612327">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/WWW.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1689861">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/linked-lists/double_linked_list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54075545">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/linked-lists/cycle_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37574553">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/linked-lists/floyd_cycle_algorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79324055">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/linked-lists/Floyd_Cycle_Algorithm.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/linked-lists/check_cycle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79324055">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Balanced-trees/self_balanced_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20874752">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/djistra_algorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4194831">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/djisktra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/find_distance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/breadth_first_search">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/find_all_paths.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.250497">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/breadth_for_search_shortest_reach.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91848904">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/find_shortest_path.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58449304">
-          <caret line="14" column="42" selection-start-line="12" selection-start-column="16" selection-end-line="14" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/graph-theory-algorithms/even_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54274356">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/valid_parenthesis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.666004">
+        <state vertical-scroll-proportion="0.84">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/permutation-combination/check_permutation.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/frogJump.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/permutation-combination/next_permutation.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/maximize_sum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.644">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/candyProblem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.064">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/frogJump_Codility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/draw_stairCase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/combination_function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/dynamic-programming/integer_knapsack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.7952286">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/subsets_different_approach.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/dynamic-programming/knap_sack_problem.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/dynamic-programming/common_child_two_strings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8349901">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.45725647">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/backtracking/subsets_sum.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/word_problem/word_order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.085487075">
+        <state vertical-scroll-proportion="1.0854871">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/search-algorithm/bisect_example_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/find_first_non_repeating_character.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/search-algorithm/bisect_example_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70974153">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/search-algorithm/binary_search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91848904">
+        <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/search-algorithm/bisect algorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75149107">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/ArrayInversionCount.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5864811">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/non-divsors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3777336">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/highest_power_of N.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74950296">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/search-algorithm/binary_search_iterative.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="36" />
-          <folding />
+        <state vertical-scroll-proportion="0.70974153">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/sum of 2 numbers.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/non_divisors_optimized.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33399603">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.196">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/find_bug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79324055">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/Rotate the array by clockwise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7376033">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/rotate_matrix_only_one_element.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17355372">
+          <caret line="4" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/contains_duplicates_within_K_distances.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73966944">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/word_problem/count_the_words.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.1714876">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/python-database/connect_using_peewee.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1301653">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/python-database/foreign_key_peewee.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30578512">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/python-database/connect_with_mysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8677686">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/aysmmetric_index_optimized.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7376033">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/asymetricIndex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.607438">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/perform_swap_operation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.696281">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
