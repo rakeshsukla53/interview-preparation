@@ -1,4 +1,4 @@
-__author__ = 'rakesh'
+
 
 import heapq
 
@@ -20,3 +20,4 @@ print heap
 #http://www.bogotobogo.com/python/python_PriorityQueue_heapq_Data_Structure.php
 
 #why we use heap and what are its advtanges than binary search trees
+
