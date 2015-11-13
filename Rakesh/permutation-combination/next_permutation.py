@@ -1,4 +1,4 @@
-__author__ = 'rakesh'
+
 
 n = input()
 
@@ -24,12 +24,12 @@ for i in range(n):
                 if len(prefix) == 0:
                     break
 
-                for f in xrange(len(stringNumbers)-1, -1, -1):
+                for f in xrange(len(stringNumbers) - 1, -1, -1):
                     if stringNumbers[f] > swapValue:
                         index = f
                         break
 
-                stringNumbers[k-1], stringNumbers[index] = stringNumbers[index], stringNumbers[k-1]
+                stringNumbers[k - 1], stringNumbers[index] = stringNumbers[index], stringNumbers[k-1]
                 suffix = stringNumbers[k:]
                 prefix = stringNumbers[:k]
                 suffix.reverse()
