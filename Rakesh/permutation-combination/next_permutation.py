@@ -12,13 +12,13 @@ for i in range(n):
         print 'no answer'
 
     else:
-        for k in xrange(len(stringNumbers)-1, -1, -1):
+        for k in xrange(len(stringNumbers) - 1, -1, -1):
 
-            if stringNumbers[k] <= stringNumbers[k-1]:
+            if stringNumbers[k] <= stringNumbers[k - 1]:
                 continue
 
             else:
-                swapValue = stringNumbers[k-1]
+                swapValue = stringNumbers[k - 1]
                 prefix = stringNumbers[:k]
 
                 if len(prefix) == 0:

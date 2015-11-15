@@ -1,38 +1,50 @@
 
 from collections import Counter
-from itertools import permutations
+from itertools import permutations, repeat
 
 class Solution(object):
     def generatePalindromes(self, s):
         """
+        Generate all palindrome of a given sequence
         :type s: str
         :rtype: List[str]
         """
-        word_frequency = Counter(s)
-        characters = word_frequency.keys()
-        word_length = len(s)
-        result = []
-        if len(s) > 1 and len(word_frequency.keys()) == 1:
+        # for not be palindrome we cannot have two character with frequency of 1
+
+        all_combination = []
+
+        if len(s) == 1 or len(set(s)) == 1:
             return [s]
-        if word_length % 2 != 0:
-            if len(characters) == (word_length / 2) + 1:
-                for s in characters:
-                    if word_frequency[s] == 1:
-                        del word_frequency[s]
-                        break
-                for i in permutations(word_frequency.keys(), len(word_frequency.keys())):
-                    result.append("".join(list(i)) + s + "".join(list(i)[::-1]))
 
-                return result
-            else:
-                return []
+        if len(filter(lambda x: x[1] % 2 == 1, Counter(s).items())) > 1:
+            return []
+
         else:
-            if len(characters) == (word_length / 2):
-                for i in permutations(word_frequency.keys(), len(word_frequency.keys())):
-                    result.append("".join(list(i)) + "".join(list(i)[::-1]))
+            if len(s) % 2 == 0:
+                if len(filter(lambda x: x[1] == 1, Counter(s).items())) == 1:
+                    return []
+                else:
+                    result = []
+                    word_frequency = Counter(s)
+                    for letters in word_frequency:
+                        result.extend(repeat(letters, word_frequency[letters] / 2))
 
-                return result
+                    for i in permutations("".join(result), len(result)):
+                        all_combination.append("".join(list(i)) + "".join(list(i[::-1])))
+
+                    return all_combination
+
             else:
-                return []
+                result = []
+                word_frequency = Counter(s)
+                for letters in word_frequency:
+                    if word_frequency[letters] % 2 == 1:
+                        middle_character = letters
+                    result.extend(repeat(letters, word_frequency[letters] / 2))
+
+                for i in permutations("".join(result), len(result)):
+                    all_combination.append("".join(list(i)) + middle_character + "".join(list(i[::-1])))
+
+                return all_combination
 
 print Solution().generatePalindromes("aabbccc")
