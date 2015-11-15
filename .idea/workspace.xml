@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="edit distance is not levenstein">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/quick-sorting/quick_sort.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/quick-sorting/quick_sort_partition.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/quick-sorting/quick_sort_unstability.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/external_sorting/external_sorting.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/external_sorting/external_sorting.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/quick-sorting/quick_sort.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/quick-sorting/stable vs unstable algorithm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/quick-sorting/two sorted lists and outputs a sorted list that is their union.”.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/trees/Flatten Binary Tree to Linked List.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/General Interview Questions/HH Facebook 1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/trees/Validate Binary Search Tree.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/trees/post_order_traversal.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/General Interview Questions/single_number.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../enigma.io/README.md" afterPath="$PROJECT_DIR$/../enigma.io/README.md" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/Desktop/MobHTML/introduction.txt" afterPath="$USER_HOME$/Desktop/MobHTML/introduction.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/merge-sorting/merge_sort_code.py" afterPath="$PROJECT_DIR$/Rakesh/merge-sorting/merge_sort_code.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/Google-interview/spy_snippet.py" afterPath="$PROJECT_DIR$/Rakesh/Google-interview/spy_snippet.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/Google-interview/stackOverflow.py" afterPath="$PROJECT_DIR$/Rakesh/Google-interview/stackOverflow.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="interview-preparation.iws" />
@@ -47,6 +41,7 @@
     <SUITE FILE_PATH="coverage/interview-preparation$Doctests_in_integer_knapsack.coverage" NAME="Doctests in integer_knapsack Coverage Results" MODIFIED="1446596015234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/dynamic-programming" />
     <SUITE FILE_PATH="coverage/interview-preparation$difference_is_2.coverage" NAME="difference_is_2 Coverage Results" MODIFIED="1441916325235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/General Interview Questions" />
     <SUITE FILE_PATH="coverage/interview-preparation$bloom_filters.coverage" NAME="bloom_filters Coverage Results" MODIFIED="1440972349212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/bloom-filters" />
+    <SUITE FILE_PATH="coverage/interview-preparation$HH_Facebook_1.coverage" NAME="HH Facebook 1 Coverage Results" MODIFIED="1447621756236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/General Interview Questions" />
     <SUITE FILE_PATH="coverage/interview-preparation$Rotate_the_array_by_clockwise.coverage" NAME="Rotate the array by clockwise Coverage Results" MODIFIED="1446732546113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
     <SUITE FILE_PATH="coverage/interview-preparation$subsets.coverage" NAME="subsets Coverage Results" MODIFIED="1444811866915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$find_number_of_binary_tree.coverage" NAME="find_number_of_binary_tree Coverage Results" MODIFIED="1443851121793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trees" />
@@ -154,16 +149,17 @@
     <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase__2_.coverage" NAME="Unittests in TestCase (2) Coverage Results" MODIFIED="1444518706495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$logistic_regression.coverage" NAME="logistic_regression Coverage Results" MODIFIED="1447091095838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
     <SUITE FILE_PATH="coverage/interview-preparation$subsets_different_approach.coverage" NAME="subsets_different_approach Coverage Results" MODIFIED="1446102542409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/backtracking" />
-    <SUITE FILE_PATH="coverage/interview-preparation$palindromic_permutation.coverage" NAME="palindromic_permutation Coverage Results" MODIFIED="1447352455597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/permutation-combination" />
+    <SUITE FILE_PATH="coverage/interview-preparation$palindromic_permutation.coverage" NAME="palindromic_permutation Coverage Results" MODIFIED="1447570734684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/permutation-combination" />
     <SUITE FILE_PATH="coverage/interview-preparation$breadth_for_search_shortest_reach.coverage" NAME="breadth_for_search_shortest_reach Coverage Results" MODIFIED="1446097182137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/graph-theory-algorithms" />
     <SUITE FILE_PATH="coverage/interview-preparation$stackOverflow.coverage" NAME="stackOverflow Coverage Results" MODIFIED="1447553020881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Google-interview" />
     <SUITE FILE_PATH="coverage/interview-preparation$Fraction_to_Recurring_Decimal.coverage" NAME="Fraction to Recurring Decimal Coverage Results" MODIFIED="1445586126272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/math" />
     <SUITE FILE_PATH="coverage/interview-preparation$environment_varibles.coverage" NAME="environment_varibles Coverage Results" MODIFIED="1445300748232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-environment" />
     <SUITE FILE_PATH="coverage/interview-preparation$IBM_Watson_1.coverage" NAME="IBM_Watson_1 Coverage Results" MODIFIED="1444102784060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$next_permutation.coverage" NAME="next_permutation Coverage Results" MODIFIED="1447567105801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/permutation-combination" />
     <SUITE FILE_PATH="coverage/interview-preparation$find_number_of_citation.coverage" NAME="find_number_of_citation Coverage Results" MODIFIED="1445567722782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
-    <SUITE FILE_PATH="coverage/interview-preparation$next_permutation.coverage" NAME="next_permutation Coverage Results" MODIFIED="1447384803367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/permutation-combination" />
     <SUITE FILE_PATH="coverage/interview-preparation$HBK.coverage" NAME="HBK Coverage Results" MODIFIED="1444188581267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$valid_parentheses.coverage" NAME="valid_parentheses Coverage Results" MODIFIED="1444268688807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
+    <SUITE FILE_PATH="coverage/interview-preparation$single_number.coverage" NAME="single_number Coverage Results" MODIFIED="1447571248368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/General Interview Questions" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -200,11 +196,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="merge_sort_code.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Rakesh/merge-sorting/merge_sort_code.py">
+      <file leaf-file-name="binary_search_implementation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rakesh/trees/binary_search_implementation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38809034">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="12" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Flatten Binary Tree to Linked List.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Rakesh/trees/Flatten Binary Tree to Linked List.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -225,12 +231,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Rakesh/python-database/connect_with_mysql.py" />
-        <option value="$PROJECT_DIR$/Rakesh/python-database/foreign_key_peewee.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/asymetricIndex.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/aysmmetric_index_optimized.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/perform_swap_operation.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/coin_flips.py" />
         <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/fun with collatz.py" />
         <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/logistic_regression.py" />
         <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/sorting sorted words.py" />
@@ -243,7 +243,6 @@
         <option value="$PROJECT_DIR$/Rakesh/heap/kth_largest_element_with_heap_amazing_solution.py" />
         <option value="$PROJECT_DIR$/Rakesh/heap/heap_indepth_analysis_nlargest.py" />
         <option value="$PROJECT_DIR$/Rakesh/sorting/quick_sort.py" />
-        <option value="$PROJECT_DIR$/Rakesh/permutation-combination/palindromic_permutation.py" />
         <option value="$PROJECT_DIR$/Rakesh/matrix_arithmetic/matrix_rotation_reverse_awesomness.py" />
         <option value="$PROJECT_DIR$/Rakesh/matrix_arithmetic/sprial_matrix.py" />
         <option value="$PROJECT_DIR$/Rakesh/python-decorator/reverse_a_string_using_decorator.py" />
@@ -254,7 +253,6 @@
         <option value="$PROJECT_DIR$/Rakesh/python-basics/Python is a PASS-BY-OBJECT-REFERENCE programming language..py" />
         <option value="$PROJECT_DIR$/Rakesh/word_problem/word_break_problem_no_need_of_permutation.py" />
         <option value="$PROJECT_DIR$/Rakesh/permutation-combination/permutation.py" />
-        <option value="$PROJECT_DIR$/Rakesh/permutation-combination/next_permutation.py" />
         <option value="$PROJECT_DIR$/Rakesh/permutation-combination/permutation_not_optimized.py" />
         <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/pangram_optimized.py" />
         <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/pangram.py" />
@@ -276,6 +274,14 @@
         <option value="$PROJECT_DIR$/Rakesh/Google-interview/spy_snippet.py" />
         <option value="$PROJECT_DIR$/Rakesh/Google-interview/stackOverflow.py" />
         <option value="$PROJECT_DIR$/Rakesh/merge-sorting/merge_sort_code.py" />
+        <option value="$PROJECT_DIR$/Rakesh/python-basics/interface.md" />
+        <option value="$PROJECT_DIR$/Rakesh/permutation-combination/next_permutation.py" />
+        <option value="$PROJECT_DIR$/Rakesh/permutation-combination/palindromic_permutation.py" />
+        <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/single_number.py" />
+        <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/HH Facebook 1.py" />
+        <option value="$PROJECT_DIR$/Rakesh/trees/Validate Binary Search Tree.py" />
+        <option value="$PROJECT_DIR$/Rakesh/trees/post_order_traversal.py" />
+        <option value="$PROJECT_DIR$/Rakesh/trees/Flatten Binary Tree to Linked List.py" />
       </list>
     </option>
   </component>
@@ -380,7 +386,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="external_sorting" />
+              <option name="myItemId" value="trees" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -418,79 +424,7 @@
       <recent name="$PROJECT_DIR$/Rakesh/word_problem" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.stackOverflow">
-    <configuration default="false" name="pangram" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="interview-preparation" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/pangram.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="pangram_optimized" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="interview-preparation" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/pangram_optimized.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="dir in python" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="interview-preparation" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/dir vars in python.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="size_of_variable_python" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/python-basics" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="interview-preparation" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/python-basics/size_of_variable_python.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.HH Facebook 1">
     <configuration default="false" name="stackOverflow" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -505,6 +439,78 @@
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Google-interview/stackOverflow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="next_permutation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/permutation-combination" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="interview-preparation" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/permutation-combination/next_permutation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="palindromic_permutation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/permutation-combination" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="interview-preparation" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/permutation-combination/palindromic_permutation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="single_number" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/General Interview Questions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="interview-preparation" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/General Interview Questions/single_number.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HH Facebook 1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/General Interview Questions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="interview-preparation" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/General Interview Questions/HH Facebook 1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -698,19 +704,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.pangram" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pangram_optimized" />
-      <item index="2" class="java.lang.String" itemvalue="Python.dir in python" />
-      <item index="3" class="java.lang.String" itemvalue="Python.size_of_variable_python" />
-      <item index="4" class="java.lang.String" itemvalue="Python.stackOverflow" />
+      <item index="0" class="java.lang.String" itemvalue="Python.stackOverflow" />
+      <item index="1" class="java.lang.String" itemvalue="Python.next_permutation" />
+      <item index="2" class="java.lang.String" itemvalue="Python.palindromic_permutation" />
+      <item index="3" class="java.lang.String" itemvalue="Python.single_number" />
+      <item index="4" class="java.lang.String" itemvalue="Python.HH Facebook 1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.stackOverflow" />
-        <item index="1" class="java.lang.String" itemvalue="Python.size_of_variable_python" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dir in python" />
-        <item index="3" class="java.lang.String" itemvalue="Python.pangram" />
-        <item index="4" class="java.lang.String" itemvalue="Python.pangram_optimized" />
+        <item index="0" class="java.lang.String" itemvalue="Python.HH Facebook 1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.single_number" />
+        <item index="2" class="java.lang.String" itemvalue="Python.palindromic_permutation" />
+        <item index="3" class="java.lang.String" itemvalue="Python.next_permutation" />
+        <item index="4" class="java.lang.String" itemvalue="Python.stackOverflow" />
       </list>
     </recent_temporary>
   </component>
@@ -724,24 +730,6 @@
       <created>1440448994947</created>
       <option name="number" value="Default" />
       <updated>1440448994947</updated>
-    </task>
-    <task id="LOCAL-00029" summary="candy problem">
-      <created>1443585804889</created>
-      <option name="number" value="00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1443585804889</updated>
-    </task>
-    <task id="LOCAL-00030" summary="candy problem">
-      <created>1443586227471</created>
-      <option name="number" value="00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1443586227471</updated>
-    </task>
-    <task id="LOCAL-00031" summary="permutation">
-      <created>1443635149991</created>
-      <option name="number" value="00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1443635149991</updated>
     </task>
     <task id="LOCAL-00032" summary="permutation">
       <created>1443845746592</created>
@@ -1019,7 +1007,25 @@
       <option name="project" value="LOCAL" />
       <updated>1447546729499</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="external sorting concepts">
+      <created>1447559678744</created>
+      <option name="number" value="00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1447559678744</updated>
+    </task>
+    <task id="LOCAL-00079" summary="abstract classes concept in Python">
+      <created>1447566213718</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1447566213718</updated>
+    </task>
+    <task id="LOCAL-00080" summary="palindrome permutation">
+      <created>1447570838836</created>
+      <option name="number" value="00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1447570838836</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1032,7 +1038,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24781732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24781732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33717948" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1086,9 +1092,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="subsets new method" />
-    <MESSAGE value="zlib function is used for compress and decompress" />
-    <MESSAGE value="gitignore files added" />
     <MESSAGE value="new interview solutions&#10;" />
     <MESSAGE value="word_problem_approach &#10;" />
     <MESSAGE value="gitignore &#10;" />
@@ -1111,7 +1114,10 @@
     <MESSAGE value="python basics getter setter gil" />
     <MESSAGE value="understanding how getter and setter works" />
     <MESSAGE value="getter and setter in python class" />
-    <option name="LAST_COMMIT_MESSAGE" value="getter and setter in python class" />
+    <MESSAGE value="external sorting concepts" />
+    <MESSAGE value="abstract classes concept in Python" />
+    <MESSAGE value="palindrome permutation" />
+    <option name="LAST_COMMIT_MESSAGE" value="palindrome permutation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1123,55 +1129,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakesh/heap/kth_largest_element_optimized.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64681727">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/heap/kth_largest_element_with_heap_amazing_solution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90554416">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/heap/when_you_should_use_heap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90554416">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/matrix_arithmetic/sprial_matrix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9486653">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/python-decorator/reverse_a_string_using_decorator_another_method.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47433266">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/python-decorator/reverse_a_string_using_decorator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8706365">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/python-decorator/hacker_Rank_python_decorator_questions_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.90554416">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/python-basics/call_by_reference_in_python.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.8110883">
@@ -1209,20 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.78439426">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/permutation-combination/next_permutation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8973306">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/permutation-combination/palindromic_permutation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7412731">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1456,7 +1399,7 @@
         <state vertical-scroll-proportion="-1.164271">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1#17#0" expanded="true" />
+            <element signature="e#1#17#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1532,6 +1475,89 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38809034">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/python-basics/interface.md">
+      <provider selected="true" editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxHtmlEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/single_number.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4312115">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/permutation-combination/next_permutation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7412731">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/permutation-combination/palindromic_permutation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7412731">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/HH Facebook 1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1724846">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/Validate Binary Search Tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7412731">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/post_order_traversal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7412731">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/binary_search_implementation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="12" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/trees/Flatten Binary Tree to Linked List.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
