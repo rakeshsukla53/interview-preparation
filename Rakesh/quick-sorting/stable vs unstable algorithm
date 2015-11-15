@@ -1,0 +1,3 @@
+Stable sorting algorithms maintain the relative order of records with equal keys .Lets take a array of numbers  A[8,3,1,4,5,3] there are two threes is the array.
+So let us write(just for understanding) the three at position A[5]=3* so our array is now  A[8,3,1,4,5,3*] .Now when we sort the array A we will have A[1,3,3*,4,5] or A[1,3*,3,4,5] based on the algorithm we use.If 3  comes before the 3*  the sort is stable that is there relative order is maintained .This has to be followed for every element which occur more than once in an array.
+

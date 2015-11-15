@@ -1,5 +1,3 @@
-__author__ = 'rakesh'
-
 
 from itertools import product
 
@@ -11,6 +9,8 @@ def answer(document, search_terms):
         for term in search_terms
     ]
 
+    print search_term_positions
+
     combos = [sorted(combo) for combo in product(*search_term_positions)]
     if not combos:
         return None    # Could not find all search terms
@@ -19,7 +19,7 @@ def answer(document, search_terms):
     return " ".join(words[best_combo[0] : best_combo[-1] + 1])
 
 
-print answer("a b c d a", ["a", "c", "d"])
+print answer("world there hello hello where world", ["hello", "world"])
 
 
 
