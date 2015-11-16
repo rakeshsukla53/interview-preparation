@@ -1,8 +1,12 @@
 
-from collections import Counter
-
-def subsequence(s1, s2):
+def answer(s1, s2):
 
 
-subsequence("abaabbabcacc", "abc")
 
+
+
+
+
+
+
+answer('abaabbabcacc', 'abc')

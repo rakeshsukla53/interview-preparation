@@ -1,6 +1,6 @@
-__author__ = 'rakesh'
 
-#size of the matrix here will be length(string1) + 1 * length(string2) + 1
+
+# size of the matrix here will be length(string1) + 1 * length(string2) + 1
 
 columnString = list(raw_input().strip())
 rowString = list(raw_input().strip())
@@ -20,7 +20,7 @@ for i in range(len(rowString)):
 
 print dynamicMatrix[len(rowString)][len(columnString)]
 
-#you can solve this problem in O(n*n)
+# you can solve this problem in O(n*n)
 
-#In every case you need to retain the previous value , while here I am saving the data in memory but
+# In every case you need to retain the previous value , while here I am saving the data in memory but
 
