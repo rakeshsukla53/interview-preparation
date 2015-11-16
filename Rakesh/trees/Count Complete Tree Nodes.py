@@ -7,7 +7,7 @@
 
 class Solution(object):
     ''' For complete binary tree the number of nodes = 2^height of tree - 1'''
-
+    ''' this is highly efficient and not using any property of Complete Binary Tree'''
     def totalNodes(self, root):
 
         if root is None:

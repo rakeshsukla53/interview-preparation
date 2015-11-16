@@ -1,7 +1,4 @@
-__author__ = 'rakesh'
-
-
-class BinarySearchTree:   #now you can perform any type of opertion on this tree
+class BinarySearchTree:   # now you can perform any type of opertion on this tree
 
     def __init__(self, value):
 
@@ -9,7 +6,7 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
         self.right = None
         self.left =  None
 
-    def insert(self, data):  #this will take the value and insert accordingly
+    def insert(self, data):  # this will take the value and insert accordingly
 
         if data > self.value:
             if self.right == None:
@@ -299,7 +296,7 @@ class BinarySearchTree:   #now you can perform any type of opertion on this tree
         if self.right != None:
             self.right.invertBinaryTree()
 
-    def breadthForSearch(self):  #so the breadth for search if perfectly working
+    def breadthForSearch(self):  # so the breadth for search if perfectly working
         from collections import deque
         '''
         for breadth for search you have the use the deque

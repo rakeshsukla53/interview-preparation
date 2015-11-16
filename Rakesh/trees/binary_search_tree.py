@@ -1,6 +1,4 @@
-__author__ = 'rakesh'
-
-#create a binary tree
+# create a binary tree
 
 class BinaryTree:
 
