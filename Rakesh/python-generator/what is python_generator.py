@@ -23,6 +23,7 @@ def without_generator():
 
 print without_generator()  # this will return the whole list
 
+list.extend()
 
 
 
