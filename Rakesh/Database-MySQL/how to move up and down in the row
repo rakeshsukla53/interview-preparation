@@ -1,0 +1,16 @@
+select
+    distinct(select
+            c2.id
+        from
+            temperature c2
+        where
+            c2.id > c1.id and c2.date > c1.date
+                and c2.temperature > c1.temperature
+        limit 1) as id
+from
+    temperature c1
+
+# there are many ways to move up and down in an sql table using group by, inner join and lots of where condition
+
+# since you are not very familiar with defining variables and their USAGE these methods are superuseful
+

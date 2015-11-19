@@ -1,0 +1,13 @@
+select
+    r1.id,
+    r1.score,
+    (select
+            count(distinct (r2.score))
+        from
+            rank r2
+        where
+            r2.score >= r1.score) as rank
+from
+    rank r1
+order by r1.score DESC
+

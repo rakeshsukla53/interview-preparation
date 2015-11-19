@@ -1,0 +1,11 @@
+select
+    *
+from
+    rank
+order by score DESC
+limit 1 offset 1
+
+# offset just removes the top row from your mysql table, so this concept is pretty amazing
+
+# it is generally used to find the nth or 2nd maximum value or 3 or 4th
+
