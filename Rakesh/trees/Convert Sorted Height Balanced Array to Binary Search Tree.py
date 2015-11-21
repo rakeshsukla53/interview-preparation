@@ -1,6 +1,4 @@
 
-# The reason why one will binary search tree instead of hash table is we can do range very efficiently
-
 
 # Definition for a binary tree node.
 class TreeNode(object):
@@ -27,9 +25,6 @@ class Solution(object):
             return None
 
 # convert a array into balanced binary search tree
-
-# another interesting way to balance search tree
-
 
 
 

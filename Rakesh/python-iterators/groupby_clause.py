@@ -7,10 +7,9 @@ class Solution(object):
         :rtype: List[List[str]]
         """
         result = []
-        strings = sorted(strings, key=len)
         for k, g in groupby(strings, key=len):
             result.append(sorted(list(g)))
 
         return result
 
-print Solution().groupStrings(["a", "bc", "d"])
+print Solution().groupStrings(["ab", "ba", "d"])

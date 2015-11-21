@@ -8,9 +8,9 @@ def solution(N):
     if N == 1:
         return None
 
-    #the range_value will always be less or equal to log(N,2) where N is the number, and 2 is base
+    # the range_value will always be less or equal to log(N,2) where N is the number, and 2 is base
     # 2^x = N => x = log2N
-    #math.ceil function return the ceiling of x as a float, the smallest integer value greater than or equal to x.
+    # math.ceil function return the ceiling of x as a float, the smallest integer value greater than or equal to x.
     range_value = int(math.ceil(math.log(N, 2)))
 
     for i in range(range_value):
