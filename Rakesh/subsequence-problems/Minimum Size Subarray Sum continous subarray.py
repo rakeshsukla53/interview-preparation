@@ -23,23 +23,20 @@ class Solution(object):
             subarray.append(i)
             total_sum += i
             if total_sum < s:
+                # keep adding since the sum is smaller
                 continue
-            elif total_sum == s:
-                # if you sum is equal then find out the length of the subarray
-                if len(subarray) < min_length:
-                    min_length = len(subarray)
-            elif total_sum > s:
-                while total_sum > s:
-                    # pop out the left element if the sum is greater and then check for availability
+            else:
+                while total_sum >= s:
+                    # since we are talking about continuous array this technique will work
+                    if len(subarray) < min_length:
+                        # if you found a smaller length subarray then take that value
+                        min_length = len(subarray)
                     total_sum -= subarray.popleft()
-                    if total_sum == s:
-                        if len(subarray) < min_length:
-                            min_length = len(subarray)
 
         if min_length == sys.maxint:
             return 0
         else:
             return min_length
 
-print Solution().minSubArrayLen(11, [1, 2, 3, 4, 4])
+print Solution().minSubArrayLen(7, [2, 3, 1, 2, 4, 3])
 
