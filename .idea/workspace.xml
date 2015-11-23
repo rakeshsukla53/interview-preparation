@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="edit distance is not levenstein">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/subsets/3Sum Smaller.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/subsequence-problems/Minimum Size Subarray Sum continous subarray.py" afterPath="$PROJECT_DIR$/Rakesh/subsequence-problems/Minimum Size Subarray Sum continous subarray.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/2 Pointers/3Sum Smaller.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/2 Pointers/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Rakesh/subsequence-problems/Minimum Size Subarray Sum continous subarray.py" afterPath="$PROJECT_DIR$/Rakesh/2 Pointers/Minimum Size Subarray Sum continous subarray.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/subsets/3Sum Smaller.py" afterPath="$PROJECT_DIR$/Rakesh/subsets/3Sum Smaller.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../enigma.io/README.md" afterPath="$PROJECT_DIR$/../enigma.io/README.md" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/Desktop/MobHTML/introduction.txt" afterPath="$USER_HOME$/Desktop/MobHTML/introduction.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -36,6 +38,7 @@
     <SUITE FILE_PATH="coverage/interview-preparation$find_all_paths.coverage" NAME="find_all_paths Coverage Results" MODIFIED="1444181031390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/graph-theory-algorithms" />
     <SUITE FILE_PATH="coverage/interview-preparation$BinaryGap.coverage" NAME="BinaryGap Coverage Results" MODIFIED="1446574666373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility" />
     <SUITE FILE_PATH="coverage/interview-preparation$trie.coverage" NAME="trie Coverage Results" MODIFIED="1440983963088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/trie" />
+    <SUITE FILE_PATH="coverage/interview-preparation$3Sum_Smaller.coverage" NAME="3Sum Smaller Coverage Results" MODIFIED="1448244057095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/2 Pointers" />
     <SUITE FILE_PATH="coverage/interview-preparation$Doctests_in_integer_knapsack.coverage" NAME="Doctests in integer_knapsack Coverage Results" MODIFIED="1446596015234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/dynamic-programming" />
     <SUITE FILE_PATH="coverage/interview-preparation$difference_is_2.coverage" NAME="difference_is_2 Coverage Results" MODIFIED="1441916325235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/General Interview Questions" />
     <SUITE FILE_PATH="coverage/interview-preparation$binary_search_insert_position.coverage" NAME="binary_search_insert_position Coverage Results" MODIFIED="1448213980197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/search-algorithm" />
@@ -197,24 +200,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="3Sum Smaller.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Rakesh/subsets/3Sum Smaller.py">
+      <file leaf-file-name="3Sum Smaller.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Rakesh/2 Pointers/3Sum Smaller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.747495">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Minimum Size Subarray Sum continous subarray.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Rakesh/subsequence-problems/Minimum Size Subarray Sum continous subarray.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3046092">
-              <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
-              <folding>
-                <element signature="e#1#30#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -234,7 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Rakesh/trees/testing_binary_search_tree.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/Binary Tree Right Side View.py" />
         <option value="$PROJECT_DIR$/Rakesh/python-basics/enumerate basics.py" />
         <option value="$PROJECT_DIR$/Rakesh/python-basics/difference between list and array.py" />
@@ -283,8 +273,9 @@
         <option value="$PROJECT_DIR$/Rakesh/subsequence-problems/Minimum Size Subarray Sum discontinous array.py" />
         <option value="$PROJECT_DIR$/Rakesh/search-algorithm/binary_search_insert_position.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/Binary Tree Zigzag Level Order Traversal.py" />
-        <option value="$PROJECT_DIR$/Rakesh/subsets/3Sum Smaller.py" />
         <option value="$PROJECT_DIR$/Rakesh/subsequence-problems/Minimum Size Subarray Sum continous subarray.py" />
+        <option value="$PROJECT_DIR$/Rakesh/subsets/3Sum Smaller.py" />
+        <option value="$PROJECT_DIR$/Rakesh/2 Pointers/3Sum Smaller.py" />
       </list>
     </option>
   </component>
@@ -409,7 +400,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="subsequence-problems" />
+              <option name="myItemId" value="2 Pointers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -427,6 +418,9 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/sorting/quick_sort.png" />
   </component>
   <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="http://" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Rakesh/quick-sorting" />
       <recent name="$PROJECT_DIR$/Rakesh/subsets" />
@@ -434,36 +428,15 @@
       <recent name="$PROJECT_DIR$/Rakesh/word_problem" />
       <recent name="$PROJECT_DIR$/Rakesh/trees" />
     </key>
-    <key name="OPEN_URL_DIALOG">
-      <recent name="http://" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Rakesh/2 Pointers" />
       <recent name="$PROJECT_DIR$/Rakesh/Balanced-trees" />
       <recent name="$PROJECT_DIR$/Rakesh/python-descriptors_getter_setter" />
       <recent name="$PROJECT_DIR$/Rakesh/python-decorator" />
       <recent name="$PROJECT_DIR$/Rakesh/dynamic-programming" />
-      <recent name="$PROJECT_DIR$/Rakesh/trees" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Minimum Size Subarray Sum">
-    <configuration default="false" name="starmap" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/python-functionals" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="interview-preparation" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/python-functionals/starmap.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.3Sum Smaller">
     <configuration default="false" name="reverse the string" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -513,7 +486,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/subsequence-problems/Minimum Size Subarray Sum continous subarray.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/2 Pointers/Minimum Size Subarray Sum continous subarray.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -532,6 +505,24 @@
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/search-algorithm/binary_search_insert_position.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="3Sum Smaller" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/2 Pointers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="interview-preparation" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/2 Pointers/3Sum Smaller.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -725,19 +716,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.starmap" />
-      <item index="1" class="java.lang.String" itemvalue="Python.reverse the string" />
-      <item index="2" class="java.lang.String" itemvalue="Python.largest_number" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Minimum Size Subarray Sum" />
-      <item index="4" class="java.lang.String" itemvalue="Python.binary_search_insert_position" />
+      <item index="0" class="java.lang.String" itemvalue="Python.reverse the string" />
+      <item index="1" class="java.lang.String" itemvalue="Python.largest_number" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Minimum Size Subarray Sum" />
+      <item index="3" class="java.lang.String" itemvalue="Python.binary_search_insert_position" />
+      <item index="4" class="java.lang.String" itemvalue="Python.3Sum Smaller" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Minimum Size Subarray Sum" />
-        <item index="1" class="java.lang.String" itemvalue="Python.binary_search_insert_position" />
-        <item index="2" class="java.lang.String" itemvalue="Python.largest_number" />
-        <item index="3" class="java.lang.String" itemvalue="Python.reverse the string" />
-        <item index="4" class="java.lang.String" itemvalue="Python.starmap" />
+        <item index="0" class="java.lang.String" itemvalue="Python.3Sum Smaller" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Minimum Size Subarray Sum" />
+        <item index="2" class="java.lang.String" itemvalue="Python.binary_search_insert_position" />
+        <item index="3" class="java.lang.String" itemvalue="Python.largest_number" />
+        <item index="4" class="java.lang.String" itemvalue="Python.reverse the string" />
       </list>
     </recent_temporary>
   </component>
@@ -751,12 +742,6 @@
       <created>1440448994947</created>
       <option name="number" value="Default" />
       <updated>1440448994947</updated>
-    </task>
-    <task id="LOCAL-00041" summary="queen problem">
-      <created>1444191972491</created>
-      <option name="number" value="00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1444191972491</updated>
     </task>
     <task id="LOCAL-00042" summary="valid parentheses">
       <created>1444269104420</created>
@@ -1046,7 +1031,13 @@
       <option name="project" value="LOCAL" />
       <updated>1448217863886</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="subsequence problems always clarify whether the sequence is continous or not">
+      <created>1448228856750</created>
+      <option name="number" value="00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1448228856750</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1059,7 +1050,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975152" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2256548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2256548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32179487" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1089,7 +1080,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="algorithms solution" />
     <MESSAGE value="codility questions" />
     <MESSAGE value="integer knap sack problem" />
     <MESSAGE value="bisect examples" />
@@ -1114,7 +1104,8 @@
     <MESSAGE value="understanding SQL in a better way" />
     <MESSAGE value="binary tree questions" />
     <MESSAGE value="tree coding questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="tree coding questions" />
+    <MESSAGE value="subsequence problems always clarify whether the sequence is continous or not" />
+    <option name="LAST_COMMIT_MESSAGE" value="subsequence problems always clarify whether the sequence is continous or not" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1126,13 +1117,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakesh/trees/binary_search_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5174538">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/trees/Binary Tree Right Side View.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.724846">
@@ -1496,21 +1480,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/subsets/3Sum Smaller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/subsequence-problems/Minimum Size Subarray Sum continous subarray.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/2 Pointers/Minimum Size Subarray Sum continous subarray.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3046092">
           <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
           <folding>
-            <element signature="e#1#30#0" expanded="true" />
+            <element signature="e#1#30#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/subsets/3Sum Smaller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04208417">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/2 Pointers/3Sum Smaller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.747495">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
