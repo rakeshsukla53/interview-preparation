@@ -13,6 +13,7 @@ class Solution(object):
             return 0
 
         nums.sort()
+        print nums
         n = len(nums)
         count = 0
         for i in range(n - 2):
@@ -22,20 +23,23 @@ class Solution(object):
             # end will start from n - 1
             end = n - 1
             # the process will go on till start and end are equal
-            while not start == end:
+            while start < end:
                 # take the next value of b and c
                 b = nums[start]
                 c = nums[end]
                 # if the sum is less than target, then capture the value
-                if a + b + c >= target:
+                if a + b + c < target:
+                    count += end - start
+                    start += 1
+                else:
                     end -= 1
-                elif a + b + c < target:
+
                     # if you need to decrease the value of end here anyway since you're checking for all the values less than target.
-                    end -= 1
-                    count += 1
+
         # return the final count or you can just yield it
         return count
 
-print Solution().threeSumSmaller([-2, 0, 1, 2, 3, 1, 1, 1], 2)
+print Solution().threeSumSmaller([3, 1, 0, -2], 4)
 
 # if you want to check the value of zero then you need can insert all the values into a hash table
+
