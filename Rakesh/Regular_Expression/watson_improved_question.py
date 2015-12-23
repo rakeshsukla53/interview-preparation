@@ -11,3 +11,5 @@ print("Compressed length:", len(compressed))
 decompressed = decompress(compressed)
 print("Decompressed is equal:", decompressed == string)
 
+
+
