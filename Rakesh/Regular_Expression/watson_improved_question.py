@@ -1,4 +1,3 @@
-__author__ = 'rakesh'
 
 from zlib import compress, decompress  # it is based on GNU zip
 
@@ -10,6 +9,5 @@ print compressed
 print("Compressed length:", len(compressed))
 decompressed = decompress(compressed)
 print("Decompressed is equal:", decompressed == string)
-
 
 
