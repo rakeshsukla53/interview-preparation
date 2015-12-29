@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/General Interview Questions/First Missing Positive.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/sorting/largest_digit_formed_by_number.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Math/median_improved_solution.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/sorting/sorting_some_values_in_a_list.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/General Interview Questions/Max Points on a Line.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/General Interview Questions/First Missing Positive.py" afterPath="$PROJECT_DIR$/Rakesh/General Interview Questions/First Missing Positive.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/sorting/sorting_some_values_in_a_list.py" afterPath="$PROJECT_DIR$/Rakesh/sorting/sorting_some_values_in_a_list.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="interview-preparation.iws" />
@@ -23,6 +22,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/interview-preparation$sorting_some_values_in_a_list.coverage" NAME="sorting_some_values_in_a_list Coverage Results" MODIFIED="1451351178450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/sorting" />
     <SUITE FILE_PATH="coverage/interview-preparation$count_number_of_ones.coverage" NAME="count_number_of_ones Coverage Results" MODIFIED="1444178093009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$foreign_key_peewee.coverage" NAME="foreign_key_peewee Coverage Results" MODIFIED="1446814430731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-database" />
     <SUITE FILE_PATH="coverage/interview-preparation$Modifying_a_list_while_iterating_over_it.coverage" NAME="Modifying a list while iterating over it Coverage Results" MODIFIED="1440451069516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-mistakes" />
@@ -201,14 +201,14 @@
     <favorites_list name="interview-preparation" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.4475096">
       <split-first>
         <leaf>
           <file leaf-file-name="First Missing Positive.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/First Missing Positive.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.4">
-                  <caret line="44" column="83" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="83" />
+                <state vertical-scroll-proportion="0.53333336">
+                  <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -218,11 +218,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="sorting_some_values_in_a_list.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Rakesh/sorting/sorting_some_values_in_a_list.py">
+          <file leaf-file-name="Max Points on a Line.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/Max Points on a Line.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.74545455">
+                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -251,7 +251,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Rakesh/python-output/output_list 2.py" />
         <option value="$PROJECT_DIR$/Rakesh/python-basics/generator and yield for massive performance.md" />
         <option value="$PROJECT_DIR$/Rakesh/python-generator/what is python_generator.py" />
         <option value="$PROJECT_DIR$/Rakesh/python-basics/append vs extend.py" />
@@ -300,8 +299,9 @@
         <option value="$PROJECT_DIR$/Rakesh/Math/median_improved_solution.py" />
         <option value="$PROJECT_DIR$/Rakesh/Common-interview-problems/largest_number.py" />
         <option value="$PROJECT_DIR$/Rakesh/sorting/largest_digit_formed_by_number.py" />
-        <option value="$PROJECT_DIR$/Rakesh/sorting/sorting_some_values_in_a_list.py" />
         <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/First Missing Positive.py" />
+        <option value="$PROJECT_DIR$/Rakesh/sorting/sorting_some_values_in_a_list.py" />
+        <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/Max Points on a Line.py" />
       </list>
     </option>
   </component>
@@ -423,7 +423,7 @@
     <property name="FullScreen" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="lar&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py&#10;largest&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py" />
+    <property name="SearchEverywhereHistoryKey" value="missing&#9;null&#9;null&#10;missi&#9;null&#9;null&#10;subsequence&#9;null&#9;null&#10;lar&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py&#10;largest&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -459,25 +459,7 @@
       <recent name="$PROJECT_DIR$/Rakesh/dynamic-programming" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.First Missing Positive">
-    <configuration default="false" name="watson_improved_question" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Regular_Expression" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="interview-preparation" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Regular_Expression/watson_improved_question.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.sorting_some_values_in_a_list">
     <configuration default="false" name="watson_question" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -546,6 +528,24 @@
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/General Interview Questions/First Missing Positive.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="sorting_some_values_in_a_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/sorting" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="interview-preparation" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/sorting/sorting_some_values_in_a_list.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -739,19 +739,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.watson_improved_question" />
-      <item index="1" class="java.lang.String" itemvalue="Python.watson_question" />
-      <item index="2" class="java.lang.String" itemvalue="Python.median" />
-      <item index="3" class="java.lang.String" itemvalue="Python.median_problem_tricks" />
-      <item index="4" class="java.lang.String" itemvalue="Python.First Missing Positive" />
+      <item index="0" class="java.lang.String" itemvalue="Python.watson_question" />
+      <item index="1" class="java.lang.String" itemvalue="Python.median" />
+      <item index="2" class="java.lang.String" itemvalue="Python.median_problem_tricks" />
+      <item index="3" class="java.lang.String" itemvalue="Python.First Missing Positive" />
+      <item index="4" class="java.lang.String" itemvalue="Python.sorting_some_values_in_a_list" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.First Missing Positive" />
-        <item index="1" class="java.lang.String" itemvalue="Python.median_problem_tricks" />
-        <item index="2" class="java.lang.String" itemvalue="Python.median" />
-        <item index="3" class="java.lang.String" itemvalue="Python.watson_question" />
-        <item index="4" class="java.lang.String" itemvalue="Python.watson_improved_question" />
+        <item index="0" class="java.lang.String" itemvalue="Python.sorting_some_values_in_a_list" />
+        <item index="1" class="java.lang.String" itemvalue="Python.First Missing Positive" />
+        <item index="2" class="java.lang.String" itemvalue="Python.median_problem_tricks" />
+        <item index="3" class="java.lang.String" itemvalue="Python.median" />
+        <item index="4" class="java.lang.String" itemvalue="Python.watson_question" />
       </list>
     </recent_temporary>
   </component>
@@ -765,12 +765,6 @@
       <created>1440448994947</created>
       <option name="number" value="Default" />
       <updated>1440448994947</updated>
-    </task>
-    <task id="LOCAL-00050" summary="interview questions">
-      <created>1445275308681</created>
-      <option name="number" value="00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1445275308719</updated>
     </task>
     <task id="LOCAL-00051" summary="subsets new method">
       <created>1445287184712</created>
@@ -1060,7 +1054,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451337021462</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="missing positive integer">
+      <created>1451346149572</created>
+      <option name="number" value="00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1451346149572</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1073,7 +1073,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975152" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14640698" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12357287" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32692307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1103,7 +1103,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="amazon phone interview questions added" />
     <MESSAGE value="codility test quesitions" />
     <MESSAGE value="understand heap better" />
     <MESSAGE value="python basics" />
@@ -1128,7 +1127,8 @@
     <MESSAGE value="edit distance is not levenstein" />
     <MESSAGE value="vim emulator added" />
     <MESSAGE value="problem solving approaches" />
-    <option name="LAST_COMMIT_MESSAGE" value="problem solving approaches" />
+    <MESSAGE value="missing positive integer" />
+    <option name="LAST_COMMIT_MESSAGE" value="missing positive integer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1140,48 +1140,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakesh/Codility and HackerRank/logistic_regression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.476">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Database-MySQL/how_to_use_offset_limit_create_function_define_variables.db">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6733467">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/python-basics/classes and objects for complex numbers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08416834">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/Database-MySQL/how to move up and down in the row">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6733467">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/python-iterators/groupby_clause.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63126254">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/python-functionals/reduce.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4208417">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/-1247972723/itertools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -1507,7 +1465,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/sorting/sorting_some_values_in_a_list.py">
+    <entry file="file://$PROJECT_DIR$/Rakesh/subsequence-problems/longest_increasing_subsequence.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1515,10 +1473,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/dynamic-programming/longest_subsequence_string.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.14545454">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/python-functionals/lambda_use_with_map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/missing_Numbers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/missing_number.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/sorting/sorting_some_values_in_a_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/First Missing Positive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.4">
-          <caret line="44" column="83" selection-start-line="44" selection-start-column="83" selection-end-line="44" selection-end-column="83" />
+        <state vertical-scroll-proportion="0.53333336">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/Max Points on a Line.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74545455">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
