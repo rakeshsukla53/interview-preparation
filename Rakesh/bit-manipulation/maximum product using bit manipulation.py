@@ -1,5 +1,3 @@
-from collections import Counter
-
 class Solution(object):
     def maxProduct(self, words):
         """
@@ -10,11 +8,10 @@ class Solution(object):
         max_product = 0
         words = sorted(words, key=len, reverse=True)
         for index, j in enumerate(words):
-            w1 = Counter(j)
             for i in words[index + 1:]:
                 count = 0
                 for k in i:
-                    if k in w1:
+                    if k in j:
                         count = 1
                         break
                 if not count:
@@ -28,3 +25,5 @@ class Solution(object):
         return max_product
 
 print Solution().maxProduct(["eae", "ea", "aaf", "bda", "fcf", "dc", "ac", "ce", "cefde", "dabae"])
+
+
