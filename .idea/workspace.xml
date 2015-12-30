@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Brain-Teaser/Bulb Switches.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Brain-Teaser/additive_number.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/matrix_arithmetic/matrix_multiplication_easy way.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/bit-manipulation/maximum product using bit manipulation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/bit-manipulation/bit_manipulation.py" afterPath="$PROJECT_DIR$/Rakesh/bit-manipulation/bit_manipulation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/matrix_arithmetic/matrix_multiplication.py" afterPath="$PROJECT_DIR$/Rakesh/matrix_arithmetic/matrix_multiplication.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/python/list comprehension examples.py" afterPath="$PROJECT_DIR$/Rakesh/python/list comprehension examples.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="interview-preparation.iws" />
@@ -234,11 +229,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matrix_multiplication_easy way.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="matrix_multiplication_easy way.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rakesh/matrix_arithmetic/matrix_multiplication_easy way.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72420263">
+            <state vertical-scroll-proportion="0.0">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list comprehension examples.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Rakesh/python/list comprehension examples.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27767354">
+              <caret line="59" column="81" selection-start-line="59" selection-start-column="81" selection-end-line="59" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -307,7 +312,6 @@
         <option value="$PROJECT_DIR$/Rakesh/sorting/sorting_some_values_in_a_list.py" />
         <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/Max Points on a Line.py" />
         <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/Strobogrammatic Number II.py" />
-        <option value="$PROJECT_DIR$/Rakesh/python/list comprehension examples.py" />
         <option value="$PROJECT_DIR$/Rakesh/bit-manipulation/maximum product of word length.py" />
         <option value="$PROJECT_DIR$/Rakesh/bit-manipulation/code_review_maximum_word_length.py" />
         <option value="$PROJECT_DIR$/Rakesh/bit-manipulation/maximum product using bit manipulation.py" />
@@ -316,6 +320,7 @@
         <option value="$PROJECT_DIR$/Rakesh/Brain-Teaser/additive_number.py" />
         <option value="$PROJECT_DIR$/Rakesh/matrix_arithmetic/matrix_multiplication.py" />
         <option value="$PROJECT_DIR$/Rakesh/matrix_arithmetic/matrix_multiplication_easy way.py" />
+        <option value="$PROJECT_DIR$/Rakesh/python/list comprehension examples.py" />
       </list>
     </option>
   </component>
@@ -455,7 +460,7 @@
     <property name="FullScreen" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="list&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/python/list comprehension examples.py&#10;missing&#9;null&#9;null&#10;missi&#9;null&#9;null&#10;subsequence&#9;null&#9;null&#10;lar&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py&#10;largest&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py" />
+    <property name="SearchEverywhereHistoryKey" value="lis&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/python/list comprehension examples.py&#10;list&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/python/list comprehension examples.py&#10;missing&#9;null&#9;null&#10;missi&#9;null&#9;null&#10;subsequence&#9;null&#9;null&#10;lar&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py&#10;largest&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -798,12 +803,6 @@
       <option name="number" value="Default" />
       <updated>1440448994947</updated>
     </task>
-    <task id="LOCAL-00053" summary="gitignore files added">
-      <created>1445409430875</created>
-      <option name="number" value="00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1445409430876</updated>
-    </task>
     <task id="LOCAL-00054" summary="gitignore files added">
       <created>1445410286437</created>
       <option name="number" value="00054" />
@@ -1092,7 +1091,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451426431424</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="matrix multiplication added">
+      <created>1451449548152</created>
+      <option name="number" value="00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1451449548153</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1135,7 +1140,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="python basics" />
     <MESSAGE value="jw player coding questions" />
     <MESSAGE value="python basics getter setter gil" />
     <MESSAGE value="understanding how getter and setter works" />
@@ -1160,7 +1164,8 @@
     <MESSAGE value="missing positive integer" />
     <MESSAGE value="find maximum points on a single line using slope method" />
     <MESSAGE value="maximum product of two words and code review" />
-    <option name="LAST_COMMIT_MESSAGE" value="maximum product of two words and code review" />
+    <MESSAGE value="matrix multiplication added" />
+    <option name="LAST_COMMIT_MESSAGE" value="matrix multiplication added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1483,14 +1488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/python/list comprehension examples.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47368422">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/bit-manipulation/code_review_maximum_word_length.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75">
@@ -1549,8 +1546,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/matrix_arithmetic/matrix_multiplication_easy way.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72420263">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/python/list comprehension examples.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27767354">
+          <caret line="59" column="81" selection-start-line="59" selection-start-column="81" selection-end-line="59" selection-end-column="81" />
           <folding />
         </state>
       </provider>

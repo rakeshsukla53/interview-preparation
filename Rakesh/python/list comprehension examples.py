@@ -54,6 +54,11 @@ print ['%s-%d' % (x, y) for x in alpha_list if y < 55 and x < 'C' for y in num_l
 			for y in num_list
 				if y < 55]
 
+
+# matrix example
+
+ [[sum(a * b for a, b in zip(X_row, Y_col)) for Y_col in zip(*B)] for X_row in A]
+
 # nested loop list comprehension
 
 print [[float(y) for y in x] for x in l]
