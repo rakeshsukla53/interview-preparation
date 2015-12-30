@@ -15,11 +15,11 @@ A = [
 ]
 
 B = [
-  [ 7, 0, 0 ],
-  [ 0, 0, 0 ],
-  [ 0, 0, 1 ]
+  [ 7, 0, 0, 0 ],
+  [ 0, 0, 0, 0 ],
+  [ 0, 0, 1, 0 ]
 ]
 
 
-Solution().multiply(A, B)
+print Solution().multiply(A, B)
 
