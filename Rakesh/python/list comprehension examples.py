@@ -55,6 +55,12 @@ print ['%s-%d' % (x, y) for x in alpha_list if y < 55 and x < 'C' for y in num_l
 				if y < 55]
 
 
+# simple for loop if else
+
+[n for n in ctr if nums.count(n) > len(nums)/3]
+
+n for n in nums if n in ctr
+
 # matrix example
 
  [[sum(a * b for a, b in zip(X_row, Y_col)) for Y_col in zip(*B)] for X_row in A]
