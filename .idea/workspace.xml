@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/matrix_arithmetic/Search a 2D Matrix II.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/matrix_arithmetic/Search a 2D Matrix optimized.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/matrix_arithmetic/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/General Interview Questions/create_pascal_triangle.py" afterPath="$PROJECT_DIR$/Rakesh/General Interview Questions/create_pascal_triangle.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/interview-preparation.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/.gitignore" afterPath="$PROJECT_DIR$/Rakesh/.gitignore" />
     </list>
     <ignored path="interview-preparation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -218,7 +222,18 @@
     <favorites_list name="interview-preparation" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Rakesh/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6466165">
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -239,7 +254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Rakesh/trees/same tree.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/same tree optimized how to do double tree recursion.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/balanced_binary_tree.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/Lowest Common Ancestor of a Binary Tree.py" />
@@ -290,6 +304,7 @@
         <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/create_pascal_triangle.py" />
         <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/Search a 2D Matrix II.py" />
         <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/Search a 2D Matrix optimized.py" />
+        <option value="$PROJECT_DIR$/Rakesh/.gitignore" />
       </list>
     </option>
   </component>
@@ -736,12 +751,6 @@
       <option name="number" value="Default" />
       <updated>1440448994947</updated>
     </task>
-    <task id="LOCAL-00057" summary="gitignore &#10;">
-      <created>1445560438953</created>
-      <option name="number" value="00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1445560438953</updated>
-    </task>
     <task id="LOCAL-00058" summary="number of island question &#10;">
       <created>1445562562999</created>
       <option name="number" value="00058" />
@@ -1030,12 +1039,18 @@
       <option name="project" value="LOCAL" />
       <updated>1451519600711</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="matrix programs added">
+      <created>1451537323707</created>
+      <option name="number" value="00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1451537323708</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1043,7 +1058,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975152" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17595702" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17595702" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27820513" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1073,7 +1088,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="getter and setter in python class" />
     <MESSAGE value="external sorting concepts" />
     <MESSAGE value="abstract classes concept in Python" />
     <MESSAGE value="palindrome permutation" />
@@ -1098,7 +1112,8 @@
     <MESSAGE value="list comprehension examples added" />
     <MESSAGE value="python tricks added" />
     <MESSAGE value="pascal triangle added" />
-    <option name="LAST_COMMIT_MESSAGE" value="pascal triangle added" />
+    <MESSAGE value="matrix programs added" />
+    <option name="LAST_COMMIT_MESSAGE" value="matrix programs added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1110,13 +1125,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakesh/search-algorithm/binary_search_insert_position.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6733467">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/trees/Binary Tree Zigzag Level Order Traversal.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1492,6 +1500,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.30018762">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6466165">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding />
         </state>
       </provider>
