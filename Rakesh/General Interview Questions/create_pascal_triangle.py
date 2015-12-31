@@ -19,8 +19,6 @@ class Solution(object):
             return num[0]
         elif numRows == 2:
             return num
-        elif numRows == 0:
-            return []
 
         row = []
         for i in range(2, numRows):
@@ -30,5 +28,3 @@ class Solution(object):
             row = []
 
         return num
-
-

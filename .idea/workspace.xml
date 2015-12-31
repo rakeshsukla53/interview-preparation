@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e96aa0ce-ccfe-4184-9fc1-5ec58a30fc33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/General Interview Questions/Generalized Abbreviation.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/General Interview Questions/Ugly Number II.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/General Interview Questions/create_pascal_triangle.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Common-interview-problems/majority elements.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/Common-interview-problems/product of array except self.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/python/list comprehension examples.py" afterPath="$PROJECT_DIR$/Rakesh/python/list comprehension examples.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/matrix_arithmetic/Search a 2D Matrix II.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/matrix_arithmetic/Search a 2D Matrix optimized.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakesh/matrix_arithmetic/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakesh/General Interview Questions/create_pascal_triangle.py" afterPath="$PROJECT_DIR$/Rakesh/General Interview Questions/create_pascal_triangle.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="interview-preparation.iws" />
@@ -90,7 +88,7 @@
     <SUITE FILE_PATH="coverage/interview-preparation$non_divsors.coverage" NAME="non-divsors Coverage Results" MODIFIED="1446612254318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility" />
     <SUITE FILE_PATH="coverage/interview-preparation$Unittests_in_TestCase__3_.coverage" NAME="Unittests in TestCase (3) Coverage Results" MODIFIED="1444518716308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
     <SUITE FILE_PATH="coverage/interview-preparation$Python_is_a_PASS_BY_OBJECT_REFERENCE_programming_language_.coverage" NAME="Python is a PASS-BY-OBJECT-REFERENCE programming language. Coverage Results" MODIFIED="1447379710097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-basics" />
-    <SUITE FILE_PATH="coverage/interview-preparation$create_pascal_triangle.coverage" NAME="create_pascal_triangle Coverage Results" MODIFIED="1451519098487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/General Interview Questions" />
+    <SUITE FILE_PATH="coverage/interview-preparation$create_pascal_triangle.coverage" NAME="create_pascal_triangle Coverage Results" MODIFIED="1451520134656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/General Interview Questions" />
     <SUITE FILE_PATH="coverage/interview-preparation$sprial_matrix.coverage" NAME="sprial_matrix Coverage Results" MODIFIED="1447354794657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/matrix_arithmetic" />
     <SUITE FILE_PATH="coverage/interview-preparation$heap_indepth_analysis_nlargest.coverage" NAME="heap_indepth_analysis_nlargest Coverage Results" MODIFIED="1447212565825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/heap" />
     <SUITE FILE_PATH="coverage/interview-preparation$word_length_dictionary_problem.coverage" NAME="word_length_dictionary_problem Coverage Results" MODIFIED="1443504787771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
@@ -142,9 +140,11 @@
     <SUITE FILE_PATH="coverage/interview-preparation$maximum_product_using_bit_manipulation.coverage" NAME="maximum product using bit manipulation Coverage Results" MODIFIED="1451427536424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/bit-manipulation" />
     <SUITE FILE_PATH="coverage/interview-preparation$sorting_sorted_words.coverage" NAME="sorting sorted words Coverage Results" MODIFIED="1447086856567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Codility and HackerRank" />
     <SUITE FILE_PATH="coverage/interview-preparation$Unittest_test_function__2_.coverage" NAME="Unittest test_function (2) Coverage Results" MODIFIED="1444518699541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Search_a_2D_Matrix_II.coverage" NAME="Search a 2D Matrix II Coverage Results" MODIFIED="1451535146370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/General Interview Questions" />
     <SUITE FILE_PATH="coverage/interview-preparation$draw_stairCase.coverage" NAME="draw_stairCase Coverage Results" MODIFIED="1444085966243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$maximize_sum.coverage" NAME="maximize_sum Coverage Results" MODIFIED="1442901839423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/50-problem-challenge" />
     <SUITE FILE_PATH="coverage/interview-preparation$Unittest_test_function__1_.coverage" NAME="Unittest test_function (1) Coverage Results" MODIFIED="1444518698397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Python-testing" />
+    <SUITE FILE_PATH="coverage/interview-preparation$Search_a_2D_Matrix_optimized.coverage" NAME="Search a 2D Matrix optimized Coverage Results" MODIFIED="1451536461848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/General Interview Questions" />
     <SUITE FILE_PATH="coverage/interview-preparation$reduce.coverage" NAME="reduce Coverage Results" MODIFIED="1447925978635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-functionals" />
     <SUITE FILE_PATH="coverage/interview-preparation$reverse_a_string_using_decorator.coverage" NAME="reverse_a_string_using_decorator Coverage Results" MODIFIED="1447375004093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/python-decorator" />
     <SUITE FILE_PATH="coverage/interview-preparation$find_first_non_repeating_character.coverage" NAME="find_first_non_repeating_character Coverage Results" MODIFIED="1446101417081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
@@ -218,36 +218,7 @@
     <favorites_list name="interview-preparation" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="Generalized Abbreviation.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/Generalized Abbreviation.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.43339586">
-                  <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="create_pascal_triangle.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/create_pascal_triangle.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.43339586">
-                  <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -268,8 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/highest_power_of N.py" />
-        <option value="$PROJECT_DIR$/Rakesh/Codility and HackerRank/coin_flips.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/same tree.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/same tree optimized how to do double tree recursion.py" />
         <option value="$PROJECT_DIR$/Rakesh/trees/balanced_binary_tree.py" />
@@ -319,6 +288,8 @@
         <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/Ugly Number II.py" />
         <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/Generalized Abbreviation.py" />
         <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/create_pascal_triangle.py" />
+        <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/Search a 2D Matrix II.py" />
+        <option value="$PROJECT_DIR$/Rakesh/General Interview Questions/Search a 2D Matrix optimized.py" />
       </list>
     </option>
   </component>
@@ -410,24 +381,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interview-preparation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interview-preparation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Rakesh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="General Interview Questions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -440,7 +393,7 @@
     <property name="FullScreen" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="list &#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/python/list comprehension examples.py&#10;list&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/python/list comprehension examples.py&#10;pytho&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/python tricks.py&#10;lis&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/python/list comprehension examples.py&#10;missing&#9;null&#9;null&#10;missi&#9;null&#9;null&#10;subsequence&#9;null&#9;null&#10;lar&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py&#10;largest&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py" />
+    <property name="SearchEverywhereHistoryKey" value="list&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/python/list comprehension examples.py&#10;list &#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/python/list comprehension examples.py&#10;pytho&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/python tricks.py&#10;lis&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/python/list comprehension examples.py&#10;missing&#9;null&#9;null&#10;missi&#9;null&#9;null&#10;subsequence&#9;null&#9;null&#10;lar&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py&#10;largest&#9;FILE&#9;file:///home/rakesh/Documents/interview-preparation/Rakesh/Common-interview-problems/largest_number.py" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -458,9 +411,6 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="OPEN_URL_DIALOG">
-      <recent name="http://" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Rakesh/quick-sorting" />
       <recent name="$PROJECT_DIR$/Rakesh/subsets" />
@@ -468,51 +418,18 @@
       <recent name="$PROJECT_DIR$/Rakesh/word_problem" />
       <recent name="$PROJECT_DIR$/Rakesh/trees" />
     </key>
+    <key name="OPEN_URL_DIALOG">
+      <recent name="http://" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Rakesh/matrix_arithmetic" />
       <recent name="$PROJECT_DIR$/Rakesh/2 Pointers" />
       <recent name="$PROJECT_DIR$/Rakesh/Balanced-trees" />
       <recent name="$PROJECT_DIR$/Rakesh/python-descriptors_getter_setter" />
       <recent name="$PROJECT_DIR$/Rakesh/python-decorator" />
-      <recent name="$PROJECT_DIR$/Rakesh/dynamic-programming" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.create_pascal_triangle">
-    <configuration default="false" name="majority elements" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="interview-preparation" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Common-interview-problems/majority elements.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="product of array except self" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/Common-interview-problems" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="interview-preparation" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/Common-interview-problems/product of array except self.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.Search a 2D Matrix optimized">
     <configuration default="false" name="Ugly Number II" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -563,6 +480,42 @@
       <module name="interview-preparation" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/General Interview Questions/create_pascal_triangle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Search a 2D Matrix II" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/General Interview Questions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="interview-preparation" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/matrix_arithmetic/Search a 2D Matrix II.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Search a 2D Matrix optimized" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Rakesh/General Interview Questions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="interview-preparation" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rakesh/matrix_arithmetic/Search a 2D Matrix optimized.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -756,19 +709,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.majority elements" />
-      <item index="1" class="java.lang.String" itemvalue="Python.product of array except self" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Ugly Number II" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Generalized Abbreviation" />
-      <item index="4" class="java.lang.String" itemvalue="Python.create_pascal_triangle" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Ugly Number II" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Generalized Abbreviation" />
+      <item index="2" class="java.lang.String" itemvalue="Python.create_pascal_triangle" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Search a 2D Matrix II" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Search a 2D Matrix optimized" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.create_pascal_triangle" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Generalized Abbreviation" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Ugly Number II" />
-        <item index="3" class="java.lang.String" itemvalue="Python.product of array except self" />
-        <item index="4" class="java.lang.String" itemvalue="Python.majority elements" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Search a 2D Matrix optimized" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Search a 2D Matrix II" />
+        <item index="2" class="java.lang.String" itemvalue="Python.create_pascal_triangle" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Generalized Abbreviation" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Ugly Number II" />
       </list>
     </recent_temporary>
   </component>
@@ -782,12 +735,6 @@
       <created>1440448994947</created>
       <option name="number" value="Default" />
       <updated>1440448994947</updated>
-    </task>
-    <task id="LOCAL-00056" summary="word_problem_approach &#10;">
-      <created>1445559784222</created>
-      <option name="number" value="00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1445559784222</updated>
     </task>
     <task id="LOCAL-00057" summary="gitignore &#10;">
       <created>1445560438953</created>
@@ -1077,19 +1024,26 @@
       <option name="project" value="LOCAL" />
       <updated>1451451464233</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="pascal triangle added">
+      <created>1451519600711</created>
+      <option name="number" value="00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1451519600711</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975152" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15513767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17595702" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27820513" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1102,7 +1056,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1120,7 +1073,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="understanding how getter and setter works" />
     <MESSAGE value="getter and setter in python class" />
     <MESSAGE value="external sorting concepts" />
     <MESSAGE value="abstract classes concept in Python" />
@@ -1145,7 +1097,8 @@
     <MESSAGE value="matrix multiplication added" />
     <MESSAGE value="list comprehension examples added" />
     <MESSAGE value="python tricks added" />
-    <option name="LAST_COMMIT_MESSAGE" value="python tricks added" />
+    <MESSAGE value="pascal triangle added" />
+    <option name="LAST_COMMIT_MESSAGE" value="pascal triangle added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1157,34 +1110,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakesh/trees/Minimum Depth of Binary Tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3787575">
-          <caret line="9" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/trees/Mininum depth of Binary Tree optimized.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5470942">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/trees/Sum Root to Leaf Numbers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.252505">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/subsequence-problems/Minimum Size Subarray Sum discontinous array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.364">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/search-algorithm/binary_search_insert_position.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6733467">
@@ -1484,13 +1409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakesh/python/list comprehension examples.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3958724">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/Common-interview-problems/majority elements.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74859285">
@@ -1518,9 +1436,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4727955">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#35#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1532,10 +1448,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/python/list comprehension examples.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5">
+          <caret line="70" column="67" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/create_pascal_triangle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43339586">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state vertical-scroll-proportion="-0.10318949">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/matrix_arithmetic/Search a 2D Matrix II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/matrix_arithmetic/Search a 2D Matrix optimized.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56660414">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/word_order_optimized.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakesh/General Interview Questions/word_order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.30018762">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
