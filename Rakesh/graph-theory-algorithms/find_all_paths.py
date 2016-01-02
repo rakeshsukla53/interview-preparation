@@ -4,7 +4,6 @@ graph = {'A': ['B'],
              'B': ['C'],
              'C': ['D', 'F']}
 
-
 def find_path(graph, start, end, path=[]):
         path = path + [start]
         if start == end:
