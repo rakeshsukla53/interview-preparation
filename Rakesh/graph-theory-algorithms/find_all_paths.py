@@ -1,4 +1,4 @@
-__author__ = 'rakesh'
+
 
 graph = {'A': ['B'],
              'B': ['C'],
@@ -18,3 +18,4 @@ def find_path(graph, start, end, path=[]):
         return None
 
 find_path(graph, 'A', 'D')
+

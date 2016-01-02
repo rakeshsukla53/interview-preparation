@@ -1,4 +1,4 @@
-__author__ = 'rakesh'
+
 
 def find_shortest_path(graph, start, end, path=[]):
         path = path + [start]
