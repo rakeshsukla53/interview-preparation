@@ -1,7 +1,7 @@
 
 import time
 start_time = time.time()
-
+ss
 class Solution(object):
 # using dP
     def lengthOfLIS1(self, nums):
