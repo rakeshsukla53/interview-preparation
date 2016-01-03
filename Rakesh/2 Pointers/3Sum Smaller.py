@@ -13,7 +13,6 @@ class Solution(object):
             return 0
 
         nums.sort()
-        print nums
         n = len(nums)
         count = 0
         for i in range(n - 2):
