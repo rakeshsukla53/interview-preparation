@@ -1,9 +1,7 @@
 
-
 # this technique will not work. Think about something else
 
 # it will only work if the edges are given in a particular order
-
 
 from collections import defaultdict
 
