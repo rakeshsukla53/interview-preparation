@@ -20,10 +20,12 @@ class Solution(object):
 
         visited_nodes = defaultdict(list)
         count = True
+        unvisited = []
         for key, value in edges:
 
             if key in visited_nodes and value in visited_nodes:
                 return False
+
             if count:
                 visited_nodes[key] = []
                 visited_nodes[value] = []
@@ -36,9 +38,23 @@ class Solution(object):
                 visited_nodes[value].append(key)
                 visited_nodes[key] = []
             else:
+                unvisited.append([key, value])
+
+        for key, value in unvisited:
+
+            if key in visited_nodes and value in visited_nodes:
                 return False
 
-        return True
+            if key in visited_nodes:
+                visited_nodes[key].append(value)
+                visited_nodes[value] = []
+            elif value in visited_nodes:
+                visited_nodes[value].append(key)
+                visited_nodes[key] = []
+            else:
+                return False
 
-print Solution().validTree(5, [[0, 1], [1, 2], [3, 4]])
+        return n == len(visited_nodes.keys())
+
+print Solution().validTree(4, [[0, 1], [2, 3], [1, 2]])
 
