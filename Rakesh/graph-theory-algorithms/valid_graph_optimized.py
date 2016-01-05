@@ -21,6 +21,7 @@ class Solution(object):
         visited_nodes = defaultdict(list)
         count = True
         unvisited = []
+
         for key, value in edges:
 
             if key in visited_nodes and value in visited_nodes:
