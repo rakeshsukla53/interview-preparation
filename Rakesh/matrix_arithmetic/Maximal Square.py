@@ -33,7 +33,6 @@ class Solution(object):
         return pow(area_largest_square, 2)
 
 
-print Solution().maximalSquare([[1, 1, 1, 1, 1], [1, 1, 1, 1, 0], [0, 0, 0, 0, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0], [0, 1, 1, 1, 0]])
-
+print Solution().maximalSquare([[1, 1, 1, 1, 1], [1, 1, 1, 1, 0], [0, 0, 0, 0, 0], [1, 1, 1, 1, 0], [1, 1, 1, 1, 0], [1, 1, 1, 1, 0], [1, 1, 1, 1, 1]])
 
 
