@@ -1,32 +1,35 @@
 
+# for this method I am going to use the reverse binary tree method to check for symmetric tree
+
+def reverseTree(self):
+    self.left, self.right = self.right, self.left
+    if self.left != None:
+        self.left.reverseTree()
+    if self.right != None:
+        self.right.reverseTree()
+
+# Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
 class Solution(object):
 
     def __init__(self):
-        self.right = []
-        self.left = []
+        self.count = True
 
-    def left_root_inorder(self, root):
-        if root.left is None:
-            self.left.append(0)
-        else:
-            self.left_root_inorder(root.left)
-        self.left.append(root.val)
-        if root.right is None:
-            self.left.append(0)
-        else:
-            self.left_root_inorder(root.right)
+    def sym(self, L, R):
 
-    def right_root_inorder(self, root):
+        if L is None and R is None:
+            return True
 
-        if root.right is None:
-            self.right.append(0)
+        if L and R and L.val == R.val:
+            self.sym(L.left, R.right)
+            self.sym(L.right, R.left)
         else:
-            self.right_root_inorder(root.right)
-        self.right.append(root.val)
-        if root.left is None:
-            self.right.append(0)
-        else:
-            self.right_root_inorder(root.left)
+            self.count = False
 
     def isSymmetric(self, root):
         """
@@ -36,11 +39,8 @@ class Solution(object):
         if not root or (root.left is None and root.right is None):
             return True
 
-        if root.left and root.right and (root.left.val == root.right.val):
-            self.left_root_inorder(root.left)
-            self.right_root_inorder(root.right)
-        else:
-            return False
+        self.sym(root.left, root.right)
+        return self.count
 
-        return self.left == self.right
+# optimized solution of symmetric tree
 
