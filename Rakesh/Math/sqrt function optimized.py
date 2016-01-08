@@ -11,8 +11,6 @@ class Solution(object):
         X = 1
         while True:
             fx = X*X - x
-            if not fx:
-                break
             dx = 2*X
             y = X
             X = X - float(fx)/dx
@@ -23,4 +21,4 @@ class Solution(object):
         return int(X)
 # time exceeded for this but there is no memory error
 
-print Solution().mySqrt(2)
+print Solution().mySqrt(400)
