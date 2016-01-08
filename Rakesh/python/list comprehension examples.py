@@ -9,6 +9,10 @@ def expressions(x):
     return '(%s)' % x
 
 
+# nested loop with IF and ELSE
+
+[[1 if int(j) > 4 else 0 for j in i] for i in l]
+
 alpha_list = ['A','B','C']
 print alpha_list
 

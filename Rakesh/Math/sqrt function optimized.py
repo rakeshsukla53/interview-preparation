@@ -22,3 +22,4 @@ class Solution(object):
 # time exceeded for this but there is no memory error
 
 print Solution().mySqrt(400)
+
