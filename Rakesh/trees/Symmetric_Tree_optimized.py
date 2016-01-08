@@ -1,13 +1,6 @@
 
 # for this method I am going to use the reverse binary tree method to check for symmetric tree
 
-def reverseTree(self):
-    self.left, self.right = self.right, self.left
-    if self.left != None:
-        self.left.reverseTree()
-    if self.right != None:
-        self.right.reverseTree()
-
 # Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
