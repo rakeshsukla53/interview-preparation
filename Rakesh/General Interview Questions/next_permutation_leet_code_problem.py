@@ -45,3 +45,4 @@ class Solution(object):
                 print nums
 
 Solution().nextPermutation([1, 2])
+
