@@ -1,4 +1,8 @@
 
+
+# run time of my solution beat 80% of submission
+
+
 from collections import deque
 
 class Solution(object):
@@ -7,6 +11,9 @@ class Solution(object):
         :type matrix: List[List[int]]
         :rtype: List[int]
         """
+        if not matrix:
+            return []
+
         nrows = deque()
         ncols = deque()
         nrows.extend(range(len(matrix)))
@@ -57,9 +64,7 @@ class Solution(object):
         return result
 
 matrix = [
- [1, 2, 3],
- [4, 5, 6],
- [7, 8, 9],
+ [],
 ]
 
 print Solution().spiralOrder(matrix)
