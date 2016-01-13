@@ -51,3 +51,22 @@ class Solution(object):
         del head
 
         return merged_node
+
+'''
+very simple way to do it
+class Solution:
+    def mergeTwoLists(self, a, b):
+        if a and b:
+            if a.val > b.val:
+                a, b = b, a
+            a.next = self.mergeTwoLists(a.next, b)
+        return a or b
+
+
+The expression x and y first evaluates x; if x is false, its value is returned; otherwise, y is evaluated and the resulting value is returned.
+
+The expression x or y first evaluates x; if x is true, its value is returned; otherwise, y is evaluated and the resulting value is returned.
+
+'''
+
+K
