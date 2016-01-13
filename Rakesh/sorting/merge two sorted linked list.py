@@ -69,4 +69,3 @@ The expression x or y first evaluates x; if x is true, its value is returned; ot
 
 '''
 
-K
