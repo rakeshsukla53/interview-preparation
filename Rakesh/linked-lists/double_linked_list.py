@@ -1,5 +1,5 @@
 
-#Doubly linked list
+# Doubly linked list
 
 class double:
 
@@ -35,7 +35,7 @@ class first:
             self.head.left = temp
             self.head = temp
 
-    def circular(self):   #for making it a cicular linked list
+    def circular(self):   # for making it a cicular linked list
         first = self.head
         while first.right != None:
             first = first.right
