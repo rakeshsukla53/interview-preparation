@@ -25,6 +25,40 @@ A = [[[[[[[3]]]]]], 'q', [1], 2.34]
 
 print list(flatten(A))
 
-a = 1.12
+# if you are wondering why base string is used
 
-print isinstance(a, basestring)
+'''
+>>> import collections
+>>> a = 'A
+  File "<input>", line 1
+    a = 'A
+         ^
+SyntaxError: EOL while scanning string literal
+>>> a = 'A'
+>>> isinstance(a, collections.Iterable)
+True
+>>> a = 1
+>>> isinstance(a, collections.Iterable)
+False
+>>> a = 2
+>>> isinstance(a, collections.Iterable)
+False
+>>> isinstance(a, collections.Iterable)
+False
+>>> a = 'Rakesh'
+>>> isinstance(a, collections.Iterable)
+True
+>>>
+'''
+
+
+
+
+
+
+
+
+
+
+
+
