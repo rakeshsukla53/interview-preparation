@@ -1,6 +1,6 @@
 
 
-#Backtracking solution implemented through iteration no recursion
+# Backtracking solution implemented through iteration no recursion
 
 class Solution(object):
     def subsets(self, nums):
@@ -30,6 +30,6 @@ class Solution(object):
         return uniqueSubset
 
 
-print Solution().subsets([1,2,3])
+print Solution().subsets([1, 2, 3])
 
 
