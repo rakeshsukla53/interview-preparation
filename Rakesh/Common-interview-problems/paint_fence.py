@@ -1,26 +1,19 @@
-__author__ = 'rakesh'
+def minCost(costs):
+    size = len(costs)
+    if size == 0:
+        return 0
 
-class Solution(object):
-    def numWays(self, n, k):
-        """
-        :type n: int
-        :type k: int
-        :rtype: int
-        """
-        colors = list(range(1, k))
+    pre = costs[0][:]
+    now = [0]*3
 
-        if n == 1:
-            return k
+    for i in xrange(size-1):
+        now[0] = min(pre[1], pre[2]) + costs[i+1][0]
+        now[1] = min(pre[0], pre[2]) + costs[i+1][1]
+        now[2] = min(pre[0], pre[1]) + costs[i+1][2]
+        pre[:] = now[:]
 
-        if n == 2:
-            from itertools import product
-            count = 0
-            for i in product(colors, repeat=2):
-                count += 1
-            return count
+    return min(pre)
 
-        if n > 2:
-            from itertools import combinations
+costs = [[1, 4, 2], [0, 15, 18], [1, 250, 100], [100, 19, 20]]
 
-
-
+print minCost(costs)
