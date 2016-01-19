@@ -16,9 +16,17 @@ finally:
 
 # New way to do in Python
 
-with lock:
+with lock:  # this is amazing context-managers
     print "Critical Section 1"
     print "Critical Section 2"
+
+
+with ignored(OSError):
+    os.remoe(.....)
+
+# rather than using try and except block you can use ignore
+
+
 
 
 
