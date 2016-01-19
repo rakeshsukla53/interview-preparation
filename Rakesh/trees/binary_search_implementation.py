@@ -64,7 +64,6 @@ class BinarySearchTree:   # now you can perform any type of opertion on this tre
         if self.right:
             self.right.preOrder()
 
-
     def lookup(self, data, parent=None):
 
         if data > self.value:
