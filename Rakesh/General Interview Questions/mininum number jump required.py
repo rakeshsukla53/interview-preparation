@@ -9,6 +9,7 @@ def mininum_flight_path(input_path):
     return
         'failure' : failure means hero cannot reach destination
         result (list) : it contains the indices in the input_array through which the hero will reach the destination
+        THIS CODE IS TO FIND MINIMUM NUMBER OF JUMP REQUIRED
     """
 
     result = []
