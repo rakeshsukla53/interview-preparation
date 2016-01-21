@@ -1,14 +1,13 @@
-__author__ = 'rakesh'
 
 
-#this is the DP solution for edit distance not levenstein distance
-word1="rakesh"
+# this is the DP solution for edit distance not levenstein distance
+word1 = "rakesh"
 
-word2="r"
+word2 = "bakesh"
 
-len_1=len(word1)
+len_1 = len(word1)
 
-len_2=len(word2)
+len_2 = len(word2)
 
 x =[[0]*(len_2+1) for _ in range(len_1+1)]#the matrix whose last element ->edit distance
 
@@ -29,5 +28,4 @@ for i in range (1,len_1+1):
             x[i][j]= min(x[i][j-1],x[i-1][j],x[i-1][j-1])+1
 
 print x[i][j]
-
 
