@@ -12,6 +12,12 @@ class Solution(object):
         if abs(len_1 - len_2) > 1 or (len(list(set(s) - set(t))) > 1 or len(list(set(t) - set(s))) > 1) or (not s and not t):
             return False
 
+        if abs(len_1 - len_2) == 1 or (len(list(set(s) - set(t))) > 1 or len(list(set(t) - set(s))) > 1):
+            return False
+
+        if abs(len_1 - len_2) == 0 or (len(list(set(s) - set(t))) > 1 or len(list(set(t) - set(s))) > 1):
+            return False
+
         x = [[0]*(len_2+1) for _ in range(len_1+1)]   # the matrix whose last element -> edit distance
         for i in range(0, len_1+1):  # initialization of base case values
             x[i][0] = i
