@@ -16,9 +16,9 @@
 #
 # The result is the last index of d.
 
-w = {'I': '', 'love': '', 'da': '', 'data': ''}
+s = "catsanddog"
 
-s = "Ilovedata"
+dict = {"cat": '', "cats": '', "and": '',  "sand": '',  "dog": ''}
 
 def word_break(s, words):
     d = [False] * len(s)
@@ -26,26 +26,25 @@ def word_break(s, words):
         for w in words:
             if w == s[i - len(w) + 1:i + 1] and (d[i - len(w)] or i - len(w) == -1):
                 d[i] = True
+    print d
     return d[-1]
 
-print word_break(s, w)
+print word_break(s, dict)
 
-class Solution(object):
-    def wordBreak(self, s, wordDict):
-        """
-        :type s: str
-        :type wordDict: Set[str]
-        :rtype: bool
-        """
-        d = [False] * len(s)
-        for i in range(len(s)):
-            for w in wordDict:
-                if w == s[i - len(w) + 1:i + 1] and (d[i - len(w)] or i - len(w) == -1):
-                    d[i] = True
-        return d[-1]
-
-
-
+# class Solution(object):
+#     def wordBreak(self, s, wordDict):
+#         """
+#         :type s: str
+#         :type wordDict: Set[str]
+#         :rtype: bool
+#         """
+#         d = [False] * len(s)
+#         for i in range(len(s)):
+#             for w in wordDict:
+#                 if w == s[i - len(w) + 1:i + 1] and (d[i - len(w)] or i - len(w) == -1):
+#                     d[i] = True
+#         return d[-1]
+#
 
 
 
