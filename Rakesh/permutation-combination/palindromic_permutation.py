@@ -47,5 +47,5 @@ class Solution(object):
 
                 return all_combination
 
-print Solution().generatePalindromes("code")
+print Solution().generatePalindromes("aabaa")
 
