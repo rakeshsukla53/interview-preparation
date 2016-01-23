@@ -1,8 +1,7 @@
 
-
 def isPrime(self, n):
         """
-        Prime number test algorithm. It runs pretty blazzingly fast
+        Prime number test algorithm. It runs pretty blazing fast
         """
         if n == 2 or n == 3:
             return True
