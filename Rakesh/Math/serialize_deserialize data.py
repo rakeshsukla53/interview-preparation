@@ -17,7 +17,6 @@ class Codec:
         """
         return cPickle.dumps(root)
 
-
     def deserialize(self, data):
         """Decodes your encoded data to tree.
         :type data: str

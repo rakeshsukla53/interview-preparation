@@ -1,14 +1,39 @@
-__author__ = 'rakesh'
 
-a = dict()
+# Definition for singly-linked list.
 
-a[str(<__main__.Node object at 0x7fa236048510>)] = 1
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
-print a
+import cPickle
+from collections import defaultdict
 
-# the reason we can store this main node because it cannot be hashed so we cannot store it
+class Solution(object):
+    def hasCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        if not head:
+            return False
 
+        store_objects = defaultdict(int)
 
+        while head != None:
+            if str(cPickle.dumps(head)) in store_objects:
+                return True
+            store_objects[str(cPickle.dumps(head))] += 1
+            head = head.next
+
+        return False
+
+head = ListNode(10)
+Solution().hasCycle(head)
+
+# well this is not the right way to do that because it is highly inefficient method
+
+# Floyd Marshall Algorithm is the right approach to go about it
 
 
 
