@@ -20,3 +20,5 @@ class Solution(object):
         return True
 
 print Solution().isIsomorphic('foo', 'bar')
+
+
