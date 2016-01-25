@@ -21,6 +21,9 @@ class Solution(object):
 
             if abs(index1 - index2) < shortest_distance:
                 shortest_distance = abs(index1 - index2)
+                # the distance cannot be shorter then one
+                if shortest_distance == 1:
+                    break
 
         return shortest_distance
 
