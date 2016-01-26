@@ -4,8 +4,6 @@ def pramp(arr1, arr2):
    mlogn
    cmp in python
    cmp(array1[i], array2[i]) = 0  +1 -1
-   [1, 2, 3]
-   [3, 4, 5]
 
    array1, array2 = sorted(array1), sorted(array2)
    i, j = 0, 0
